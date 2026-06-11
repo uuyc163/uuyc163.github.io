@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote 연결 문제 해결 & 오류 조회 - 연결 안 됨, 검은 화면, 렉, 소리 없음</title>
+<meta name="description" content="UU Remote가 연결 안 됨, 연결 후 검은 화면, 렉, 소리 없음, 컨트롤러 미인식? 증상을 입력하거나 누르세요(연결 안 됨 / 검은 화면 / 렉 / 끊김 / 소리 없음 / 컨트롤러 / 포트 충돌). 가장 가능성 높은 원인 + 해결 단계 + 예방을 찾습니다: 렉은 보통 네트워크 문제(패킷 손실, 약한 Wi-Fi, 낮은 호스트 업로드)이지 PC 성능이 아닙니다. 검은 화면은 보통 해상도/전체화면 불일치나 오래된 GPU 드라이버. 연결 실패 시 먼저 방화벽/백신과 원격 스위치 확인. 보안 오류는 인증/암호화 계층 또는 손상된 라이선스 인증서를 가리킴. RDP 포트 3389 충돌; 절전 중 도달 불가; IPv6 적응 불량. UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play 비교와 2026 추정 포함. Microsoft 공식 RDP 문서, Steam Remote Play 및 Parsec 공식 지원에서 정리.">
+<link rel="canonical" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote 연결 문제 해결 & 오류 조회",
+   "url": "https://uuyc163.github.io/ko/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "ko",
+   "description": "UU Remote가 연결 안 됨, 연결 후 검은 화면, 렉, 소리 없음, 컨트롤러 미인식? 증상을 입력하거나 누르세요(연결 안 됨 / 검은 화면 / 렉 / 끊김 / 소리 없음 / 컨트롤러 / 포트 충돌). 가장 가능성 높은 원인 + 해결 단계 + 예방을 찾습니다: 렉은 보통 네트워크 문제(패킷 손실, 약한 Wi-Fi, 낮은 호스트 업로드)이지 PC 성능이 아닙니다. 검은 화면은 보통 해상도/전체화면 불일치나 오래된 GPU 드라이버. 연결 실패 시 먼저 방화벽/백신과 원격 스위치 확인. 보안 오류는 인증/암호화 계층 또는 손상된 라이선스 인증서를 가리킴. RDP 포트 3389 충돌; 절전 중 도달 불가; IPv6 적응 불량. UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play 비교와 2026 추정 포함. Microsoft 공식 RDP 문서, Steam Remote Play 및 Parsec 공식 지원에서 정리.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "ko",
+   "url": "https://uuyc163.github.io/ko/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - 연결 안 됨 / 연결 실패 어떻게 해결하나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "클라이언트가 \"원격 컴퓨터에 연결할 수 없음 / 실패 / 타임아웃\"이라고 표시; 호스트에 들어갈 수 없음. 호스트 꺼짐 / 미로그인 / 오프라인, 방화벽 또는 백신 차단, 원격 스위치 결함, 집 IP 변경, 또는 포트 점유. 1) 호스트가 켜짐·로그인·온라인인지 확인; 2) 방화벽과 백신에서 UU Remote 허용; 3) 원격 스위치 껐다 켜서 재설정; 4) 라우터 재시작으로 IP 갱신; 5) 포트 3389 점유 시 변경하거나 충돌 프로그램 중지. 호스트에 고정 LAN IP 부여, 신뢰 목록에 추가, 켜짐·온라인 유지."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - 연결 후 검은 화면 어떻게 해결하나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "연결됐지만 화면이 완전히 검음, 흔히 소리는 들리고 마우스는 보임. 해상도 미지원, 게임 전체화면 해상도 != 스트리밍 해상도, 오래된 GPU 드라이버, 또는 손상된 영구 비트맵 캐싱. 1) 호스트를 1080p 같은 일반 해상도로; 2) 전체화면 게임을 창모드로; 3) GPU 드라이버 업데이트; 4) \"영구 비트맵 캐싱\" 끄기(RDP 성능 탭). 호환 해상도 사용, GPU 드라이버 최신 유지."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - 렉 / 입력 지연 어떻게 해결하나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "뚜렷한 입력 지연, 버벅임 / 프레임 드롭, 나쁜 반응. 네트워크 혼잡 / 패킷 손실, 약한 Wi-Fi, 낮은 호스트 업로드, 대역폭 초과 비트레이트, 또는 새 GPU 드라이버의 비정상 인코더 지연. 1) 유선이나 5GHz Wi-Fi 근처로; 2) 여유를 위해 비트레이트/대역폭 한도 낮춤; 3) 패킷 손실 확인, 대역폭 잡아먹는 앱 닫기; 4) 호스트에서 안정 GPU 드라이버로 롤백. 유선 우선; 비트레이트 < 업로드, 여유 두기."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - 잦은 끊김 / 몇 초 만에 끊김 어떻게 해결하나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "몇 초나 1분 만에 끊기고 계속 재연결. 네트워크 불안정 / 손실, keep-alive 미설정, 보안 계층 또는 인증서 문제, 또는 TermDD X.224 프로토콜 오류(Event ID 50). 1) 패킷 손실과 라우팅 안정성 확인; 2) 호스트에 keep-alive 간격 설정; 3) 보안 계층과 암호화 검토; 4) 프로토콜 중단을 찾기 위해 이벤트 뷰어 Event ID 50 확인. 안정 네트워크, 올바른 보안 계층과 인증서."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - 소리 없음 어떻게 해결하나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "화면은 좋은데 원격 쪽 소리 없음. 호스트에 쓸 수 있는 오디오 장치 없음(클라우드 PC / 스피커 없음은 \"스피커 또는 헤드폰이 연결되지 않음\" 표시) 또는 잘못된 캡처 장치 선택. 1) 호스트에 가상 오디오 장치(VB-Cable 등) 설치; 2) 설정에서 올바른 캡처 장치 선택; 3) 누군가 연결 중이면 적용을 위해 재연결. 호스트에 쓸 수 있는 오디오 출력 장치 확보."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - 컨트롤러 / 주변기기 미인식 어떻게 해결하나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "컨트롤러, 키보드/마우스 또는 기타 주변기기가 원격 쪽에서 인식 안 되거나 무반응. 클라이언트에서 컨트롤러 패스스루 미활성, 호스트에 컨트롤러 드라이버 없음, 또는 다른 프로그램이 장치를 독점. 1) UU Remote에서 컨트롤러/주변기기 패스스루 켜기; 2) 호스트에 맞는 컨트롤러 드라이버 설치; 3) 재연결하고 장치를 독점하는 프로그램 닫기. 드라이버를 미리 설치하고 패스스루 켜기."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - 포트 충돌 / 리스너 문제 어떻게 해결하나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "비정상 리스너 / 연결 거부, 자체 호스팅 / 동일 머신 RDP에서 흔함. 기본 RDP 포트 3389(또는 설정한 포트)가 다른 프로그램에 사용됨. 1) 포트를 쓰는 PID를 찾으려면 netstat -a -o; 2) tasklist /svc로 매칭; 3) 포트 변경 또는 충돌 프로그램 중지 후 원격 서비스 재시작. 여러 원격 도구가 같은 포트를 다투지 않게."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - 절전/최대 절전 시 도달 불가 어떻게 해결하나요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "호스트가 무반응이고 도무지 연결 안 됨. 호스트가 절전 또는 최대 절전에 들어가 네트워크 카드 전원이 끊겨 무반응. 1) 호스트 전원 계획을 절대 절전/최대 절전 안 함으로; 2) Wake-on-LAN 또는 UU 원격 전원 켜기로 깨우기; 3) 깨운 후 연결 시작. 절전/최대 절전 끄기, 원격 전원 켜기 설정."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">언어: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <strong>한국어</strong> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote 원격 제어 / 게임 스트리밍 - 연결 문제 해결 & 오류 조회</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_ko.webp"><img src="/img/cover_ko.png" alt="UU Remote 연결 문제 해결 & 오류 조회 일러스트" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>그림: UU Remote 고장 조회(증상 키워드 -> 가장 가능성 높은 원인 + 단계 + 예방)</figcaption></figure>
+<p><strong>UU Remote</strong> 연결 안 됨, 연결 후 <strong>검은 화면</strong>, <strong>렉</strong>, 소리 없음, 컨트롤러 미인식 - 무작정 시도하지 마세요. 핵심은 <strong>분류하고 순서대로 자가 점검</strong>: 먼저 <strong>네트워크(패킷 손실 / 업로드 / 방화벽)</strong>, 다음 <strong>GPU 드라이버 / 해상도</strong>, 마지막 <strong>권한 / 인증서</strong>. <strong>증상</strong>(예: <code>연결 안 됨</code>, <code>검은 화면</code>, <code>렉</code>, <code>소리 없음</code>, <code>끊김</code>, <code>컨트롤러</code>)을 입력하면 <strong>가장 가능성 높은 원인 + 단계 + 예방</strong>을 찾습니다. 먼저 설치? <a href="https://uuyc163.com/download/">UU Remote 다운로드</a>와 <a href="https://uuyc163.com/faq/">자주 묻는 질문</a> 참고.</p>
+<input id="q" placeholder="증상 입력, 예: 연결 안 됨 / 검은 화면 / 렉 / 소리 없음 / 끊김 / 컨트롤러" autocomplete="off">
+<button id="go">해결 찾기</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>1단계: 먼저 고장을 네 그룹으로 나누기(바로 재설치하지 말 것)</h2>
+<p>원격 제어/스트리밍 문제의 열에 아홉은 네 그룹에 들어갑니다 - 먼저 분류, 그다음 처리: (1) <strong>연결</strong> - 연결 안 됨, 몇 초 만에 끊김, 포트 충돌, 절전 중 도달 불가, 변덕스러운 IPv6: <strong>네트워크와 방화벽/백신, 원격 스위치, 호스트가 온라인이며 켜져 있는지</strong> 확인; (2) <strong>화면</strong> - 검은 화면, 아티팩트, 흐림: 보통 <strong>해상도/전체화면 불일치 또는 오래된 GPU 드라이버</strong>; (3) <strong>지연/렉</strong> - 입력 지연, 버벅임: 진짜 원인은 보통 <strong>패킷 손실 / 약한 Wi-Fi / 낮은 호스트 업로드</strong>, 성능 아님; (4) <strong>소리 / 주변기기 / 권한</strong> - 소리 없음, 컨트롤러 미인식, 원격 권한 없음: <strong>호스트 오디오 장치, 컨트롤러 패스스루, 원격 데스크톱 사용자 그룹</strong> 확인. 더보기: <a href="https://uuyc163.com/faq/">UU Remote FAQ</a>.</p>
+<div class="cat"><div class="catbox"><b>연결 / 끊김</b><span class="cs">연결 안 됨 . 잦은 끊김 . 포트 충돌 . 절전 중 도달 불가 . IPv6</span><div>네트워크와 방화벽/백신, 원격 스위치, 호스트가 온라인이며 켜져 있는지 확인: 실패 시 먼저 방화벽 허용, 원격 껐다 켜기, IP 갱신; 포트 3389 사용 중이면 netstat로 충돌 찾기; 호스트를 절전시키지 말 것.</div></div><div class="catbox"><b>화면 (검은 화면 / 아티팩트 / 흐림)</b><span class="cs">연결 시 검은 화면 . 아티팩트 . 흐림</span><div>보통 해상도/전체화면 불일치 또는 오래된 GPU 드라이버: 지원 해상도로 전환, 게임 창모드, GPU 드라이버 업데이트, 영구 비트맵 캐싱 끄기; 아티팩트/흐림은 비트레이트와 패킷 손실 확인 후 하드웨어 디코딩 끄기 시도.</div></div><div class="catbox"><b>지연 / 렉</b><span class="cs">입력 지연 . 버벅임 . 끊김</span><div>진짜 원인은 보통 네트워크이지 성능 아님: 유선이나 5GHz Wi-Fi로, 비트레이트/대역폭 한도 낮춤, 패킷 손실 확인, 호스트에서 안정 GPU 드라이버로 롤백, 대역폭 잡아먹는 앱 닫기; 부족한 호스트 업로드가 인터넷 경유 진짜 병목.</div></div><div class="catbox"><b>소리 / 주변기기 / 권한</b><span class="cs">소리 없음 . 컨트롤러 미인식 . 원격 권한 없음</span><div>소리 없음 - 호스트 오디오 장치 확인(클라우드 PC / 스피커 없음은 가상 오디오 장치 필요); 컨트롤러 미인식 - 패스스루 켜고 드라이버 설치; 권한 없음 - 계정을 "원격 데스크톱 사용자" 그룹에 추가하고 연결 제한 정책 확인.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote 고장 위치 결정 트리" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">고장 위치 찾는 법(증상별로 네 그룹: 연결 / 화면 / 지연 / 소리 및 주변기기)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">고장 발생</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">증상별 분류</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">연결 안 됨/끊김 -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">네트워크 . 방화벽 . 스위치 . 포트</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">검은 화면/아티팩트 -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">해상도 . 전체화면 . GPU 드라이버</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">네 가지 전형적 고장(증상별 자가 점검 방향 선택)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. 연결/끊김</text><text x="32" y="234" fill="#555" font-size="11">네트워크 . 방화벽 . 포트 . 절전</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. 검은 화면</text><text x="206" y="234" fill="#555" font-size="11">해상도 . 전체화면 . 드라이버</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. 지연/렉</text><text x="380" y="234" fill="#555" font-size="11">손실 . 업로드 . 유선 우선</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. 소리/주변기기</text><text x="554" y="234" fill="#555" font-size="11">오디오 장치 . 컨트롤러 . 권한</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>그림 1: UU Remote 고장 위치 흐름 - 증상별로 네 그룹으로 나눔(연결 / 화면 / 지연 / 소리 및 주변기기), 그다음 순서대로 점검</figcaption></figure>
+<h2>2단계: 가장 자주 오진되는 원인 -> L2 (네트워크 먼저, 다음 드라이버/해상도, 마지막 권한/인증서)</h2>
+<p>핵심: <strong>대부분의 "렉"과 "연결 안 됨"은 사실 네트워크 문제이지 PC 성능이나 소프트웨어 버그가 아닙니다</strong>. 이 순서로 점검하면 시간이 가장 절약됩니다: (1) <strong>렉/지연 - 먼저 네트워크</strong>: 패킷 손실, 약한 Wi-Fi, 부족한 호스트 <strong>업로드</strong>가 스트리밍의 진짜 병목입니다(밖에서 집을 제어하면 화면이 집에서 <em>밖으로</em> 전송되어 업로드를 소모) - 유선이나 5GHz Wi-Fi로 전환, 비트레이트/대역폭 한도 낮추기, 호스트에서 안정 GPU 드라이버로 롤백(새 NVIDIA 드라이버가 비정상 인코더 지연을 유발한 적 있음); (2) <strong>검은 화면 - 먼저 해상도와 드라이버</strong>: 연결됐는데 검고 소리는 들리고 마우스는 보이면 보통 <strong>해상도 미지원 또는 게임 전체화면 해상도 != 스트리밍 해상도</strong>(게임 창모드), <strong>오래된 GPU 드라이버</strong>(업데이트), 또는 손상된 영구 비트맵 캐싱(끄기); (3) <strong>연결 실패 - 먼저 방화벽과 스위치</strong>: 방화벽/백신 차단, 원격 스위치 껐다 켜기, 라우터 재시작으로 IP 갱신, 또는 포트 <code>3389</code> 사용 중(<code>netstat -a -o</code>로 충돌); (4) <strong>보안 오류 - 인증/인증서</strong>: "보안 오류로 클라이언트가 연결할 수 없음"은 보통 잘못 구성된 인증/암호화 계층 또는 손상된 라이선스 인증서; (5) <strong>소리 없음 - 오디오 장치</strong>: 호스트에 스피커가 없거나 / 클라우드 PC에 오디오 장치가 없으면 가상 오디오 장치 설치. 아래는 고장 위치 결정 트리; 더 아래는 자가 점검 패널, 비교, 2026 추정.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote 연결 전 자가 점검 패널" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">연결/스트리밍 전 자가 점검 패널(녹색 = 충족 / 빨강 = 놓치기 쉬움)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">점검 항목</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">판단</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">상태</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">호스트 켜짐, 로그인, 온라인(절전 아님)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">온라인 상태</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">충족</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">방화벽/백신이 UU Remote 허용</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">방화벽</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">확인</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">양쪽 유선 또는 5GHz Wi-Fi, 신호 가득</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">네트워크 품질</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">충족</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">호스트 GPU 드라이버 = 최신 안정 버전</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">GPU 드라이버</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">확인</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">호스트 업로드 >= 스트리밍 비트레이트 + 여유</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">업로드</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">충족</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">포트 3389가 다른 프로그램에 안 쓰임</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">포트</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">확인</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">참고: 빨강 = 가장 자주 놓치는 셋 - 방화벽 허용, GPU 드라이버, 포트 충돌; 연결 안 됨 / 검은 화면 / 렉은 재설치 전 이것부터 확인.</text></svg><figcaption>그림 2: 연결 전 자가 점검 패널(녹색 = 충족 / 빨강 = 확인할 함정)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_ko.webp"><img src="/img/board_ko.png" alt="UU Remote 연결 전 자가 점검 패널의 녹색/빨강 점 일러스트" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>그림: "호스트 온라인 & 켜짐 . 방화벽 허용 . 유선/5GHz . 최신 드라이버 . 포트 비어 있음" 확인 - 렉과 검은 화면은 보통 앞쪽에서 실패</figcaption></figure>
+<h2>전체 일반 고장 조회표(증상 . 분류 . 해결 방향)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs 주요 원격 제어 / 스트리밍 - 문제 해결 비교(공개 문서)</h2>
+<table class="cmp"><tr><th>솔루션</th><th>연결/NAT</th><th>검은 화면 처리</th><th>주변기기/컨트롤러</th><th>네트워크 경유 지연</th><th>진단 도구</th></tr><tr><td>UU Remote</td><td>P2P 직접 + 전용망, 자동 NAT</td><td>해상도 전환 / 창 / 드라이버 업데이트</td><td>컨트롤러 & 주변기기 패스스루</td><td>밀리초(최적화 전용망)</td><td>클라이언트 로그 + 자가 점검</td></tr><tr><td>ToDesk</td><td>자체 릴레이 + P2P</td><td>적응형 해상도</td><td>주변기기 매핑</td><td>낮음(전용 채널)</td><td>진단 패널</td></tr><tr><td>Parsec</td><td>P2P 홀펀칭, 공인 IP/UPnP 필요</td><td>전체화면 불일치 -> 창</td><td>네이티브 컨트롤러 지원</td><td>LAN 매우 낮음, 인터넷은 네트워크 의존</td><td>로그 + 커뮤니티 문서</td></tr><tr><td>Microsoft RDP</td><td>포트 3389, 허용/게이트웨이 필요</td><td>영구 비트맵 캐시 / 해상도 / 드라이버</td><td>리디렉션 설정 필요</td><td>LAN 낮음, 인터넷은 대역폭 의존</td><td>이벤트 뷰어 + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>Steam 릴레이 + 직접</td><td>드라이버 업데이트 / 하드웨어 디코드 끄기</td><td>컨트롤러 우선 지원</td><td>~30-50Mb/s @1080p60</td><td>IPv6 끄기 + 스트림 설정</td></tr></table><section class="i4data">
+<h2>UU Remote 원격 제어/스트리밍 일반 고장 분포 및 메모(2026 추정)</h2>
+<p>다음은 Microsoft 공식 RDP 문서, Steam Remote Play 및 Parsec 공식 지원을 결합한 <strong>2026 추정</strong>입니다(벤더 약속이나 1차 통계 아님; 참고용, 버전과 네트워크에 따라 변함):</p>
+<table>
+<tr><th>차원</th><th>추정 / 메모</th></tr>
+<tr><td>고장 유형 분포(추정)</td><td>연결/끊김 ~ <strong>35%</strong> . 화면(검은 화면/아티팩트) ~ <strong>25%</strong> . 지연/렉 ~ <strong>22%</strong> . 소리/주변기기 ~ <strong>12%</strong> . 권한/보안 ~ <strong>6%</strong></td></tr>
+<tr><td>렉의 진짜 원인(핵심)</td><td>대부분의 "렉 / 연결 안 됨"은 <strong>네트워크 문제</strong>(패킷 손실, 약한 Wi-Fi, 낮은 호스트 <strong>업로드</strong>)이며 <strong>PC 성능이나 버그가 아님</strong> -> 소프트/하드웨어 전에 네트워크 확인</td></tr>
+<tr><td>검은 화면 주원인(추정)</td><td>해상도/전체화면 불일치 + 오래된 GPU 드라이버 우세; 소리 있는 검정 = 전형적 해상도 문제, 게임 창모드 / 일반 해상도가 가장 도움</td></tr>
+<tr><td>RDP 포트 및 프로토콜</td><td>기본 RDP 포트 <strong>3389(TCP)</strong>; 사용 중이면 -> 연결 안 됨; Event ID <strong>50(TermDD . X.224)</strong> = 클라이언트를 끊는 프로토콜 스트림 오류</td></tr>
+<tr><td>자가 점검 순서(시간 절약)</td><td><strong>네트워크(손실/업로드/방화벽) 먼저 -> 드라이버/해상도 -> 권한/인증서 마지막</strong>; 스트리밍은 약 <strong>30-50Mbps @1080p60</strong>, 비트레이트는 호스트 업로드 아래여야 함</td></tr>
+</table>
+<p><small>추정 근거: 출처 기준선 + 외삽(Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", Steam Remote Play 공식 지원, Parsec 공식 지원, 2026 결합); 버전과 네트워크 정책에 따라 변함. 각사 최신 공식 정보와 본인 테스트를 따르세요.</small></p>
+</section>
+<h2>실제 시나리오 - 빠른 읽기</h2>
+<ul class="scenes"><li>휴대폰에서 집 PC 제어, 연결 직후 검은 화면이지만 소리는 들림: 보통 호스트 해상도가 휴대폰에서 미지원이거나 게임 전체화면 해상도가 맞지 않음 -> 게임 창모드, 호스트를 1080p 같은 일반 해상도로, GPU 드라이버 업데이트.</li><li>세션 도중 갑자기 느려지고 큰 지연: PC 성능부터 탓하지 말 것 - 패킷 손실과 Wi-Fi 신호 확인, 유선이나 5GHz Wi-Fi 근처로, 비트레이트/대역폭 한도 낮춤, 호스트 업로드가 낮으면 화질 낮춤; 새로 설치한 NVIDIA 드라이버가 말썽이면 안정 버전으로 롤백.</li><li>클라이언트가 "원격 컴퓨터에 연결할 수 없음 / 연결 실패"라고 표시: 호스트가 켜짐·로그인·온라인인지 확인, 방화벽과 백신에서 UU Remote 허용, 원격 스위치 껐다 켜기; 집 IP가 바뀌었으면 라우터 재시작, 또는 포트 3389가 다른 프로그램에 쓰이는지 확인.</li><li>몇 초나 1분 만에 끊김: 보통 네트워크 불안정 또는 보안/인증서 문제 - 패킷 손실과 라우팅 확인, 호스트에 keep-alive 간격 설정, 보안 계층과 암호화 검토; 이벤트 뷰어의 Event ID 50(TermDD . X.224)도 중단된 프로토콜 스트림을 가리킴.</li><li>화면은 좋은데 원격 쪽 소리 없음: 호스트에 쓸 수 있는 오디오 장치 없음(클라우드 PC나 스피커 없음은 "스피커 또는 헤드폰이 연결되지 않음" 표시) -> 호스트에 가상 오디오 장치(VB-Cable 등) 설치하고 설정에서 올바른 캡처 장치 선택.</li><li>로그인은 되는데 원격 제어를 시작할 수 없고 권한 없음 경고: 계정을 호스트의 "원격 데스크톱 사용자" 그룹에 추가, "연결 수 제한" 정책이 막는지 확인, 계정에 원격 로그온 권한이 있는지 확인.</li></ul><div class="related"><h2>관련</h2><ul><li><a href="https://uuyc163.com/">UU Remote 공식 / 다운로드 및 가이드</a></li><li><a href="https://uuyc163.com/faq/">UU Remote FAQ(공식)</a></li><li><a href="https://uuyc163.com/ko/tools/connection-troubleshooting/">UU Remote 문제 해결(전체 참조표)</a></li><li><a href="https://uuycc.com/">UU Remote 다운로드 센터(자매)</a></li></ul></div></main>
+<footer>고장 / 원인 / 해결 메모는 Microsoft Learn "Troubleshoot Remote desktop disconnected errors" 및 "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons"(RDP 연결 실패, 포트 3389 충돌, 보안 계층 및 암호화, 라이선스 인증서 손상, 절전 중 도달 불가, Event ID 50 TermDD X.224 프로토콜 오류), Steam Remote Play 공식 지원(연결 실패 = 방화벽/백신 / 스위치 재설정 / IP 갱신, 검은 화면 = 드라이버 업데이트 / 하드웨어 디코딩 끄기, IPv6 끄기), Parsec 공식 지원(검은 화면 = 전체화면 해상도 불일치 -> 창, 소리 없음 = 호스트에 오디오 장치 없음 -> 가상 오디오 장치, 높은 지연 = 새 드라이버 / 손실 -> 드라이버 롤백 . 대역폭 낮춤 . 유선)에서 정리. 2026 고장 분포는 추정이며 벤더 약속이나 1차 통계가 아닙니다. 참고용이며 각사 최신 공식 정보와 본인 테스트를 따르세요. (현지화: 비공식 · LLM 번역)<br>도구 페이지 . 조회는 공식 클라이언트의 실제 테스트나 공식 지원을 대체하지 않음</footer>
+</div>
+<script src="/ko/codes.js"></script><script src="/app.js"></script>
+</body></html>
