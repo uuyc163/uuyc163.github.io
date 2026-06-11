@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote khắc phục sự cố kết nối & tra lỗi - không kết nối, màn hình đen, lag, mất tiếng</title>
+<meta name="description" content="UU Remote không kết nối, màn hình đen sau khi kết nối, lag, mất tiếng hay tay cầm không nhận? Nhập hoặc chạm một triệu chứng (không kết nối / màn hình đen / lag / rớt kết nối / mất tiếng / tay cầm / xung đột cổng) để tìm nguyên nhân khả dĩ nhất + các bước khắc phục + phòng ngừa: lag thường là vấn đề mạng (mất gói, Wi-Fi yếu, upload máy chủ thấp), không phải hiệu năng PC; màn hình đen thường do lệch độ phân giải/toàn màn hình hoặc driver GPU cũ; khi lỗi kết nối kiểm tra trước tường lửa/diệt virus và công tắc từ xa; lỗi bảo mật chỉ tới lớp xác thực/mã hóa hoặc chứng chỉ giấy phép hỏng; xung đột cổng RDP 3389; không tới được khi ngủ; thích ứng IPv6 kém. Kèm so sánh UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play và ước tính 2026. Tổng hợp từ tài liệu RDP chính thức của Microsoft, hỗ trợ chính thức Steam Remote Play và Parsec.">
+<link rel="canonical" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote khắc phục sự cố kết nối & tra lỗi",
+   "url": "https://uuyc163.github.io/vi/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "vi",
+   "description": "UU Remote không kết nối, màn hình đen sau khi kết nối, lag, mất tiếng hay tay cầm không nhận? Nhập hoặc chạm một triệu chứng (không kết nối / màn hình đen / lag / rớt kết nối / mất tiếng / tay cầm / xung đột cổng) để tìm nguyên nhân khả dĩ nhất + các bước khắc phục + phòng ngừa: lag thường là vấn đề mạng (mất gói, Wi-Fi yếu, upload máy chủ thấp), không phải hiệu năng PC; màn hình đen thường do lệch độ phân giải/toàn màn hình hoặc driver GPU cũ; khi lỗi kết nối kiểm tra trước tường lửa/diệt virus và công tắc từ xa; lỗi bảo mật chỉ tới lớp xác thực/mã hóa hoặc chứng chỉ giấy phép hỏng; xung đột cổng RDP 3389; không tới được khi ngủ; thích ứng IPv6 kém. Kèm so sánh UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play và ước tính 2026. Tổng hợp từ tài liệu RDP chính thức của Microsoft, hỗ trợ chính thức Steam Remote Play và Parsec.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "vi",
+   "url": "https://uuyc163.github.io/vi/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - cách khắc phục Không kết nối / kết nối thất bại?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Client báo \"không thể kết nối tới máy tính từ xa / thất bại / timeout\"; bạn không vào được máy chủ. Máy chủ tắt / chưa đăng nhập / ngoại tuyến, tường lửa hoặc diệt virus chặn, công tắc từ xa lỗi, IP nhà đổi, hoặc cổng bị chiếm. 1) Xác nhận máy chủ bật, đăng nhập và trực tuyến; 2) cho phép UU Remote trong tường lửa và diệt virus; 3) tắt rồi bật công tắc từ xa để đặt lại; 4) khởi động lại router để làm mới IP; 5) nếu cổng 3389 bị chiếm, đổi cổng hoặc dừng chương trình xung đột. Cấp cho máy chủ IP LAN cố định, thêm vào danh sách tin cậy, giữ bật và trực tuyến."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - cách khắc phục Màn hình đen sau khi kết nối?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kết nối được nhưng hình hoàn toàn đen, thường khi nghe được tiếng và thấy chuột. Độ phân giải không được hỗ trợ, độ phân giải toàn màn hình của game != độ phân giải phát, driver GPU cũ, hoặc bộ nhớ đệm bitmap bền vững hỏng. 1) Đổi máy chủ sang độ phân giải phổ biến như 1080p; 2) chuyển game toàn màn hình sang cửa sổ; 3) cập nhật driver GPU; 4) tắt \"bộ nhớ đệm bitmap bền vững\" (tab Hiệu năng RDP). Dùng độ phân giải tương thích, giữ driver GPU mới."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - cách khắc phục Lag / trễ thao tác?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Trễ thao tác rõ rệt, giật / rớt khung hình, phản hồi kém. Nghẽn mạng / mất gói, Wi-Fi yếu, upload máy chủ thấp, bitrate vượt băng thông, hoặc độ trễ bộ mã hóa bất thường từ driver GPU mới. 1) Chuyển sang cáp hoặc lại gần Wi-Fi 5 GHz; 2) hạ giới hạn bitrate/băng thông để có dư; 3) kiểm mất gói, đóng app ngốn băng thông khác; 4) ở máy chủ quay lại driver GPU ổn định. Ưu tiên cáp; bitrate < upload có dư."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - cách khắc phục Rớt thường xuyên / rớt sau vài giây?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Rớt sau vài giây hoặc một phút, kết nối lại liên tục. Mạng không ổn định / mất gói, chưa đặt keep-alive, vấn đề lớp bảo mật hoặc chứng chỉ, hoặc lỗi giao thức TermDD X.224 (Event ID 50). 1) Kiểm mất gói và độ ổn định định tuyến; 2) đặt khoảng keep-alive ở máy chủ; 3) xem lớp bảo mật và mã hóa; 4) xem Event ID 50 trong Trình xem Sự kiện để định vị gián đoạn giao thức. Mạng ổn định, lớp bảo mật và chứng chỉ đúng."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - cách khắc phục Mất tiếng?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hình tốt nhưng đầu từ xa mất tiếng. Máy chủ không có thiết bị âm thanh dùng được (PC đám mây / không loa hiện \"Không có loa hoặc tai nghe được cắm\") hoặc chọn sai thiết bị thu. 1) Cài thiết bị âm thanh ảo (như VB-Cable) ở máy chủ; 2) chọn đúng thiết bị thu trong cài đặt; 3) nếu có người đang kết nối, kết nối lại để áp dụng. Đảm bảo máy chủ có thiết bị xuất âm thanh dùng được."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - cách khắc phục Tay cầm / thiết bị không nhận?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tay cầm, bàn phím/chuột hoặc thiết bị khác không được nhận hoặc không phản hồi ở đầu từ xa. Passthrough tay cầm chưa bật ở client, thiếu driver tay cầm ở máy chủ, hoặc chương trình khác giữ thiết bị độc quyền. 1) Bật passthrough tay cầm/thiết bị trong UU Remote; 2) cài driver tay cầm phù hợp ở máy chủ; 3) kết nối lại và đóng chương trình giữ thiết bị độc quyền. Cài driver trước và bật passthrough."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - cách khắc phục Xung đột cổng / vấn đề listener?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Listener bất thường / kết nối bị từ chối, hay gặp ở RDP tự host / cùng máy. Cổng RDP mặc định 3389 (hoặc cổng đã đặt) bị chương trình khác dùng. 1) Dùng netstat -a -o để tìm PID đang dùng cổng; 2) đối chiếu bằng tasklist /svc; 3) đổi cổng hoặc dừng chương trình xung đột, rồi khởi động lại dịch vụ từ xa. Tránh nhiều công cụ từ xa tranh cùng cổng."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - cách khắc phục Không tới được khi ngủ/ngủ đông?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Máy chủ không phản hồi và không tài nào kết nối. Máy chủ vào chế độ ngủ hoặc ngủ đông, nên card mạng mất điện và không phản hồi. 1) Đặt gói điện máy chủ thành không bao giờ ngủ/ngủ đông; 2) đánh thức bằng Wake-on-LAN hoặc bật nguồn từ xa UU; 3) bắt đầu kết nối sau khi thức. Tắt ngủ/ngủ đông, cấu hình bật nguồn từ xa."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Ngôn ngữ: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <strong>Tiếng Việt</strong> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote điều khiển từ xa / phát game - khắc phục sự cố kết nối & tra lỗi</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_vi.webp"><img src="/img/cover_vi.png" alt="Minh họa khắc phục sự cố kết nối & tra lỗi UU Remote" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Hình: tra sự cố UU Remote (từ khóa triệu chứng -> nguyên nhân khả dĩ nhất + các bước + phòng ngừa)</figcaption></figure>
+<p><strong>UU Remote</strong> không kết nối, <strong>màn hình đen</strong> sau khi kết nối, <strong>lag</strong>, mất tiếng, tay cầm không nhận - đừng đoán mò. Chìa khóa là <strong>chia theo nhóm và tự kiểm tra theo thứ tự</strong>: trước hết <strong>mạng (mất gói / upload / tường lửa)</strong>, rồi <strong>driver GPU / độ phân giải</strong>, cuối cùng <strong>quyền / chứng chỉ</strong>. Nhập hoặc chạm <strong>triệu chứng</strong> của bạn (vd. <code>không kết nối</code>, <code>màn hình đen</code>, <code>lag</code>, <code>mất tiếng</code>, <code>rớt kết nối</code>, <code>tay cầm</code>) để tìm <strong>nguyên nhân khả dĩ nhất + các bước + phòng ngừa</strong>. Muốn cài trước? Xem <a href="https://uuyc163.com/download/">tải UU Remote</a> và <a href="https://uuyc163.com/faq/">câu hỏi thường gặp</a>.</p>
+<input id="q" placeholder="Nhập triệu chứng, vd. không kết nối / màn hình đen / lag / mất tiếng / rớt kết nối / tay cầm" autocomplete="off">
+<button id="go">Tìm cách khắc phục</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>Bước 1: chia sự cố thành bốn nhóm trước (đừng cài lại ngay)</h2>
+<p>Chín trên mười sự cố điều khiển từ xa/phát game thuộc bốn nhóm - phân loại trước, rồi xử lý: (1) <strong>Kết nối</strong> - không kết nối, rớt sau vài giây, xung đột cổng, không tới được khi ngủ, IPv6 dở chứng: kiểm tra <strong>mạng và tường lửa/diệt virus, công tắc từ xa, và máy chủ có trực tuyến và bật không</strong>; (2) <strong>Hình ảnh</strong> - màn hình đen, nhiễu, mờ: thường do <strong>lệch độ phân giải/toàn màn hình hoặc driver GPU cũ</strong>; (3) <strong>Độ trễ/lag</strong> - trễ thao tác, giật: nguyên nhân thật thường là <strong>mất gói / Wi-Fi yếu / upload máy chủ thấp</strong>, không phải hiệu năng; (4) <strong>Âm thanh / thiết bị / quyền</strong> - mất tiếng, tay cầm không nhận, không quyền từ xa: kiểm tra <strong>thiết bị âm thanh máy chủ, passthrough tay cầm, nhóm Người dùng Máy tính Từ xa</strong>. Thêm: <a href="https://uuyc163.com/faq/">FAQ UU Remote</a>.</p>
+<div class="cat"><div class="catbox"><b>Kết nối / rớt</b><span class="cs">không kết nối . rớt thường xuyên . xung đột cổng . không tới được khi ngủ . IPv6</span><div>Kiểm tra mạng và tường lửa/diệt virus, công tắc từ xa, và máy chủ có trực tuyến và bật không: khi lỗi, cho phép tường lửa trước, tắt/bật từ xa, làm mới IP; nếu cổng 3389 đang dùng, tìm xung đột bằng netstat; đừng để máy chủ ngủ.</div></div><div class="catbox"><b>Hình ảnh (màn hình đen / nhiễu / mờ)</b><span class="cs">màn hình đen khi kết nối . nhiễu . mờ</span><div>Thường do lệch độ phân giải/toàn màn hình hoặc driver GPU cũ: đổi sang độ phân giải được hỗ trợ, chuyển game sang cửa sổ, cập nhật driver GPU, tắt bộ nhớ đệm bitmap bền vững; với nhiễu/mờ kiểm bitrate và mất gói, thử tắt giải mã phần cứng.</div></div><div class="catbox"><b>Độ trễ / lag</b><span class="cs">trễ thao tác . giật . khựng</span><div>Nguyên nhân thật thường là mạng, không phải hiệu năng: chuyển sang cáp hoặc Wi-Fi 5 GHz, hạ giới hạn bitrate/băng thông, kiểm mất gói, ở máy chủ quay lại driver GPU ổn định, đóng app ngốn băng thông khác; upload máy chủ thiếu là nút thắt thật qua internet.</div></div><div class="catbox"><b>Âm thanh / thiết bị / quyền</b><span class="cs">mất tiếng . tay cầm không nhận . không quyền từ xa</span><div>Mất tiếng - kiểm thiết bị âm thanh máy chủ (PC đám mây / không loa cần thiết bị âm thanh ảo); tay cầm không nhận - bật passthrough và cài driver; không quyền - thêm tài khoản vào nhóm "Người dùng Máy tính Từ xa" và kiểm chính sách giới hạn kết nối.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cây quyết định định vị sự cố UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Cách định vị sự cố (chia theo triệu chứng thành bốn nhóm: kết nối / hình ảnh / độ trễ / âm thanh & thiết bị)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">Có sự cố</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">Chia theo triệu chứng</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">không kết nối/rớt -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">mạng . tường lửa . công tắc . cổng</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">màn hình đen/nhiễu -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">độ phân giải . toàn màn hình . driver GPU</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">Bốn sự cố điển hình (chọn hướng tự kiểm theo triệu chứng)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. Kết nối/rớt</text><text x="32" y="234" fill="#555" font-size="11">mạng . tường lửa . cổng . ngủ</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. Màn hình đen</text><text x="206" y="234" fill="#555" font-size="11">độ phân giải . toàn màn hình . driver</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. Độ trễ/lag</text><text x="380" y="234" fill="#555" font-size="11">mất gói . upload . cáp trước</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. Âm thanh/thiết bị</text><text x="554" y="234" fill="#555" font-size="11">thiết bị âm thanh . tay cầm . quyền</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>Hình 1: luồng định vị sự cố UU Remote - chia theo triệu chứng thành bốn nhóm (kết nối / hình ảnh / độ trễ / âm thanh & thiết bị), rồi tự kiểm theo thứ tự</figcaption></figure>
+<h2>Bước 2: nguyên nhân hay bị chẩn đoán sai nhất -> L2 (mạng trước, rồi driver/độ phân giải, cuối quyền/chứng chỉ)</h2>
+<p>Ý chính: <strong>đa số trường hợp "lag" và "không kết nối" thực ra là vấn đề mạng, không phải hiệu năng PC hay lỗi phần mềm</strong>. Tự kiểm tra theo thứ tự này tiết kiệm thời gian nhất: (1) <strong>Lag/trễ - kiểm tra mạng trước</strong>: mất gói, Wi-Fi yếu, và <strong>upload</strong> máy chủ không đủ là nút thắt thật của phát hình (điều khiển nhà từ bên ngoài gửi hình <em>ra ngoài</em>, ngốn upload) - chuyển sang cáp hoặc Wi-Fi 5 GHz, hạ giới hạn bitrate/băng thông, ở máy chủ thử quay lại driver GPU ổn định (driver NVIDIA mới từng gây độ trễ bộ mã hóa bất thường); (2) <strong>Màn hình đen - kiểm tra độ phân giải và driver trước</strong>: kết nối được nhưng đen trong khi nghe được tiếng / thấy chuột thường nghĩa là <strong>độ phân giải không được hỗ trợ hoặc độ phân giải toàn màn hình của game != độ phân giải phát</strong> (chuyển game sang cửa sổ), <strong>driver GPU cũ</strong> (cập nhật), hoặc bộ nhớ đệm bitmap bền vững hỏng (tắt nó); (3) <strong>Lỗi kết nối - kiểm tra tường lửa và công tắc trước</strong>: tường lửa/diệt virus chặn, tắt rồi bật công tắc từ xa, khởi động lại router để làm mới IP, hoặc cổng <code>3389</code> đang dùng (<code>netstat -a -o</code> để tìm xung đột); (4) <strong>Lỗi bảo mật - kiểm tra xác thực/chứng chỉ</strong>: "do lỗi bảo mật, client không thể kết nối" thường là lớp xác thực/mã hóa cấu hình sai hoặc chứng chỉ giấy phép hỏng; (5) <strong>Mất tiếng - kiểm tra thiết bị âm thanh</strong>: nếu máy chủ không có loa / PC đám mây không có thiết bị âm thanh, cài thiết bị âm thanh ảo. Bên dưới là cây quyết định để định vị sự cố; xuống nữa là bảng tự kiểm, so sánh và ước tính 2026.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bảng tự kiểm trước khi kết nối UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Bảng tự kiểm trước khi kết nối/phát (xanh = đạt / đỏ = dễ bỏ sót)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">Mục kiểm</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Đánh giá</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Trạng thái</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Máy chủ bật, đăng nhập, trực tuyến (không ngủ)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">trạng thái trực tuyến</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">đạt</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Tường lửa/diệt virus cho phép UU Remote</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">tường lửa</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">kiểm</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Hai đầu cáp hoặc Wi-Fi 5 GHz, tín hiệu đầy</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">chất lượng mạng</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">đạt</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Driver GPU máy chủ = bản ổn định mới</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">driver GPU</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">kiểm</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Upload máy chủ >= bitrate phát + dư</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">upload</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">đạt</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Cổng 3389 không bị chương trình khác dùng</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">cổng</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">kiểm</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">Lưu ý: đỏ = ba mục hay bỏ sót nhất - cho phép tường lửa, driver GPU, xung đột cổng; với không kết nối / màn hình đen / lag hãy kiểm trước khi cài lại.</text></svg><figcaption>Hình 2: bảng tự kiểm trước khi kết nối (xanh = đạt / đỏ = bẫy cần kiểm)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_vi.webp"><img src="/img/board_vi.png" alt="Minh họa các điểm xanh/đỏ của bảng tự kiểm trước khi kết nối UU Remote" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Hình: kiểm "máy chủ trực tuyến & bật . tường lửa cho phép . cáp/5GHz . driver mới . cổng trống" - lag & màn hình đen hay hỏng ở các mục đầu</figcaption></figure>
+<h2>Bảng tra đầy đủ sự cố thường gặp (triệu chứng . danh mục . hướng khắc phục)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs điều khiển từ xa / phát game phổ biến - so sánh khắc phục sự cố (tài liệu công khai)</h2>
+<table class="cmp"><tr><th>Giải pháp</th><th>Kết nối/NAT</th><th>Xử lý màn hình đen</th><th>Thiết bị/tay cầm</th><th>Độ trễ qua mạng</th><th>Công cụ chẩn đoán</th></tr><tr><td>UU Remote</td><td>P2P trực tiếp + mạng riêng, NAT tự động</td><td>đổi độ phân giải / cửa sổ / cập nhật driver</td><td>passthrough tay cầm & thiết bị</td><td>mili giây (mạng riêng tối ưu)</td><td>log client + tự kiểm</td></tr><tr><td>ToDesk</td><td>relay riêng + P2P</td><td>độ phân giải thích ứng</td><td>ánh xạ thiết bị</td><td>thấp (kênh riêng)</td><td>bảng chẩn đoán</td></tr><tr><td>Parsec</td><td>P2P đục lỗ, cần IP công cộng/UPnP</td><td>lệch toàn màn hình -> cửa sổ</td><td>hỗ trợ tay cầm gốc</td><td>rất thấp trong LAN, phụ thuộc mạng qua internet</td><td>log + tài liệu cộng đồng</td></tr><tr><td>Microsoft RDP</td><td>cổng 3389, cần cho phép/gateway</td><td>bộ nhớ đệm bitmap bền vững / độ phân giải / driver</td><td>cần cấu hình chuyển hướng</td><td>thấp trong LAN, phụ thuộc băng thông qua internet</td><td>Trình xem Sự kiện + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>relay Steam + trực tiếp</td><td>cập nhật driver / tắt giải mã HW</td><td>ưu tiên hỗ trợ tay cầm</td><td>~30-50Mb/s @1080p60</td><td>tắt IPv6 + cài đặt luồng</td></tr></table><section class="i4data">
+<h2>UU Remote điều khiển từ xa/phát game phân bố sự cố thường gặp & ghi chú (ước tính 2026)</h2>
+<p>Sau đây là <strong>ước tính 2026</strong> kết hợp tài liệu RDP chính thức của Microsoft, hỗ trợ chính thức Steam Remote Play và Parsec (không phải cam kết của nhà cung cấp hay thống kê trực tiếp; mang tính tham khảo, thay đổi theo phiên bản và mạng):</p>
+<table>
+<tr><th>Chiều</th><th>Ước tính / ghi chú</th></tr>
+<tr><td>Phân bố theo loại sự cố (ưt.)</td><td>kết nối/rớt ~ <strong>35%</strong> . hình ảnh (màn hình đen/nhiễu) ~ <strong>25%</strong> . độ trễ/lag ~ <strong>22%</strong> . âm thanh/thiết bị ~ <strong>12%</strong> . quyền/bảo mật ~ <strong>6%</strong></td></tr>
+<tr><td>Nguyên nhân thật của lag (chìa khóa)</td><td>đa số "lag / không kết nối" là <strong>vấn đề mạng</strong> (mất gói, Wi-Fi yếu, <strong>upload</strong> máy chủ thấp), <strong>không</strong> phải hiệu năng PC hay lỗi -> kiểm mạng trước phần mềm/phần cứng</td></tr>
+<tr><td>Nguyên nhân chính màn hình đen (ưt.)</td><td>lệch độ phân giải/toàn màn hình + driver GPU cũ chiếm đa số; đen mà có tiếng = vấn đề độ phân giải kinh điển, chuyển game sang cửa sổ / độ phân giải phổ biến giúp nhất</td></tr>
+<tr><td>Cổng & giao thức RDP</td><td>cổng RDP mặc định <strong>3389 (TCP)</strong>; nếu bị dùng -> không kết nối; Event ID <strong>50 (TermDD . X.224)</strong> = lỗi luồng giao thức làm rớt client</td></tr>
+<tr><td>Thứ tự tự kiểm (tiết kiệm thời gian)</td><td><strong>mạng (mất gói/upload/tường lửa) trước -> driver/độ phân giải -> quyền/chứng chỉ cuối</strong>; phát hình khoảng <strong>30-50Mbps @1080p60</strong>, và bitrate phải dưới upload máy chủ</td></tr>
+</table>
+<p><small>Cơ sở ước tính: nền nguồn + ngoại suy (kết hợp Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", hỗ trợ chính thức Steam Remote Play, hỗ trợ chính thức Parsec, 2026); thay đổi theo phiên bản và chính sách mạng. Hãy dựa vào thông tin chính thức mới nhất và thử nghiệm của bạn.</small></p>
+</section>
+<h2>Tình huống thực - đọc nhanh</h2>
+<ul class="scenes"><li>Điều khiển PC nhà từ điện thoại, màn hình đen ngay khi kết nối nhưng nghe được tiếng: thường độ phân giải máy chủ không được điện thoại hỗ trợ hoặc độ phân giải toàn màn hình của game không khớp -> chuyển game sang cửa sổ, đổi máy chủ sang độ phân giải phổ biến như 1080p, và cập nhật driver GPU.</li><li>Đột nhiên giật với độ trễ lớn giữa phiên: đừng đổ lỗi hiệu năng PC trước - kiểm mất gói và tín hiệu Wi-Fi, chuyển sang cáp hoặc lại gần Wi-Fi 5 GHz, hạ giới hạn bitrate/băng thông, hạ chất lượng nếu upload máy chủ thấp; nếu driver NVIDIA mới cài trục trặc, quay lại bản ổn định.</li><li>Client báo "không thể kết nối tới máy tính từ xa / kết nối thất bại": xác nhận máy chủ đã bật, đăng nhập và trực tuyến, cho phép UU Remote trong tường lửa và diệt virus, tắt rồi bật công tắc từ xa; nếu IP nhà đổi, khởi động lại router, hoặc xem cổng 3389 có bị chương trình khác dùng không.</li><li>Rớt sau vài giây hoặc một phút: thường mạng không ổn định hoặc vấn đề bảo mật/chứng chỉ - kiểm mất gói và định tuyến, đặt khoảng keep-alive ở máy chủ, xem lớp bảo mật và mã hóa; Event ID 50 (TermDD . X.224) trong Trình xem Sự kiện cũng chỉ tới luồng giao thức bị gián đoạn.</li><li>Hình tốt nhưng đầu từ xa mất tiếng: máy chủ không có thiết bị âm thanh dùng được (PC đám mây hoặc không loa hiện "Không có loa hoặc tai nghe được cắm") -> cài thiết bị âm thanh ảo (như VB-Cable) ở máy chủ và chọn đúng thiết bị thu trong cài đặt.</li><li>Đăng nhập được nhưng không bắt đầu điều khiển từ xa, kèm cảnh báo thiếu quyền: thêm tài khoản vào nhóm "Người dùng Máy tính Từ xa" của máy chủ, kiểm chính sách "Giới hạn số kết nối" có chặn không, và xác nhận tài khoản có quyền đăng nhập từ xa.</li></ul><div class="related"><h2>Liên quan</h2><ul><li><a href="https://uuyc163.com/">UU Remote chính thức / tải về và hướng dẫn</a></li><li><a href="https://uuyc163.com/faq/">FAQ UU Remote (chính thức)</a></li><li><a href="https://uuyc163.com/vi/tools/connection-troubleshooting/">Khắc phục sự cố UU Remote (bảng đầy đủ tham chiếu)</a></li><li><a href="https://uuycc.com/">Trung tâm tải UU Remote (chị em)</a></li></ul></div></main>
+<footer>Ghi chú sự cố / nguyên nhân / khắc phục tổng hợp từ Microsoft Learn "Troubleshoot Remote desktop disconnected errors" và "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (lỗi kết nối RDP, xung đột cổng 3389, lớp bảo mật & mã hóa, hỏng chứng chỉ giấy phép, không tới được khi ngủ, Event ID 50 TermDD X.224 lỗi giao thức), hỗ trợ chính thức Steam Remote Play (lỗi kết nối = tường lửa/diệt virus / đặt lại công tắc / làm mới IP, màn hình đen = cập nhật driver / tắt giải mã phần cứng, tắt IPv6) và hỗ trợ chính thức Parsec (màn hình đen = lệch độ phân giải toàn màn hình -> cửa sổ, mất tiếng = máy chủ không có thiết bị âm thanh -> thiết bị âm thanh ảo, độ trễ cao = driver mới / mất gói -> quay lại driver . hạ băng thông . cáp). Phân bố sự cố 2026 là ước tính, không phải cam kết của nhà cung cấp hay thống kê trực tiếp; mang tính tham khảo, hãy dựa vào thông tin chính thức mới nhất và thử nghiệm của bạn. (Bản địa hóa: không chính thức · dịch LLM)<br>Trang công cụ . tra cứu không thay thế thử nghiệm thật trong client chính thức hoặc hỗ trợ chính thức</footer>
+</div>
+<script src="/vi/codes.js"></script><script src="/app.js"></script>
+</body></html>
