@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote การแก้ปัญหาการเชื่อมต่อและข้อผิดพลาด - เชื่อมต่อไม่ได้ จอดำ แลค ไม่มีเสียง</title>
+<meta name="description" content="UU Remote เชื่อมต่อไม่ได้ จอดำหลังเชื่อมต่อ แลค ไม่มีเสียง หรือไม่พบจอย? พิมพ์หรือแตะอาการ (เชื่อมต่อไม่ได้ / จอดำ / แลค / หลุด / ไม่มีเสียง / จอย / พอร์ตชนกัน) เพื่อหาสาเหตุที่น่าจะเป็นที่สุด + ขั้นตอนแก้ + การป้องกัน: แลคมักเป็นปัญหาเครือข่าย (แพ็กเก็ตหาย, Wi-Fi อ่อน, อัปโหลดของโฮสต์ต่ำ) ไม่ใช่ประสิทธิภาพพีซี; จอดำมักเป็นความละเอียด/เต็มจอไม่ตรงกันหรือไดรเวอร์ GPU เก่า; เมื่อเชื่อมต่อล้มเหลวให้ตรวจไฟร์วอลล์/แอนติไวรัสและสวิตช์รีโมทก่อน; ข้อผิดพลาดความปลอดภัยชี้ไปที่ชั้นการยืนยันตัวตน/การเข้ารหัสหรือใบรับรองสิทธิ์เสียหาย; พอร์ต RDP 3389 ชนกัน; เข้าถึงไม่ได้เมื่อสลีป; การปรับ IPv6 ไม่ดี รวมการเปรียบเทียบ UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play และประมาณการ 2026 เรียบเรียงจากเอกสาร RDP ทางการของ Microsoft, การสนับสนุนทางการของ Steam Remote Play และ Parsec.">
+<link rel="canonical" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote การแก้ปัญหาการเชื่อมต่อและข้อผิดพลาด",
+   "url": "https://uuyc163.github.io/th/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "th",
+   "description": "UU Remote เชื่อมต่อไม่ได้ จอดำหลังเชื่อมต่อ แลค ไม่มีเสียง หรือไม่พบจอย? พิมพ์หรือแตะอาการ (เชื่อมต่อไม่ได้ / จอดำ / แลค / หลุด / ไม่มีเสียง / จอย / พอร์ตชนกัน) เพื่อหาสาเหตุที่น่าจะเป็นที่สุด + ขั้นตอนแก้ + การป้องกัน: แลคมักเป็นปัญหาเครือข่าย (แพ็กเก็ตหาย, Wi-Fi อ่อน, อัปโหลดของโฮสต์ต่ำ) ไม่ใช่ประสิทธิภาพพีซี; จอดำมักเป็นความละเอียด/เต็มจอไม่ตรงกันหรือไดรเวอร์ GPU เก่า; เมื่อเชื่อมต่อล้มเหลวให้ตรวจไฟร์วอลล์/แอนติไวรัสและสวิตช์รีโมทก่อน; ข้อผิดพลาดความปลอดภัยชี้ไปที่ชั้นการยืนยันตัวตน/การเข้ารหัสหรือใบรับรองสิทธิ์เสียหาย; พอร์ต RDP 3389 ชนกัน; เข้าถึงไม่ได้เมื่อสลีป; การปรับ IPv6 ไม่ดี รวมการเปรียบเทียบ UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play และประมาณการ 2026 เรียบเรียงจากเอกสาร RDP ทางการของ Microsoft, การสนับสนุนทางการของ Steam Remote Play และ Parsec.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "th",
+   "url": "https://uuyc163.github.io/th/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - แก้ เชื่อมต่อไม่ได้ / เชื่อมต่อล้มเหลว อย่างไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ไคลเอนต์ขึ้น \"เชื่อมต่อคอมพิวเตอร์ระยะไกลไม่ได้ / ล้มเหลว / หมดเวลา\"; คุณเข้าโฮสต์ไม่ได้. โฮสต์ปิด / ไม่ล็อกอิน / ออฟไลน์ ไฟร์วอลล์หรือแอนติไวรัสบล็อก สวิตช์รีโมทเสีย IP บ้านเปลี่ยน หรือพอร์ตถูกใช้. 1) ยืนยันโฮสต์เปิด ล็อกอิน ออนไลน์; 2) อนุญาต UU Remote ในไฟร์วอลล์และแอนติไวรัส; 3) ปิด-เปิดสวิตช์รีโมทเพื่อรีเซ็ต; 4) รีสตาร์ตเราเตอร์เพื่อรีเฟรช IP; 5) ถ้าพอร์ต 3389 ถูกใช้ เปลี่ยนหรือหยุดโปรแกรมที่ชน. ให้โฮสต์ IP LAN คงที่ เพิ่มในรายการเชื่อถือ เปิดและออนไลน์เสมอ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - แก้ จอดำหลังเชื่อมต่อ อย่างไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "เชื่อมต่อได้แต่ภาพดำสนิท มักได้ยินเสียงและเห็นเมาส์. ความละเอียดไม่รองรับ ความละเอียดเต็มจอของเกม != ความละเอียดสตรีม ไดรเวอร์ GPU เก่า หรือแคชบิตแมปถาวรเสีย. 1) เปลี่ยนโฮสต์เป็นความละเอียดทั่วไปเช่น 1080p; 2) ทำเกมเต็มจอเป็นหน้าต่าง; 3) อัปเดตไดรเวอร์ GPU; 4) ปิด \"แคชบิตแมปถาวร\" (แท็บ Performance ของ RDP). ใช้ความละเอียดที่เข้ากันได้ เก็บไดรเวอร์ GPU ใหม่."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - แก้ แลค / ดีเลย์อินพุต อย่างไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ดีเลย์อินพุตชัดเจน กระตุก / เฟรมตก ตอบสนองแย่. เครือข่ายแออัด / แพ็กเก็ตหาย Wi-Fi อ่อน อัปโหลดโฮสต์ต่ำ บิตเรตเกินแบนด์วิดท์ หรือดีเลย์ตัวเข้ารหัสผิดปกติจากไดรเวอร์ GPU ใหม่. 1) เปลี่ยนเป็นสายหรือเข้าใกล้ Wi-Fi 5GHz; 2) ลดขีดจำกัดบิตเรต/แบนด์วิดท์เพื่อเผื่อ; 3) ตรวจแพ็กเก็ตหาย ปิดแอปกินแบนด์วิดท์อื่น; 4) ที่โฮสต์ย้อนไดรเวอร์ GPU เสถียร. เลือกสายก่อน; บิตเรต < อัปโหลด มีเผื่อ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - แก้ หลุดบ่อย / หลุดในไม่กี่วินาที อย่างไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "หลุดในไม่กี่วินาทีหรือหนึ่งนาที เชื่อมต่อใหม่ซ้ำ ๆ. เครือข่ายไม่เสถียร / สูญหาย ไม่ได้ตั้ง keep-alive ปัญหาชั้นความปลอดภัยหรือใบรับรอง หรือข้อผิดพลาดโปรโตคอล TermDD X.224 (Event ID 50). 1) ตรวจแพ็กเก็ตหายและความเสถียรของเส้นทาง; 2) ตั้งช่วง keep-alive ที่โฮสต์; 3) ตรวจชั้นความปลอดภัยและการเข้ารหัส; 4) ดู Event ID 50 ใน Event Viewer เพื่อหาตำแหน่งโปรโตคอลขาด. เครือข่ายเสถียร ชั้นความปลอดภัยและใบรับรองถูกต้อง."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - แก้ ไม่มีเสียง อย่างไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ภาพดีแต่ปลายทางไม่มีเสียง. โฮสต์ไม่มีอุปกรณ์เสียงที่ใช้ได้ (พีซีคลาวด์ / ไม่มีลำโพงแสดง \"ไม่มีลำโพงหรือหูฟังเสียบอยู่\") หรือเลือกอุปกรณ์จับเสียงผิด. 1) ติดตั้งอุปกรณ์เสียงเสมือน (เช่น VB-Cable) ที่โฮสต์; 2) เลือกอุปกรณ์จับเสียงที่ถูกต้องในการตั้งค่า; 3) ถ้ามีคนเชื่อมต่ออยู่ เชื่อมต่อใหม่เพื่อให้มีผล. ให้แน่ใจว่าโฮสต์มีอุปกรณ์ส่งออกเสียงที่ใช้ได้."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - แก้ ไม่พบจอย / อุปกรณ์ต่อพ่วง อย่างไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "จอย คีย์บอร์ด/เมาส์ หรืออุปกรณ์ต่อพ่วงอื่นไม่ถูกตรวจพบหรือไม่ตอบสนองที่ปลายทาง. ไม่ได้เปิดการส่งผ่านจอยที่ไคลเอนต์ ไดรเวอร์จอยขาดที่โฮสต์ หรือโปรแกรมอื่นถืออุปกรณ์ผูกขาด. 1) เปิดการส่งผ่านจอย/อุปกรณ์ใน UU Remote; 2) ติดตั้งไดรเวอร์จอยที่เหมาะกับโฮสต์; 3) เชื่อมต่อใหม่และปิดโปรแกรมที่ถืออุปกรณ์ผูกขาด. ติดตั้งไดรเวอร์ล่วงหน้าและเปิดการส่งผ่าน."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - แก้ พอร์ตชนกัน / ปัญหา listener อย่างไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "listener ผิดปกติ / ปฏิเสธการเชื่อมต่อ พบบ่อยใน RDP ที่โฮสต์เอง / เครื่องเดียวกัน. พอร์ต RDP เริ่มต้น 3389 (หรือพอร์ตที่ตั้ง) ถูกโปรแกรมอื่นใช้. 1) ใช้ netstat -a -o หา PID ที่ใช้พอร์ต; 2) จับคู่ด้วย tasklist /svc; 3) เปลี่ยนพอร์ตหรือหยุดโปรแกรมที่ชน แล้วรีสตาร์ตบริการรีโมท. เลี่ยงให้หลายเครื่องมือรีโมทแย่งพอร์ตเดียวกัน."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - แก้ เข้าถึงไม่ได้เมื่อสลีป/ไฮเบอร์เนต อย่างไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "โฮสต์ไม่ตอบสนองและเชื่อมต่อไม่ได้เลย. โฮสต์เข้าสลีปหรือไฮเบอร์เนต การ์ดเครือข่ายจึงไม่มีไฟและไม่ตอบสนอง. 1) ตั้งแผนพลังงานโฮสต์เป็นไม่สลีป/ไฮเบอร์เนต; 2) ปลุกด้วย Wake-on-LAN หรือเปิดเครื่องระยะไกล UU; 3) เริ่มเชื่อมต่อหลังตื่น. ปิดสลีป/ไฮเบอร์เนต ตั้งค่าเปิดเครื่องระยะไกล."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">ภาษา: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <strong>ไทย</strong> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote ควบคุมระยะไกล / สตรีมเกม - การแก้ปัญหาการเชื่อมต่อและข้อผิดพลาด</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_th.webp"><img src="/img/cover_th.png" alt="ภาพประกอบการแก้ปัญหาการเชื่อมต่อและข้อผิดพลาด UU Remote" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>รูป: การค้นหาปัญหา UU Remote (คำสำคัญอาการ -> สาเหตุที่น่าจะเป็นที่สุด + ขั้นตอน + การป้องกัน)</figcaption></figure>
+<p><strong>UU Remote</strong> เชื่อมต่อไม่ได้ <strong>จอดำ</strong>หลังเชื่อมต่อ <strong>แลค</strong> ไม่มีเสียง ไม่พบจอย - อย่าเดาสุ่ม กุญแจคือ <strong>แยกตามหมวดและตรวจสอบเองตามลำดับ</strong>: ก่อนอื่น <strong>เครือข่าย (แพ็กเก็ตหาย / อัปโหลด / ไฟร์วอลล์)</strong> แล้ว <strong>ไดรเวอร์ GPU / ความละเอียด</strong> สุดท้าย <strong>สิทธิ์ / ใบรับรอง</strong> พิมพ์หรือแตะ<strong>อาการ</strong>ของคุณ (เช่น <code>เชื่อมต่อไม่ได้</code> <code>จอดำ</code> <code>แลค</code> <code>ไม่มีเสียง</code> <code>หลุด</code> <code>จอย</code>) เพื่อหา<strong>สาเหตุที่น่าจะเป็นที่สุด + ขั้นตอน + การป้องกัน</strong> อยากติดตั้งก่อน? ดู <a href="https://uuyc163.com/download/">ดาวน์โหลด UU Remote</a> และ <a href="https://uuyc163.com/faq/">คำถามที่พบบ่อย</a>.</p>
+<input id="q" placeholder="พิมพ์อาการ เช่น เชื่อมต่อไม่ได้ / จอดำ / แลค / ไม่มีเสียง / หลุด / จอย" autocomplete="off">
+<button id="go">หาวิธีแก้</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>ขั้นที่ 1: แยกความผิดพลาดเป็นสี่กลุ่มก่อน (อย่าเพิ่งติดตั้งใหม่)</h2>
+<p>เก้าในสิบของปัญหาควบคุมระยะไกล/สตรีมเข้าได้กับสี่กลุ่ม - จัดหมวดก่อนแล้วค่อยแก้: (1) <strong>การเชื่อมต่อ</strong> - เชื่อมต่อไม่ได้ หลุดในไม่กี่วินาที พอร์ตชนกัน เข้าถึงไม่ได้เมื่อสลีป IPv6 งอแง: ตรวจ <strong>เครือข่ายและไฟร์วอลล์/แอนติไวรัส สวิตช์รีโมท และโฮสต์ออนไลน์และเปิดอยู่ไหม</strong>; (2) <strong>ภาพ</strong> - จอดำ อาร์ติแฟกต์ เบลอ: มักเป็น <strong>ความละเอียด/เต็มจอไม่ตรงกันหรือไดรเวอร์ GPU เก่า</strong>; (3) <strong>ดีเลย์/แลค</strong> - ดีเลย์อินพุต กระตุก: สาเหตุจริงมักเป็น <strong>แพ็กเก็ตหาย / Wi-Fi อ่อน / อัปโหลดโฮสต์ต่ำ</strong> ไม่ใช่ประสิทธิภาพ; (4) <strong>เสียง / อุปกรณ์ต่อพ่วง / สิทธิ์</strong> - ไม่มีเสียง ไม่พบจอย ไม่มีสิทธิ์รีโมท: ตรวจ <strong>อุปกรณ์เสียงของโฮสต์ การส่งผ่านจอย กลุ่ม Remote Desktop Users</strong> เพิ่มเติม: <a href="https://uuyc163.com/faq/">FAQ UU Remote</a>.</p>
+<div class="cat"><div class="catbox"><b>การเชื่อมต่อ / หลุด</b><span class="cs">เชื่อมต่อไม่ได้ . หลุดบ่อย . พอร์ตชนกัน . เข้าถึงไม่ได้เมื่อสลีป . IPv6</span><div>ตรวจเครือข่ายและไฟร์วอลล์/แอนติไวรัส สวิตช์รีโมท และโฮสต์ออนไลน์และเปิดไหม: เมื่อล้มเหลวอนุญาตไฟร์วอลล์ก่อน ปิด/เปิดรีโมท รีเฟรช IP; ถ้าพอร์ต 3389 ถูกใช้ หาที่ชนด้วย netstat; อย่าให้โฮสต์สลีป.</div></div><div class="catbox"><b>ภาพ (จอดำ / อาร์ติแฟกต์ / เบลอ)</b><span class="cs">จอดำเมื่อเชื่อมต่อ . อาร์ติแฟกต์ . เบลอ</span><div>มักเป็นความละเอียด/เต็มจอไม่ตรงกันหรือไดรเวอร์ GPU เก่า: เปลี่ยนเป็นความละเอียดที่รองรับ ทำเกมเป็นหน้าต่าง อัปเดตไดรเวอร์ GPU ปิดแคชบิตแมปถาวร; อาร์ติแฟกต์/เบลอตรวจบิตเรตและแพ็กเก็ตหาย ลองปิดถอดรหัสฮาร์ดแวร์.</div></div><div class="catbox"><b>ดีเลย์ / แลค</b><span class="cs">ดีเลย์อินพุต . กระตุก . สะดุด</span><div>สาเหตุจริงมักเป็นเครือข่าย ไม่ใช่ประสิทธิภาพ: เปลี่ยนเป็นสายหรือ Wi-Fi 5GHz ลดขีดจำกัดบิตเรต/แบนด์วิดท์ ตรวจแพ็กเก็ตหาย ที่โฮสต์ย้อนไดรเวอร์ GPU เสถียร ปิดแอปกินแบนด์วิดท์อื่น; อัปโหลดโฮสต์ไม่พอคือคอขวดจริงผ่านอินเทอร์เน็ต.</div></div><div class="catbox"><b>เสียง / อุปกรณ์ต่อพ่วง / สิทธิ์</b><span class="cs">ไม่มีเสียง . ไม่พบจอย . ไม่มีสิทธิ์รีโมท</span><div>ไม่มีเสียง - ตรวจอุปกรณ์เสียงโฮสต์ (พีซีคลาวด์ / ไม่มีลำโพงต้องใช้อุปกรณ์เสียงเสมือน); ไม่พบจอย - เปิดการส่งผ่านและติดตั้งไดรเวอร์; ไม่มีสิทธิ์ - เพิ่มบัญชีเข้ากลุ่ม "Remote Desktop Users" และตรวจนโยบายจำกัดการเชื่อมต่อ.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="แผนผังการตัดสินใจหาตำแหน่งปัญหา UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">วิธีหาตำแหน่งปัญหา (แยกตามอาการเป็นสี่กลุ่ม: การเชื่อมต่อ / ภาพ / ดีเลย์ / เสียงและอุปกรณ์)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">มีปัญหา</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">แยกตามอาการ</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">เชื่อมต่อไม่ได้/หลุด -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">เครือข่าย . ไฟร์วอลล์ . สวิตช์ . พอร์ต</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">จอดำ/อาร์ติแฟกต์ -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">ความละเอียด . เต็มจอ . ไดรเวอร์ GPU</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">สี่ปัญหาทั่วไป (เลือกทิศทางตรวจเองตามอาการ)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. การเชื่อมต่อ/หลุด</text><text x="32" y="234" fill="#555" font-size="11">เครือข่าย . ไฟร์วอลล์ . พอร์ต . สลีป</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. จอดำ</text><text x="206" y="234" fill="#555" font-size="11">ความละเอียด . เต็มจอ . ไดรเวอร์</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. ดีเลย์/แลค</text><text x="380" y="234" fill="#555" font-size="11">สูญหาย . อัปโหลด . สายก่อน</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. เสียง/อุปกรณ์</text><text x="554" y="234" fill="#555" font-size="11">อุปกรณ์เสียง . จอย . สิทธิ์</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>รูป 1: ลำดับการหาตำแหน่งปัญหา UU Remote - แยกตามอาการเป็นสี่กลุ่ม (การเชื่อมต่อ / ภาพ / ดีเลย์ / เสียงและอุปกรณ์) แล้วตรวจตามลำดับ</figcaption></figure>
+<h2>ขั้นที่ 2: สาเหตุที่วินิจฉัยผิดบ่อยที่สุด -> L2 (เครือข่ายก่อน แล้วไดรเวอร์/ความละเอียด สุดท้ายสิทธิ์/ใบรับรอง)</h2>
+<p>แนวคิดหลัก: <strong>กรณี "แลค" และ "เชื่อมต่อไม่ได้" ส่วนใหญ่จริง ๆ เป็นปัญหาเครือข่าย ไม่ใช่ประสิทธิภาพพีซีหรือบั๊กซอฟต์แวร์</strong> การตรวจตามลำดับนี้ประหยัดเวลาที่สุด: (1) <strong>แลค/ดีเลย์ - ตรวจเครือข่ายก่อน</strong>: แพ็กเก็ตหาย Wi-Fi อ่อน และ<strong>อัปโหลด</strong>โฮสต์ไม่พอคือคอขวดจริงของสตรีม (ควบคุมบ้านจากข้างนอกส่งภาพ<em>ออกไป</em>กินอัปโหลด) - เปลี่ยนเป็นสายหรือ Wi-Fi 5GHz ลดขีดจำกัดบิตเรต/แบนด์วิดท์ ที่โฮสต์ลองย้อนไดรเวอร์ GPU เสถียร (ไดรเวอร์ NVIDIA ใหม่เคยทำให้ดีเลย์ตัวเข้ารหัสผิดปกติ); (2) <strong>จอดำ - ตรวจความละเอียดและไดรเวอร์ก่อน</strong>: เชื่อมต่อได้แต่ดำขณะได้ยินเสียง/เห็นเมาส์มักหมายถึง <strong>ความละเอียดไม่รองรับหรือความละเอียดเต็มจอของเกม != ความละเอียดสตรีม</strong> (ทำเกมเป็นหน้าต่าง) <strong>ไดรเวอร์ GPU เก่า</strong> (อัปเดต) หรือแคชบิตแมปถาวรเสีย (ปิด); (3) <strong>เชื่อมต่อล้มเหลว - ตรวจไฟร์วอลล์และสวิตช์ก่อน</strong>: ไฟร์วอลล์/แอนติไวรัสบล็อก ปิด-เปิดสวิตช์รีโมท รีสตาร์ตเราเตอร์เพื่อรีเฟรช IP หรือพอร์ต <code>3389</code> ถูกใช้ (<code>netstat -a -o</code> หาที่ชน); (4) <strong>ข้อผิดพลาดความปลอดภัย - ตรวจการยืนยันตัวตน/ใบรับรอง</strong>: "เนื่องจากข้อผิดพลาดความปลอดภัย ไคลเอนต์เชื่อมต่อไม่ได้" มักเป็นชั้นการยืนยันตัวตน/เข้ารหัสตั้งค่าผิดหรือใบรับรองสิทธิ์เสีย; (5) <strong>ไม่มีเสียง - ตรวจอุปกรณ์เสียง</strong>: ถ้าโฮสต์ไม่มีลำโพง / พีซีคลาวด์ไม่มีอุปกรณ์เสียง ติดตั้งอุปกรณ์เสียงเสมือน ด้านล่างคือแผนผังการตัดสินใจหาตำแหน่งปัญหา ถัดลงไปคือแผงตรวจสอบเอง การเปรียบเทียบ และประมาณการ 2026.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="แผงตรวจสอบเองก่อนเชื่อมต่อ UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">แผงตรวจสอบเองก่อนเชื่อมต่อ/สตรีม (เขียว = ผ่าน / แดง = พลาดง่าย)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">รายการตรวจ</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">การตัดสิน</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">สถานะ</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">โฮสต์เปิด ล็อกอิน ออนไลน์ (ไม่สลีป)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">สถานะออนไลน์</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">ผ่าน</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">ไฟร์วอลล์/แอนติไวรัสอนุญาต UU Remote</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">ไฟร์วอลล์</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">ตรวจ</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">สองฝั่งสายหรือ Wi-Fi 5GHz สัญญาณเต็ม</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">คุณภาพเครือข่าย</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">ผ่าน</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">ไดรเวอร์ GPU โฮสต์ = เวอร์ชันเสถียรใหม่</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">ไดรเวอร์ GPU</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">ตรวจ</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">อัปโหลดโฮสต์ >= บิตเรตสตรีม + เผื่อ</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">อัปโหลด</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">ผ่าน</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">พอร์ต 3389 ไม่ถูกโปรแกรมอื่นใช้</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">พอร์ต</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">ตรวจ</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">หมายเหตุ: แดง = สามข้อที่พลาดบ่อยสุด - อนุญาตไฟร์วอลล์ ไดรเวอร์ GPU พอร์ตชนกัน; เชื่อมต่อไม่ได้ / จอดำ / แลคให้ตรวจสิ่งเหล่านี้ก่อนติดตั้งใหม่.</text></svg><figcaption>รูป 2: แผงตรวจสอบเองก่อนเชื่อมต่อ (เขียว = ผ่าน / แดง = กับดักที่ต้องตรวจ)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_th.webp"><img src="/img/board_th.png" alt="ภาพประกอบจุดเขียว/แดงของแผงตรวจสอบเองก่อนเชื่อมต่อ UU Remote" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>รูป: ตรวจ "โฮสต์ออนไลน์และเปิด . ไฟร์วอลล์อนุญาต . สาย/5GHz . ไดรเวอร์ใหม่ . พอร์ตว่าง" - แลคและจอดำมักล้มที่ข้อแรก ๆ</figcaption></figure>
+<h2>ตารางค้นหาปัญหาที่พบบ่อยทั้งหมด (อาการ . หมวด . ทิศทางแก้)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs ควบคุมระยะไกล / สตรีมทั่วไป - เปรียบเทียบการแก้ปัญหา (เอกสารสาธารณะ)</h2>
+<table class="cmp"><tr><th>โซลูชัน</th><th>การเชื่อมต่อ/NAT</th><th>การจัดการจอดำ</th><th>อุปกรณ์/จอย</th><th>ดีเลย์ผ่านเครือข่าย</th><th>เครื่องมือวินิจฉัย</th></tr><tr><td>UU Remote</td><td>P2P ตรง + เครือข่ายส่วนตัว NAT อัตโนมัติ</td><td>เปลี่ยนความละเอียด / หน้าต่าง / อัปเดตไดรเวอร์</td><td>ส่งผ่านจอยและอุปกรณ์</td><td>มิลลิวินาที (เครือข่ายส่วนตัวที่ปรับแล้ว)</td><td>ล็อกไคลเอนต์ + ตรวจเอง</td></tr><tr><td>ToDesk</td><td>รีเลย์ของตัวเอง + P2P</td><td>ความละเอียดปรับอัตโนมัติ</td><td>แมปอุปกรณ์</td><td>ต่ำ (ช่องเฉพาะ)</td><td>แผงวินิจฉัย</td></tr><tr><td>Parsec</td><td>P2P เจาะรู ต้อง IP สาธารณะ/UPnP</td><td>เต็มจอไม่ตรง -> หน้าต่าง</td><td>รองรับจอยเนทีฟ</td><td>ต่ำมากใน LAN ผ่านเน็ตขึ้นกับเครือข่าย</td><td>ล็อก + เอกสารชุมชน</td></tr><tr><td>Microsoft RDP</td><td>พอร์ต 3389 ต้องอนุญาต/เกตเวย์</td><td>แคชบิตแมปถาวร / ความละเอียด / ไดรเวอร์</td><td>ต้องตั้งค่ารีไดเรกต์</td><td>ต่ำใน LAN ผ่านเน็ตขึ้นกับแบนด์วิดท์</td><td>Event Viewer + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>รีเลย์ Steam + ตรง</td><td>อัปเดตไดรเวอร์ / ปิดถอดรหัส HW</td><td>รองรับจอยก่อน</td><td>~30-50Mb/s @1080p60</td><td>ปิด IPv6 + ตั้งค่าสตรีม</td></tr></table><section class="i4data">
+<h2>UU Remote ควบคุมระยะไกล/สตรีม การกระจายปัญหาที่พบบ่อยและหมายเหตุ (ประมาณการ 2026)</h2>
+<p>ต่อไปนี้คือ <strong>ประมาณการ 2026</strong> ที่รวมเอกสาร RDP ทางการของ Microsoft, การสนับสนุนทางการ Steam Remote Play และ Parsec (ไม่ใช่คำมั่นของผู้ผลิตหรือสถิติมือหนึ่ง; เพื่ออ้างอิง เปลี่ยนตามเวอร์ชันและเครือข่าย):</p>
+<table>
+<tr><th>มิติ</th><th>ประมาณการ / หมายเหตุ</th></tr>
+<tr><td>การกระจายตามชนิดปัญหา (ปม.)</td><td>การเชื่อมต่อ/หลุด ~ <strong>35%</strong> . ภาพ (จอดำ/อาร์ติแฟกต์) ~ <strong>25%</strong> . ดีเลย์/แลค ~ <strong>22%</strong> . เสียง/อุปกรณ์ ~ <strong>12%</strong> . สิทธิ์/ความปลอดภัย ~ <strong>6%</strong></td></tr>
+<tr><td>สาเหตุจริงของแลค (กุญแจ)</td><td>ส่วนใหญ่ "แลค / เชื่อมต่อไม่ได้" เป็น <strong>ปัญหาเครือข่าย</strong> (แพ็กเก็ตหาย, Wi-Fi อ่อน, <strong>อัปโหลด</strong>โฮสต์ต่ำ) <strong>ไม่ใช่</strong> ประสิทธิภาพพีซีหรือบั๊ก -> ตรวจเครือข่ายก่อนซอฟต์/ฮาร์ดแวร์</td></tr>
+<tr><td>สาเหตุหลักจอดำ (ปม.)</td><td>ความละเอียด/เต็มจอไม่ตรง + ไดรเวอร์ GPU เก่าเป็นหลัก; ดำแต่มีเสียง = ปัญหาความละเอียดคลาสสิก ทำเกมเป็นหน้าต่าง / ความละเอียดทั่วไปช่วยมากสุด</td></tr>
+<tr><td>พอร์ตและโปรโตคอล RDP</td><td>พอร์ต RDP เริ่มต้น <strong>3389 (TCP)</strong>; ถ้าถูกใช้ -> เชื่อมต่อไม่ได้; Event ID <strong>50 (TermDD . X.224)</strong> = ข้อผิดพลาดสตรีมโปรโตคอลที่ตัดไคลเอนต์</td></tr>
+<tr><td>ลำดับตรวจเอง (ประหยัดเวลา)</td><td><strong>เครือข่าย (สูญหาย/อัปโหลด/ไฟร์วอลล์) ก่อน -> ไดรเวอร์/ความละเอียด -> สิทธิ์/ใบรับรองสุดท้าย</strong>; สตรีมราว <strong>30-50Mbps @1080p60</strong> และบิตเรตต้องต่ำกว่าอัปโหลดโฮสต์</td></tr>
+</table>
+<p><small>ฐานประมาณการ: เส้นฐานแหล่งข้อมูล + การคาดการณ์ (รวม Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", การสนับสนุนทางการ Steam Remote Play, การสนับสนุนทางการ Parsec, 2026); เปลี่ยนตามเวอร์ชันและนโยบายเครือข่าย ยึดข้อมูลทางการล่าสุดและการทดสอบของคุณ.</small></p>
+</section>
+<h2>สถานการณ์จริง - อ่านเร็ว</h2>
+<ul class="scenes"><li>ควบคุมพีซีบ้านจากมือถือ จอดำทันทีหลังเชื่อมต่อแต่มีเสียง: มักเป็นความละเอียดโฮสต์ที่มือถือไม่รองรับหรือความละเอียดเต็มจอของเกมไม่ตรง -> ทำเกมเป็นหน้าต่าง เปลี่ยนโฮสต์เป็นความละเอียดทั่วไปเช่น 1080p และอัปเดตไดรเวอร์ GPU.</li><li>อยู่ ๆ ก็ช้าและดีเลย์มากกลางเซสชัน: อย่าโทษประสิทธิภาพพีซีก่อน - ตรวจแพ็กเก็ตหายและสัญญาณ Wi-Fi เปลี่ยนเป็นสายหรือเข้าใกล้ Wi-Fi 5GHz ลดขีดจำกัดบิตเรต/แบนด์วิดท์ ลดคุณภาพถ้าอัปโหลดโฮสต์ต่ำ; ถ้าไดรเวอร์ NVIDIA ที่เพิ่งติดตั้งมีปัญหา ย้อนเป็นเสถียร.</li><li>ไคลเอนต์ขึ้น "เชื่อมต่อคอมพิวเตอร์ระยะไกลไม่ได้ / เชื่อมต่อล้มเหลว": ยืนยันว่าโฮสต์เปิด ล็อกอิน และออนไลน์ อนุญาต UU Remote ในไฟร์วอลล์และแอนติไวรัส ปิด-เปิดสวิตช์รีโมท; ถ้า IP บ้านเปลี่ยน รีสตาร์ตเราเตอร์ หรือดูว่าพอร์ต 3389 ถูกโปรแกรมอื่นใช้ไหม.</li><li>หลุดในไม่กี่วินาทีหรือหนึ่งนาที: มักเป็นเครือข่ายไม่เสถียรหรือปัญหาความปลอดภัย/ใบรับรอง - ตรวจแพ็กเก็ตหายและเส้นทาง ตั้งช่วง keep-alive ที่โฮสต์ ตรวจชั้นความปลอดภัยและการเข้ารหัส; Event ID 50 (TermDD . X.224) ใน Event Viewer ก็ชี้ถึงสตรีมโปรโตคอลขาด.</li><li>ภาพดีแต่ปลายทางไม่มีเสียง: โฮสต์ไม่มีอุปกรณ์เสียงที่ใช้ได้ (พีซีคลาวด์หรือไม่มีลำโพงแสดง "ไม่มีลำโพงหรือหูฟังเสียบอยู่") -> ติดตั้งอุปกรณ์เสียงเสมือน (เช่น VB-Cable) ที่โฮสต์และเลือกอุปกรณ์จับเสียงที่ถูกต้องในการตั้งค่า.</li><li>ล็อกอินได้แต่เริ่มควบคุมระยะไกลไม่ได้ มีคำเตือนไม่มีสิทธิ์: เพิ่มบัญชีเข้ากลุ่ม "Remote Desktop Users" ของโฮสต์ ตรวจว่านโยบาย "Limit number of connections" บล็อกไหม และยืนยันว่าบัญชีมีสิทธิ์ล็อกอินระยะไกล.</li></ul><div class="related"><h2>ที่เกี่ยวข้อง</h2><ul><li><a href="https://uuyc163.com/">UU Remote ทางการ / ดาวน์โหลดและคู่มือ</a></li><li><a href="https://uuyc163.com/faq/">FAQ UU Remote (ทางการ)</a></li><li><a href="https://uuyc163.com/th/tools/connection-troubleshooting/">การแก้ปัญหา UU Remote (ตารางอ้างอิงเต็ม)</a></li><li><a href="https://uuycc.com/">ศูนย์ดาวน์โหลด UU Remote (พี่น้อง)</a></li></ul></div></main>
+<footer>บันทึกปัญหา / สาเหตุ / การแก้เรียบเรียงจาก Microsoft Learn "Troubleshoot Remote desktop disconnected errors" และ "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (เชื่อมต่อ RDP ล้มเหลว, พอร์ต 3389 ชนกัน, ชั้นความปลอดภัยและการเข้ารหัส, ใบรับรองสิทธิ์เสียหาย, เข้าถึงไม่ได้เมื่อสลีป, Event ID 50 TermDD X.224 ข้อผิดพลาดโปรโตคอล), การสนับสนุนทางการ Steam Remote Play (เชื่อมต่อล้มเหลว = ไฟร์วอลล์/แอนติไวรัส / รีเซ็ตสวิตช์ / รีเฟรช IP, จอดำ = อัปเดตไดรเวอร์ / ปิดถอดรหัสฮาร์ดแวร์, ปิด IPv6) และการสนับสนุนทางการ Parsec (จอดำ = ความละเอียดเต็มจอไม่ตรงกัน -> หน้าต่าง, ไม่มีเสียง = โฮสต์ไม่มีอุปกรณ์เสียง -> อุปกรณ์เสียงเสมือน, ดีเลย์สูง = ไดรเวอร์ใหม่ / สูญหาย -> ย้อนไดรเวอร์ . ลดแบนด์วิดท์ . สาย) การกระจายปัญหา 2026 เป็นการประมาณ ไม่ใช่คำมั่นของผู้ผลิตหรือสถิติมือหนึ่ง เพื่ออ้างอิง โปรดยึดข้อมูลทางการล่าสุดและการทดสอบของคุณ (การแปล: ไม่เป็นทางการ · แปลโดย LLM)<br>หน้าเครื่องมือ . การค้นหาไม่แทนการทดสอบจริงในไคลเอนต์ทางการหรือการสนับสนุนทางการ</footer>
+</div>
+<script src="/th/codes.js"></script><script src="/app.js"></script>
+</body></html>
