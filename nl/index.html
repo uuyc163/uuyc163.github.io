@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote verbindingsproblemen oplossen & foutopzoeking - geen verbinding, zwart scherm, lag, geen geluid</title>
+<meta name="description" content="UU Remote maakt geen verbinding, zwart scherm na verbinden, lag, geen geluid of controller niet herkend? Typ of tik een symptoom (geen verbinding / zwart scherm / lag / verbreking / geen geluid / controller / poortconflict) om de meest waarschijnlijke oorzaak + oplosstappen + preventie te vinden: lag is meestal een netwerkprobleem (pakketverlies, zwakke wifi, lage upload van de host), niet de pc-prestaties; zwart scherm is meestal een resolutie-/volledig-scherm-mismatch of een oude GPU-driver; bij verbindingsfouten controleer eerst firewall/antivirus en de remote-schakelaar; een beveiligingsfout wijst op de auth-/encryptielaag of een beschadigd licentiecertificaat; RDP-poort 3389 conflict; onbereikbaar in slaapstand; slechte IPv6-aanpassing. Plus een vergelijking UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play en 2026-schattingen. Samengesteld uit Microsofts officiële RDP-documentatie, de officiële support van Steam Remote Play en Parsec.">
+<link rel="canonical" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote verbindingsproblemen oplossen & foutopzoeking",
+   "url": "https://uuyc163.github.io/nl/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "nl",
+   "description": "UU Remote maakt geen verbinding, zwart scherm na verbinden, lag, geen geluid of controller niet herkend? Typ of tik een symptoom (geen verbinding / zwart scherm / lag / verbreking / geen geluid / controller / poortconflict) om de meest waarschijnlijke oorzaak + oplosstappen + preventie te vinden: lag is meestal een netwerkprobleem (pakketverlies, zwakke wifi, lage upload van de host), niet de pc-prestaties; zwart scherm is meestal een resolutie-/volledig-scherm-mismatch of een oude GPU-driver; bij verbindingsfouten controleer eerst firewall/antivirus en de remote-schakelaar; een beveiligingsfout wijst op de auth-/encryptielaag of een beschadigd licentiecertificaat; RDP-poort 3389 conflict; onbereikbaar in slaapstand; slechte IPv6-aanpassing. Plus een vergelijking UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play en 2026-schattingen. Samengesteld uit Microsofts officiële RDP-documentatie, de officiële support van Steam Remote Play en Parsec.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "nl",
+   "url": "https://uuyc163.github.io/nl/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - hoe los je Geen verbinding / verbinding mislukt op?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "De client meldt \"kan geen verbinding maken met de externe computer / mislukt / timeout\"; je komt niet in de host. Host uit / niet aangemeld / offline, firewall of antivirus blokkeert, defecte remote-schakelaar, gewijzigd thuis-IP of bezette poort. 1) Bevestig dat de host aan, aangemeld en online is; 2) sta UU Remote toe in firewall en antivirus; 3) zet de remote-schakelaar uit en weer aan om te resetten; 4) herstart de router om het IP te vernieuwen; 5) is poort 3389 bezet, wijzig hem of stop het conflicterende programma. Geef de host een vast LAN-IP, voeg toe aan de vertrouwenslijst, houd hem aan en online."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - hoe los je Zwart scherm na verbinden op?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Verbonden maar het beeld is helemaal zwart, vaak terwijl je geluid hoort en de muis ziet. Resolutie niet ondersteund, volledig-scherm-resolutie van het spel != streaming-resolutie, oude GPU-driver of beschadigde persistente bitmap-caching. 1) Schakel de host naar een gangbare resolutie zoals 1080p; 2) zet het volledig-scherm-spel in venstermodus; 3) werk de GPU-driver bij; 4) schakel \"persistente bitmap-caching\" uit (RDP-tabblad Prestaties). Gebruik een compatibele resolutie, houd de GPU-driver recent."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - hoe los je Lag / invoervertraging op?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Merkbare invoervertraging, haperingen / frame-drops, slechte respons. Netwerkcongestie / pakketverlies, zwakke wifi, lage host-upload, bitrate boven de bandbreedte, of abnormale encoder-latency door een nieuwe GPU-driver. 1) Schakel naar kabel of ga dicht bij 5GHz-wifi; 2) verlaag de bitrate-/bandbreedtelimiet voor marge; 3) controleer pakketverlies, sluit andere bandbreedtevretende apps; 4) rol op de host terug naar een stabiele GPU-driver. Geef kabel de voorkeur; bitrate < upload met marge."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - hoe los je Frequent wegvallen / valt na seconden weg op?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Valt na een paar seconden of een minuut weg, telkens opnieuw verbinden. Netwerkinstabiliteit / verlies, geen keep-alive ingesteld, een beveiligingslaag- of certificaatprobleem, of een TermDD X.224 protocolfout (Event ID 50). 1) Controleer pakketverlies en routingstabiliteit; 2) stel een keep-alive-interval in op de host; 3) bekijk de beveiligingslaag en encryptie; 4) bekijk Event ID 50 in Logboeken om de protocolonderbreking te lokaliseren. Stabiel netwerk, juiste beveiligingslaag en certificaat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - hoe los je Geen geluid op?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Het beeld is goed maar er is geen geluid aan de externe kant. De host heeft geen bruikbaar audioapparaat (een cloud-pc / zonder luidspreker toont \"Er zijn geen luidsprekers of koptelefoons aangesloten\") of het verkeerde opnameapparaat is gekozen. 1) Installeer een virtueel audioapparaat (zoals VB-Cable) op de host; 2) kies het juiste opnameapparaat in de instellingen; 3) is iemand verbonden, verbind opnieuw om het toe te passen. Zorg dat de host een bruikbaar audio-uitvoerapparaat heeft."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - hoe los je Controller / randapparaat niet herkend op?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Een controller, toetsenbord/muis of ander randapparaat wordt niet herkend of reageert niet aan de externe kant. Controller-passthrough niet ingeschakeld op de client, ontbrekende controller-drivers op de host, of een ander programma dat het apparaat exclusief vasthoudt. 1) Schakel controller-/randapparaat-passthrough in in UU Remote; 2) installeer de juiste controller-driver op de host; 3) verbind opnieuw en sluit het programma dat het apparaat exclusief vasthoudt. Installeer drivers vooraf en schakel passthrough in."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - hoe los je Poortconflict / listener-probleem op?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Abnormale listener / verbinding geweigerd, vaak bij zelf-gehost / zelfde-machine RDP. De standaard RDP-poort 3389 (of je ingestelde poort) is door een ander programma in gebruik. 1) Gebruik netstat -a -o om de PID te vinden die de poort gebruikt; 2) koppel met tasklist /svc; 3) wijzig de poort of stop het conflicterende programma, herstart daarna de remote-service. Voorkom dat meerdere remote-tools om dezelfde poort vechten."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - hoe los je Onbereikbaar in slaapstand/sluimerstand op?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "De host reageert niet en verbindt op geen enkele manier. De host ging in slaap- of sluimerstand, dus de netwerkkaart is stroomloos en reageert niet. 1) Stel het energiebeheer van de host in op nooit slapen/sluimeren; 2) wek hem met Wake-on-LAN of UU-remote-inschakelen; 3) start de verbinding na het wekken. Schakel slaap-/sluimerstand uit, stel remote-inschakelen in."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Taal: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <strong>Nederlands</strong> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote afstandsbediening / game-streaming - verbindingsproblemen oplossen & foutopzoeking</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_nl.webp"><img src="/img/cover_nl.png" alt="Illustratie van UU Remote verbindingsproblemen oplossen & foutopzoeking" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Afb: UU Remote foutopzoeking (symptoom-trefwoord -> meest waarschijnlijke oorzaak + stappen + preventie)</figcaption></figure>
+<p><strong>UU Remote</strong> maakt geen verbinding, <strong>zwart scherm</strong> na verbinden, <strong>lag</strong>, geen geluid, controller niet herkend - niet blind proberen. De sleutel is <strong>op categorie splitsen en op volgorde zelf controleren</strong>: eerst <strong>netwerk (pakketverlies / upload / firewall)</strong>, dan <strong>GPU-driver / resolutie</strong>, en als laatste <strong>rechten / certificaat</strong>. Typ of tik je <strong>symptoom</strong> (bv. <code>geen verbinding</code>, <code>zwart scherm</code>, <code>lag</code>, <code>geen geluid</code>, <code>verbreking</code>, <code>controller</code>) om de <strong>meest waarschijnlijke oorzaak + stappen + preventie</strong> te vinden. Eerst installeren? Zie <a href="https://uuyc163.com/download/">UU Remote downloaden</a> en de <a href="https://uuyc163.com/faq/">veelgestelde vragen</a>.</p>
+<input id="q" placeholder="Typ een symptoom, bv. geen verbinding / zwart scherm / lag / geen geluid / verbreking / controller" autocomplete="off">
+<button id="go">Oplossing zoeken</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>Stap 1: splits de storing eerst in vier groepen (niet meteen herinstalleren)</h2>
+<p>Negen van de tien afstandsbedienings-/streamingproblemen passen in vier groepen - eerst indelen, dan behandelen: (1) <strong>Verbinding</strong> - geen verbinding, valt na seconden weg, poortconflict, onbereikbaar in slaapstand, IPv6 die zeurt: controleer <strong>netwerk en firewall/antivirus, de remote-schakelaar en of de host online en aan is</strong>; (2) <strong>Beeld</strong> - zwart scherm, artefacten, wazig: meestal een <strong>resolutie-/volledig-scherm-mismatch of een oude GPU-driver</strong>; (3) <strong>Latency/lag</strong> - invoervertraging, haperingen: de echte oorzaak is meestal <strong>pakketverlies / zwakke wifi / lage host-upload</strong>, niet de prestaties; (4) <strong>Geluid / randapparaat / rechten</strong> - geen geluid, controller niet herkend, geen remote-rechten: controleer het <strong>audioapparaat van de host, controller-passthrough, de groep Gebruikers extern bureaublad</strong>. Meer: <a href="https://uuyc163.com/faq/">UU Remote FAQ</a>.</p>
+<div class="cat"><div class="catbox"><b>Verbinding / wegvallen</b><span class="cs">geen verbinding . frequent wegvallen . poortconflict . onbereikbaar in slaapstand . IPv6</span><div>Controleer netwerk en firewall/antivirus, de remote-schakelaar en of de host online en aan is: bij verbindingsfout eerst de firewall toestaan, remote uit/aan, IP vernieuwen; is poort 3389 in gebruik, vind het conflict met netstat; laat de host niet in slaapstand gaan.</div></div><div class="catbox"><b>Beeld (zwart scherm / artefacten / wazig)</b><span class="cs">zwart scherm bij verbinden . artefacten . wazig</span><div>Meestal een resolutie-/volledig-scherm-mismatch of oude GPU-driver: schakel naar een ondersteunde resolutie, zet het spel in venstermodus, werk de GPU-driver bij, schakel persistente bitmap-caching uit; bij artefacten/wazig de bitrate en pakketverlies controleren en hardware-decoding uitschakelen om naar software te gaan.</div></div><div class="catbox"><b>Latency / lag</b><span class="cs">invoervertraging . haperingen . stotteren</span><div>De echte oorzaak is meestal het netwerk, niet de prestaties: schakel naar kabel of 5GHz-wifi, verlaag de bitrate-/bandbreedtelimiet, controleer pakketverlies, rol op de host terug naar een stabiele GPU-driver, sluit andere bandbreedtevretende apps; onvoldoende host-upload is het echte knelpunt via internet.</div></div><div class="catbox"><b>Geluid / randapparaat / rechten</b><span class="cs">geen geluid . controller niet herkend . geen remote-rechten</span><div>Geen geluid - controleer het audioapparaat van de host (een cloud-pc / zonder luidspreker heeft een virtueel audioapparaat nodig); controller niet herkend - schakel passthrough in en installeer drivers; geen rechten - voeg het account toe aan de groep "Gebruikers extern bureaublad" en controleer het verbindingslimietbeleid.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote beslisboom voor storingslokalisatie" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Hoe je een storing lokaliseert (per symptoom in vier groepen: verbinding / beeld / latency / geluid en randapparaat)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">Iets kapot</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">Per symptoom splitsen</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">geen verbinding/wegvallen -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">netwerk . firewall . schakelaar . poort</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">zwart scherm/artefacten -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">resolutie . volledig scherm . GPU-driver</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">Vier typische storingen (kies zelfcontrolerichting per symptoom)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. Verbinding/wegvallen</text><text x="32" y="234" fill="#555" font-size="11">netwerk . firewall . poort . slaapstand</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. Zwart scherm</text><text x="206" y="234" fill="#555" font-size="11">resolutie . volledig scherm . driver</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. Latency/lag</text><text x="380" y="234" fill="#555" font-size="11">verlies . upload . kabel eerst</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. Geluid/randapparaat</text><text x="554" y="234" fill="#555" font-size="11">audioapp . controller . rechten</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>Afb 1: UU Remote storingslokalisatie-flow - per symptoom in vier groepen splitsen (verbinding / beeld / latency / geluid en randapparaat), dan op volgorde zelf controleren</figcaption></figure>
+<h2>Stap 2: de vaakst verkeerd gediagnosticeerde oorzaak -> L2 (eerst netwerk, dan driver/resolutie, als laatste rechten/certificaat)</h2>
+<p>Kernidee: <strong>de meeste "lag"- en "geen verbinding"-gevallen zijn eigenlijk netwerkproblemen, geen pc-prestaties en geen softwarebug</strong>. Zelf controleren in deze volgorde bespaart de meeste tijd: (1) <strong>Lag/vertraging - controleer eerst het netwerk</strong>: pakketverlies, zwakke wifi en onvoldoende host-<strong>upload</strong> zijn het echte streaming-knelpunt (je thuis-pc van buitenaf bedienen stuurt het beeld <em>naar buiten</em>, dat kost upload) - schakel over op kabel of 5GHz-wifi, verlaag de bitrate-/bandbreedtelimiet en rol op de host terug naar een stabiele GPU-driver (nieuwere NVIDIA-drivers veroorzaakten abnormale encoder-latency); (2) <strong>Zwart scherm - controleer eerst resolutie en driver</strong>: verbonden maar zwart terwijl je geluid hoort / de muis ziet betekent meestal <strong>resolutie niet ondersteund of volledig-scherm-resolutie van het spel != streaming-resolutie</strong> (zet het spel in venstermodus), een <strong>oude GPU-driver</strong> (werk bij) of beschadigde persistente bitmap-caching (uitschakelen); (3) <strong>Verbindingsfout - controleer eerst firewall en schakelaar</strong>: firewall/antivirus die blokkeert, zet de remote-schakelaar uit en weer aan, herstart de router om het IP te vernieuwen, of poort <code>3389</code> in gebruik (<code>netstat -a -o</code> voor het conflict); (4) <strong>Beveiligingsfout - controleer auth/certificaat</strong>: "door een beveiligingsfout kon de client niet verbinden" betekent meestal een verkeerd geconfigureerde auth-/encryptielaag of een beschadigd licentiecertificaat; (5) <strong>Geen geluid - controleer het audioapparaat</strong>: heeft de host geen luidspreker / een cloud-pc geen audioapparaat, installeer dan een virtueel audioapparaat. Hieronder de beslisboom om de storing te lokaliseren; verder naar beneden het zelfcontrolepaneel, de vergelijking en de 2026-schattingen.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote zelfcontrolepaneel voor het verbinden" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Zelfcontrolepaneel voor verbinden/streaming (groen = voldaan / rood = makkelijk over het hoofd gezien)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">Controlepunt</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Oordeel</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Status</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host aan, aangemeld, online (niet in slaapstand)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">online-status</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">voldaan</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Firewall/antivirus staan UU Remote toe</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">firewall</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">checken</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Beide kanten kabel of 5GHz-wifi, vol signaal</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">netwerkkwaliteit</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">voldaan</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host-GPU-driver is een recente stabiele versie</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">GPU-driver</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">checken</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host-upload >= streaming-bitrate + marge</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">upload</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">voldaan</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Poort 3389 niet door ander programma gebruikt</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">poort</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">checken</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">Let op: rood = de drie meest over het hoofd geziene - firewall toestaan, GPU-driver, poortconflict; bij geen verbinding / zwart scherm / lag check ze voordat je herinstalleert.</text></svg><figcaption>Afb 2: zelfcontrolepaneel voor het verbinden (groen = voldaan / rood = valkuil om te checken)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_nl.webp"><img src="/img/board_nl.png" alt="Illustratie van de groen/rood-punten van het UU Remote zelfcontrolepaneel voor het verbinden" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Afb: controleer "host online en aan . firewall toegestaan . kabel/5GHz . recente driver . poort vrij" - lag en zwart scherm falen vaak bij de eerste</figcaption></figure>
+<h2>Volledige tabel met veelvoorkomende storingen (symptoom . categorie . oplosrichting)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs gangbare afstandsbediening / streaming - probleemoplossingsvergelijking (publieke documentatie)</h2>
+<table class="cmp"><tr><th>Oplossing</th><th>Verbinding/NAT</th><th>Zwart-scherm-afhandeling</th><th>Randapparaat/controller</th><th>Latency via netwerk</th><th>Diagnosetools</th></tr><tr><td>UU Remote</td><td>P2P direct + privé-netwerk, auto-NAT</td><td>resolutie wisselen / venster / driver bijwerken</td><td>controller- & randapparaat-passthrough</td><td>milliseconden (geoptimaliseerd privé-netwerk)</td><td>client-logs + zelfcontrole</td></tr><tr><td>ToDesk</td><td>eigen relay + P2P</td><td>adaptieve resolutie</td><td>randapparaat-mapping</td><td>laag (eigen kanaal)</td><td>diagnosepaneel</td></tr><tr><td>Parsec</td><td>P2P hole-punch, vereist publiek IP/UPnP</td><td>volledig-scherm-mismatch -> venster</td><td>native controller-ondersteuning</td><td>zeer laag op LAN, netwerkafhankelijk via internet</td><td>logs + community-documentatie</td></tr><tr><td>Microsoft RDP</td><td>poort 3389, vereist toestaan/gateway</td><td>persistente bitmap-cache / resolutie / driver</td><td>vereist omleidingsconfiguratie</td><td>laag op LAN, bandbreedteafhankelijk via internet</td><td>Logboeken + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>Steam-relay + direct</td><td>driver bijwerken / hardware-decode uit</td><td>controller-eerst-ondersteuning</td><td>~30-50Mb/s @1080p60</td><td>IPv6 uit + streaminstellingen</td></tr></table><section class="i4data">
+<h2>UU Remote afstandsbediening/streaming verdeling van veelvoorkomende storingen en notities (schatting 2026)</h2>
+<p>Het volgende zijn <strong>2026-schattingen</strong> die Microsofts officiële RDP-documentatie, de officiële support van Steam Remote Play en Parsec combineren (geen toezeggingen van de fabrikant en geen eigen statistiek; ter oriëntatie, verandert met versie en netwerk):</p>
+<table>
+<tr><th>Dimensie</th><th>Schatting / notitie</th></tr>
+<tr><td>Verdeling per storingstype (sch.)</td><td>verbinding/wegvallen ~ <strong>35%</strong> . beeld (zwart scherm/artefacten) ~ <strong>25%</strong> . latency/lag ~ <strong>22%</strong> . geluid/randapparaat ~ <strong>12%</strong> . rechten/beveiliging ~ <strong>6%</strong></td></tr>
+<tr><td>Echte oorzaak van lag (sleutel)</td><td>het meeste "lag / geen verbinding" is een <strong>netwerkprobleem</strong> (pakketverlies, zwakke wifi, lage host-<strong>upload</strong>), <strong>geen</strong> pc-prestaties of bug -> controleer het netwerk vóór soft-/hardware</td></tr>
+<tr><td>Hoofdoorzaak zwart scherm (sch.)</td><td>resolutie-/volledig-scherm-mismatch + oude GPU-driver overheersen; zwart met geluid = een klassiek resolutieprobleem, het spel in venstermodus / een gangbare resolutie helpt het meest</td></tr>
+<tr><td>RDP-poort & protocol</td><td>RDP-standaardpoort <strong>3389 (TCP)</strong>; in gebruik -> geen verbinding; Event ID <strong>50 (TermDD . X.224)</strong> = een protocolstroomfout die de client verbreekt</td></tr>
+<tr><td>Zelfcontrolevolgorde (tijdbesparend)</td><td><strong>netwerk (verlies/upload/firewall) eerst -> driver/resolutie -> rechten/certificaat als laatste</strong>; streaming is ongeveer <strong>30-50Mbps @1080p60</strong>, en de bitrate moet onder de host-upload blijven</td></tr>
+</table>
+<p><small>Schattingsbasis: bronbaseline + extrapolatie (Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", officiële support Steam Remote Play, officiële support Parsec, 2026 gecombineerd); verandert met versie en netwerkbeleid. Vertrouw op de nieuwste officiële info en je eigen tests.</small></p>
+</section>
+<h2>Praktijkgevallen - snel lezen</h2>
+<ul class="scenes"><li>De thuis-pc vanaf de telefoon bedienen, zwart scherm meteen na verbinden maar je hoort geluid: meestal wordt de host-resolutie niet ondersteund door de telefoon of past de volledig-scherm-resolutie van het spel niet -> zet het spel in venstermodus, schakel de host naar een gangbare resolutie zoals 1080p en werk de GPU-driver bij.</li><li>Het wordt ineens traag met grote vertraging halverwege de sessie: geef niet eerst de pc-prestaties de schuld - controleer pakketverlies en wifi-signaal, schakel naar kabel of ga dichter bij 5GHz-wifi, verlaag de bitrate-/bandbreedtelimiet, verlaag de kwaliteit bij lage host-upload; spookt een vers geïnstalleerde NVIDIA-driver, rol terug naar een stabiele.</li><li>De client meldt "kan geen verbinding maken met de externe computer / verbinding mislukt": bevestig dat de host aan, aangemeld en online is, sta UU Remote toe in firewall en antivirus, zet de remote-schakelaar uit en weer aan; is het thuis-IP veranderd, herstart de router, of kijk of poort 3389 door een ander programma wordt gebruikt.</li><li>Het valt na een paar seconden of een minuut weg: meestal netwerkinstabiliteit of een beveiligings-/certificaatprobleem - controleer pakketverlies en routing, stel een keep-alive-interval in op de host, bekijk de beveiligingslaag en encryptie; Event ID 50 (TermDD . X.224) in Logboeken wijst ook op een onderbroken protocolstroom.</li><li>Het beeld is goed maar er is geen geluid aan de externe kant: de host heeft geen bruikbaar audioapparaat (een cloud-pc of zonder luidspreker toont "Er zijn geen luidsprekers of koptelefoons aangesloten") -> installeer een virtueel audioapparaat (zoals VB-Cable) op de host en kies het juiste opnameapparaat in de instellingen.</li><li>Je kunt inloggen maar geen afstandsbediening starten, met een melding over ontbrekende rechten: voeg het account toe aan de groep "Gebruikers extern bureaublad" van de host, controleer of het beleid "Aantal verbindingen beperken" blokkeert, en bevestig dat het account externe aanmeldingsrechten heeft.</li></ul><div class="related"><h2>Gerelateerd</h2><ul><li><a href="https://uuyc163.com/">UU Remote officieel / download en handleiding</a></li><li><a href="https://uuyc163.com/faq/">UU Remote FAQ (officieel)</a></li><li><a href="https://uuyc163.com/nl/tools/connection-troubleshooting/">UU Remote probleemoplossing (gezaghebbende volledige tabel)</a></li><li><a href="https://uuycc.com/">UU Remote downloadcentrum (zustersite)</a></li></ul></div></main>
+<footer>Notities over storing / oorzaak / oplossing zijn samengesteld uit Microsoft Learn "Troubleshoot Remote desktop disconnected errors" en "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (RDP-verbindingsfout, poort-3389-conflict, beveiligingslaag & encryptie, beschadigd licentiecertificaat, onbereikbaar in slaapstand, Event ID 50 TermDD X.224 protocolfout), de officiële support van Steam Remote Play (verbindingsfout = firewall/antivirus / schakelaar-reset / IP vernieuwen, zwart scherm = drivers bijwerken / hardware-decoding uit, IPv6 uitschakelen) en de officiële support van Parsec (zwart scherm = volledig-scherm-resolutie-mismatch -> venster, geen geluid = host zonder audioapparaat -> virtueel audioapparaat, hoge latency = nieuwere driver / verlies -> driver terug . bandbreedte omlaag . kabel). De 2026-storingsverdeling is een schatting, geen toezeggingen van de fabrikant en geen eigen statistiek; ter oriëntatie, vertrouw op de nieuwste officiële info en je eigen tests. (Lokalisatie: niet-officieel · LLM-vertaling)<br>Toolpagina . het opzoeken vervangt geen echte tests in de officiële client of de officiële support</footer>
+</div>
+<script src="/nl/codes.js"></script><script src="/app.js"></script>
+</body></html>
