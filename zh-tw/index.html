@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU遠程 遠端控制/串流 連線故障 & 報錯速查表 - 連不上、黑畫面、卡頓延遲、沒聲音怎麼解決</title>
+<meta name="description" content="UU遠程連不上、連上黑畫面、卡頓延遲、沒聲音、手把不識別怎麼修？輸入或點選「故障現象」（連不上 / 黑畫面 / 卡頓 / 斷線 / 沒聲音 / 手把 / 連接埠衝突），查最可能原因 + 解決步驟 + 預防自檢：卡頓真因多是網路丟包與被控端上行不足（非效能）、黑畫面多為解析度/全螢幕不匹配或顯卡驅動舊、連線失敗先查防火牆/防毒與遠端開關、安全錯誤是認證/加密層或授權憑證、RDP 連接埠 3389 衝突、睡眠/休眠不可連、IPv6 相容不良。附 UU遠程 vs ToDesk / Parsec / 微軟 RDP / Steam Remote Play 排障對照與 2026 故障分布估算。口徑整理自微軟 RDP 官方排障文件、Steam Remote Play 與 Parsec 官方支援。">
+<link rel="canonical" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU遠程 遠端控制/串流 連線故障 & 報錯速查表",
+   "url": "https://uuyc163.github.io/zh-tw/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "zh-Hant",
+   "description": "UU遠程連不上、連上黑畫面、卡頓延遲、沒聲音、手把不識別怎麼修？輸入或點選「故障現象」（連不上 / 黑畫面 / 卡頓 / 斷線 / 沒聲音 / 手把 / 連接埠衝突），查最可能原因 + 解決步驟 + 預防自檢：卡頓真因多是網路丟包與被控端上行不足（非效能）、黑畫面多為解析度/全螢幕不匹配或顯卡驅動舊、連線失敗先查防火牆/防毒與遠端開關、安全錯誤是認證/加密層或授權憑證、RDP 連接埠 3389 衝突、睡眠/休眠不可連、IPv6 相容不良。附 UU遠程 vs ToDesk / Parsec / 微軟 RDP / Steam Remote Play 排障對照與 2026 故障分布估算。口徑整理自微軟 RDP 官方排障文件、Steam Remote Play 與 Parsec 官方支援。",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "zh-Hant",
+   "url": "https://uuyc163.github.io/zh-tw/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU遠程 連不上 / 連線失敗 怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "用戶端提示「無法連線到遠端電腦/連線失敗/連線逾時」，進不去被控端。 被控端未開機登入或不在線、防火牆/防毒攔截、遠端開關異常、家裡 IP 變動、連接埠被占。 ① 確認被控端已開機登入且在線；② 防火牆與防毒放行 UU遠程；③ 把遠端開關關掉再打開重置；④ 重啟路由刷新 IP；⑤ 連接埠 3389 被占用則換埠或停衝突程式。 被控端固定內網 IP、加入信任名單、保持開機在線。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU遠程 連上後黑畫面 怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "連上但畫面全黑，往往能聽到聲音、看到滑鼠。 解析度不被支援、遊戲全螢幕解析度≠串流解析度、顯卡驅動舊、持久點陣圖快取損壞。 ① 被控端換 1080p 等通用解析度；② 把全螢幕遊戲改視窗化；③ 更新顯卡驅動；④ 關閉「持久點陣圖快取」（RDP 體驗選項卡）。 用相容解析度、顯卡驅動保持較新。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU遠程 卡頓 / 操作延遲 怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "操作有明顯延遲、畫面卡頓掉幀、跟手差。 網路壅塞/丟包、Wi-Fi 信號弱、被控端上行不足、碼率超頻寬、新顯卡驅動編碼器延遲異常。 ① 改有線或貼近 5G Wi-Fi；② 降碼率/頻寬上限給網路留緩衝；③ 查丟包、關其他占網程式；④ 被控端回退穩定版顯卡驅動。 有線優先、碼率 < 上行並留緩衝。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU遠程 頻繁斷線 / 幾秒就斷 怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "連上幾秒或一分鐘就斷開，反覆重連。 網路不穩/丟包、keep-alive 未配置、安全層或憑證問題、TermDD X.224 協定錯（Event ID 50）。 ① 查網路丟包與路由穩定性；② 被控端配置 keep-alive 保活間隔；③ 檢查安全層與加密設定；④ 看事件檢視器 Event ID 50 定位協定中斷。 穩定網路、正確的安全層與憑證。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU遠程 沒有聲音 怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "畫面正常但遠端沒有聲音。 被控端沒有可用音訊裝置（雲端主機/沒插喇叭，顯示「未插入喇叭或耳機」）、選錯擷取裝置。 ① 被控端裝一個虛擬音效卡（如 VB-Cable）；② 在設定裡把音訊擷取選到對的裝置；③ 有人連著時改設定後需重連生效。 保證被控端有可用音訊輸出裝置。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU遠程 手把 / 外設不識別 怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "手把、鍵鼠等外設在遠端不被識別或無反應。 控制端未開手把透傳、被控端缺手把驅動、被其他程式獨佔。 ① 在 UU遠程開啟手把/外設透傳；② 被控端安裝對應手把驅動；③ 斷開重連、關閉獨佔該裝置的程式。 提前裝好驅動並開啟透傳。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU遠程 連接埠衝突 / 監聽異常 怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "服務監聽異常、連線被拒，多發生在自建/RDP 同機。 RDP 預設連接埠 3389（或所配埠）被其它程式占用。 ① 用 netstat -a -o 找占用埠的行程 PID；② tasklist /svc 對出是哪個程式；③ 改埠或停衝突程式，再重啟遠端服務。 避免多遠控程式搶同一連接埠。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU遠程 睡眠/休眠無法連 怎麼解決？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "被控端無回應、怎麼都連不上。 被控端進入了睡眠或休眠，網卡斷電無法回應。 ① 被控端電源設為「從不睡眠/休眠」；② 用網路喚醒(WoL)或 UU 遠端開機把它喚醒；③ 喚醒後再發起連線。 關睡眠/休眠、配好遠端開機。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">語言：<a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <strong>繁體中文</strong> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU遠程 遠端控制 / 遊戲串流 連線故障 & 報錯速查表</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_tw.webp"><img src="/img/cover_tw.png" alt="UU遠程 遠端控制/串流 連線故障與報錯速查表示意圖" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>圖：UU遠程連線故障速查（現象關鍵字 → 最可能原因 + 解決步驟 + 預防自檢）</figcaption></figure>
+<p><strong>UU遠程</strong>連不上、連上<strong>黑畫面</strong>、<strong>卡頓延遲</strong>、沒聲音、手把不識別——別亂試。排障關鍵是<strong>先分類、按順序自檢</strong>：先看<strong>網路（丟包/上行/防火牆）</strong>，再看<strong>顯卡驅動/解析度</strong>，最後才查<strong>權限/憑證</strong>。輸入或點選你的<strong>故障現象</strong>（如 <code>連不上</code>、<code>黑畫面</code>、<code>卡頓</code>、<code>沒聲音</code>、<code>斷線</code>、<code>手把</code>），即查 <strong>最可能原因 + 解決步驟 + 預防自檢</strong>。想先裝用戶端，看 <a href="https://uuyc163.com/download/">UU遠程下載</a> 與 <a href="https://uuyc163.com/faq/">常見問題</a>。</p>
+<input id="q" placeholder="輸入故障現象，例如 連不上 / 黑畫面 / 卡頓 / 沒聲音 / 斷線 / 手把" autocomplete="off">
+<button id="go">查解決</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>第一步：先把故障分四類（別一上來就重裝）</h2>
+<p>遠端控制/串流出問題，九成能歸進四類，先分類再對症：① <strong>連線類</strong>——連不上、連上幾秒就斷、連接埠衝突、睡眠不可連、IPv6 抽風，優先查<strong>網路與防火牆/防毒、遠端開關、被控端是否在線開機</strong>；② <strong>畫面類</strong>——黑畫面、花屏、糊，多為<strong>解析度/全螢幕不匹配或顯卡驅動舊</strong>；③ <strong>延遲卡頓類</strong>——操作延遲、掉幀，真因多在<strong>網路丟包/Wi-Fi 弱/被控端上行不足</strong>，非效能；④ <strong>聲音/外設/權限類</strong>——沒聲音、手把不識別、無權限遠控，查<strong>被控端音訊裝置、手把透傳、遠端使用者群組授權</strong>。更多見 <a href="https://uuyc163.com/faq/">UU遠程常見問題</a>。</p>
+<div class="cat"><div class="catbox"><b>連線 / 斷線類</b><span class="cs">連不上 · 頻繁斷線 · 連接埠衝突 · 睡眠不可連 · IPv6</span><div>優先查網路與防火牆/防毒、遠端開關、被控端是否在線開機：連線失敗先放行防火牆、關掉再開遠端、刷新 IP；連接埠 3389 被占用用 netstat 查衝突；被控端別進睡眠/休眠。</div></div><div class="catbox"><b>畫面類（黑畫面 / 花屏 / 糊）</b><span class="cs">連上黑畫面 · 花屏馬賽克 · 畫質糊</span><div>多為解析度/全螢幕不匹配或顯卡驅動舊：換支援的解析度、把遊戲改視窗化、更新顯卡驅動、關持久點陣圖快取；花屏/糊查碼率與丟包，必要時關硬體解碼試軟解。</div></div><div class="catbox"><b>延遲 / 卡頓類</b><span class="cs">操作延遲 · 掉幀 · 卡頓</span><div>真因多在網路非效能：改有線或 5G Wi-Fi、降碼率/頻寬上限、查丟包、被控端試回退穩定版顯卡驅動、關其他占網程式；被控端上行不足是外網串流真瓶頸。</div></div><div class="catbox"><b>聲音 / 外設 / 權限類</b><span class="cs">沒聲音 · 手把不識別 · 無權限遠控</span><div>沒聲音查被控端音訊裝置（雲端主機/無喇叭需裝虛擬音效卡）；手把不識別開手把透傳、裝驅動；無權限把帳號加入「遠端桌面使用者」群組、檢查連線數原則。</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU遠程故障定位決策流程圖" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">故障怎麼定位（先按現象分四類：連線 / 畫面 / 延遲 / 聲音外設）</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">出故障了</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">先按現象分</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">連不上/斷線 →</text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">查網路·防火牆·遠端開關·連接埠</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">黑畫面/花屏 →</text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">查解析度·全螢幕·顯卡驅動</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">四類典型故障（按現象選自檢方向）</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">① 連線/斷線</text><text x="32" y="234" fill="#555" font-size="11">網路·防火牆·連接埠·睡眠</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">② 畫面黑屏</text><text x="206" y="234" fill="#555" font-size="11">解析度·全螢幕·驅動</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">③ 延遲卡頓</text><text x="380" y="234" fill="#555" font-size="11">丟包·上行·有線優先</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">④ 聲音/外設</text><text x="554" y="234" fill="#555" font-size="11">音訊裝置·手把·權限</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>圖1：UU遠程故障定位流程——先按現象分四類（連線 / 畫面 / 延遲 / 聲音外設），再按自檢順序對症</figcaption></figure>
+<h2>第二步：最常被誤判的真因 → L2 深度（先網路、再驅動/解析度、最後權限/憑證）</h2>
+<p>關鍵認知：<strong>大多數「卡頓」「連不上」其實是網路問題，不是電腦效能或軟體 Bug</strong>。按這個順序自檢最省時間：① <strong>卡頓/延遲先查網路</strong>——丟包、Wi-Fi 信號弱、被控端<strong>上行</strong>不足才是串流真瓶頸（外網控家裡，畫面從家裡「傳出去」吃的是上行），改有線或 5G Wi-Fi、降碼率/頻寬上限、被控端試回退穩定版顯卡驅動（新 NVIDIA 驅動曾致編碼器延遲異常）；② <strong>黑畫面先查解析度與驅動</strong>——連上黑畫面但能聽到聲音/看到滑鼠，多是<strong>解析度不被支援或遊戲全螢幕解析度≠串流解析度</strong>（把遊戲改視窗化）、<strong>顯卡驅動舊</strong>（更新驅動）、或持久點陣圖快取損壞（關掉它）；③ <strong>連線失敗先查防火牆與開關</strong>——防火牆/防毒攔截、遠端開關需關掉再開、IP 變動可重啟路由刷新、連接埠 <code>3389</code> 被占用（<code>netstat -a -o</code> 查衝突行程）；④ <strong>安全錯誤查認證/憑證</strong>——「由於安全錯誤無法連線」多為認證/加密層配置錯或授權憑證損壞；⑤ <strong>沒聲音查音訊裝置</strong>——被控端無喇叭/雲端主機無音訊裝置時需裝虛擬音效卡。下圖是「故障定位」決策樹；再往下是連線前自檢板、橫向對照與 2026 估算。</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU遠程連線前自檢評分板示意圖" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">連線/串流前自檢板示意（綠=已滿足 / 紅=易忽略待核）</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">自檢項</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">判斷</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">狀態</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">被控端已開機登入、在線（非睡眠/休眠）</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">在線狀態</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">已滿足</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">防火牆/防毒已放行 UU遠程</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">防火牆</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">待核</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">兩端有線或 5G Wi-Fi、信號滿格</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">網路品質</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">已滿足</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">被控端顯卡驅動為較新穩定版</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">顯卡驅動</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">待核</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">被控端「上行」≥ 串流碼率 + 緩衝</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">上行頻寬</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">已滿足</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">連接埠 3389 未被其它程式占用</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">連接埠</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">待核</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">註：紅 = 最易忽略三點——防火牆放行、顯卡驅動、連接埠占用；連不上/黑畫面/卡頓先核這幾項再重裝。</text></svg><figcaption>圖2：連線前自檢評分板示意（綠=已滿足 / 紅=易踩坑待核）</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_tw.webp"><img src="/img/board_tw.png" alt="UU遠程連線前自檢評分板紅綠項示意圖" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>圖：先核「被控端在線開機·防火牆放行·有線/5G·驅動新·連接埠不占」——卡頓黑畫面多栽在前幾項</figcaption></figure>
+<h2>全部常見故障 速查表（現象 · 分類 · 解決方向）</h2>
+<table id="tbl"></table>
+<h2>UU遠程 vs 主流遠控/串流方案 排障維度 橫向對照（公開口徑）</h2>
+<table class="cmp"><tr><th>方案</th><th>連線/穿透</th><th>黑畫面處理</th><th>外設/手把</th><th>跨網延遲</th><th>排障工具</th></tr><tr><td>UU遠程</td><td>P2P 直連 + 專網，自動穿透</td><td>切解析度/視窗化/更新驅動</td><td>手把/外設透傳</td><td>毫秒級（專網最佳化）</td><td>用戶端日誌 + 自檢</td></tr><tr><td>ToDesk</td><td>自研中轉 + P2P</td><td>解析度自適應</td><td>支援外設映射</td><td>低延遲（專屬通道）</td><td>診斷面板</td></tr><tr><td>Parsec</td><td>P2P 打洞，需公網/UPnP</td><td>全螢幕解析度不匹配→視窗化</td><td>手把原生支援</td><td>區網極低、跨網看網路</td><td>日誌 + 社群文件</td></tr><tr><td>微軟 RDP</td><td>連接埠 3389，需放行/閘道</td><td>持久點陣圖快取/解析度/驅動</td><td>需重新導向設定</td><td>區網低、跨網看頻寬</td><td>Event Viewer + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>Steam 中繼 + 直連</td><td>更新驅動/關硬體解碼</td><td>手把優先支援</td><td>約 30–50Mb/s@1080p60</td><td>停 IPv6 + 串流設定</td></tr></table><section class="i4data">
+<h2>UU遠程 遠端控制/串流 常見故障分布與口徑（2026 估算）</h2>
+<p>以下為綜合微軟 RDP 官方排障文件、Steam Remote Play 與 Parsec 官方支援的 <strong>2026 估算</strong>（非廠商承諾值、非一手統計，僅供參考；隨版本與網路環境變化）：</p>
+<table>
+<tr><th>維度</th><th>估算 / 口徑</th></tr>
+<tr><td>故障類型分布（估算）</td><td>連線/斷線類 ≈ <strong>35%</strong> · 畫面(黑畫面/花屏) ≈ <strong>25%</strong> · 延遲/卡頓 ≈ <strong>22%</strong> · 聲音/外設 ≈ <strong>12%</strong> · 權限/安全 ≈ <strong>6%</strong></td></tr>
+<tr><td>卡頓真因（關鍵）</td><td>多數「卡頓/連不上」是<strong>網路問題</strong>（丟包、Wi-Fi 弱、被控端<strong>上行</strong>不足），<strong>非</strong>電腦效能或軟體 Bug → 先查網路再查軟硬體</td></tr>
+<tr><td>黑畫面首因（估算）</td><td>解析度/全螢幕不匹配 + 顯卡驅動舊占多數；連上黑畫面卻有聲音 = 典型解析度問題，把遊戲視窗化 / 換通用解析度最有效</td></tr>
+<tr><td>RDP 連接埠與協定</td><td>RDP 預設連接埠 <strong>3389（TCP）</strong>，被占用會連不上；Event ID <strong>50（TermDD·X.224）</strong>= 協定流錯誤導致用戶端被斷開</td></tr>
+<tr><td>自檢順序（省時）</td><td><strong>先網路（丟包/上行/防火牆）→ 再驅動/解析度 → 最後權限/憑證</strong>；串流約 <strong>30–50Mbps@1080p60</strong>，碼率須 &lt; 被控端上行</td></tr>
+</table>
+<p><small>估算口徑：信源基線 + 時間外推（綜合微軟 Learn《Troubleshoot Remote desktop disconnected errors》《Disconnect Codes and Reasons》、Steam Remote Play 官方支援、Parsec 官方支援 2026 抓取），隨版本與網路策略會變；請以各家最新官方與實測為準。</small></p>
+</section>
+<h2>真實場景速判</h2>
+<ul class="scenes"><li>在外用手機控家裡電腦，連上就黑畫面但能聽到聲音：多是被控端解析度不被手機支援或遊戲全螢幕解析度不匹配 → 先把遊戲改視窗化、被控端換 1080p 等通用解析度，並更新顯卡驅動。</li><li>玩著玩著突然很卡、操作延遲大：先別怪電腦效能——查網路丟包與 Wi-Fi 信號，改有線或貼近 5G Wi-Fi、把碼率/頻寬上限調低，被控端上行不足時降畫質；新裝的 NVIDIA 驅動若異常可回退穩定版。</li><li>用戶端提示「無法連線到遠端電腦/連線失敗」：確認被控端已開機登入在線、防火牆與防毒放行 UU遠程、把遠端開關關掉再打開；家裡 IP 變動時重啟路由刷新，或檢查連接埠 3389 是否被別的程式占用。</li><li>連上幾秒或一分鐘就斷開：多為網路不穩或安全/憑證問題——查丟包與路由、被控端配置 keep-alive 保活、檢查安全層與加密設定；事件檢視器出現 Event ID 50（TermDD·X.224 協定錯）也指向連線被中斷。</li><li>畫面正常但遠端沒聲音：被控端沒有可用音訊裝置（雲端主機或沒插喇叭會顯示「未插入喇叭或耳機」）→ 被控端裝一個虛擬音效卡（如 VB-Cable）、並在設定裡選對擷取裝置。</li><li>登入後無法發起遠控、提示無權限：把要用的帳號加入被控端的「遠端桌面使用者」群組、檢查「限制連線數」群組原則是否卡住、確認該帳號有遠端登入權限。</li></ul><div class="related"><h2>相關</h2><ul><li><a href="https://uuyc163.com/">UU遠程官網 / 下載與使用教學</a></li><li><a href="https://uuyc163.com/faq/">UU遠程常見問題（官方 FAQ）</a></li><li><a href="https://uuyc163.com/zh-tw/tools/connection-troubleshooting/">UU遠程連線故障速查（本站權威版 · 全量表）</a></li><li><a href="https://uuycc.com/">UU遠程下載中心（姊妹站）</a></li></ul></div></main>
+<footer>故障/原因/解決口徑整理自微軟 Learn《Troubleshoot Remote desktop disconnected errors》與《Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons》（RDP 連線失敗、連接埠 3389 衝突、安全層與加密、授權憑證損壞、睡眠不可連、Event ID 50 TermDD X.224 協定錯）、Steam Remote Play 官方支援（連線失敗=防火牆/防毒/開關重置/刷新IP、黑畫面=更新驅動/關硬體解碼、停用 IPv6）與 Parsec 官方支援（黑畫面=全螢幕解析度不匹配→視窗化、無聲=被控端無音訊裝置→裝虛擬音效卡、高延遲=新驅動/丟包→回退驅動·降頻寬·改有線）。2026 故障分布為估算、非廠商承諾值、非一手統計，僅供參考，請以各家最新官方與實測為準。<br>工具頁 · 速查口徑不替代官方用戶端實測與官方技術支援</footer>
+</div>
+<script src="/zh-tw/codes.js"></script><script src="/app.js"></script>
+</body></html>
