@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="my"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote ချိတ်ဆက်မှုပြဿနာ - မချိတ်နိုင်, မျက်နှာပြင်မည်း, နှေး, အသံမရှိ</title>
+<meta name="description" content="UU Remote မချိတ်နိုင်, ချိတ်ပြီးနောက် မျက်နှာပြင်မည်း, နှေး, အသံမရှိ ဒါမှမဟုတ် ထိန်းချုပ်ကိရိယာ မမှတ်မိ? ရောဂါလက္ခဏာ ရိုက်/ထိပါ (မချိတ်နိုင် / မျက်နှာပြင်မည်း / နှေး / ပြတ် / အသံမရှိ / ထိန်းချုပ်ကိရိယာ / port ပဋိပက္ခ) — ဖြစ်နိုင်ဆုံးအကြောင်းရင်း + ဖြေရှင်းနည်းအဆင့်များ + ကာကွယ်ရေး ရှာရန်: နှေးခြင်းသည် များသောအားဖြင့် ကွန်ရက်ပြဿနာ (packet ဆုံးရှုံး, Wi-Fi အားနည်း, host upload နည်း), PC စွမ်းဆောင်ရည်မဟုတ်; မျက်နှာပြင်မည်းသည် များသောအားဖြင့် resolution/full-screen မကိုက်ညီ သို့မဟုတ် GPU driver ဟောင်း; ချိတ်ဆက်မှုကျရှုံးလျှင် firewall/antivirus နှင့် remote switch ကို ဦးစွာစစ်ပါ; security error သည် authentication/encryption layer သို့မဟုတ် license certificate ပျက်စီးခြင်းကို ညွှန်ပြ; RDP port 3389 ပဋိပက္ခ; sleep တွင်မရောက်နိုင်; IPv6 ညံ့သော လိုက်လျောညီထွေမှု. UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play နှိုင်းယှဉ်ချက် နှင့် 2026 ခန့်မှန်းချက်များ. Microsoft တရားဝင် RDP စာရွက်စာတမ်း, Steam Remote Play နှင့် Parsec တရားဝင်အထောက်အပံ့မှ စုစည်း.">
+<link rel="canonical" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote ချိတ်ဆက်မှုပြဿနာဖြေရှင်းခြင်း & အမှားရှာဖွေခြင်း",
+   "url": "https://uuyc163.github.io/my/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "my",
+   "description": "UU Remote မချိတ်နိုင်, ချိတ်ပြီးနောက် မျက်နှာပြင်မည်း, နှေး, အသံမရှိ ဒါမှမဟုတ် ထိန်းချုပ်ကိရိယာ မမှတ်မိ? ရောဂါလက္ခဏာ ရိုက်/ထိပါ (မချိတ်နိုင် / မျက်နှာပြင်မည်း / နှေး / ပြတ် / အသံမရှိ / ထိန်းချုပ်ကိရိယာ / port ပဋိပက္ခ) — ဖြစ်နိုင်ဆုံးအကြောင်းရင်း + ဖြေရှင်းနည်းအဆင့်များ + ကာကွယ်ရေး ရှာရန်: နှေးခြင်းသည် များသောအားဖြင့် ကွန်ရက်ပြဿနာ (packet ဆုံးရှုံး, Wi-Fi အားနည်း, host upload နည်း), PC စွမ်းဆောင်ရည်မဟုတ်; မျက်နှာပြင်မည်းသည် များသောအားဖြင့် resolution/full-screen မကိုက်ညီ သို့မဟုတ် GPU driver ဟောင်း; ချိတ်ဆက်မှုကျရှုံးလျှင် firewall/antivirus နှင့် remote switch ကို ဦးစွာစစ်ပါ; security error သည် authentication/encryption layer သို့မဟုတ် license certificate ပျက်စီးခြင်းကို ညွှန်ပြ; RDP port 3389 ပဋိပက္ခ; sleep တွင်မရောက်နိုင်; IPv6 ညံ့သော လိုက်လျောညီထွေမှု. UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play နှိုင်းယှဉ်ချက် နှင့် 2026 ခန့်မှန်းချက်များ. Microsoft တရားဝင် RDP စာရွက်စာတမ်း, Steam Remote Play နှင့် Parsec တရားဝင်အထောက်အပံ့မှ စုစည်း.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "my",
+   "url": "https://uuyc163.github.io/my/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - မချိတ်နိုင် / ချိတ်ဆက်မှုကျရှုံး ကို ဘယ်လိုဖြေရှင်းမလဲ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "client က \"remote computer သို့ ချိတ်မရ / ကျရှုံး / timeout\" ပြ; host ထဲ မဝင်နိုင်. host ပိတ် / မ login / offline, firewall သို့မဟုတ် antivirus ပိတ်ဆို့, remote switch ချွတ်ယွင်း, အိမ် IP ပြောင်း, သို့မဟုတ် port အသုံးပြုနေ. 1) host ဖွင့်, login & online ဖြစ်ကြောင်း အတည်ပြု; 2) firewall & antivirus တွင် UU Remote ခွင့်ပြု; 3) remote switch ပိတ်-ဖွင့်၍ reset; 4) IP refresh အတွက် router restart; 5) port 3389 အသုံးပြုနေလျှင် ပြောင်း သို့မဟုတ် ပဋိပက္ခ program ရပ်. host ကို LAN IP အမြဲတမ်းပေး, ယုံကြည်စာရင်းတွင်ထည့်, ဖွင့် & online ထား."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - ချိတ်ပြီးနောက် မျက်နှာပြင်မည်း ကို ဘယ်လိုဖြေရှင်းမလဲ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ချိတ်ထားသော်လည်း ပုံ လုံးဝမည်း, မကြာခဏ အသံကြား & mouse မြင်. resolution မပံ့ပိုး, ဂိမ်း full-screen resolution != streaming resolution, GPU driver ဟောင်း, သို့မဟုတ် persistent bitmap caching ပျက်. 1) host ကို 1080p ကဲ့သို့ ဖြစ်လေ့ရှိ resolution သို့ပြောင်း; 2) full-screen ဂိမ်းကို window လုပ်; 3) GPU driver update; 4) \"persistent bitmap caching\" ပိတ် (RDP Performance tab). သဟဇာတ resolution သုံး, GPU driver အသစ်ထား."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - နှေး / input နှောင့်နှေး ကို ဘယ်လိုဖြေရှင်းမလဲ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "input နှောင့်နှေး ထင်ရှား, ဆွဲ / frame ကျ, တုံ့ပြန်မှုညံ့. ကွန်ရက်ပိတ်ဆို့ / packet ဆုံးရှုံး, Wi-Fi အားနည်း, host upload နည်း, bandwidth ထက် bitrate ပို, သို့မဟုတ် GPU driver အသစ်မှ encoder နှောင့်နှေး ပုံမှန်မဟုတ်. 1) cable သို့မဟုတ် Wi-Fi 5GHz အနီးသွား; 2) လပ်ရာအတွက် bitrate/bandwidth ကန့်သတ်လျှော့; 3) packet ဆုံးရှုံးစစ်, bandwidth စားသော app ပိတ်; 4) host တွင် တည်ငြိမ်သော GPU driver ပြန်. cable ဦးစား; bitrate < upload လပ်ရာဖြင့်."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - မကြာခဏပြတ် / စက္ကန့်အတွင်းပြတ် ကို ဘယ်လိုဖြေရှင်းမလဲ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "စက္ကန့်အနည်းငယ် သို့မဟုတ် တစ်မိနစ်အတွင်း ပြတ်, ထပ်ခါထပ်ခါ ပြန်ချိတ်. ကွန်ရက်မတည်ငြိမ် / ဆုံးရှုံး, keep-alive မသတ်မှတ်, security layer သို့မဟုတ် certificate ပြဿနာ, သို့မဟုတ် TermDD X.224 protocol error (Event ID 50). 1) packet ဆုံးရှုံး & routing တည်ငြိမ်မှုစစ်; 2) host တွင် keep-alive interval သတ်မှတ်; 3) security layer & encryption စစ်; 4) protocol ပြတ်တောက်မှုအတွက် Event Viewer Event ID 50 ကြည့်. တည်ငြိမ်ကွန်ရက်, မှန်ကန်သော security layer & certificate."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - အသံမရှိ ကို ဘယ်လိုဖြေရှင်းမလဲ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ပုံကောင်းသော်လည်း remote ဘက်တွင် အသံမရှိ. host တွင် အသုံးပြုနိုင်သော audio device မရှိ (cloud PC / speaker မရှိ \"speaker သို့မဟုတ် headphone မချိတ်ထား\" ပြ) သို့မဟုတ် မှားသော capture device ရွေး. 1) host တွင် virtual audio device (VB-Cable ကဲ့သို့) တပ်; 2) settings တွင် မှန်ကန်သော capture device ရွေး; 3) တစ်စုံတစ်ဦးချိတ်ထားလျှင် အသုံးချရန် ပြန်ချိတ်. host တွင် အသုံးပြုနိုင်သော audio output device ရှိစေ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - ထိန်းချုပ်ကိရိယာ / peripheral မမှတ်မိ ကို ဘယ်လိုဖြေရှင်းမလဲ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ထိန်းချုပ်ကိရိယာ, keyboard/mouse သို့မဟုတ် အခြား peripheral သည် remote ဘက်တွင် မမှတ်မိ သို့မဟုတ် မတုံ့ပြန်. client တွင် controller passthrough မဖွင့်, host တွင် controller driver မရှိ, သို့မဟုတ် အခြား program က device ကို သီးသန့်ကိုင်. 1) UU Remote တွင် controller/peripheral passthrough ဖွင့်; 2) host တွင် သင့်လျော်သော controller driver တပ်; 3) ပြန်ချိတ် & device ကို သီးသန့်ကိုင်ထားသော program ပိတ်. driver ကြိုတင်တပ် & passthrough ဖွင့်."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - port ပဋိပက္ခ / listener ပြဿနာ ကို ဘယ်လိုဖြေရှင်းမလဲ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "listener ပုံမှန်မဟုတ် / ချိတ်ဆက်မှု ငြင်းပယ်, self-hosted / တူညီစက် RDP တွင် ဖြစ်လေ့ရှိ. default RDP port 3389 (သို့မဟုတ် သတ်မှတ် port) ကို အခြား program သုံး. 1) port သုံးသော PID ရှာရန် netstat -a -o; 2) tasklist /svc ဖြင့်တွဲ; 3) port ပြောင်း သို့မဟုတ် ပဋိပက္ခ program ရပ်, ထို့နောက် remote service restart. remote tool များစွာ တူညီ port ကို မလုကြစေ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - sleep/hibernate တွင်မရောက်နိုင် ကို ဘယ်လိုဖြေရှင်းမလဲ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "host မတုံ့ပြန် & လုံးဝ မချိတ်နိုင်. host သည် sleep သို့မဟုတ် hibernate ဝင်သွား၍ network card လျှပ်စစ်မရှိ & မတုံ့ပြန်. 1) host power plan ကို ဘယ်တော့မှ sleep/hibernate မဖြစ်အောင်သတ်မှတ်; 2) Wake-on-LAN သို့မဟုတ် UU remote power-on ဖြင့်နှိုး; 3) နိုးပြီးနောက် ချိတ်ဆက်မှုစတင်. sleep/hibernate ပိတ်, remote power-on သတ်မှတ်."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">ဘာသာစကား: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <strong>မြန်မာ</strong></nav>
+<h1>UU Remote အဝေးထိန်း / ဂိမ်းstreaming - ချိတ်ဆက်မှုပြဿနာဖြေရှင်းခြင်း & အမှားရှာဖွေခြင်း</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_my.webp"><img src="/img/cover_my.png" alt="UU Remote ချိတ်ဆက်မှုပြဿနာဖြေရှင်းခြင်း & အမှားရှာဖွေခြင်း သရုပ်ဖော်ပုံ" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>ပုံ: UU Remote ချွတ်ယွင်းမှုရှာဖွေခြင်း (ရောဂါလက္ခဏာ keyword -> ဖြစ်နိုင်ဆုံးအကြောင်းရင်း + အဆင့်များ + ကာကွယ်ရေး)</figcaption></figure>
+<p><strong>UU Remote</strong> မချိတ်နိုင်, ချိတ်ချိန် <strong>မျက်နှာပြင်မည်း</strong>, <strong>နှေး</strong>, အသံမရှိ, ထိန်းချုပ်ကိရိယာ မမှတ်မိ - မျက်စိမှိတ်ပြီး မခန့်မှန်းပါနှင့်. သော့ချက်မှာ <strong>အမျိုးအစားအလိုက် ခွဲ၍ အစဉ်လိုက် ကိုယ်တိုင်စစ်ပါ</strong>: ဦးစွာ <strong>ကွန်ရက် (packet ဆုံးရှုံး / upload / firewall)</strong>, ထို့နောက် <strong>GPU driver / resolution</strong>, နောက်ဆုံး <strong>ခွင့်ပြုချက် / certificate</strong>. သင့် <strong>ရောဂါလက္ခဏာ</strong> ရိုက်/ထိပါ (ဥပမာ <code>မချိတ်နိုင်</code>, <code>မျက်နှာပြင်မည်း</code>, <code>နှေး</code>, <code>အသံမရှိ</code>, <code>ပြတ်</code>, <code>ထိန်းချုပ်ကိရိယာ</code>) — <strong>ဖြစ်နိုင်ဆုံးအကြောင်းရင်း + အဆင့်များ + ကာကွယ်ရေး</strong> ရှာရန်. ဦးစွာတပ်ဆင်မလား? ကြည့်ပါ <a href="https://uuyc163.com/download/">UU Remote ဒေါင်းလုဒ်</a> နှင့် <a href="https://uuyc163.com/faq/">မေးလေ့ရှိသောမေးခွန်းများ</a>.</p>
+<input id="q" placeholder="ရောဂါလက္ခဏာ ရိုက်ပါ ဥပမာ မချိတ်နိုင် / မျက်နှာပြင်မည်း / နှေး / အသံမရှိ / ပြတ် / ထိန်းချုပ်ကိရိယာ" autocomplete="off">
+<button id="go">ဖြေရှင်းနည်းရှာ</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>အဆင့် ၁: ချွတ်ယွင်းမှုကို ဦးစွာ လေးအုပ်စုခွဲပါ (ချက်ချင်း ပြန်မတပ်ဆင်ပါနှင့်)</h2>
+<p>အဝေးထိန်း/streaming ပြဿနာ ဆယ်ခုတွင် ကိုးခု လေးအုပ်စုတွင် ပါဝင်: (1) <strong>ချိတ်ဆက်မှု</strong> - မချိတ်နိုင်, စက္ကန့်ပိုင်းအတွင်းပြတ်, port ပဋိပက္ခ, sleep တွင်မရောက်နိုင်, IPv6 ဆိုးရွား: <strong>ကွန်ရက်နှင့် firewall/antivirus, remote switch, နှင့် host online ဖွင့်ထား/မထား</strong> စစ်ပါ; (2) <strong>ပုံ</strong> - မျက်နှာပြင်မည်း, artifact, ဝါး: များသောအားဖြင့် <strong>resolution/full-screen မကိုက်ညီ သို့မဟုတ် GPU driver ဟောင်း</strong>; (3) <strong>နှောင့်နှေး/lag</strong> - input နှောင့်နှေး, ဆွဲ: စစ်မှန်အကြောင်းရင်းမှာ များသောအားဖြင့် <strong>packet ဆုံးရှုံး / Wi-Fi အားနည်း / host upload နည်း</strong>, စွမ်းဆောင်ရည်မဟုတ်; (4) <strong>အသံ / peripheral / ခွင့်ပြုချက်</strong> - အသံမရှိ, ထိန်းချုပ်ကိရိယာ မမှတ်မိ, remote ခွင့်မရှိ: <strong>host audio device, controller passthrough, Remote Desktop Users group</strong> စစ်ပါ. ပိုမို: <a href="https://uuyc163.com/faq/">UU Remote FAQ</a>.</p>
+<div class="cat"><div class="catbox"><b>ချိတ်ဆက်မှု / ပြတ်</b><span class="cs">မချိတ်နိုင် . မကြာခဏပြတ် . port ပဋိပက္ခ . sleep တွင်မရောက်နိုင် . IPv6</span><div>ကွန်ရက်နှင့် firewall/antivirus, remote switch, နှင့် host online & ဖွင့်ထား စစ်ပါ: ကျရှုံးလျှင် firewall ဦးစွာခွင့်ပြု, remote ပိတ်/ဖွင့်, IP refresh; port 3389 အသုံးပြုနေလျှင် netstat ဖြင့် ပဋိပက္ခရှာ; host ကို sleep မဖြစ်စေပါနှင့်.</div></div><div class="catbox"><b>ပုံ (မျက်နှာပြင်မည်း / artifact / ဝါး)</b><span class="cs">ချိတ်ချိန် မျက်နှာပြင်မည်း . artifact . ဝါး</span><div>များသောအားဖြင့် resolution/full-screen မကိုက်ညီ သို့မဟုတ် GPU driver ဟောင်း: ပံ့ပိုးသော resolution သို့ပြောင်း, ဂိမ်းကို window လုပ်, GPU driver update, persistent bitmap caching ပိတ်; artifact/ဝါးအတွက် bitrate & packet ဆုံးရှုံး စစ်, hardware decoding ပိတ်၍ကြည့်.</div></div><div class="catbox"><b>နှောင့်နှေး / lag</b><span class="cs">input နှောင့်နှေး . ဆွဲ . တုံ့</span><div>စစ်မှန်အကြောင်းရင်းမှာ များသောအားဖြင့် ကွန်ရက်ဖြစ်ပြီး စွမ်းဆောင်ရည်မဟုတ်: cable သို့မဟုတ် Wi-Fi 5GHz သို့ပြောင်း, bitrate/bandwidth ကန့်သတ်လျှော့, packet ဆုံးရှုံးစစ်, host တွင် တည်ငြိမ်သော GPU driver ပြန်, bandwidth စားသော အခြား app ပိတ်; host upload နည်းခြင်းသည် internet မှ စစ်မှန်သော bottleneck.</div></div><div class="catbox"><b>အသံ / peripheral / ခွင့်ပြုချက်</b><span class="cs">အသံမရှိ . ထိန်းချုပ်ကိရိယာ မမှတ်မိ . remote ခွင့်မရှိ</span><div>အသံမရှိ - host audio device စစ် (cloud PC / speaker မရှိ virtual audio device လို); ထိန်းချုပ်ကိရိယာ မမှတ်မိ - passthrough ဖွင့် & driver တပ်; ခွင့်မရှိ - account ကို "Remote Desktop Users" group တွင်ထည့် & connection limit policy စစ်.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote ချွတ်ယွင်းမှုတည်နေရာ ဆုံးဖြတ်ချက်သစ်ပင်" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">ချွတ်ယွင်းမှု ဘယ်လိုတည်နေရာရှာမလဲ (ရောဂါလက္ခဏာအလိုက် လေးအုပ်စု: ချိတ်ဆက်မှု / ပုံ / နှောင့်နှေး / အသံ & peripheral)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">တစ်ခုခုပျက်</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">ရောဂါလက္ခဏာအလိုက်ခွဲ</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">မချိတ်နိုင်/ပြတ် -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">ကွန်ရက် . firewall . switch . port</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">မျက်နှာပြင်မည်း/artifact -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">resolution . full-screen . GPU driver</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">ဖြစ်လေ့ရှိ ချွတ်ယွင်းမှု လေးခု (ရောဂါလက္ခဏာအလိုက် ကိုယ်တိုင်စစ်ဦးတည်ရာ ရွေး)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. ချိတ်ဆက်/ပြတ်</text><text x="32" y="234" fill="#555" font-size="11">ကွန်ရက် . firewall . port . sleep</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. မျက်နှာပြင်မည်း</text><text x="206" y="234" fill="#555" font-size="11">resolution . full-screen . driver</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. နှောင့်နှေး/lag</text><text x="380" y="234" fill="#555" font-size="11">ဆုံးရှုံး . upload . cable ဦးစွာ</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. အသံ/peripheral</text><text x="554" y="234" fill="#555" font-size="11">audio device . controller . ခွင့်ပြုချက်</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>ပုံ ၁: UU Remote ချွတ်ယွင်းမှုတည်နေရာ flow - ရောဂါလက္ခဏာအလိုက် လေးအုပ်စုခွဲ (ချိတ်ဆက်မှု / ပုံ / နှောင့်နှေး / အသံ & peripheral), ထို့နောက် အစဉ်လိုက်စစ်ပါ</figcaption></figure>
+<h2>အဆင့် ၂: အများဆုံး မှားယွင်းစစ်ဆေးခံရသော အကြောင်းရင်း -> L2 (ကွန်ရက်ဦးစွာ, ထို့နောက် driver/resolution, နောက်ဆုံး ခွင့်ပြုချက်/certificate)</h2>
+<p>အဓိကအတွေး: <strong>"နှေး" နှင့် "မချိတ်နိုင်" အများစုသည် တကယ်တော့ ကွန်ရက်ပြဿနာများဖြစ်ပြီး PC စွမ်းဆောင်ရည် သို့မဟုတ် software bug မဟုတ်</strong>. ဤအစဉ်လိုက် စစ်ဆေးခြင်းသည် အချိန်အကုန်ဆုံးသက်သာ: (1) <strong>နှေး/နှောင့်နှေး - ကွန်ရက်ဦးစွာ</strong>: packet ဆုံးရှုံး, Wi-Fi အားနည်း, နှင့် host <strong>upload</strong> မလုံလောက်ခြင်းသည် streaming ၏ စစ်မှန်သော bottleneck (အပြင်မှ အိမ်ထိန်းချုပ်ခြင်းသည် ပုံကို <em>အပြင်သို့</em> ပို့၍ upload စားသည်) - cable သို့မဟုတ် Wi-Fi 5GHz သို့ ပြောင်းပါ, bitrate/bandwidth ကန့်သတ်ချက် လျှော့ပါ, host တွင် တည်ငြိမ်သော GPU driver သို့ ပြန်သွားပါ (NVIDIA driver အသစ်များက encoder နှောင့်နှေးမှု ပုံမှန်မဟုတ်အောင် ဖြစ်စေဖူး); (2) <strong>မျက်နှာပြင်မည်း - resolution နှင့် driver ဦးစွာ</strong>: ချိတ်ထားသော်လည်း မည်းနေ၍ အသံကြား/mouse မြင်လျှင် များသောအားဖြင့် <strong>resolution မပံ့ပိုး သို့မဟုတ် ဂိမ်း full-screen resolution != streaming resolution</strong> (ဂိမ်းကို window လုပ်ပါ), <strong>GPU driver ဟောင်း</strong> (update), သို့မဟုတ် persistent bitmap caching ပျက် (ပိတ်ပါ); (3) <strong>ချိတ်ဆက်မှုကျရှုံး - firewall နှင့် switch ဦးစွာ</strong>: firewall/antivirus ပိတ်ဆို့, remote switch ပိတ်-ဖွင့်, IP refresh အတွက် router restart, သို့မဟုတ် port <code>3389</code> အသုံးပြုနေ (<code>netstat -a -o</code> ပဋိပက္ခအတွက်); (4) <strong>security error - authentication/certificate</strong>: "security error ကြောင့် client ချိတ်မရ" သည် များသောအားဖြင့် authentication/encryption layer မှားယွင်းပြင်ဆင် သို့မဟုတ် license certificate ပျက်; (5) <strong>အသံမရှိ - audio device</strong>: host တွင် speaker မရှိ / cloud PC တွင် audio device မရှိလျှင် virtual audio device တပ်ပါ. အောက်တွင် ချွတ်ယွင်းမှုတည်နေရာ ဆုံးဖြတ်ချက်သစ်ပင်; ပိုအောက်တွင် ကိုယ်တိုင်စစ်ဆေး panel, နှိုင်းယှဉ်ချက်, 2026 ခန့်မှန်းချက်.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote ချိတ်မီ ကိုယ်တိုင်စစ်ဆေး panel" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">ချိတ်/stream မီ ကိုယ်တိုင်စစ်ဆေး panel (အစိမ်း = ပြည့်မီ / အနီ = လွယ်လွယ်လွတ်)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">စစ်ဆေးအချက်</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">ဆုံးဖြတ်</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">အခြေအနေ</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">host ဖွင့်, login, online (sleep မဟုတ်)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">online အခြေအနေ</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">ပြည့်မီ</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">firewall/antivirus က UU Remote ခွင့်ပြု</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">firewall</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">စစ်</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">နှစ်ဖက် cable သို့မဟုတ် Wi-Fi 5GHz, signal ပြည့်</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">ကွန်ရက်အရည်အသွေး</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">ပြည့်မီ</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">host GPU driver = တည်ငြိမ်သော version အသစ်</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">GPU driver</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">စစ်</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">host upload >= streaming bitrate + လပ်ရာ</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">upload</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">ပြည့်မီ</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">port 3389 ကို အခြား program မသုံး</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">port</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">စစ်</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">မှတ်ချက်: အနီ = အများဆုံးလွတ်သော သုံးခု - firewall ခွင့်ပြု, GPU driver, port ပဋိပက္ခ; မချိတ်နိုင် / မျက်နှာပြင်မည်း / နှေး တွင် ပြန်မတပ်ဆင်မီ ဤအရာများစစ်ပါ.</text></svg><figcaption>ပုံ ၂: ချိတ်မီ ကိုယ်တိုင်စစ်ဆေး panel (အစိမ်း = ပြည့်မီ / အနီ = စစ်ရန် ထောင်ချောက်)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_my.webp"><img src="/img/board_my.png" alt="UU Remote ချိတ်မီ ကိုယ်တိုင်စစ်ဆေး panel ၏ အစိမ်း/အနီ အမှတ်များ သရုပ်ဖော်ပုံ" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>ပုံ: စစ်ပါ "host online & ဖွင့် . firewall ခွင့်ပြု . cable/5GHz . driver အသစ် . port အားလပ်" - နှေး & မျက်နှာပြင်မည်း သည် ပထမများတွင် မကြာခဏကျရှုံး</figcaption></figure>
+<h2>ဖြစ်လေ့ရှိသော ချွတ်ယွင်းမှုအားလုံး ရှာဖွေဇယား (ရောဂါလက္ခဏာ . အမျိုးအစား . ဖြေရှင်းဦးတည်ရာ)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs ဖြစ်လေ့ရှိ အဝေးထိန်း / streaming - ပြဿနာဖြေရှင်းနှိုင်းယှဉ်ချက် (အများသုံးစာရွက်စာတမ်း)</h2>
+<table class="cmp"><tr><th>ဖြေရှင်းချက်</th><th>ချိတ်ဆက်မှု/NAT</th><th>မျက်နှာပြင်မည်း ကိုင်တွယ်ခြင်း</th><th>peripheral/controller</th><th>ကွန်ရက်မှ နှောင့်နှေး</th><th>diagnostic tools</th></tr><tr><td>UU Remote</td><td>P2P တိုက်ရိုက် + private network, auto NAT</td><td>resolution ပြောင်း / window / driver update</td><td>controller & peripheral passthrough</td><td>millisecond (optimize private network)</td><td>client log + ကိုယ်တိုင်စစ်</td></tr><tr><td>ToDesk</td><td>ကိုယ်ပိုင် relay + P2P</td><td>adaptive resolution</td><td>peripheral mapping</td><td>နိမ့် (dedicated channel)</td><td>diagnostic panel</td></tr><tr><td>Parsec</td><td>P2P hole-punch, public IP/UPnP လို</td><td>full-screen မကိုက် -> window</td><td>native controller support</td><td>LAN တွင် အလွန်နိမ့်, internet တွင် network မူတည်</td><td>log + community docs</td></tr><tr><td>Microsoft RDP</td><td>port 3389, ခွင့်ပြု/gateway လို</td><td>persistent bitmap cache / resolution / driver</td><td>redirection setup လို</td><td>LAN တွင် နိမ့်, internet တွင် bandwidth မူတည်</td><td>Event Viewer + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>Steam relay + တိုက်ရိုက်</td><td>driver update / hardware decode ပိတ်</td><td>controller-first support</td><td>~30-50Mb/s @1080p60</td><td>IPv6 ပိတ် + stream settings</td></tr></table><section class="i4data">
+<h2>UU Remote အဝေးထိန်း/streaming ဖြစ်လေ့ရှိ ချွတ်ယွင်းမှု ဖြန့်ဖြူးမှု & မှတ်စု (ခန့်မှန်း 2026)</h2>
+<p>အောက်ပါတို့သည် Microsoft တရားဝင် RDP စာရွက်စာတမ်း, Steam Remote Play & Parsec တရားဝင်အထောက်အပံ့ တို့ပေါင်းစပ်သော <strong>2026 ခန့်မှန်းချက်များ</strong> (vendor ကတိ သို့မဟုတ် တိုက်ရိုက်စာရင်းဇယားမဟုတ်; ကိုးကားရန်, version & network ဖြင့်ပြောင်း):</p>
+<table>
+<tr><th>အတိုင်းအတာ</th><th>ခန့်မှန်း / မှတ်စု</th></tr>
+<tr><td>ချွတ်ယွင်းမှုအမျိုးအစား ဖြန့်ဖြူးမှု (ခန့်.)</td><td>ချိတ်ဆက်/ပြတ် ~ <strong>35%</strong> . ပုံ (မျက်နှာပြင်မည်း/artifact) ~ <strong>25%</strong> . နှောင့်နှေး/lag ~ <strong>22%</strong> . အသံ/peripheral ~ <strong>12%</strong> . ခွင့်ပြုချက်/security ~ <strong>6%</strong></td></tr>
+<tr><td>lag ၏ စစ်မှန်အကြောင်းရင်း (သော့ချက်)</td><td>"lag / မချိတ်နိုင်" အများစုသည် <strong>ကွန်ရက်ပြဿနာ</strong> (packet ဆုံးရှုံး, Wi-Fi အားနည်း, host <strong>upload</strong> နည်း), <strong>မဟုတ်</strong> PC စွမ်းဆောင်ရည် သို့မဟုတ် bug -> software/hardware မတိုင်မီ ကွန်ရက်စစ်</td></tr>
+<tr><td>မျက်နှာပြင်မည်း အဓိကအကြောင်းရင်း (ခန့်.)</td><td>resolution/full-screen မကိုက် + GPU driver ဟောင်း လွှမ်းမိုး; အသံပါ မည်း = classic resolution ပြဿနာ, ဂိမ်းကို window လုပ် / ဖြစ်လေ့ရှိ resolution အများဆုံးအကူအညီ</td></tr>
+<tr><td>RDP port & protocol</td><td>default RDP port <strong>3389 (TCP)</strong>; အသုံးပြုနေလျှင် -> မချိတ်နိုင်; Event ID <strong>50 (TermDD . X.224)</strong> = client ကိုဖြတ်သော protocol stream error</td></tr>
+<tr><td>ကိုယ်တိုင်စစ်အစဉ် (အချိန်ချွေတာ)</td><td><strong>ကွန်ရက် (ဆုံးရှုံး/upload/firewall) ဦးစွာ -> driver/resolution -> နောက်ဆုံး ခွင့်ပြုချက်/certificate</strong>; streaming ခန့် <strong>30-50Mbps @1080p60</strong>, bitrate သည် host upload အောက် နေရမည်</td></tr>
+</table>
+<p><small>ခန့်မှန်းအခြေခံ: source baseline + extrapolation (Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", Steam Remote Play တရားဝင်အထောက်အပံ့, Parsec တရားဝင်အထောက်အပံ့, 2026 ပေါင်းစပ်); version & network policy ဖြင့်ပြောင်း. နောက်ဆုံးတရားဝင်အချက်အလက် & သင့်စမ်းသပ်မှုကို အားကိုးပါ.</small></p>
+</section>
+<h2>အစစ်အမှန်အခြေအနေ - မြန်မြန်ဖတ်</h2>
+<ul class="scenes"><li>ဖုန်းမှ အိမ် PC ထိန်းချုပ်, ချိတ်ချိန်ချင်း မျက်နှာပြင်မည်းသော်လည်း အသံကြား: များသောအားဖြင့် host resolution ကို ဖုန်းက မပံ့ပိုး သို့မဟုတ် ဂိမ်း full-screen resolution မကိုက် -> ဂိမ်းကို window လုပ်, host ကို 1080p ကဲ့သို့ ဖြစ်လေ့ရှိ resolution သို့ပြောင်း, GPU driver update.</li><li>session အလယ်တွင် ရုတ်တရက် နှေး၍ နှောင့်နှေးကြီး: PC စွမ်းဆောင်ရည်ကို ဦးစွာ မပြစ်တင်ပါနှင့် - packet ဆုံးရှုံး & Wi-Fi signal စစ်, cable သို့ပြောင်း သို့မဟုတ် Wi-Fi 5GHz အနီးသွား, bitrate/bandwidth ကန့်သတ်လျှော့, host upload နည်းလျှင် quality လျှော့; NVIDIA driver အသစ်တပ် ပြဿနာရှိလျှင် တည်ငြိမ်သို့ပြန်.</li><li>client က "remote computer သို့ ချိတ်မရ / ချိတ်ဆက်မှုကျရှုံး" ဆို: host ဖွင့်, login & online ဖြစ်ကြောင်း အတည်ပြု, firewall & antivirus တွင် UU Remote ခွင့်ပြု, remote switch ပိတ်-ဖွင့်; အိမ် IP ပြောင်းလျှင် router restart, သို့မဟုတ် port 3389 ကို အခြား program သုံးနေလားကြည့်.</li><li>စက္ကန့်အနည်းငယ် သို့မဟုတ် တစ်မိနစ်အတွင်း ပြတ်: များသောအားဖြင့် ကွန်ရက်မတည်ငြိမ် သို့မဟုတ် security/certificate ပြဿနာ - packet ဆုံးရှုံး & routing စစ်, host တွင် keep-alive interval သတ်မှတ်, security layer & encryption စစ်; Event Viewer ရှိ Event ID 50 (TermDD . X.224) သည်လည်း ပြတ်တောက်သော protocol stream ကို ညွှန်ပြ.</li><li>ပုံကောင်းသော်လည်း remote ဘက်တွင် အသံမရှိ: host တွင် အသုံးပြုနိုင်သော audio device မရှိ (cloud PC သို့မဟုတ် speaker မရှိ "speaker သို့မဟုတ် headphone မချိတ်ထား" ပြ) -> host တွင် virtual audio device (VB-Cable ကဲ့သို့) တပ် & settings တွင် မှန်ကန်သော capture device ရွေး.</li><li>login ဝင်နိုင်သော်လည်း remote control မစတင်နိုင်, ခွင့်မရှိ သတိပေးချက်ဖြင့်: account ကို host ၏ "Remote Desktop Users" group တွင်ထည့်, "Limit number of connections" policy ပိတ်ဆို့လားစစ်, account တွင် remote logon ခွင့်ရှိကြောင်း အတည်ပြု.</li></ul><div class="related"><h2>ဆက်စပ်</h2><ul><li><a href="https://uuyc163.com/">UU Remote တရားဝင် / ဒေါင်းလုဒ် & လမ်းညွှန်</a></li><li><a href="https://uuyc163.com/faq/">UU Remote FAQ (တရားဝင်)</a></li><li><a href="https://uuyc163.com/my/tools/connection-troubleshooting/">UU Remote ပြဿနာဖြေရှင်းခြင်း (ပြည့်စုံ ကိုးကားဇယား)</a></li><li><a href="https://uuycc.com/">UU Remote ဒေါင်းလုဒ်စင်တာ (ညီအစ်မ)</a></li></ul></div></main>
+<footer>ချွတ်ယွင်းမှု / အကြောင်းရင်း / ဖြေရှင်းနည်း မှတ်စုများ Microsoft Learn "Troubleshoot Remote desktop disconnected errors" နှင့် "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (RDP ချိတ်ဆက်ကျရှုံး, port 3389 ပဋိပက္ခ, security layer & encryption, license certificate ပျက်စီး, sleep တွင်မရောက်နိုင်, Event ID 50 TermDD X.224 protocol error), Steam Remote Play တရားဝင်အထောက်အပံ့ (ချိတ်ဆက်ကျရှုံး = firewall/antivirus / switch reset / IP refresh, မျက်နှာပြင်မည်း = driver update / hardware decoding ပိတ်, IPv6 ပိတ်) နှင့် Parsec တရားဝင်အထောက်အပံ့ (မျက်နှာပြင်မည်း = full-screen resolution မကိုက်ညီ -> window, အသံမရှိ = host တွင် audio device မရှိ -> virtual audio device, နှောင့်နှေးမြင့် = driver အသစ် / ဆုံးရှုံး -> driver ပြန် . bandwidth လျှော့ . cable) မှ စုစည်း. 2026 ချွတ်ယွင်းမှုဖြန့်ဖြူးမှုသည် ခန့်မှန်းချက်ဖြစ်ပြီး vendor ကတိ သို့မဟုတ် တိုက်ရိုက်စာရင်းဇယားမဟုတ်; ကိုးကားရန်, နောက်ဆုံးတရားဝင်အချက်အလက် နှင့် သင့်စမ်းသပ်မှုကို အားကိုးပါ. (ဒေသခံပြုလုပ်ခြင်း: တရားမဝင် · LLM ဘာသာပြန်)<br>tool စာမျက်နှာ . ရှာဖွေခြင်းသည် တရားဝင် client တွင် အစစ်စမ်းသပ်ခြင်း သို့မဟုတ် တရားဝင်အထောက်အပံ့ကို အစားမထိုး</footer>
+</div>
+<script src="/my/codes.js"></script><script src="/app.js"></script>
+</body></html>
