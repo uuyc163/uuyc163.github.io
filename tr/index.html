@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote bağlantı sorun giderme ve hata arama - bağlanmıyor, siyah ekran, gecikme, ses yok</title>
+<meta name="description" content="UU Remote bağlanmıyor, bağlandıktan sonra siyah ekran, gecikme, ses yok ya da kol algılanmıyor mu? Bir belirti yazın veya dokunun (bağlanmıyor / siyah ekran / gecikme / bağlantı kopuyor / ses yok / kol / port çakışması) ve en olası nedeni + çözüm adımlarını + önlemi bulun: gecikme genelde ağ sorunudur (paket kaybı, zayıf Wi-Fi, düşük host upload), PC performansı değil; siyah ekran genelde çözünürlük/tam ekran uyumsuzluğu veya eski GPU sürücüsüdür; bağlantı hatasında önce güvenlik duvarı/antivirüs ve uzak anahtarı kontrol edin; güvenlik hatası kimlik doğrulama/şifreleme katmanına veya bozuk lisans sertifikasına işaret eder; RDP port 3389 çakışması; uykudayken erişilemez; kötü IPv6 uyumu. Ayrıca UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play karşılaştırması ve 2026 tahminleri. Microsoft resmi RDP belgeleri, Steam Remote Play ve Parsec resmi desteğinden derlendi.">
+<link rel="canonical" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote bağlantı sorun giderme ve hata arama",
+   "url": "https://uuyc163.github.io/tr/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "tr",
+   "description": "UU Remote bağlanmıyor, bağlandıktan sonra siyah ekran, gecikme, ses yok ya da kol algılanmıyor mu? Bir belirti yazın veya dokunun (bağlanmıyor / siyah ekran / gecikme / bağlantı kopuyor / ses yok / kol / port çakışması) ve en olası nedeni + çözüm adımlarını + önlemi bulun: gecikme genelde ağ sorunudur (paket kaybı, zayıf Wi-Fi, düşük host upload), PC performansı değil; siyah ekran genelde çözünürlük/tam ekran uyumsuzluğu veya eski GPU sürücüsüdür; bağlantı hatasında önce güvenlik duvarı/antivirüs ve uzak anahtarı kontrol edin; güvenlik hatası kimlik doğrulama/şifreleme katmanına veya bozuk lisans sertifikasına işaret eder; RDP port 3389 çakışması; uykudayken erişilemez; kötü IPv6 uyumu. Ayrıca UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play karşılaştırması ve 2026 tahminleri. Microsoft resmi RDP belgeleri, Steam Remote Play ve Parsec resmi desteğinden derlendi.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "tr",
+   "url": "https://uuyc163.github.io/tr/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - Bağlanmıyor / bağlantı başarısız nasıl düzeltilir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "İstemci \"uzak bilgisayara bağlanılamadı / başarısız / timeout\" diyor; host'a giremiyorsun. Host kapalı / oturum açmamış / çevrimdışı, güvenlik duvarı veya antivirüs engelliyor, bozuk uzak anahtar, değişen ev IP'si veya dolu port. 1) Host'un açık, oturum açmış ve çevrimiçi olduğunu doğrula; 2) UU Remote'a güvenlik duvarı ve antivirüste izin ver; 3) uzak anahtarı kapat-aç; 4) IP yenilemek için yönlendiriciyi yeniden başlat; 5) port 3389 doluysa değiştir veya çakışan programı durdur. Host'a sabit LAN IP ver, güven listesine ekle, açık ve çevrimiçi tut."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - Bağlandıktan sonra siyah ekran nasıl düzeltilir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bağlı ama görüntü tamamen siyah, genelde ses duyup fareyi görürken. Çözünürlük desteklenmiyor, oyunun tam ekran çözünürlüğü != yayın çözünürlüğü, eski GPU sürücüsü veya bozuk kalıcı bit eşlem önbelleği. 1) Host'u 1080p gibi yaygın çözünürlüğe geçir; 2) tam ekran oyunu pencereye al; 3) GPU sürücüsünü güncelle; 4) \"kalıcı bit eşlem önbelleği\"ni kapat (RDP Performans sekmesi). Uyumlu çözünürlük kullan, GPU sürücüsünü yeni tut."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - Gecikme / giriş gecikmesi nasıl düzeltilir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Belirgin giriş gecikmesi, takılma / kare düşüşü, kötü tepki. Ağ tıkanıklığı / paket kaybı, zayıf Wi-Fi, düşük host upload, bant üstü bitrate veya yeni GPU sürücüsünden anormal kodlayıcı gecikmesi. 1) Kabloya veya 5 GHz Wi-Fi'ye yaklaş; 2) pay için bitrate/bant limitini düşür; 3) paket kaybını kontrol et, bant yiyen uygulamaları kapat; 4) host'ta kararlı GPU sürücüsüne dön. Kabloyu yeğle; bitrate < upload, payla."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - Sık kopma / saniyelerde kopuyor nasıl düzeltilir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Birkaç saniye veya bir dakikada kopuyor, tekrar tekrar bağlanıyor. Ağ kararsızlığı / kayıp, keep-alive yok, güvenlik katmanı veya sertifika sorunu ya da TermDD X.224 protokol hatası (Event ID 50). 1) Paket kaybı ve yönlendirme kararlılığını kontrol et; 2) host'ta keep-alive aralığı ayarla; 3) güvenlik katmanı ve şifrelemeyi incele; 4) protokol kesintisini bulmak için Olay Görüntüleyici Event ID 50'ye bak. Kararlı ağ, doğru güvenlik katmanı ve sertifika."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - Ses yok nasıl düzeltilir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Görüntü iyi ama uzak uçta ses yok. Host'ta kullanılabilir ses aygıtı yok (bulut PC / hoparlörsüz \"Bağlı hoparlör veya kulaklık yok\" gösterir) veya yanlış yakalama aygıtı seçili. 1) Host'a sanal ses aygıtı (VB-Cable gibi) kur; 2) ayarlarda doğru yakalama aygıtını seç; 3) biri bağlıysa uygulanması için yeniden bağlan. Host'ta kullanılabilir ses çıkış aygıtı olduğundan emin ol."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - Kol / çevre birim algılanmıyor nasıl düzeltilir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kol, klavye/fare veya başka çevre birim uzak uçta algılanmıyor veya tepki vermiyor. İstemcide kol passthrough açık değil, host'ta kol sürücüsü eksik veya başka program aygıtı özel tutuyor. 1) UU Remote'ta kol/çevre birim passthrough'ı aç; 2) host'a uygun kol sürücüsü kur; 3) yeniden bağlan ve aygıtı özel tutan programı kapat. Sürücüleri önceden kur ve passthrough'ı aç."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - Port çakışması / dinleyici sorunu nasıl düzeltilir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Anormal dinleyici / bağlantı reddedildi, kendi barındırılan / aynı makine RDP'de yaygın. Varsayılan RDP port 3389 (veya ayarladığın port) başka programca kullanılıyor. 1) Portu kullanan PID'yi bulmak için netstat -a -o; 2) tasklist /svc ile eşle; 3) portu değiştir veya çakışan programı durdur, sonra uzak hizmeti yeniden başlat. Birden çok uzak aracın aynı port için çekişmesini önle."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - Uyku/hazırda bekletmede erişilemez nasıl düzeltilir?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Host yanıt vermiyor ve hiçbir şekilde bağlanmıyor. Host uyku veya hazırda bekletmeye girdi, ağ kartı elektriksiz ve yanıt vermiyor. 1) Host güç planını asla uyuma/hazırda bekletme yap; 2) Wake-on-LAN veya UU uzaktan açma ile uyandır; 3) uyandıktan sonra bağlantıyı başlat. Uyku/hazırda bekletmeyi kapat, uzaktan açmayı ayarla."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Dil: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <strong>Türkçe</strong> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote uzaktan kumanda / oyun yayını - bağlantı sorun giderme ve hata arama</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_tr.webp"><img src="/img/cover_tr.png" alt="UU Remote bağlantı sorun giderme ve hata arama görseli" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Şek: UU Remote arıza arama (belirti anahtar kelimesi -> en olası neden + adımlar + önlem)</figcaption></figure>
+<p><strong>UU Remote</strong> bağlanmıyor, bağlanınca <strong>siyah ekran</strong>, <strong>gecikme</strong>, ses yok, kol algılanmıyor - körlemesine deneme. Anahtar: <strong>kategoriye ayır ve sırayla kendin kontrol et</strong>: önce <strong>ağ (paket kaybı / upload / güvenlik duvarı)</strong>, sonra <strong>GPU sürücüsü / çözünürlük</strong>, en son <strong>izinler / sertifika</strong>. <strong>Belirtini</strong> yaz veya dokun (ör. <code>bağlanmıyor</code>, <code>siyah ekran</code>, <code>gecikme</code>, <code>ses yok</code>, <code>kopuyor</code>, <code>kol</code>) ve <strong>en olası neden + adımlar + önlem</strong>i bul. Önce kurmak ister misin? Bkz. <a href="https://uuyc163.com/download/">UU Remote indir</a> ve <a href="https://uuyc163.com/faq/">SSS</a>.</p>
+<input id="q" placeholder="Belirti yazın, ör. bağlanmıyor / siyah ekran / gecikme / ses yok / kopuyor / kol" autocomplete="off">
+<button id="go">Çözüm bul</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>Adım 1: arızayı önce dört gruba ayır (hemen yeniden kurma)</h2>
+<p>Uzaktan kumanda/yayın sorunlarının onda dokuzu dört gruba girer - önce sınıfla, sonra çöz: (1) <strong>Bağlantı</strong> - bağlanmıyor, saniyelerde kopuyor, port çakışması, uykuda erişilemez, huysuz IPv6: <strong>ağ ve güvenlik duvarı/antivirüs, uzak anahtarı ve host'un çevrimiçi ve açık olup olmadığını</strong> kontrol et; (2) <strong>Görüntü</strong> - siyah ekran, bozulma, bulanık: genelde <strong>çözünürlük/tam ekran uyumsuzluğu veya eski GPU sürücüsü</strong>; (3) <strong>Gecikme</strong> - giriş gecikmesi, takılma: gerçek neden genelde <strong>paket kaybı / zayıf Wi-Fi / düşük host upload</strong>, performans değil; (4) <strong>Ses / çevre birim / izin</strong> - ses yok, kol algılanmıyor, uzak izni yok: <strong>host ses aygıtı, kol passthrough, Uzak Masaüstü Kullanıcıları grubu</strong>nu kontrol et. Daha fazla: <a href="https://uuyc163.com/faq/">UU Remote SSS</a>.</p>
+<div class="cat"><div class="catbox"><b>Bağlantı / kopma</b><span class="cs">bağlanmıyor . sık kopma . port çakışması . uykuda erişilemez . IPv6</span><div>Ağ ve güvenlik duvarı/antivirüs, uzak anahtarı ve host'un çevrimiçi ve açık olup olmadığını kontrol et: hatada önce güvenlik duvarına izin ver, uzağı kapat-aç, IP yenile; port 3389 doluysa netstat ile çakışmayı bul; host'u uyutma.</div></div><div class="catbox"><b>Görüntü (siyah ekran / bozulma / bulanık)</b><span class="cs">bağlanınca siyah ekran . bozulma . bulanık</span><div>Genelde çözünürlük/tam ekran uyumsuzluğu veya eski GPU sürücüsü: desteklenen çözünürlüğe geç, oyunu pencereye al, GPU sürücüsünü güncelle, kalıcı bit eşlem önbelleğini kapat; bozulma/bulanıkta bitrate ve paket kaybını kontrol et, donanım çözmeyi kapatmayı dene.</div></div><div class="catbox"><b>Gecikme</b><span class="cs">giriş gecikmesi . takılma . tutukluk</span><div>Gerçek neden genelde ağdır, performans değil: kabloya veya 5 GHz Wi-Fi'ye geç, bitrate/bant limitini düşür, paket kaybını kontrol et, host'ta kararlı GPU sürücüsüne dön, bant yiyen diğer uygulamaları kapat; yetersiz host upload internette gerçek darboğazdır.</div></div><div class="catbox"><b>Ses / çevre birim / izin</b><span class="cs">ses yok . kol algılanmıyor . uzak izni yok</span><div>Ses yok - host ses aygıtını kontrol et (bulut PC / hoparlörsüz sanal ses aygıtı ister); kol algılanmıyor - passthrough'ı aç ve sürücü kur; izin yok - hesabı "Uzak Masaüstü Kullanıcıları" grubuna ekle ve bağlantı sınırı ilkesini kontrol et.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote arıza bulma karar ağacı" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Arıza nasıl bulunur (belirtiye göre dört gruba ayır: bağlantı / görüntü / gecikme / ses ve çevre birim)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">Bir şey bozuldu</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">Belirtiye göre ayır</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">bağlanmıyor/kopuyor -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">ağ . güvenlik duvarı . anahtar . port</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">siyah ekran/bozulma -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">çözünürlük . tam ekran . GPU sürücüsü</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">Dört tipik arıza (belirtiye göre öz kontrol yönü seç)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. Bağlantı/kopma</text><text x="32" y="234" fill="#555" font-size="11">ağ . güvenlik duvarı . port . uyku</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. Siyah ekran</text><text x="206" y="234" fill="#555" font-size="11">çözünürlük . tam ekran . sürücü</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. Gecikme</text><text x="380" y="234" fill="#555" font-size="11">kayıp . upload . önce kablo</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. Ses/çevre birim</text><text x="554" y="234" fill="#555" font-size="11">ses aygıtı . kol . izin</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>Şek 1: UU Remote arıza bulma akışı - belirtiye göre dört gruba ayır (bağlantı / görüntü / gecikme / ses ve çevre birim), sonra sırayla kontrol et</figcaption></figure>
+<h2>Adım 2: en sık yanlış teşhis edilen neden -> L2 (önce ağ, sonra sürücü/çözünürlük, en son izin/sertifika)</h2>
+<p>Ana fikir: <strong>çoğu "gecikme" ve "bağlanmıyor" aslında ağ sorunudur, PC performansı veya yazılım hatası değil</strong>. Bu sırayla kontrol en çok zaman kazandırır: (1) <strong>Gecikme - önce ağ</strong>: paket kaybı, zayıf Wi-Fi ve yetersiz host <strong>upload</strong>'u yayının gerçek darboğazıdır (evi dışarıdan kontrol etmek görüntüyü <em>dışarı</em> gönderir, upload yer) - kabloya veya 5 GHz Wi-Fi'ye geç, bitrate/bant limitini düşür, host'ta kararlı GPU sürücüsüne geri dön (yeni NVIDIA sürücüleri anormal kodlayıcı gecikmesine yol açtı); (2) <strong>Siyah ekran - önce çözünürlük ve sürücü</strong>: bağlı ama siyah, ses duyup fareyi görüyorsan genelde <strong>çözünürlük desteklenmiyor veya oyunun tam ekran çözünürlüğü != yayın çözünürlüğü</strong> (oyunu pencereye al), <strong>eski GPU sürücüsü</strong> (güncelle) veya bozuk kalıcı bit eşlem önbelleği (kapat); (3) <strong>Bağlantı hatası - önce güvenlik duvarı ve anahtar</strong>: güvenlik duvarı/antivirüs engelliyor, uzak anahtarı kapat-aç, IP yenilemek için yönlendiriciyi yeniden başlat veya port <code>3389</code> dolu (<code>netstat -a -o</code> ile çakışma); (4) <strong>Güvenlik hatası - kimlik doğrulama/sertifika</strong>: "güvenlik hatası nedeniyle istemci bağlanamadı" genelde yanlış yapılandırılmış kimlik doğrulama/şifreleme katmanı veya bozuk lisans sertifikasıdır; (5) <strong>Ses yok - ses aygıtı</strong>: host'ta hoparlör yoksa / bulut PC'de ses aygıtı yoksa sanal ses aygıtı kur. Aşağıda arıza bulma karar ağacı; daha aşağıda öz kontrol paneli, karşılaştırma ve 2026 tahminleri.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote bağlanmadan önce öz kontrol paneli" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Bağlanmadan/yayından önce öz kontrol paneli (yeşil = sağlandı / kırmızı = kolayca gözden kaçar)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">Kontrol öğesi</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Karar</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Durum</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host açık, oturum açmış, çevrimiçi (uykuda değil)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">çevrimiçi durum</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">sağlandı</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Güvenlik duvarı/antivirüs UU Remote'a izin veriyor</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">güvenlik duvarı</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">kontrol</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">İki uç da kablo veya 5 GHz Wi-Fi, tam sinyal</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">ağ kalitesi</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">sağlandı</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host GPU sürücüsü = yeni kararlı sürüm</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">GPU sürücüsü</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">kontrol</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host upload >= yayın bitrate + pay</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">upload</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">sağlandı</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Port 3389 başka programca kullanılmıyor</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">port</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">kontrol</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">Not: kırmızı = en çok gözden kaçan üçü - güvenlik duvarına izin, GPU sürücüsü, port çakışması; bağlanmıyor / siyah ekran / gecikme için yeniden kurmadan önce kontrol et.</text></svg><figcaption>Şek 2: bağlanmadan önce öz kontrol paneli (yeşil = sağlandı / kırmızı = kontrol edilecek tuzak)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_tr.webp"><img src="/img/board_tr.png" alt="UU Remote bağlanmadan önce öz kontrol panelinin yeşil/kırmızı noktaları görseli" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Şek: "host çevrimiçi ve açık . güvenlik duvarı izinli . kablo/5GHz . yeni sürücü . port boş" kontrol et - gecikme ve siyah ekran genelde ilkinde takılır</figcaption></figure>
+<h2>Yaygın arızaların tam tablosu (belirti . kategori . çözüm yönü)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs yaygın uzaktan kumanda / yayın - sorun giderme karşılaştırması (genel belgeler)</h2>
+<table class="cmp"><tr><th>Çözüm</th><th>Bağlantı/NAT</th><th>Siyah ekran işleme</th><th>Çevre birim/kol</th><th>Ağ üzerinden gecikme</th><th>Tanı araçları</th></tr><tr><td>UU Remote</td><td>P2P doğrudan + özel ağ, oto NAT</td><td>çözünürlük değiştir / pencere / sürücü güncelle</td><td>kol ve çevre birim passthrough</td><td>milisaniye (optimize özel ağ)</td><td>istemci günlükleri + öz kontrol</td></tr><tr><td>ToDesk</td><td>kendi rölesi + P2P</td><td>uyarlanır çözünürlük</td><td>çevre birim eşleme</td><td>düşük (özel kanal)</td><td>tanı paneli</td></tr><tr><td>Parsec</td><td>P2P delme, genel IP/UPnP gerekir</td><td>tam ekran uyumsuzluğu -> pencere</td><td>yerel kol desteği</td><td>LAN'da çok düşük, internette ağa bağlı</td><td>günlükler + topluluk belgeleri</td></tr><tr><td>Microsoft RDP</td><td>port 3389, izin/ağ geçidi gerekir</td><td>kalıcı bit eşlem önbelleği / çözünürlük / sürücü</td><td>yönlendirme kurulumu gerekir</td><td>LAN'da düşük, internette banda bağlı</td><td>Olay Görüntüleyici + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>Steam rölesi + doğrudan</td><td>sürücü güncelle / donanım çözmeyi kapat</td><td>kol öncelikli destek</td><td>~30-50Mb/s @1080p60</td><td>IPv6 kapat + akış ayarları</td></tr></table><section class="i4data">
+<h2>UU Remote uzaktan kumanda/yayın yaygın arıza dağılımı ve notlar (2026 tahmini)</h2>
+<p>Aşağıdakiler Microsoft resmi RDP belgeleri, Steam Remote Play ve Parsec resmi desteğini birleştiren <strong>2026 tahminleridir</strong> (üretici taahhüdü veya birinci elden istatistik değil; referans için, sürüm ve ağ ile değişir):</p>
+<table>
+<tr><th>Boyut</th><th>Tahmin / not</th></tr>
+<tr><td>Arıza türüne göre dağılım (tah.)</td><td>bağlantı/kopma ~ <strong>35%</strong> . görüntü (siyah ekran/bozulma) ~ <strong>25%</strong> . gecikme ~ <strong>22%</strong> . ses/çevre birim ~ <strong>12%</strong> . izin/güvenlik ~ <strong>6%</strong></td></tr>
+<tr><td>Gecikmenin gerçek nedeni (anahtar)</td><td>çoğu "gecikme / bağlanmıyor" bir <strong>ağ sorunudur</strong> (paket kaybı, zayıf Wi-Fi, düşük host <strong>upload</strong>), <strong>PC performansı veya hata değil</strong> -> yazılım/donanımdan önce ağı kontrol et</td></tr>
+<tr><td>Siyah ekranın ana nedeni (tah.)</td><td>çözünürlük/tam ekran uyumsuzluğu + eski GPU sürücüsü baskın; sesli siyah = klasik çözünürlük sorunu, oyunu pencereye almak / yaygın çözünürlük en çok yardımcı olur</td></tr>
+<tr><td>RDP port ve protokol</td><td>varsayılan RDP port <strong>3389 (TCP)</strong>; doluysa -> bağlanmıyor; Event ID <strong>50 (TermDD . X.224)</strong> = istemciyi koparan protokol akış hatası</td></tr>
+<tr><td>Öz kontrol sırası (zaman kazandırır)</td><td><strong>önce ağ (kayıp/upload/güvenlik duvarı) -> sürücü/çözünürlük -> en son izin/sertifika</strong>; yayın yaklaşık <strong>30-50Mbps @1080p60</strong> ve bitrate host upload'unun altında kalmalı</td></tr>
+</table>
+<p><small>Tahmin temeli: kaynak taban + dış değer (Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", Steam Remote Play resmi destek, Parsec resmi destek, 2026 birleştirilerek); sürüm ve ağ politikasıyla değişir. En güncel resmi bilgilere ve kendi testlerinize güvenin.</small></p>
+</section>
+<h2>Gerçek senaryolar - hızlı oku</h2>
+<ul class="scenes"><li>Telefondan ev PC'sini kontrol, bağlanınca hemen siyah ekran ama ses var: genelde host çözünürlüğü telefonca desteklenmiyor veya oyunun tam ekran çözünürlüğü uymuyor -> oyunu pencereye al, host'u 1080p gibi yaygın çözünürlüğe geçir, GPU sürücüsünü güncelle.</li><li>Oturum ortasında aniden yavaşlama ve büyük gecikme: önce PC performansını suçlama - paket kaybı ve Wi-Fi sinyalini kontrol et, kabloya geç veya 5 GHz Wi-Fi'ye yaklaş, bitrate/bant limitini düşür, host upload düşükse kaliteyi düşür; yeni kurulan NVIDIA sürücüsü sorunluysa kararlıya dön.</li><li>İstemci "uzak bilgisayara bağlanılamadı / bağlantı başarısız" diyor: host'un açık, oturum açmış ve çevrimiçi olduğunu doğrula, UU Remote'a güvenlik duvarı ve antivirüste izin ver, uzak anahtarı kapat-aç; ev IP'si değiştiyse yönlendiriciyi yeniden başlat veya port 3389'un başka programca kullanılıp kullanılmadığına bak.</li><li>Birkaç saniye veya bir dakikada kopuyor: genelde ağ kararsızlığı veya güvenlik/sertifika sorunu - paket kaybı ve yönlendirmeyi kontrol et, host'ta keep-alive aralığı ayarla, güvenlik katmanı ve şifrelemeyi incele; Olay Görüntüleyici'deki Event ID 50 (TermDD . X.224) de kesilen protokol akışına işaret eder.</li><li>Görüntü iyi ama uzak uçta ses yok: host'ta kullanılabilir ses aygıtı yok (bulut PC veya hoparlörsüz "Bağlı hoparlör veya kulaklık yok" gösterir) -> host'a sanal ses aygıtı (VB-Cable gibi) kur ve ayarlarda doğru yakalama aygıtını seç.</li><li>Giriş yapabiliyorsun ama uzaktan kontrolü başlatamıyorsun, izin yok uyarısıyla: hesabı host'un "Uzak Masaüstü Kullanıcıları" grubuna ekle, "Bağlantı sayısını sınırla" ilkesinin engelleyip engellemediğini kontrol et ve hesabın uzaktan oturum açma hakkı olduğunu doğrula.</li></ul><div class="related"><h2>İlgili</h2><ul><li><a href="https://uuyc163.com/">UU Remote resmi / indirme ve kılavuz</a></li><li><a href="https://uuyc163.com/faq/">UU Remote SSS (resmi)</a></li><li><a href="https://uuyc163.com/tr/tools/connection-troubleshooting/">UU Remote sorun giderme (tam referans tablosu)</a></li><li><a href="https://uuycc.com/">UU Remote indirme merkezi (kardeş)</a></li></ul></div></main>
+<footer>Arıza / neden / çözüm notları Microsoft Learn "Troubleshoot Remote desktop disconnected errors" ve "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (RDP bağlantı hatası, port 3389 çakışması, güvenlik katmanı ve şifreleme, lisans sertifikası bozulması, uykuda erişilemez, Event ID 50 TermDD X.224 protokol hatası), Steam Remote Play resmi desteği (bağlantı hatası = güvenlik duvarı/antivirüs / anahtar sıfırlama / IP yenileme, siyah ekran = sürücü güncelle / donanım çözmeyi kapat, IPv6 kapat) ve Parsec resmi desteğinden (siyah ekran = tam ekran çözünürlük uyumsuzluğu -> pencere, ses yok = host ses aygıtsız -> sanal ses aygıtı, yüksek gecikme = yeni sürücü / kayıp -> sürücüyü geri al . bandı düşür . kablo) derlendi. 2026 arıza dağılımı bir tahmindir, üretici taahhüdü veya birinci elden istatistik değildir; referans için en güncel resmi bilgilere ve kendi testlerinize güvenin. (Yerelleştirme: resmi değil · LLM çevirisi)<br>Araç sayfası . arama, resmi istemcide gerçek testin veya resmi desteğin yerini tutmaz</footer>
+</div>
+<script src="/tr/codes.js"></script><script src="/app.js"></script>
+</body></html>
