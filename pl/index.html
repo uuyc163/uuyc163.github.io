@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote rozwiązywanie problemów z połączeniem i błędów - nie łączy, czarny ekran, lag, brak dźwięku</title>
+<meta name="description" content="UU Remote nie łączy, czarny ekran po połączeniu, lag, brak dźwięku albo pad niewykryty? Wpisz lub dotknij objaw (nie łączy / czarny ekran / lag / rozłączenia / brak dźwięku / pad / konflikt portu), aby znaleźć najbardziej prawdopodobną przyczynę + kroki naprawy + zapobieganie: lag to zwykle problem sieci (utrata pakietów, słabe Wi-Fi, niski upload hosta), nie wydajność PC; czarny ekran to zwykle niezgodność rozdzielczości/pełnego ekranu lub stary sterownik GPU; przy błędach połączenia sprawdź najpierw zaporę/antywirus i przełącznik zdalny; błąd zabezpieczeń wskazuje na warstwę uwierzytelniania/szyfrowania lub uszkodzony certyfikat licencji; konflikt portu RDP 3389; nieosiągalny w uśpieniu; zła adaptacja IPv6. Plus porównanie UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play i szacunki 2026. Opracowano z oficjalnej dokumentacji RDP Microsoftu oraz oficjalnego wsparcia Steam Remote Play i Parsec.">
+<link rel="canonical" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote rozwiązywanie problemów z połączeniem i błędów",
+   "url": "https://uuyc163.github.io/pl/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "pl",
+   "description": "UU Remote nie łączy, czarny ekran po połączeniu, lag, brak dźwięku albo pad niewykryty? Wpisz lub dotknij objaw (nie łączy / czarny ekran / lag / rozłączenia / brak dźwięku / pad / konflikt portu), aby znaleźć najbardziej prawdopodobną przyczynę + kroki naprawy + zapobieganie: lag to zwykle problem sieci (utrata pakietów, słabe Wi-Fi, niski upload hosta), nie wydajność PC; czarny ekran to zwykle niezgodność rozdzielczości/pełnego ekranu lub stary sterownik GPU; przy błędach połączenia sprawdź najpierw zaporę/antywirus i przełącznik zdalny; błąd zabezpieczeń wskazuje na warstwę uwierzytelniania/szyfrowania lub uszkodzony certyfikat licencji; konflikt portu RDP 3389; nieosiągalny w uśpieniu; zła adaptacja IPv6. Plus porównanie UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play i szacunki 2026. Opracowano z oficjalnej dokumentacji RDP Microsoftu oraz oficjalnego wsparcia Steam Remote Play i Parsec.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "pl",
+   "url": "https://uuyc163.github.io/pl/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - jak naprawić Nie łączy / połączenie nieudane?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Klient mówi \"nie można połączyć z komputerem zdalnym / nieudane / timeout\"; nie wchodzisz na host. Host wyłączony / niezalogowany / offline, zapora lub antywirus blokuje, wadliwy przełącznik zdalny, zmieniony domowy IP lub zajęty port. 1) Potwierdź, że host jest włączony, zalogowany i online; 2) zezwól UU Remote w zaporze i antywirusie; 3) wyłącz i włącz przełącznik zdalny, aby zresetować; 4) zrestartuj router, aby odświeżyć IP; 5) jeśli port 3389 zajęty, zmień go lub zatrzymaj program w konflikcie. Nadaj hostowi stałe IP LAN, dodaj do listy zaufanych, trzymaj włączony i online."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - jak naprawić Czarny ekran po połączeniu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Połączono, ale obraz jest całkowicie czarny, często gdy słychać dźwięk i widać mysz. Nieobsługiwana rozdzielczość, rozdzielczość pełnoekranowa gry != rozdzielczość streamingu, stary sterownik GPU lub uszkodzona trwała pamięć podręczna map bitowych. 1) Przełącz host na popularną rozdzielczość jak 1080p; 2) ustaw grę pełnoekranową w oknie; 3) zaktualizuj sterownik GPU; 4) wyłącz \"trwałą pamięć podręczną map bitowych\" (zakładka Wydajność RDP). Używaj zgodnej rozdzielczości, trzymaj sterownik GPU świeży."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - jak naprawić Lag / opóźnienie wejścia?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Zauważalne opóźnienie wejścia, przycięcia / spadki klatek, słaba reakcja. Zatłoczenie sieci / utrata pakietów, słabe Wi-Fi, niski upload hosta, bitrate powyżej przepustowości, lub nieprawidłowe opóźnienie enkodera od nowego sterownika GPU. 1) Przejdź na kabel lub zbliż się do Wi-Fi 5 GHz; 2) obniż limit bitrate/przepustowości dla zapasu; 3) sprawdź utratę pakietów, zamknij inne aplikacje zżerające pasmo; 4) przywróć na hoście stabilny sterownik GPU. Wybierz kabel; bitrate < upload z zapasem."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - jak naprawić Częste zrywanie / zrywa po sekundach?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Zrywa po kilku sekundach lub minucie, ciągle łącząc na nowo. Niestabilność sieci / utrata, brak keep-alive, problem warstwy zabezpieczeń lub certyfikatu, lub błąd protokołu TermDD X.224 (Event ID 50). 1) Sprawdź utratę pakietów i stabilność routingu; 2) ustaw interwał keep-alive na hoście; 3) przejrzyj warstwę zabezpieczeń i szyfrowanie; 4) sprawdź Event ID 50 w Podglądzie zdarzeń, aby zlokalizować przerwę protokołu. Stabilna sieć, poprawna warstwa zabezpieczeń i certyfikat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - jak naprawić Brak dźwięku?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Obraz jest dobry, ale po stronie zdalnej brak dźwięku. Host nie ma użytecznego urządzenia audio (PC w chmurze / bez głośnika pokazuje \"Nie podłączono głośników ani słuchawek\") lub wybrano złe urządzenie przechwytywania. 1) Zainstaluj wirtualne urządzenie audio (jak VB-Cable) na hoście; 2) wybierz właściwe urządzenie przechwytywania w ustawieniach; 3) jeśli ktoś jest połączony, połącz ponownie, aby zastosować. Zapewnij hostowi użyteczne urządzenie wyjścia audio."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - jak naprawić Pad / urządzenie niewykryte?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pad, klawiatura/mysz lub inne urządzenie nie jest wykrywane lub nie reaguje po stronie zdalnej. Passthrough pada niewłączony na kliencie, brak sterowników pada na hoście, lub inny program trzyma urządzenie na wyłączność. 1) Włącz passthrough pada/urządzenia w UU Remote; 2) zainstaluj odpowiedni sterownik pada na hoście; 3) połącz ponownie i zamknij program trzymający urządzenie na wyłączność. Zainstaluj sterowniki wcześniej i włącz passthrough."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - jak naprawić Konflikt portu / problem nasłuchu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nieprawidłowy nasłuch / odmowa połączenia, częste w RDP self-hosted / tej samej maszynie. Domyślny port RDP 3389 (lub skonfigurowany) jest używany przez inny program. 1) Użyj netstat -a -o, aby znaleźć PID używający portu; 2) dopasuj przez tasklist /svc; 3) zmień port lub zatrzymaj program w konflikcie, potem zrestartuj usługę zdalną. Unikaj walki wielu narzędzi zdalnych o ten sam port."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - jak naprawić Nieosiągalny w uśpieniu/hibernacji?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Host nie odpowiada i w żaden sposób się nie łączy. Host przeszedł w uśpienie lub hibernację, więc karta sieciowa jest bez zasilania i nie odpowiada. 1) Ustaw plan zasilania hosta na nigdy nie usypiaj/hibernuj; 2) wybudź go przez Wake-on-LAN lub zdalne włączenie UU; 3) rozpocznij połączenie po wybudzeniu. Wyłącz uśpienie/hibernację, skonfiguruj zdalne włączanie."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Język: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <strong>Polski</strong> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote zdalne sterowanie / streaming gier - rozwiązywanie problemów z połączeniem i błędów</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_pl.webp"><img src="/img/cover_pl.png" alt="Ilustracja rozwiązywania problemów z połączeniem i błędów UU Remote" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Rys: wyszukiwanie usterek UU Remote (słowo kluczowe objawu -> najbardziej prawdopodobna przyczyna + kroki + zapobieganie)</figcaption></figure>
+<p><strong>UU Remote</strong> nie łączy, <strong>czarny ekran</strong> po połączeniu, <strong>lag</strong>, brak dźwięku, pad niewykryty - nie zgaduj na ślepo. Klucz to <strong>podzielić na kategorie i sprawdzać po kolei</strong>: najpierw <strong>sieć (utrata pakietów / upload / zapora)</strong>, potem <strong>sterownik GPU / rozdzielczość</strong>, a na końcu <strong>uprawnienia / certyfikat</strong>. Wpisz lub dotknij swój <strong>objaw</strong> (np. <code>nie łączy</code>, <code>czarny ekran</code>, <code>lag</code>, <code>brak dźwięku</code>, <code>rozłączenia</code>, <code>pad</code>), aby znaleźć <strong>najbardziej prawdopodobną przyczynę + kroki + zapobieganie</strong>. Najpierw instalacja? Zobacz <a href="https://uuyc163.com/download/">pobierz UU Remote</a> i <a href="https://uuyc163.com/faq/">najczęstsze pytania</a>.</p>
+<input id="q" placeholder="Wpisz objaw, np. nie łączy / czarny ekran / lag / brak dźwięku / rozłączenia / pad" autocomplete="off">
+<button id="go">Znajdź rozwiązanie</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>Krok 1: podziel usterkę najpierw na cztery grupy (nie instaluj od razu od nowa)</h2>
+<p>Dziewięć na dziesięć problemów ze zdalnym sterowaniem/streamingiem mieści się w czterech grupach - najpierw zaklasyfikuj, potem napraw: (1) <strong>Połączenie</strong> - nie łączy, zrywa po sekundach, konflikt portu, nieosiągalny w uśpieniu, kapryśny IPv6: sprawdź <strong>sieć i zaporę/antywirus, przełącznik zdalny oraz czy host jest online i włączony</strong>; (2) <strong>Obraz</strong> - czarny ekran, artefakty, rozmycie: zwykle <strong>niezgodność rozdzielczości/pełnego ekranu lub stary sterownik GPU</strong>; (3) <strong>Opóźnienie/lag</strong> - opóźnienie wejścia, przycięcia: prawdziwa przyczyna to zwykle <strong>utrata pakietów / słabe Wi-Fi / niski upload hosta</strong>, nie wydajność; (4) <strong>Dźwięk / urządzenie / uprawnienia</strong> - brak dźwięku, pad niewykryty, brak uprawnień zdalnych: sprawdź <strong>urządzenie audio hosta, passthrough pada, grupę Użytkownicy pulpitu zdalnego</strong>. Więcej: <a href="https://uuyc163.com/faq/">FAQ UU Remote</a>.</p>
+<div class="cat"><div class="catbox"><b>Połączenie / zrywanie</b><span class="cs">nie łączy . częste zrywanie . konflikt portu . nieosiągalny w uśpieniu . IPv6</span><div>Sprawdź sieć i zaporę/antywirus, przełącznik zdalny oraz czy host jest online i włączony: przy błędzie najpierw zezwól w zaporze, wyłącz/włącz zdalny, odśwież IP; jeśli port 3389 zajęty, znajdź konflikt przez netstat; nie pozwól hostowi się uśpić.</div></div><div class="catbox"><b>Obraz (czarny ekran / artefakty / rozmycie)</b><span class="cs">czarny ekran przy łączeniu . artefakty . rozmycie</span><div>Zwykle niezgodność rozdzielczości/pełnego ekranu lub stary sterownik GPU: przełącz na obsługiwaną rozdzielczość, ustaw grę w oknie, zaktualizuj sterownik GPU, wyłącz trwałą pamięć podręczną map bitowych; przy artefaktach/rozmyciu sprawdź bitrate i utratę pakietów i spróbuj wyłączyć dekodowanie sprzętowe.</div></div><div class="catbox"><b>Opóźnienie / lag</b><span class="cs">opóźnienie wejścia . przycięcia . zacinanie</span><div>Prawdziwa przyczyna to zwykle sieć, nie wydajność: przejdź na kabel lub Wi-Fi 5 GHz, obniż limit bitrate/przepustowości, sprawdź utratę pakietów, na hoście przywróć stabilny sterownik GPU, zamknij inne aplikacje zżerające pasmo; niski upload hosta to prawdziwe wąskie gardło przez internet.</div></div><div class="catbox"><b>Dźwięk / urządzenie / uprawnienia</b><span class="cs">brak dźwięku . pad niewykryty . brak uprawnień zdalnych</span><div>Brak dźwięku - sprawdź urządzenie audio hosta (PC w chmurze / bez głośnika wymaga wirtualnego urządzenia audio); pad niewykryty - włącz passthrough i zainstaluj sterowniki; brak uprawnień - dodaj konto do grupy "Użytkownicy pulpitu zdalnego" i sprawdź zasadę limitu połączeń.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Drzewo decyzyjne lokalizacji usterek UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Jak zlokalizować usterkę (podziel po objawie na cztery grupy: połączenie / obraz / opóźnienie / dźwięk i urządzenie)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">Coś się zepsuło</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">Podziel po objawie</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">nie łączy/zrywa -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">sieć . zapora . przełącznik . port</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">czarny ekran/artefakty -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">rozdzielczość . pełny ekran . sterownik GPU</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">Cztery typowe usterki (wybierz kierunek autokontroli po objawie)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. Połączenie/zrywanie</text><text x="32" y="234" fill="#555" font-size="11">sieć . zapora . port . uśpienie</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. Czarny ekran</text><text x="206" y="234" fill="#555" font-size="11">rozdzielczość . pełny ekran . sterownik</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. Opóźnienie/lag</text><text x="380" y="234" fill="#555" font-size="11">utrata . upload . kabel najpierw</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. Dźwięk/urządzenie</text><text x="554" y="234" fill="#555" font-size="11">urz. audio . pad . uprawnienia</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>Rys 1: przepływ lokalizacji usterek UU Remote - podziel po objawie na cztery grupy (połączenie / obraz / opóźnienie / dźwięk i urządzenie), potem sprawdzaj po kolei</figcaption></figure>
+<h2>Krok 2: najczęściej źle diagnozowana przyczyna -> L2 (najpierw sieć, potem sterownik/rozdzielczość, na końcu uprawnienia/certyfikat)</h2>
+<p>Kluczowa myśl: <strong>większość przypadków "lag" i "nie łączy" to w rzeczywistości problemy sieci, nie wydajność PC ani błąd oprogramowania</strong>. Sprawdzanie w tej kolejności oszczędza najwięcej czasu: (1) <strong>Lag/opóźnienie - sprawdź najpierw sieć</strong>: utrata pakietów, słabe Wi-Fi i niewystarczający <strong>upload</strong> hosta to prawdziwe wąskie gardło streamingu (sterowanie domem z zewnątrz wysyła obraz <em>na zewnątrz</em>, co zużywa upload) - przejdź na kabel lub Wi-Fi 5 GHz, obniż limit bitrate/przepustowości, a na hoście przywróć stabilny sterownik GPU (nowsze sterowniki NVIDIA powodowały nieprawidłowe opóźnienie enkodera); (2) <strong>Czarny ekran - sprawdź najpierw rozdzielczość i sterownik</strong>: połączono, ale czarno, a słychać dźwięk / widać mysz, zwykle oznacza <strong>nieobsługiwaną rozdzielczość lub rozdzielczość pełnoekranową gry != rozdzielczość streamingu</strong> (ustaw grę w oknie), <strong>stary sterownik GPU</strong> (zaktualizuj) lub uszkodzoną trwałą pamięć podręczną map bitowych (wyłącz ją); (3) <strong>Błąd połączenia - sprawdź najpierw zaporę i przełącznik</strong>: zapora/antywirus blokuje, wyłącz i włącz przełącznik zdalny, zrestartuj router, aby odświeżyć IP, lub port <code>3389</code> zajęty (<code>netstat -a -o</code> na konflikt); (4) <strong>Błąd zabezpieczeń - sprawdź uwierzytelnianie/certyfikat</strong>: "z powodu błędu zabezpieczeń klient nie mógł się połączyć" zwykle oznacza źle skonfigurowaną warstwę uwierzytelniania/szyfrowania lub uszkodzony certyfikat licencji; (5) <strong>Brak dźwięku - sprawdź urządzenie audio</strong>: jeśli host nie ma głośnika / PC w chmurze nie ma urządzenia audio, zainstaluj wirtualne urządzenie audio. Poniżej drzewo decyzyjne do lokalizacji usterki; niżej panel autokontroli, porównanie i szacunki 2026.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Panel autokontroli przed połączeniem UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Panel autokontroli przed połączeniem/streamingiem (zielony = spełnione / czerwony = łatwo przeoczyć)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">Punkt kontroli</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Ocena</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Stan</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host włączony, zalogowany, online (nie w uśpieniu)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">stan online</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">spełnione</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Zapora/antywirus zezwalają UU Remote</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">zapora</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">sprawdź</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Obie strony kabel lub Wi-Fi 5 GHz, pełny sygnał</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">jakość sieci</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">spełnione</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Sterownik GPU hosta = świeża stabilna wersja</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">sterownik GPU</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">sprawdź</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Upload hosta >= bitrate streamingu + zapas</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">upload</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">spełnione</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Port 3389 nie używany przez inny program</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">port</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">sprawdź</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">Uwaga: czerwony = trzy najczęściej przeoczane - zezwolenie w zaporze, sterownik GPU, konflikt portu; przy nie łączy / czarny ekran / lag sprawdź je przed reinstalacją.</text></svg><figcaption>Rys 2: panel autokontroli przed połączeniem (zielony = spełnione / czerwony = pułapka do sprawdzenia)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_pl.webp"><img src="/img/board_pl.png" alt="Ilustracja zielonych/czerwonych punktów panelu autokontroli przed połączeniem UU Remote" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Rys: sprawdź "host online i włączony . zapora dozwolona . kabel/5GHz . świeży sterownik . port wolny" - lag i czarny ekran często zawodzą na pierwszych</figcaption></figure>
+<h2>Pełna tabela typowych usterek (objaw . kategoria . kierunek rozwiązania)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs popularne zdalne sterowanie / streaming - porównanie rozwiązywania problemów (dokumentacja publiczna)</h2>
+<table class="cmp"><tr><th>Rozwiązanie</th><th>Połączenie/NAT</th><th>Obsługa czarnego ekranu</th><th>Urządzenie/pad</th><th>Opóźnienie przez sieć</th><th>Narzędzia diagnostyczne</th></tr><tr><td>UU Remote</td><td>P2P bezpośrednio + sieć prywatna, auto-NAT</td><td>zmiana rozdzielczości / okno / aktualizacja sterownika</td><td>passthrough pada i urządzeń</td><td>milisekundy (zoptymalizowana sieć prywatna)</td><td>logi klienta + autokontrola</td></tr><tr><td>ToDesk</td><td>własny relay + P2P</td><td>adaptacyjna rozdzielczość</td><td>mapowanie urządzeń</td><td>niskie (dedykowany kanał)</td><td>panel diagnostyczny</td></tr><tr><td>Parsec</td><td>P2P hole-punch, wymaga publicznego IP/UPnP</td><td>niezgodność pełnego ekranu -> okno</td><td>natywna obsługa pada</td><td>bardzo niskie w LAN, zależne od sieci przez internet</td><td>logi + dokumentacja społeczności</td></tr><tr><td>Microsoft RDP</td><td>port 3389, wymaga zezwolenia/bramy</td><td>trwała pamięć map bitowych / rozdzielczość / sterownik</td><td>wymaga konfiguracji przekierowania</td><td>niskie w LAN, zależne od pasma przez internet</td><td>Podgląd zdarzeń + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>relay Steam + bezpośrednio</td><td>aktualizacja sterownika / wyłącz dekodowanie HW</td><td>obsługa pada priorytetowo</td><td>~30-50Mb/s @1080p60</td><td>wyłącz IPv6 + ustawienia strumienia</td></tr></table><section class="i4data">
+<h2>UU Remote zdalne sterowanie/streaming rozkład typowych usterek i uwagi (szacunek 2026)</h2>
+<p>Poniżej <strong>szacunki 2026</strong> łączące oficjalną dokumentację RDP Microsoftu, oficjalne wsparcie Steam Remote Play i Parsec (nie zobowiązania producenta ani statystyka z pierwszej ręki; orientacyjne, zmieniają się z wersją i siecią):</p>
+<table>
+<tr><th>Wymiar</th><th>Szacunek / uwaga</th></tr>
+<tr><td>Rozkład wg typu usterki (sz.)</td><td>połączenie/zrywanie ~ <strong>35%</strong> . obraz (czarny ekran/artefakty) ~ <strong>25%</strong> . opóźnienie/lag ~ <strong>22%</strong> . dźwięk/urządzenie ~ <strong>12%</strong> . uprawnienia/zabezpieczenia ~ <strong>6%</strong></td></tr>
+<tr><td>Prawdziwa przyczyna laga (klucz)</td><td>większość "lag / nie łączy" to <strong>problem sieci</strong> (utrata pakietów, słabe Wi-Fi, niski <strong>upload</strong> hosta), <strong>nie</strong> wydajność PC ani błąd -> sprawdź sieć przed soft/hardware</td></tr>
+<tr><td>Główna przyczyna czarnego ekranu (sz.)</td><td>niezgodność rozdzielczości/pełnego ekranu + stary sterownik GPU dominują; czarno z dźwiękiem = klasyczny problem rozdzielczości, gra w oknie / popularna rozdzielczość pomaga najbardziej</td></tr>
+<tr><td>Port i protokół RDP</td><td>domyślny port RDP <strong>3389 (TCP)</strong>; zajęty -> nie łączy; Event ID <strong>50 (TermDD . X.224)</strong> = błąd strumienia protokołu rozłączający klienta</td></tr>
+<tr><td>Kolejność autokontroli (oszczędza czas)</td><td><strong>sieć (utrata/upload/zapora) najpierw -> sterownik/rozdzielczość -> uprawnienia/certyfikat na końcu</strong>; streaming to około <strong>30-50Mbps @1080p60</strong>, a bitrate musi pozostać poniżej uploadu hosta</td></tr>
+</table>
+<p><small>Podstawa szacunku: baza źródeł + ekstrapolacja (łącząc Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", oficjalne wsparcie Steam Remote Play, oficjalne wsparcie Parsec, 2026); zmienia się z wersją i polityką sieci. Kieruj się najnowszymi oficjalnymi informacjami i własnymi testami.</small></p>
+</section>
+<h2>Realne przypadki - szybkie czytanie</h2>
+<ul class="scenes"><li>Sterowanie domowym PC z telefonu, czarny ekran zaraz po połączeniu, ale słychać dźwięk: zwykle rozdzielczość hosta nie jest obsługiwana przez telefon lub rozdzielczość pełnoekranowa gry się nie zgadza -> ustaw grę w oknie, przełącz host na popularną rozdzielczość jak 1080p i zaktualizuj sterownik GPU.</li><li>Nagle robi się wolno z dużym opóźnieniem w trakcie sesji: nie obwiniaj najpierw wydajności PC - sprawdź utratę pakietów i sygnał Wi-Fi, przejdź na kabel lub zbliż się do Wi-Fi 5 GHz, obniż limit bitrate/przepustowości, obniż jakość przy niskim uploadzie hosta; jeśli świeżo zainstalowany sterownik NVIDIA szwankuje, przywróć stabilny.</li><li>Klient mówi "nie można połączyć z komputerem zdalnym / połączenie nieudane": potwierdź, że host jest włączony, zalogowany i online, zezwól UU Remote w zaporze i antywirusie, wyłącz i włącz przełącznik zdalny; jeśli zmienił się domowy IP, zrestartuj router, lub sprawdź, czy port 3389 jest używany przez inny program.</li><li>Zrywa po kilku sekundach lub minucie: zwykle niestabilność sieci lub problem zabezpieczeń/certyfikatu - sprawdź utratę pakietów i routing, ustaw interwał keep-alive na hoście, przejrzyj warstwę zabezpieczeń i szyfrowanie; Event ID 50 (TermDD . X.224) w Podglądzie zdarzeń też wskazuje na przerwany strumień protokołu.</li><li>Obraz jest dobry, ale po stronie zdalnej brak dźwięku: host nie ma użytecznego urządzenia audio (PC w chmurze lub bez głośnika pokazuje "Nie podłączono głośników ani słuchawek") -> zainstaluj wirtualne urządzenie audio (jak VB-Cable) na hoście i wybierz właściwe urządzenie przechwytywania w ustawieniach.</li><li>Możesz się zalogować, ale nie rozpocząć zdalnego sterowania, z komunikatem o braku uprawnień: dodaj konto do grupy "Użytkownicy pulpitu zdalnego" hosta, sprawdź, czy zasada "Ogranicz liczbę połączeń" blokuje, i potwierdź, że konto ma prawa logowania zdalnego.</li></ul><div class="related"><h2>Powiązane</h2><ul><li><a href="https://uuyc163.com/">UU Remote oficjalnie / pobieranie i przewodnik</a></li><li><a href="https://uuyc163.com/faq/">FAQ UU Remote (oficjalne)</a></li><li><a href="https://uuyc163.com/pl/tools/connection-troubleshooting/">Rozwiązywanie problemów UU Remote (pełna tabela referencyjna)</a></li><li><a href="https://uuycc.com/">Centrum pobierania UU Remote (siostrzane)</a></li></ul></div></main>
+<footer>Notatki o usterce / przyczynie / rozwiązaniu opracowano z Microsoft Learn "Troubleshoot Remote desktop disconnected errors" i "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (błąd połączenia RDP, konflikt portu 3389, warstwa zabezpieczeń i szyfrowanie, uszkodzenie certyfikatu licencji, nieosiągalny w uśpieniu, Event ID 50 TermDD X.224 błąd protokołu), oficjalnego wsparcia Steam Remote Play (błąd połączenia = zapora/antywirus / reset przełącznika / odświeżenie IP, czarny ekran = aktualizacja sterowników / wyłączenie dekodowania sprzętowego, wyłączenie IPv6) i oficjalnego wsparcia Parsec (czarny ekran = niezgodność rozdzielczości pełnoekranowej -> okno, brak dźwięku = host bez urządzenia audio -> wirtualne urządzenie audio, wysokie opóźnienie = nowszy sterownik / utrata -> przywróć sterownik . obniż przepustowość . kabel). Rozkład usterek 2026 to szacunek, nie zobowiązania producenta ani statystyka z pierwszej ręki; orientacyjnie, kieruj się najnowszymi oficjalnymi informacjami i własnymi testami. (Lokalizacja: nieoficjalna · tłumaczenie LLM)<br>Strona narzędzia . wyszukiwanie nie zastępuje realnych testów w oficjalnym kliencie ani oficjalnego wsparcia</footer>
+</div>
+<script src="/pl/codes.js"></script><script src="/app.js"></script>
+</body></html>
