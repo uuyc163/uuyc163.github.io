@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="fil"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote pag-aayos ng problema sa koneksyon at error - hindi kumokonekta, black screen, lag, walang tunog</title>
+<meta name="description" content="Hindi kumokonekta ang UU Remote, black screen pagkatapos kumonekta, lag, walang tunog, o hindi natutukoy ang controller? I-type o i-tap ang sintomas (hindi kumokonekta / black screen / lag / nadidiskonekta / walang tunog / controller / port conflict) para mahanap ang pinaka-malamang na sanhi + mga hakbang sa pag-ayos + pag-iwas: ang lag ay kadalasang problema sa network (packet loss, mahinang Wi-Fi, mababang upload ng host), hindi performance ng PC; ang black screen ay kadalasang mismatch ng resolusyon/fullscreen o lumang GPU driver; sa connection error, suriin muna ang firewall/antivirus at remote switch; ang security error ay tumuturo sa auth/encryption layer o sirang license certificate; RDP port 3389 conflict; hindi maabot kapag naka-sleep; mahinang IPv6 adaptation. Kasama ang paghahambing UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play at mga tantya sa 2026. Hinango mula sa opisyal na RDP docs ng Microsoft, opisyal na suporta ng Steam Remote Play at Parsec.">
+<link rel="canonical" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote pag-aayos ng problema sa koneksyon at error",
+   "url": "https://uuyc163.github.io/fil/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "fil",
+   "description": "Hindi kumokonekta ang UU Remote, black screen pagkatapos kumonekta, lag, walang tunog, o hindi natutukoy ang controller? I-type o i-tap ang sintomas (hindi kumokonekta / black screen / lag / nadidiskonekta / walang tunog / controller / port conflict) para mahanap ang pinaka-malamang na sanhi + mga hakbang sa pag-ayos + pag-iwas: ang lag ay kadalasang problema sa network (packet loss, mahinang Wi-Fi, mababang upload ng host), hindi performance ng PC; ang black screen ay kadalasang mismatch ng resolusyon/fullscreen o lumang GPU driver; sa connection error, suriin muna ang firewall/antivirus at remote switch; ang security error ay tumuturo sa auth/encryption layer o sirang license certificate; RDP port 3389 conflict; hindi maabot kapag naka-sleep; mahinang IPv6 adaptation. Kasama ang paghahambing UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play at mga tantya sa 2026. Hinango mula sa opisyal na RDP docs ng Microsoft, opisyal na suporta ng Steam Remote Play at Parsec.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fil",
+   "url": "https://uuyc163.github.io/fil/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - paano ayusin ang Hindi kumokonekta / nabigong koneksyon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sinasabi ng client na \"hindi makakonekta sa remote computer / nabigo / timeout\"; hindi ka makapasok sa host. Host naka-off / hindi naka-login / offline, humaharang ang firewall o antivirus, sirang remote switch, nagbagong IP sa bahay, o gamit na ang port. 1) Kumpirmahin na naka-on, naka-login, at online ang host; 2) payagan ang UU Remote sa firewall at antivirus; 3) i-off tapos i-on ang remote switch para mag-reset; 4) i-restart ang router para mag-refresh ng IP; 5) kung gamit ang port 3389, palitan o ihinto ang conflicting program. Bigyan ang host ng fixed LAN IP, idagdag sa trusted list, panatilihing naka-on at online."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - paano ayusin ang Black screen pagkatapos kumonekta?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nakakonekta pero ganap na itim ang larawan, kadalasang habang naririnig ang tunog at nakikita ang mouse. Hindi suportado ang resolusyon, fullscreen resolution ng laro != resolusyon ng streaming, lumang GPU driver, o sirang persistent bitmap caching. 1) Ilipat ang host sa karaniwang resolusyon tulad ng 1080p; 2) gawing windowed ang fullscreen na laro; 3) i-update ang GPU driver; 4) i-disable ang \"persistent bitmap caching\" (RDP Performance tab). Gumamit ng compatible na resolusyon, panatilihing bago ang GPU driver."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - paano ayusin ang Lag / input delay?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kapansin-pansin na input delay, pautal / frame drops, mahinang tugon. Network congestion / packet loss, mahinang Wi-Fi, mababang upload ng host, bitrate lampas sa bandwidth, o abnormal na encoder latency mula sa bagong GPU driver. 1) Lumipat sa cable o lumapit sa 5GHz Wi-Fi; 2) ibaba ang bitrate/bandwidth limit para may reserba; 3) suriin ang packet loss, isara ang ibang bandwidth-hungry na app; 4) sa host ibalik ang stable na GPU driver. Unahin ang cable; bitrate < upload na may reserba."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - paano ayusin ang Madalas na diskonekta / diskonekta sa segundo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nadidiskonekta sa ilang segundo o isang minuto, paulit-ulit na nagko-connect muli. Network instability / loss, walang keep-alive, problema sa security layer o certificate, o TermDD X.224 protocol error (Event ID 50). 1) Suriin ang packet loss at katatagan ng routing; 2) mag-set ng keep-alive interval sa host; 3) suriin ang security layer at encryption; 4) tingnan ang Event ID 50 sa Event Viewer para lokalisahin ang putol sa protocol. Matatag na network, tamang security layer at certificate."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - paano ayusin ang Walang tunog?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Maganda ang larawan pero walang tunog sa remote end. Walang magamit na audio device ang host (cloud PC / walang speaker ay nagpapakita ng \"No speakers or headphones are plugged in\") o maling capture device ang napili. 1) Mag-install ng virtual audio device (tulad ng VB-Cable) sa host; 2) piliin ang tamang capture device sa settings; 3) kung may nakakonekta, mag-connect muli para mailapat. Siguruhing may magamit na audio output device ang host."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - paano ayusin ang Hindi natutukoy ang controller / peripheral?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi natutukoy o hindi tumutugon ang controller, keyboard/mouse, o ibang peripheral sa remote end. Hindi naka-enable ang controller passthrough sa client, kulang na controller driver sa host, o may ibang programa na humahawak sa device nang eksklusibo. 1) I-enable ang controller/peripheral passthrough sa UU Remote; 2) i-install ang tamang controller driver sa host; 3) mag-connect muli at isara ang programang humahawak sa device nang eksklusibo. Mag-install ng driver nang maaga at i-enable ang passthrough."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - paano ayusin ang Port conflict / problema sa listener?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Abnormal na listener / tinanggihan ang koneksyon, karaniwan sa self-hosted / same-machine RDP. Ginagamit ng ibang programa ang default RDP port 3389 (o ang naka-set na port). 1) Gamitin ang netstat -a -o para hanapin ang PID na gumagamit ng port; 2) itugma sa tasklist /svc; 3) palitan ang port o ihinto ang conflicting program, tapos i-restart ang remote service. Iwasan ang maraming remote tool na nag-aagawan sa parehong port."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - paano ayusin ang Hindi maabot kapag naka-sleep/hibernate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi tumutugon ang host at hindi talaga kumokonekta. Pumasok sa sleep o hibernate ang host, kaya walang kuryente ang network card at hindi tumutugon. 1) I-set ang power plan ng host sa hindi kailanman mag-sleep/hibernate; 2) gisingin gamit ang Wake-on-LAN o UU remote power-on; 3) umpisahan ang koneksyon pagkatapos magising. I-disable ang sleep/hibernate, i-set ang remote power-on."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Wika: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <strong>Filipino</strong> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote remote control / game streaming - pag-aayos ng problema sa koneksyon at error</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_fil.webp"><img src="/img/cover_fil.png" alt="Ilustrasyon ng UU Remote pag-aayos ng problema sa koneksyon at error" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Larawan: paghahanap ng depekto ng UU Remote (keyword ng sintomas -> pinaka-malamang na sanhi + mga hakbang + pag-iwas)</figcaption></figure>
+<p>Hindi kumokonekta ang <strong>UU Remote</strong>, <strong>black screen</strong> pagkakonekta, <strong>lag</strong>, walang tunog, hindi natutukoy ang controller - huwag manghula nang bulag. Ang susi ay <strong>hatiin ayon sa kategorya at suriin ayon sa pagkakasunod</strong>: una ang <strong>network (packet loss / upload / firewall)</strong>, tapos <strong>GPU driver / resolusyon</strong>, at huli ang <strong>mga pahintulot / certificate</strong>. I-type o i-tap ang iyong <strong>sintomas</strong> (hal. <code>hindi kumokonekta</code>, <code>black screen</code>, <code>lag</code>, <code>walang tunog</code>, <code>nadidiskonekta</code>, <code>controller</code>) para mahanap ang <strong>pinaka-malamang na sanhi + mga hakbang + pag-iwas</strong>. Gustong mag-install muna? Tingnan ang <a href="https://uuyc163.com/download/">i-download ang UU Remote</a> at <a href="https://uuyc163.com/faq/">FAQ</a>.</p>
+<input id="q" placeholder="I-type ang sintomas, hal. hindi kumokonekta / black screen / lag / walang tunog / nadidiskonekta / controller" autocomplete="off">
+<button id="go">Maghanap ng solusyon</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>Hakbang 1: hatiin muna ang depekto sa apat na grupo (huwag agad mag-reinstall)</h2>
+<p>Siyam sa sampung problema sa remote control/streaming ay kasya sa apat na grupo - iklasipika muna, tapos ayusin: (1) <strong>Koneksyon</strong> - hindi kumokonekta, nadidiskonekta sa loob ng segundo, port conflict, hindi maabot kapag naka-sleep, pasaway na IPv6: suriin ang <strong>network at firewall/antivirus, remote switch, at kung online at naka-on ang host</strong>; (2) <strong>Larawan</strong> - black screen, artifacts, malabo: kadalasang <strong>mismatch ng resolusyon/fullscreen o lumang GPU driver</strong>; (3) <strong>Latency/lag</strong> - input delay, pautal-utal: ang tunay na sanhi ay kadalasang <strong>packet loss / mahinang Wi-Fi / mababang upload ng host</strong>, hindi performance; (4) <strong>Tunog / peripheral / pahintulot</strong> - walang tunog, hindi natutukoy ang controller, walang remote permission: suriin ang <strong>audio device ng host, controller passthrough, grupong Remote Desktop Users</strong>. Higit pa: <a href="https://uuyc163.com/faq/">UU Remote FAQ</a>.</p>
+<div class="cat"><div class="catbox"><b>Koneksyon / nadidiskonekta</b><span class="cs">hindi kumokonekta . madalas na diskonekta . port conflict . hindi maabot kapag naka-sleep . IPv6</span><div>Suriin ang network at firewall/antivirus, remote switch, at kung online at naka-on ang host: sa failure, payagan muna ang firewall, i-off/i-on ang remote, i-refresh ang IP; kung gamit ang port 3389, hanapin ang conflict gamit ang netstat; huwag hayaang mag-sleep ang host.</div></div><div class="catbox"><b>Larawan (black screen / artifacts / malabo)</b><span class="cs">black screen sa pagkonekta . artifacts . malabo</span><div>Kadalasang mismatch ng resolusyon/fullscreen o lumang GPU driver: lumipat sa suportadong resolusyon, gawing windowed ang laro, i-update ang GPU driver, i-disable ang persistent bitmap caching; sa artifacts/malabo suriin ang bitrate at packet loss at subukang i-disable ang hardware decoding.</div></div><div class="catbox"><b>Latency / lag</b><span class="cs">input delay . pautal . pautal-utal</span><div>Ang tunay na sanhi ay kadalasang network, hindi performance: lumipat sa cable o 5GHz Wi-Fi, ibaba ang bitrate/bandwidth limit, suriin ang packet loss, sa host ibalik ang stable na GPU driver, isara ang ibang app na sumisipsip ng bandwidth; ang kulang na upload ng host ang tunay na bottleneck sa internet.</div></div><div class="catbox"><b>Tunog / peripheral / pahintulot</b><span class="cs">walang tunog . hindi natutukoy ang controller . walang remote permission</span><div>Walang tunog - suriin ang audio device ng host (cloud PC / walang speaker ay kailangan ng virtual audio device); hindi natutukoy ang controller - i-enable ang passthrough at mag-install ng driver; walang pahintulot - idagdag ang account sa grupong "Remote Desktop Users" at suriin ang connection limit policy.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision tree sa paglokalisa ng depekto ng UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Paano lokalisahin ang depekto (hatiin ayon sa sintomas sa apat na grupo: koneksyon / larawan / latency / tunog at peripheral)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">May sira</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">Hatiin ayon sa sintomas</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">hindi kumokonekta/diskonekta -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">network . firewall . switch . port</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">black screen/artifacts -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">resolusyon . fullscreen . GPU driver</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">Apat na karaniwang depekto (pumili ng direksyon ng self-check ayon sa sintomas)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. Koneksyon/diskonekta</text><text x="32" y="234" fill="#555" font-size="11">network . firewall . port . sleep</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. Black screen</text><text x="206" y="234" fill="#555" font-size="11">resolusyon . fullscreen . driver</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. Latency/lag</text><text x="380" y="234" fill="#555" font-size="11">loss . upload . cable muna</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. Tunog/peripheral</text><text x="554" y="234" fill="#555" font-size="11">audio device . controller . pahintulot</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>Larawan 1: daloy ng paglokalisa ng depekto ng UU Remote - hatiin ayon sa sintomas sa apat na grupo (koneksyon / larawan / latency / tunog at peripheral), tapos suriin ayon sa pagkakasunod</figcaption></figure>
+<h2>Hakbang 2: ang pinaka-madalas na maling-diagnose na sanhi -> L2 (network muna, tapos driver/resolusyon, huli ang pahintulot/certificate)</h2>
+<p>Pangunahing ideya: <strong>karamihan sa "lag" at "hindi kumokonekta" ay talagang problema sa network, hindi performance ng PC o software bug</strong>. Ang pagsusuri sa pagkakasunod na ito ang pinakamabilis: (1) <strong>Lag/delay - suriin muna ang network</strong>: packet loss, mahinang Wi-Fi, at kulang na <strong>upload</strong> ng host ang tunay na bottleneck ng streaming (ang pagkontrol ng bahay mula sa labas ay nagpapadala ng larawan <em>palabas</em>, kumokonsumo ng upload) - lumipat sa cable o 5GHz Wi-Fi, ibaba ang bitrate/bandwidth limit, sa host subukang ibalik ang stable na GPU driver (may bagong NVIDIA driver na nagdulot ng abnormal na encoder latency); (2) <strong>Black screen - suriin muna ang resolusyon at driver</strong>: nakakonekta pero itim habang naririnig ang tunog / nakikita ang mouse ay kadalasang ibig sabihin <strong>hindi suportado ang resolusyon o ang fullscreen resolution ng laro != resolusyon ng streaming</strong> (gawing windowed ang laro), <strong>lumang GPU driver</strong> (i-update), o sirang persistent bitmap caching (i-disable); (3) <strong>Connection failure - suriin muna ang firewall at switch</strong>: humaharang ang firewall/antivirus, i-off tapos i-on ang remote switch, i-restart ang router para mag-refresh ng IP, o gamit ang port <code>3389</code> (<code>netstat -a -o</code> para sa conflict); (4) <strong>Security error - suriin ang auth/certificate</strong>: ang "dahil sa security error hindi makakonekta ang client" ay kadalasang maling-config na auth/encryption layer o sirang license certificate; (5) <strong>Walang tunog - suriin ang audio device</strong>: kung walang speaker ang host / walang audio device ang cloud PC, mag-install ng virtual audio device. Sa ibaba ang decision tree para sa paglokalisa ng depekto; sa baba pa ang self-check panel, paghahambing, at mga tantya sa 2026.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Self-check panel bago kumonekta ng UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Self-check panel bago kumonekta/mag-stream (berde = natugunan / pula = madaling makaligtaan)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">Item na susuriin</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Paghatol</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Estado</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host naka-on, naka-login, online (hindi naka-sleep)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">estado online</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">natugunan</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Pinapayagan ng firewall/antivirus ang UU Remote</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">firewall</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">suriin</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Parehong dulo cable o 5GHz Wi-Fi, buong signal</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">kalidad ng network</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">natugunan</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">GPU driver ng host = bagong stable na bersyon</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">GPU driver</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">suriin</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Upload ng host >= streaming bitrate + reserba</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">upload</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">natugunan</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Port 3389 hindi ginagamit ng ibang programa</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">port</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">suriin</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">Tala: pula = ang tatlong pinaka-nakakaligtaan - payagan ang firewall, GPU driver, port conflict; sa hindi kumokonekta / black screen / lag suriin ang mga ito bago mag-reinstall.</text></svg><figcaption>Larawan 2: self-check panel bago kumonekta (berde = natugunan / pula = bitag na susuriin)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_fil.webp"><img src="/img/board_fil.png" alt="Ilustrasyon ng berde/pula na mga tuldok ng self-check panel bago kumonekta ng UU Remote" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Larawan: suriin ang "host online at naka-on . pinapayagan ang firewall . cable/5GHz . bagong driver . libreng port" - lag at black screen ay madalas pumalpak sa una</figcaption></figure>
+<h2>Buong talahanayan ng karaniwang depekto (sintomas . kategorya . direksyon ng solusyon)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs karaniwang remote control / streaming - paghahambing sa pag-aayos (pampublikong dokumentasyon)</h2>
+<table class="cmp"><tr><th>Solusyon</th><th>Koneksyon/NAT</th><th>Pag-handle ng black screen</th><th>Peripheral/controller</th><th>Latency sa network</th><th>Diagnostic tools</th></tr><tr><td>UU Remote</td><td>P2P direkta + private network, auto NAT</td><td>palitan ang resolusyon / window / i-update ang driver</td><td>controller at peripheral passthrough</td><td>millisecond (na-optimize na private network)</td><td>client logs + self-check</td></tr><tr><td>ToDesk</td><td>sariling relay + P2P</td><td>adaptive resolution</td><td>peripheral mapping</td><td>mababa (dedicated channel)</td><td>diagnostics panel</td></tr><tr><td>Parsec</td><td>P2P hole-punch, kailangan ng public IP/UPnP</td><td>fullscreen mismatch -> window</td><td>native controller support</td><td>napakababa sa LAN, depende sa network sa internet</td><td>logs + community docs</td></tr><tr><td>Microsoft RDP</td><td>port 3389, kailangan ng pahintulot/gateway</td><td>persistent bitmap cache / resolusyon / driver</td><td>kailangan ng redirection setup</td><td>mababa sa LAN, depende sa bandwidth sa internet</td><td>Event Viewer + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>Steam relay + direkta</td><td>i-update ang driver / i-disable ang hardware decode</td><td>controller-first support</td><td>~30-50Mb/s @1080p60</td><td>i-disable ang IPv6 + stream settings</td></tr></table><section class="i4data">
+<h2>UU Remote remote control/streaming pamamahagi ng karaniwang depekto at mga tala (tantya 2026)</h2>
+<p>Ang sumusunod ay <strong>mga tantya sa 2026</strong> na pinagsama ang opisyal na RDP docs ng Microsoft, opisyal na suporta ng Steam Remote Play at Parsec (hindi pangako ng vendor o first-hand na istatistika; para sa reference, nagbabago ayon sa bersyon at network):</p>
+<table>
+<tr><th>Dimensyon</th><th>Tantya / tala</th></tr>
+<tr><td>Pamamahagi ayon sa uri ng depekto (tan.)</td><td>koneksyon/diskonekta ~ <strong>35%</strong> . larawan (black screen/artifacts) ~ <strong>25%</strong> . latency/lag ~ <strong>22%</strong> . tunog/peripheral ~ <strong>12%</strong> . pahintulot/seguridad ~ <strong>6%</strong></td></tr>
+<tr><td>Tunay na sanhi ng lag (susi)</td><td>karamihan sa "lag / hindi kumokonekta" ay <strong>problema sa network</strong> (packet loss, mahinang Wi-Fi, mababang <strong>upload</strong> ng host), <strong>hindi</strong> performance ng PC o bug -> suriin ang network bago ang soft/hardware</td></tr>
+<tr><td>Pangunahing sanhi ng black screen (tan.)</td><td>resolusyon/fullscreen mismatch + lumang GPU driver ang nangingibabaw; itim na may tunog = klasikong problema sa resolusyon, gawing windowed ang laro / karaniwang resolusyon ang pinaka-nakakatulong</td></tr>
+<tr><td>RDP port at protocol</td><td>default RDP port <strong>3389 (TCP)</strong>; kung gamit -> hindi kumokonekta; Event ID <strong>50 (TermDD . X.224)</strong> = protocol stream error na nagdidiskonekta sa client</td></tr>
+<tr><td>Pagkakasunod ng self-check (nakakatipid ng oras)</td><td><strong>network (loss/upload/firewall) muna -> driver/resolusyon -> pahintulot/certificate huli</strong>; ang streaming ay mga <strong>30-50Mbps @1080p60</strong>, at ang bitrate ay dapat sa ilalim ng upload ng host</td></tr>
+</table>
+<p><small>Batayan ng tantya: source baseline + extrapolation (pinagsama ang Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", opisyal na suporta ng Steam Remote Play, opisyal na suporta ng Parsec, 2026); nagbabago ayon sa bersyon at patakaran ng network. Umasa sa pinakabagong opisyal na impormasyon at sa sarili mong pagsubok.</small></p>
+</section>
+<h2>Tunay na sitwasyon - mabilis basahin</h2>
+<ul class="scenes"><li>Pagkontrol sa PC sa bahay mula sa telepono, black screen agad pagkakonekta pero may tunog: kadalasang hindi suportado ng telepono ang resolusyon ng host o hindi tugma ang fullscreen resolution ng laro -> gawing windowed ang laro, ilipat ang host sa karaniwang resolusyon tulad ng 1080p, at i-update ang GPU driver.</li><li>Biglang bumagal nang may malaking delay sa gitna ng session: huwag isisi muna sa performance ng PC - suriin ang packet loss at signal ng Wi-Fi, lumipat sa cable o lumapit sa 5GHz Wi-Fi, ibaba ang bitrate/bandwidth limit, ibaba ang quality kung mababa ang upload ng host; kung may bagong NVIDIA driver na nagloloko, ibalik sa stable.</li><li>Sinasabi ng client na "hindi makakonekta sa remote computer / nabigo ang koneksyon": kumpirmahin na naka-on, naka-login, at online ang host, payagan ang UU Remote sa firewall at antivirus, i-off tapos i-on ang remote switch; kung nagbago ang IP sa bahay i-restart ang router, o tingnan kung ginagamit ng ibang programa ang port 3389.</li><li>Nadidiskonekta sa loob ng ilang segundo o isang minuto: kadalasang network instability o problema sa security/certificate - suriin ang packet loss at routing, mag-set ng keep-alive interval sa host, suriin ang security layer at encryption; ang Event ID 50 (TermDD . X.224) sa Event Viewer ay tumuturo rin sa naputol na protocol stream.</li><li>Maganda ang larawan pero walang tunog sa remote end: walang magamit na audio device ang host (cloud PC o walang speaker ay nagpapakita ng "No speakers or headphones are plugged in") -> mag-install ng virtual audio device (tulad ng VB-Cable) sa host at piliin ang tamang capture device sa settings.</li><li>Maka-login ka pero hindi maumpisahan ang remote control, may babala na walang pahintulot: idagdag ang account sa grupong "Remote Desktop Users" ng host, suriin kung humaharang ang policy na "Limit number of connections", at kumpirmahin na may remote logon rights ang account.</li></ul><div class="related"><h2>Kaugnay</h2><ul><li><a href="https://uuyc163.com/">UU Remote opisyal / download at gabay</a></li><li><a href="https://uuyc163.com/faq/">UU Remote FAQ (opisyal)</a></li><li><a href="https://uuyc163.com/fil/tools/connection-troubleshooting/">Pag-aayos ng UU Remote (buong reference na talahanayan)</a></li><li><a href="https://uuycc.com/">UU Remote download center (kapatid)</a></li></ul></div></main>
+<footer>Ang mga tala sa depekto / sanhi / solusyon ay hinango mula sa Microsoft Learn "Troubleshoot Remote desktop disconnected errors" at "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (RDP connection failure, port 3389 conflict, security layer at encryption, license certificate corruption, hindi maabot kapag naka-sleep, Event ID 50 TermDD X.224 protocol error), opisyal na suporta ng Steam Remote Play (connection failure = firewall/antivirus / switch reset / refresh IP, black screen = i-update ang driver / i-disable ang hardware decoding, i-disable ang IPv6) at opisyal na suporta ng Parsec (black screen = fullscreen resolution mismatch -> window, walang tunog = host na walang audio device -> virtual audio device, mataas na latency = bagong driver / loss -> ibalik ang driver . ibaba ang bandwidth . cable). Ang 2026 na pamamahagi ng depekto ay tantya, hindi pangako ng vendor o first-hand na istatistika; para sa reference, umasa sa pinakabagong opisyal na impormasyon at sa sarili mong pagsubok. (Lokalisasyon: hindi opisyal · LLM translation)<br>Tool page . ang paghahanap ay hindi pumapalit sa tunay na pagsubok sa opisyal na client o opisyal na suporta</footer>
+</div>
+<script src="/fil/codes.js"></script><script src="/app.js"></script>
+</body></html>
