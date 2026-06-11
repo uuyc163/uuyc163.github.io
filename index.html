@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU远程 远程控制/串流 连接故障 & 报错速查表 - 连不上、黑屏、卡顿延迟、没声音怎么解决</title>
+<meta name="description" content="UU远程连不上、连上黑屏、卡顿延迟、没声音、手柄不识别怎么修？输入或点选「故障现象」（连不上 / 黑屏 / 卡顿 / 掉线 / 没声音 / 手柄 / 端口冲突），查最可能原因 + 解决步骤 + 预防自检：卡顿真因多是网络丢包与被控端上行不足（非性能）、黑屏多为分辨率/全屏不匹配或显卡驱动旧、连接失败先查防火墙/杀软与远程开关、安全错误是认证/加密层或授权证书、RDP 端口 3389 冲突、睡眠/休眠不可连、IPv6 适配不良。附 UU远程 vs ToDesk / Parsec / 微软 RDP / Steam Remote Play 排障对照与 2026 故障分布估算。口径整理自微软 RDP 官方排障文档、Steam Remote Play 与 Parsec 官方支持。">
+<link rel="canonical" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU远程 远程控制/串流 连接故障 & 报错速查表",
+   "url": "https://uuyc163.github.io/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "zh-Hans",
+   "description": "UU远程连不上、连上黑屏、卡顿延迟、没声音、手柄不识别怎么修？输入或点选「故障现象」（连不上 / 黑屏 / 卡顿 / 掉线 / 没声音 / 手柄 / 端口冲突），查最可能原因 + 解决步骤 + 预防自检：卡顿真因多是网络丢包与被控端上行不足（非性能）、黑屏多为分辨率/全屏不匹配或显卡驱动旧、连接失败先查防火墙/杀软与远程开关、安全错误是认证/加密层或授权证书、RDP 端口 3389 冲突、睡眠/休眠不可连、IPv6 适配不良。附 UU远程 vs ToDesk / Parsec / 微软 RDP / Steam Remote Play 排障对照与 2026 故障分布估算。口径整理自微软 RDP 官方排障文档、Steam Remote Play 与 Parsec 官方支持。",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "zh-Hans",
+   "url": "https://uuyc163.github.io/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU远程 连不上 / 连接失败 怎么解决？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "客户端提示「无法连接到远程电脑/连接失败/连接超时」，进不去被控端。 被控端未开机登录或不在线、防火墙/杀软拦截、远程开关异常、家里 IP 变动、端口被占。 ① 确认被控端已开机登录且在线；② 防火墙与杀毒放行 UU远程；③ 把远程开关关掉再打开重置；④ 重启路由刷新 IP；⑤ 端口 3389 被占用则换端口或停冲突程序。 被控端固定内网 IP、加入信任名单、保持开机在线。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU远程 连上后黑屏 怎么解决？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "连上但画面全黑，往往能听到声音、看到鼠标。 分辨率不被支持、游戏全屏分辨率≠串流分辨率、显卡驱动旧、持久位图缓存损坏。 ① 被控端换 1080p 等通用分辨率；② 把全屏游戏改窗口化；③ 更新显卡驱动；④ 关闭「持久位图缓存」（RDP 体验选项卡）。 用兼容分辨率、显卡驱动保持较新。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU远程 卡顿 / 操作延迟 怎么解决？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "操作有明显延迟、画面卡顿掉帧、跟手差。 网络拥塞/丢包、WiFi 信号弱、被控端上行不足、码率超带宽、新显卡驱动编码器延迟异常。 ① 改有线或贴近 5G WiFi；② 降码率/带宽上限给网络留缓冲；③ 查丢包、关其他占网程序；④ 被控端回退稳定版显卡驱动。 有线优先、码率 < 上行并留缓冲。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU远程 频繁掉线 / 几秒就断 怎么解决？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "连上几秒或一分钟就断开，反复重连。 网络不稳/丢包、keep-alive 未配置、安全层或证书问题、TermDD X.224 协议错（Event ID 50）。 ① 查网络丢包与路由稳定性；② 被控端配置 keep-alive 保活间隔；③ 检查安全层与加密设置；④ 看事件查看器 Event ID 50 定位协议中断。 稳定网络、正确的安全层与证书。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU远程 没有声音 怎么解决？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "画面正常但远端没有声音。 被控端没有可用音频设备（云主机/没插扬声器，显示「未插入扬声器或耳机」）、选错采集设备。 ① 被控端装一个虚拟声卡（如 VB-Cable）；② 在设置里把音频采集选到对的设备；③ 有人连着时改设置后需重连生效。 保证被控端有可用音频输出设备。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU远程 手柄 / 外设不识别 怎么解决？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "手柄、键鼠等外设在远端不被识别或无反应。 控制端未开手柄透传、被控端缺手柄驱动、被其他程序独占。 ① 在 UU远程开启手柄/外设透传；② 被控端安装对应手柄驱动；③ 断开重连、关闭独占该设备的程序。 提前装好驱动并开启透传。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU远程 端口冲突 / 监听异常 怎么解决？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "服务监听异常、连接被拒，多发生在自建/RDP 同机。 RDP 默认端口 3389（或所配端口）被其它程序占用。 ① 用 netstat -a -o 找占用端口的进程 PID；② tasklist /svc 对出是哪个程序；③ 改端口或停冲突程序，再重启远程服务。 避免多远控程序抢同一端口。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU远程 睡眠/休眠无法连 怎么解决？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "被控端无响应、怎么都连不上。 被控端进入了睡眠或休眠，网卡断电无法响应。 ① 被控端电源设为「从不睡眠/休眠」；② 用网络唤醒(WoL)或 UU 远程开机把它唤醒；③ 唤醒后再发起连接。 关睡眠/休眠、配好远程开机。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">语言：<strong>简体中文</strong> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a></nav>
+<h1>UU远程 远程控制 / 游戏串流 连接故障 & 报错速查表</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_zh.webp"><img src="/img/cover_zh.png" alt="UU远程 远程控制/串流 连接故障与报错速查表示意图" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>图：UU远程连接故障速查（现象关键词 → 最可能原因 + 解决步骤 + 预防自检）</figcaption></figure>
+<p><strong>UU远程</strong>连不上、连上<strong>黑屏</strong>、<strong>卡顿延迟</strong>、没声音、手柄不识别——别瞎试。排障关键是<strong>先分类、按顺序自检</strong>：先看<strong>网络（丢包/上行/防火墙）</strong>，再看<strong>显卡驱动/分辨率</strong>，最后才查<strong>权限/证书</strong>。输入或点选你的<strong>故障现象</strong>（如 <code>连不上</code>、<code>黑屏</code>、<code>卡顿</code>、<code>没声音</code>、<code>掉线</code>、<code>手柄</code>），即查 <strong>最可能原因 + 解决步骤 + 预防自检</strong>。想先装客户端，看 <a href="https://uuyc163.com/download/">UU远程下载</a> 与 <a href="https://uuyc163.com/faq/">常见问题</a>。</p>
+<input id="q" placeholder="输入故障现象，例如 连不上 / 黑屏 / 卡顿 / 没声音 / 掉线 / 手柄" autocomplete="off">
+<button id="go">查解决</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>第一步：先把故障分四类（别一上来就重装）</h2>
+<p>远程控制/串流出问题，九成能归进四类，先分类再对症：① <strong>连接类</strong>——连不上、连上几秒就断、端口冲突、睡眠不可连、IPv6 抽风，优先查<strong>网络与防火墙/杀软、远程开关、被控端是否在线开机</strong>；② <strong>画面类</strong>——黑屏、花屏、糊，多为<strong>分辨率/全屏不匹配或显卡驱动旧</strong>；③ <strong>延迟卡顿类</strong>——操作延迟、掉帧，真因多在<strong>网络丢包/WiFi 弱/被控端上行不足</strong>，非性能；④ <strong>声音/外设/权限类</strong>——没声音、手柄不识别、无权限远控，查<strong>被控端音频设备、手柄透传、远程用户组授权</strong>。更多见 <a href="https://uuyc163.com/faq/">UU远程常见问题</a>。</p>
+<div class="cat"><div class="catbox"><b>连接 / 掉线类</b><span class="cs">连不上 · 频繁掉线 · 端口冲突 · 睡眠不可连 · IPv6</span><div>优先查网络与防火墙/杀软、远程开关、被控端是否在线开机：连接失败先放行防火墙、关掉再开远程、刷新 IP；端口 3389 被占用用 netstat 查冲突；被控端别进睡眠/休眠。</div></div><div class="catbox"><b>画面类（黑屏 / 花屏 / 糊）</b><span class="cs">连上黑屏 · 花屏马赛克 · 画质糊</span><div>多为分辨率/全屏不匹配或显卡驱动旧：换支持的分辨率、把游戏改窗口化、更新显卡驱动、关持久位图缓存；花屏/糊查码率与丢包，必要时关硬件解码试软解。</div></div><div class="catbox"><b>延迟 / 卡顿类</b><span class="cs">操作延迟 · 掉帧 · 卡顿</span><div>真因多在网络非性能：改有线或 5G WiFi、降码率/带宽上限、查丢包、被控端试回退稳定版显卡驱动、关其他占网程序；被控端上行不足是外网串流真瓶颈。</div></div><div class="catbox"><b>声音 / 外设 / 权限类</b><span class="cs">没声音 · 手柄不识别 · 无权限远控</span><div>没声音查被控端音频设备（云主机/无扬声器需装虚拟声卡）；手柄不识别开手柄透传、装驱动；无权限把账号加入「远程桌面用户」组、检查连接数策略。</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU远程故障定位决策流程图" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">故障怎么定位（先按现象分四类：连接 / 画面 / 延迟 / 声音外设）</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">出故障了</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">先按现象分</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">连不上/掉线 →</text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">查网络·防火墙·远程开关·端口</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">黑屏/花屏 →</text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">查分辨率·全屏·显卡驱动</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">四类典型故障（按现象选自检方向）</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">① 连接/掉线</text><text x="32" y="234" fill="#555" font-size="11">网络·防火墙·端口·睡眠</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">② 画面黑屏</text><text x="206" y="234" fill="#555" font-size="11">分辨率·全屏·驱动</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">③ 延迟卡顿</text><text x="380" y="234" fill="#555" font-size="11">丢包·上行·有线优先</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">④ 声音/外设</text><text x="554" y="234" fill="#555" font-size="11">音频设备·手柄·权限</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>图1：UU远程故障定位流程——先按现象分四类（连接 / 画面 / 延迟 / 声音外设），再按自检顺序对症</figcaption></figure>
+<h2>第二步：最常被误判的真因 → L2 深度（先网络、再驱动/分辨率、最后权限/证书）</h2>
+<p>关键认知：<strong>大多数「卡顿」「连不上」其实是网络问题，不是电脑性能或软件 Bug</strong>。按这个顺序自检最省时间：① <strong>卡顿/延迟先查网络</strong>——丢包、WiFi 信号弱、被控端<strong>上行</strong>不足才是串流真瓶颈（外网控家里，画面从家里「传出去」吃的是上行），改有线或 5G WiFi、降码率/带宽上限、被控端试回退稳定版显卡驱动（新 NVIDIA 驱动曾致编码器延迟异常）；② <strong>黑屏先查分辨率与驱动</strong>——连上黑屏但能听到声音/看到鼠标，多是<strong>分辨率不被支持或游戏全屏分辨率≠串流分辨率</strong>（把游戏改窗口化）、<strong>显卡驱动旧</strong>（更新驱动）、或持久位图缓存损坏（关掉它）；③ <strong>连接失败先查防火墙与开关</strong>——防火墙/杀软拦截、远程开关需关掉再开、IP 变动可重启路由刷新、端口 <code>3389</code> 被占用（<code>netstat -a -o</code> 查冲突进程）；④ <strong>安全错误查认证/证书</strong>——「由于安全错误无法连接」多为认证/加密层配置错或授权证书损坏；⑤ <strong>没声音查音频设备</strong>——被控端无扬声器/云主机无音频设备时需装虚拟声卡。下图是「故障定位」决策树；再往下是连接前自检板、横向对照与 2026 估算。</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU远程连接前自检评分板示意图" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">连接/串流前自检板示意（绿=已满足 / 红=易忽略待核）</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">自检项</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">判断</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">状态</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">被控端已开机登录、在线（非睡眠/休眠）</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">在线状态</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">已满足</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">防火墙/杀软已放行 UU远程</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">防火墙</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">待核</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">两端有线或 5G WiFi、信号满格</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">网络质量</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">已满足</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">被控端显卡驱动为较新稳定版</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">显卡驱动</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">待核</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">被控端「上行」≥ 串流码率 + 缓冲</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">上行带宽</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">已满足</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">端口 3389 未被其它程序占用</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">端口</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">待核</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">注：红 = 最易忽略三点——防火墙放行、显卡驱动、端口占用；连不上/黑屏/卡顿先核这几项再重装。</text></svg><figcaption>图2：连接前自检评分板示意（绿=已满足 / 红=易踩坑待核）</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_zh.webp"><img src="/img/board_zh.png" alt="UU远程连接前自检评分板红绿项示意图" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>图：先核「被控端在线开机·防火墙放行·有线/5G·驱动新·端口不占」——卡顿黑屏多栽在前几项</figcaption></figure>
+<h2>全部常见故障 速查表（现象 · 分类 · 解决方向）</h2>
+<table id="tbl"></table>
+<h2>UU远程 vs 主流远控/串流方案 排障维度 横向对照（公开口径）</h2>
+<table class="cmp"><tr><th>方案</th><th>连接/穿透</th><th>黑屏处理</th><th>外设/手柄</th><th>跨网延迟</th><th>排障工具</th></tr><tr><td>UU远程</td><td>P2P 直连 + 专网，自动穿透</td><td>切分辨率/窗口化/更新驱动</td><td>手柄/外设透传</td><td>毫秒级（专网优化）</td><td>客户端日志 + 自检</td></tr><tr><td>ToDesk</td><td>自研中转 + P2P</td><td>分辨率自适应</td><td>支持外设映射</td><td>低延迟（专属通道）</td><td>诊断面板</td></tr><tr><td>Parsec</td><td>P2P 打洞，需公网/UPnP</td><td>全屏分辨率不匹配→窗口化</td><td>手柄原生支持</td><td>局域网极低、跨网看网络</td><td>日志 + 社区文档</td></tr><tr><td>微软 RDP</td><td>端口 3389，需放行/网关</td><td>持久位图缓存/分辨率/驱动</td><td>需重定向设置</td><td>内网低、跨网看带宽</td><td>Event Viewer + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>Steam 中继 + 直连</td><td>更新驱动/关硬件解码</td><td>手柄优先支持</td><td>约 30–50Mb/s@1080p60</td><td>禁 IPv6 + 流设置</td></tr></table><section class="i4data">
+<h2>UU远程 远程控制/串流 常见故障分布与口径（2026 估算）</h2>
+<p>以下为综合微软 RDP 官方排障文档、Steam Remote Play 与 Parsec 官方支持的 <strong>2026 估算</strong>（非厂商承诺值、非一手统计，仅供参考；随版本与网络环境变化）：</p>
+<table>
+<tr><th>维度</th><th>估算 / 口径</th></tr>
+<tr><td>故障类型分布（估算）</td><td>连接/掉线类 ≈ <strong>35%</strong> · 画面(黑屏/花屏) ≈ <strong>25%</strong> · 延迟/卡顿 ≈ <strong>22%</strong> · 声音/外设 ≈ <strong>12%</strong> · 权限/安全 ≈ <strong>6%</strong></td></tr>
+<tr><td>卡顿真因（关键）</td><td>多数「卡顿/连不上」是<strong>网络问题</strong>（丢包、WiFi 弱、被控端<strong>上行</strong>不足），<strong>非</strong>电脑性能或软件 Bug → 先查网络再查软硬件</td></tr>
+<tr><td>黑屏首因（估算）</td><td>分辨率/全屏不匹配 + 显卡驱动旧占多数；连上黑屏却有声音 = 典型分辨率问题，把游戏窗口化 / 换通用分辨率最有效</td></tr>
+<tr><td>RDP 端口与协议</td><td>RDP 默认端口 <strong>3389（TCP）</strong>，被占用会连不上；Event ID <strong>50（TermDD·X.224）</strong>= 协议流错误导致客户端被断开</td></tr>
+<tr><td>自检顺序（省时）</td><td><strong>先网络（丢包/上行/防火墙）→ 再驱动/分辨率 → 最后权限/证书</strong>；串流约 <strong>30–50Mbps@1080p60</strong>，码率须 &lt; 被控端上行</td></tr>
+</table>
+<p><small>估算口径：信源基线 + 时间外推（综合微软 Learn《Troubleshoot Remote desktop disconnected errors》《Disconnect Codes and Reasons》、Steam Remote Play 官方支持、Parsec 官方支持 2026 抓取），随版本与网络策略会变；请以各家最新官方与实测为准。</small></p>
+</section>
+<h2>真实场景速判</h2>
+<ul class="scenes"><li>在外用手机控家里电脑，连上就黑屏但能听到声音：多是被控端分辨率不被手机支持或游戏全屏分辨率不匹配 → 先把游戏改窗口化、被控端换 1080p 等通用分辨率，并更新显卡驱动。</li><li>玩着玩着突然很卡、操作延迟大：先别怪电脑性能——查网络丢包与 WiFi 信号，改有线或贴近 5G WiFi、把码率/带宽上限调低，被控端上行不足时降画质；新装的 NVIDIA 驱动若异常可回退稳定版。</li><li>客户端提示「无法连接到远程电脑/连接失败」：确认被控端已开机登录在线、防火墙与杀软放行 UU远程、把远程开关关掉再打开；家里 IP 变动时重启路由刷新，或检查端口 3389 是否被别的程序占用。</li><li>连上几秒或一分钟就断开：多为网络不稳或安全/证书问题——查丢包与路由、被控端配置 keep-alive 保活、检查安全层与加密设置；事件查看器出现 Event ID 50（TermDD·X.224 协议错）也指向连接被中断。</li><li>画面正常但远端没声音：被控端没有可用音频设备（云主机或没插扬声器会显示「未插入扬声器或耳机」）→ 被控端装一个虚拟声卡（如 VB-Cable）、并在设置里选对采集设备。</li><li>登录后无法发起远控、提示无权限：把要用的账号加入被控端的「远程桌面用户」组、检查「限制连接数」组策略是否卡住、确认该账号有远程登录权限。</li></ul><div class="related"><h2>相关</h2><ul><li><a href="https://uuyc163.com/">UU远程官网 / 下载与使用教程</a></li><li><a href="https://uuyc163.com/faq/">UU远程常见问题（官方 FAQ）</a></li><li><a href="https://uuyc163.com/tools/connection-troubleshooting/">UU远程连接故障速查（本站权威版 · 全量表）</a></li><li><a href="https://uuycc.com/">UU远程下载中心（姊妹站）</a></li></ul></div></main>
+<footer>故障/原因/解决口径整理自微软 Learn《Troubleshoot Remote desktop disconnected errors》与《Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons》（RDP 连接失败、端口 3389 冲突、安全层与加密、授权证书损坏、睡眠不可连、Event ID 50 TermDD X.224 协议错）、Steam Remote Play 官方支持（连接失败=防火墙/杀软/开关重置/刷新IP、黑屏=更新驱动/关硬件解码、禁用 IPv6）与 Parsec 官方支持（黑屏=全屏分辨率不匹配→窗口化、无声=被控端无音频设备→装虚拟声卡、高延迟=新驱动/丢包→回退驱动·降带宽·改有线）。2026 故障分布为估算、非厂商承诺值、非一手统计，仅供参考，请以各家最新官方与实测为准。<br>工具页 · 速查口径不替代官方客户端实测与官方技术支持</footer>
+</div>
+<script src="/codes.js"></script><script src="/app.js"></script>
+</body></html>
