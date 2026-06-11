@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UUリモート 接続トラブル & エラー早見表 - つながらない・黒画面・カクつき・音が出ない の直し方</title>
+<meta name="description" content="UUリモートがつながらない、接続後に黒画面、カクつき/遅延、音が出ない、コントローラーが認識されない時の直し方。症状（つながらない / 黒画面 / カクつき / 切断 / 音が出ない / コントローラー / ポート競合）を入力・タップして、最も可能性の高い原因＋対処手順＋予防を検索。カクつきの多くは性能ではなくネットワーク（パケットロス・弱い Wi-Fi・ホストの上り不足）、黒画面は解像度/全画面の不一致か古い GPU ドライバ、接続失敗はまずファイアウォール/ウイルス対策と遠隔スイッチ、セキュリティエラーは認証/暗号化層かライセンス証明書、RDP ポート 3389 競合、スリープ/休止は到達不可、IPv6 の相性。UUリモート vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play の対処比較と 2026 故障分布の推計も掲載。口径は Microsoft 公式 RDP トラブルシュート、Steam Remote Play・Parsec 公式サポートより。">
+<link rel="canonical" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UUリモート 接続トラブル & エラー早見表",
+   "url": "https://uuyc163.github.io/ja/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "ja",
+   "description": "UUリモートがつながらない、接続後に黒画面、カクつき/遅延、音が出ない、コントローラーが認識されない時の直し方。症状（つながらない / 黒画面 / カクつき / 切断 / 音が出ない / コントローラー / ポート競合）を入力・タップして、最も可能性の高い原因＋対処手順＋予防を検索。カクつきの多くは性能ではなくネットワーク（パケットロス・弱い Wi-Fi・ホストの上り不足）、黒画面は解像度/全画面の不一致か古い GPU ドライバ、接続失敗はまずファイアウォール/ウイルス対策と遠隔スイッチ、セキュリティエラーは認証/暗号化層かライセンス証明書、RDP ポート 3389 競合、スリープ/休止は到達不可、IPv6 の相性。UUリモート vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play の対処比較と 2026 故障分布の推計も掲載。口径は Microsoft 公式 RDP トラブルシュート、Steam Remote Play・Parsec 公式サポートより。",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "ja",
+   "url": "https://uuyc163.github.io/ja/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UUリモート つながらない / 接続失敗 の直し方は？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "クライアントに「リモートコンピューターに接続できませんでした/接続失敗/タイムアウト」と出てホストに入れない。 ホストが未起動/未ログイン/オフライン、ファイアウォールやウイルス対策のブロック、遠隔スイッチの不具合、自宅 IP の変動、ポートの使用中。 ① ホストが起動・ログイン・オンラインか確認；② ファイアウォールとウイルス対策で UUリモートを許可；③ 遠隔スイッチを切→入で再設定；④ ルーター再起動で IP を更新；⑤ ポート 3389 使用中なら変更か競合プログラム停止。 ホストに固定 LAN IP、信頼リストに追加、起動/オンライン維持。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UUリモート 接続後に黒画面 の直し方は？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "接続したが画面が真っ黒。音は聞こえ、マウスは見えることが多い。 解像度が非対応、ゲームの全画面解像度が配信解像度と不一致、古い GPU ドライバ、永続的ビットマップキャッシュの破損。 ① ホストを 1080p など汎用解像度に；② 全画面ゲームをウィンドウ化；③ GPU ドライバ更新；④「永続的ビットマップキャッシュ」を無効化（RDP の[画面の表示]タブ）。 互換解像度を使い、GPU ドライバを新しめに保つ。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UUリモート カクつき / 操作遅延 の直し方は？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "操作に明らかな遅延、コマ落ち/カクつき、反応が悪い。 回線の輻輳/パケットロス、弱い Wi-Fi、ホストの上り不足、ビットレートが帯域超過、新 GPU ドライバのエンコーダ遅延異常。 ① 有線か 5GHz Wi-Fi に近づく；② ビットレート/帯域上限を下げて余裕を作る；③ ロスを確認、他の帯域消費アプリを閉じる；④ ホストの GPU ドライバを安定版に戻す。 有線優先、ビットレート < 上り＋余裕。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UUリモート 頻繁な切断 / 数秒で切れる の直し方は？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "接続して数秒〜1分で切れ、再接続を繰り返す。 回線不安定/ロス、keep-alive 未設定、セキュリティ層や証明書の問題、TermDD X.224 プロトコルエラー（Event ID 50）。 ① ロスとルーティングの安定性を確認；② ホストに keep-alive 間隔を設定；③ セキュリティ層と暗号化を確認；④ イベントビューアー Event ID 50 でプロトコル中断を特定。 安定した回線、正しいセキュリティ層と証明書。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UUリモート 音が出ない の直し方は？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "映像は正常だがリモート側で音が出ない。 ホストに使える音声デバイスがない（クラウド PC/スピーカー未接続で「スピーカーまたはヘッドフォンが接続されていません」）、キャプチャデバイスの選択ミス。 ① ホストに仮想オーディオ（VB-Cable 等）を導入；② 設定で正しいキャプチャデバイスを選択；③ 接続者がいる場合は再接続で反映。 ホストに使える音声出力デバイスを用意。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UUリモート コントローラー / 周辺機器が不認識 の直し方は？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "コントローラーやキーマウなどの周辺機器がリモート側で認識されない/反応しない。 クライアント側でパススルー未有効、ホストにコントローラードライバ不足、他プログラムが占有。 ① UUリモートでコントローラー/周辺機器のパススルーを有効化；② ホストに対応ドライバを導入；③ 再接続し、デバイスを占有するプログラムを閉じる。 事前にドライバ導入とパススルー有効化。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UUリモート ポート競合 / リスナー異常 の直し方は？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "リスナー異常/接続拒否。自前構築や RDP 同居機で多い。 RDP 既定ポート 3389（または設定ポート）が他プログラムに使用されている。 ① netstat -a -o で使用中ポートの PID を特定；② tasklist /svc でどのプログラムか照合；③ ポート変更か競合停止後、リモートサービス再起動。 複数のリモートツールで同一ポートを取り合わない。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UUリモート スリープ/休止で接続不可 の直し方は？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ホストが無反応でどうしても接続できない。 ホストがスリープ/休止に入り、NIC が断電して応答できない。 ① ホストの電源プランを「スリープ/休止しない」に；② Wake-on-LAN か UU のリモート起動で起こす；③ 起動後に接続を開始。 スリープ/休止を切り、リモート起動を設定。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">言語：<a href="/">简体中文</a> · <a href="/en/">English</a> · <strong>日本語</strong> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UUリモート リモート操作 / ゲーム配信 接続トラブル & エラー早見表</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_ja.webp"><img src="/img/cover_ja.png" alt="UUリモート リモート操作/配信 接続トラブルとエラー早見表のイメージ" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>図：UUリモート 接続トラブル早見（症状キーワード → 最も可能性の高い原因＋対処手順＋予防）</figcaption></figure>
+<p><strong>UUリモート</strong>がつながらない、接続後に<strong>黒画面</strong>、<strong>カクつき/遅延</strong>、音が出ない、コントローラーが効かない——やみくもに試さない。コツは<strong>分類して順番に自己診断</strong>：まず<strong>ネットワーク（パケットロス/上り/ファイアウォール）</strong>、次に<strong>GPU ドライバ/解像度</strong>、最後に<strong>権限/証明書</strong>。あなたの<strong>症状</strong>（例：<code>つながらない</code>、<code>黒画面</code>、<code>カクつき</code>、<code>音が出ない</code>、<code>切断</code>、<code>コントローラー</code>）を入力・タップして<strong>最も可能性の高い原因＋対処手順＋予防</strong>を検索。先にクライアントを入れたい方は <a href="https://uuyc163.com/download/">UUリモート ダウンロード</a> と <a href="https://uuyc163.com/faq/">よくある質問</a> を。</p>
+<input id="q" placeholder="症状を入力（例：つながらない / 黒画面 / カクつき / 音が出ない / 切断 / コントローラー）" autocomplete="off">
+<button id="go">対処を検索</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>ステップ1：まず故障を4分類（いきなり再インストールしない）</h2>
+<p>リモート操作/配信の不具合は十中八九この4分類に収まる。分類してから対処を：① <strong>接続系</strong>——つながらない、数秒で切れる、ポート競合、スリープで到達不可、IPv6 の不調：まず<strong>ネットワークとファイアウォール/ウイルス対策、遠隔スイッチ、ホストが起動/オンラインか</strong>を確認；② <strong>映像系</strong>——黒画面、ノイズ、ぼやけ：多くは<strong>解像度/全画面の不一致か古い GPU ドライバ</strong>；③ <strong>遅延/カクつき系</strong>——操作遅延、コマ落ち：真因は<strong>パケットロス/弱い Wi-Fi/ホストの上り不足</strong>で性能ではない；④ <strong>音/周辺機器/権限系</strong>——音が出ない、コントローラー不認識、遠隔権限なし：<strong>ホストの音声デバイス、コントローラーのパススルー、リモートデスクトップユーザー権限</strong>を確認。詳細は <a href="https://uuyc163.com/faq/">UUリモート よくある質問</a>。</p>
+<div class="cat"><div class="catbox"><b>接続 / 切断系</b><span class="cs">つながらない ・ 頻繁な切断 ・ ポート競合 ・ スリープで到達不可 ・ IPv6</span><div>ネットワークとファイアウォール/ウイルス対策、遠隔スイッチ、ホストの起動/オンラインを確認：接続失敗はまずファイアウォール許可、遠隔を切→入、IP 更新；ポート 3389 使用中は netstat で競合を確認；ホストをスリープ/休止させない。</div></div><div class="catbox"><b>映像系（黒画面 / ノイズ / ぼやけ）</b><span class="cs">接続後の黒画面 ・ ノイズ ・ ぼやけ</span><div>多くは解像度/全画面の不一致か古い GPU ドライバ：対応解像度に変更、ゲームをウィンドウ化、GPU ドライバ更新、永続的ビットマップキャッシュ無効化；ノイズ/ぼやけはビットレートとロスを確認、必要ならハードウェアデコードを無効化してソフトに切替。</div></div><div class="catbox"><b>遅延 / カクつき系</b><span class="cs">操作遅延 ・ コマ落ち ・ カクつき</span><div>真因は性能でなくネットワーク：有線か 5GHz Wi-Fi に、ビットレート/帯域上限を下げる、ロスを確認、ホストは安定版 GPU ドライバに戻す、他の帯域消費アプリを閉じる；ホストの上り不足が外部配信の真のボトルネック。</div></div><div class="catbox"><b>音 / 周辺機器 / 権限系</b><span class="cs">音が出ない ・ コントローラー不認識 ・ 遠隔権限なし</span><div>音が出ない=ホストの音声デバイスを確認（クラウド PC/スピーカーなしは仮想オーディオが必要）；コントローラー不認識=パススルー有効化とドライバ導入；権限なし=アカウントを「リモートデスクトップユーザー」に追加し接続数ポリシーを確認。</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UUリモート 故障特定 決定フロー" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">故障の特定方法（症状で4分類：接続 / 映像 / 遅延 / 音・周辺機器）</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">故障発生</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">症状で分類</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">つながらない/切断 →</text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">ネットワーク・FW・スイッチ・ポート</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">黒画面/ノイズ →</text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">解像度・全画面・GPU ドライバ</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">4つの典型故障（症状で自己チェックの方向を選ぶ）</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">① 接続/切断</text><text x="32" y="234" fill="#555" font-size="11">ネット・FW・ポート・スリープ</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">② 黒画面</text><text x="206" y="234" fill="#555" font-size="11">解像度・全画面・ドライバ</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">③ 遅延カクつき</text><text x="380" y="234" fill="#555" font-size="11">ロス・上り・有線優先</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">④ 音/周辺機器</text><text x="554" y="234" fill="#555" font-size="11">音声デバイス・コントローラー・権限</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>図1：UUリモート 故障特定フロー——症状で4分類（接続 / 映像 / 遅延 / 音・周辺機器）し、順番に自己診断</figcaption></figure>
+<h2>ステップ2：最も誤診されやすい真因 → L2（ネットワーク→ドライバ/解像度→権限/証明書 の順）</h2>
+<p>重要：<strong>「カクつき」「つながらない」の多くは実はネットワークの問題で、PC 性能やソフトのバグではない</strong>。この順で自己診断すると最短：① <strong>カクつき/遅延はまずネットワーク</strong>——パケットロス、弱い Wi-Fi、ホストの<strong>上り</strong>不足が配信の真のボトルネック（外から自宅を操作すると映像は自宅から「出ていく」ので上りを消費）。有線か 5GHz Wi-Fi に変える、ビットレート/帯域上限を下げる、ホストは安定版 GPU ドライバに戻す（新しい NVIDIA ドライバでエンコーダ遅延が出たことがある）；② <strong>黒画面はまず解像度とドライバ</strong>——接続したが黒く、音は聞こえ/マウスは見える＝<strong>解像度が非対応かゲームの全画面解像度が配信解像度と不一致</strong>（ゲームをウィンドウ化）、<strong>古い GPU ドライバ</strong>（更新）、または永続的ビットマップキャッシュの破損（無効化）；③ <strong>接続失敗はまずファイアウォールとスイッチ</strong>——ファイアウォール/ウイルス対策のブロック、遠隔スイッチを切→入、IP 変動はルーター再起動で更新、ポート <code>3389</code> 使用中（<code>netstat -a -o</code> で競合を特定）；④ <strong>セキュリティエラーは認証/証明書</strong>——「セキュリティエラーで接続できない」は認証/暗号化層の設定ミスかライセンス証明書の破損；⑤ <strong>音が出ないは音声デバイス</strong>——ホストにスピーカーがない/クラウド PC に音声デバイスがない時は仮想オーディオを入れる。下図は「故障特定」の決定木、その下に接続前チェック盤、比較、2026 推計。</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UUリモート 接続前 自己チェック盤" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">接続/配信前 自己チェック盤の例（緑=満たす / 赤=見落としやすい）</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">チェック項目</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">判断</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">状態</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">ホストが起動・ログイン・オンライン（スリープ/休止でない）</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">オンライン状態</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">満たす</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">ファイアウォール/ウイルス対策が UUリモートを許可</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">ファイアウォール</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">要確認</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">両端が有線か 5GHz Wi-Fi、信号満タン</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">回線品質</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">満たす</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">ホストの GPU ドライバが新しめの安定版</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">GPU ドライバ</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">要確認</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">ホストの上り ≥ 配信ビットレート + 余裕</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">上り帯域</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">満たす</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">ポート 3389 が他に使われていない</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">ポート</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">要確認</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">注：赤＝最も見落としやすい3点——ファイアウォール許可、GPU ドライバ、ポート競合；つながらない/黒画面/カクつきは再インストール前にここを確認。</text></svg><figcaption>図2：接続前 自己チェック盤の例（緑=満たす / 赤=見落としやすい要確認）</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_ja.webp"><img src="/img/board_ja.png" alt="UUリモート 接続前 自己チェック盤の緑/赤項目のイメージ" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>図：まず「ホストが起動/オンライン・ファイアウォール許可・有線/5GHz・ドライバ新・ポート空き」を確認——カクつき黒画面は前の数項で詰まりがち</figcaption></figure>
+<h2>よくある故障 早見表（症状 ・ 分類 ・ 対処の方向）</h2>
+<table id="tbl"></table>
+<h2>UUリモート vs 主要リモート/配信 対処比較（公開情報）</h2>
+<table class="cmp"><tr><th>方式</th><th>接続/NAT</th><th>黒画面の扱い</th><th>周辺機器/コントローラー</th><th>ネット越し遅延</th><th>診断ツール</th></tr><tr><td>UUリモート</td><td>P2P 直結 + 専用網、自動 NAT</td><td>解像度切替/ウィンドウ化/ドライバ更新</td><td>コントローラー・周辺機器パススルー</td><td>ミリ秒級（専用網最適化）</td><td>クライアントログ + 自己チェック</td></tr><tr><td>ToDesk</td><td>自社中継 + P2P</td><td>解像度自動調整</td><td>周辺機器マッピング対応</td><td>低遅延（専用チャネル）</td><td>診断パネル</td></tr><tr><td>Parsec</td><td>P2P 穴あけ、公網/UPnP 必要</td><td>全画面不一致→ウィンドウ化</td><td>コントローラー ネイティブ対応</td><td>LAN は極低、ネット越しは回線次第</td><td>ログ + コミュニティ文書</td></tr><tr><td>Microsoft RDP</td><td>ポート 3389、許可/ゲートウェイ必要</td><td>永続ビットマップキャッシュ/解像度/ドライバ</td><td>リダイレクト設定が必要</td><td>LAN は低、ネット越しは帯域次第</td><td>イベントビューアー + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>Steam 中継 + 直結</td><td>ドライバ更新/ハードデコード無効化</td><td>コントローラー優先対応</td><td>約 30-50Mb/s @1080p60</td><td>IPv6 無効化 + ストリーム設定</td></tr></table><section class="i4data">
+<h2>UUリモート リモート操作/配信 よくある故障の分布と口径（2026 推計）</h2>
+<p>以下は Microsoft 公式 RDP トラブルシュート、Steam Remote Play・Parsec 公式サポートを総合した <strong>2026 推計</strong>（メーカー公約値でも一次統計でもなく参考用。バージョンや回線で変動）：</p>
+<table>
+<tr><th>項目</th><th>推計 / 口径</th></tr>
+<tr><td>故障タイプ分布（推計）</td><td>接続/切断 ≈ <strong>35%</strong> ・ 映像(黒画面/ノイズ) ≈ <strong>25%</strong> ・ 遅延/カクつき ≈ <strong>22%</strong> ・ 音/周辺機器 ≈ <strong>12%</strong> ・ 権限/セキュリティ ≈ <strong>6%</strong></td></tr>
+<tr><td>カクつきの真因（重要）</td><td>「カクつき/つながらない」の多くは<strong>ネットワーク問題</strong>（パケットロス、弱い Wi-Fi、ホストの<strong>上り</strong>不足）で、<strong>PC 性能やソフトのバグではない</strong> → まずネットワーク、次にソフト/ハード</td></tr>
+<tr><td>黒画面の主因（推計）</td><td>解像度/全画面の不一致 + 古い GPU ドライバが多数；接続して黒いが音は出る＝典型的な解像度問題、ウィンドウ化/汎用解像度が最も有効</td></tr>
+<tr><td>RDP ポートとプロトコル</td><td>RDP 既定ポート <strong>3389（TCP）</strong>、使用中だとつながらない；Event ID <strong>50（TermDD・X.224）</strong>＝プロトコルストリームのエラーでクライアント切断</td></tr>
+<tr><td>自己チェックの順（時短）</td><td><strong>ネットワーク（ロス/上り/FW）→ ドライバ/解像度 → 権限/証明書</strong>；配信は約 <strong>30-50Mbps @1080p60</strong>、ビットレートはホストの上り未満に</td></tr>
+</table>
+<p><small>推計の根拠：出典基線 + 時間外挿（Microsoft Learn「Troubleshoot Remote desktop disconnected errors」「Disconnect Codes and Reasons」、Steam Remote Play 公式サポート、Parsec 公式サポート 2026 取得を総合）。バージョン/回線方針で変動。各社最新の公式と実測を基準に。</small></p>
+</section>
+<h2>実シーン 速判</h2>
+<ul class="scenes"><li>外からスマホで自宅 PC を操作、接続直後に黒画面だが音は聞こえる：多くはホスト解像度がスマホ非対応か、ゲームの全画面解像度が不一致 → まずゲームをウィンドウ化、ホストを 1080p など汎用解像度に、GPU ドライバを更新。</li><li>プレイ中に急にカクつき、操作遅延が大きい：まず PC 性能を疑わず、パケットロスと Wi-Fi 信号を確認、有線か 5GHz Wi-Fi に近づく、ビットレート/帯域上限を下げる、ホストの上り不足なら画質を下げる；新しい NVIDIA ドライバが不調なら安定版に戻す。</li><li>クライアントに「リモートコンピューターに接続できませんでした/接続失敗」：ホストが起動・ログイン・オンラインか確認、ファイアウォールとウイルス対策で UUリモートを許可、遠隔スイッチを切→入；自宅 IP が変わったらルーター再起動で更新、ポート 3389 が他に使われていないか確認。</li><li>接続して数秒〜1分で切れる：多くはネットワーク不安定か、セキュリティ/証明書の問題——ロスとルーティングを確認、ホストに keep-alive を設定、セキュリティ層と暗号化を確認；イベントビューアーの Event ID 50（TermDD・X.224）も接続中断を示す。</li><li>映像は正常だがリモート側で音が出ない：ホストに使える音声デバイスがない（クラウド PC やスピーカー未接続だと「スピーカーまたはヘッドフォンが接続されていません」）→ ホストに仮想オーディオ（VB-Cable 等）を入れ、設定でキャプチャデバイスを選ぶ。</li><li>ログインできるが遠隔操作を開始できず、権限なしと出る：使うアカウントをホストの「リモートデスクトップユーザー」に追加、「接続数の制限」グループポリシーで詰まっていないか確認、そのアカウントにリモートログオン権があるか確認。</li></ul><div class="related"><h2>関連</h2><ul><li><a href="https://uuyc163.com/">UUリモート公式 / ダウンロードと使い方</a></li><li><a href="https://uuyc163.com/faq/">UUリモート よくある質問（公式）</a></li><li><a href="https://uuyc163.com/ja/tools/connection-troubleshooting/">UUリモート 接続トラブル早見（権威版・全量表）</a></li><li><a href="https://uuycc.com/">UUリモート ダウンロードセンター（姉妹サイト）</a></li></ul></div></main>
+<footer>故障/原因/対処の口径は Microsoft Learn「Troubleshoot Remote desktop disconnected errors」「Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons」（RDP 接続失敗、ポート 3389 競合、セキュリティ層と暗号化、ライセンス証明書の破損、スリープで到達不可、Event ID 50 TermDD X.224 プロトコルエラー）、Steam Remote Play 公式サポート（接続失敗=ファイアウォール/ウイルス対策・スイッチ再設定・IP 更新、黒画面=ドライバ更新・ハードウェアデコード無効化、IPv6 無効化）、Parsec 公式サポート（黒画面=全画面解像度の不一致→ウィンドウ化、無音=ホストに音声デバイスなし→仮想オーディオ、高遅延=新ドライバ/ロス→ドライバ戻し・帯域下げ・有線化）より整理。2026 故障分布は推計で、メーカー公約値でも一次統計でもなく参考用。各社最新の公式と実測を基準に。<br>ツールページ ・ 早見は公式クライアントでの実測・公式サポートの代わりにはなりません</footer>
+</div>
+<script src="/ja/codes.js"></script><script src="/app.js"></script>
+</body></html>
