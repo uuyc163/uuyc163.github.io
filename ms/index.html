@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="ms"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote penyelesaian masalah sambungan & ralat - tak bersambung, skrin hitam, lag, tiada bunyi</title>
+<meta name="description" content="UU Remote tak bersambung, skrin hitam selepas bersambung, lag, tiada bunyi atau kawalan tak dikesan? Taip atau ketik gejala (tak bersambung / skrin hitam / lag / putus / tiada bunyi / kawalan / konflik port) untuk cari punca paling mungkin + langkah pembaikan + pencegahan: lag biasanya masalah rangkaian (paket hilang, Wi-Fi lemah, muat naik hos rendah), bukan prestasi PC; skrin hitam biasanya ketakpadanan resolusi/skrin penuh atau pemacu GPU lama; bila gagal bersambung periksa dahulu tembok api/antivirus dan suis jauh; ralat keselamatan menunjuk ke lapisan pengesahan/penyulitan atau sijil lesen rosak; konflik port RDP 3389; tak dapat dicapai semasa tidur; penyesuaian IPv6 buruk. Termasuk perbandingan UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play dan anggaran 2026. Disusun dari dokumentasi RDP rasmi Microsoft, sokongan rasmi Steam Remote Play dan Parsec.">
+<link rel="canonical" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote penyelesaian masalah sambungan & ralat",
+   "url": "https://uuyc163.github.io/ms/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "ms",
+   "description": "UU Remote tak bersambung, skrin hitam selepas bersambung, lag, tiada bunyi atau kawalan tak dikesan? Taip atau ketik gejala (tak bersambung / skrin hitam / lag / putus / tiada bunyi / kawalan / konflik port) untuk cari punca paling mungkin + langkah pembaikan + pencegahan: lag biasanya masalah rangkaian (paket hilang, Wi-Fi lemah, muat naik hos rendah), bukan prestasi PC; skrin hitam biasanya ketakpadanan resolusi/skrin penuh atau pemacu GPU lama; bila gagal bersambung periksa dahulu tembok api/antivirus dan suis jauh; ralat keselamatan menunjuk ke lapisan pengesahan/penyulitan atau sijil lesen rosak; konflik port RDP 3389; tak dapat dicapai semasa tidur; penyesuaian IPv6 buruk. Termasuk perbandingan UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play dan anggaran 2026. Disusun dari dokumentasi RDP rasmi Microsoft, sokongan rasmi Steam Remote Play dan Parsec.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "ms",
+   "url": "https://uuyc163.github.io/ms/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - bagaimana membaiki Tak bersambung / sambungan gagal?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Klien berkata \"tak dapat bersambung ke komputer jauh / gagal / timeout\"; anda tak masuk ke hos. Hos dimatikan / tak log masuk / luar talian, tembok api atau antivirus menyekat, suis jauh rosak, IP rumah berubah, atau port diguna. 1) Pastikan hos dihidupkan, dilog masuk, dalam talian; 2) benarkan UU Remote dalam tembok api dan antivirus; 3) matikan kemudian hidupkan suis jauh untuk set semula; 4) mulakan semula penghala untuk segarkan IP; 5) jika port 3389 diguna, ubah atau hentikan program berkonflik. Beri hos IP LAN tetap, tambah ke senarai dipercayai, kekal dihidupkan dan dalam talian."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - bagaimana membaiki Skrin hitam selepas bersambung?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bersambung tapi gambar hitam sepenuhnya, sering sedangkan dengar bunyi dan nampak tetikus. Resolusi tak disokong, resolusi skrin penuh permainan != resolusi penstriman, pemacu GPU lama, atau cache bitmap kekal rosak. 1) Tukar hos ke resolusi lazim seperti 1080p; 2) jadikan permainan skrin penuh mod tetingkap; 3) kemas kini pemacu GPU; 4) lumpuhkan \"cache bitmap kekal\" (tab Prestasi RDP). Guna resolusi serasi, kekalkan pemacu GPU terkini."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - bagaimana membaiki Lag / lengah input?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Lengah input ketara, tersekat / kehilangan bingkai, gerak balas lemah. Kesesakan rangkaian / paket hilang, Wi-Fi lemah, muat naik hos rendah, kadar bit melebihi lebar jalur, atau kependaman pengekod luar biasa dari pemacu GPU baharu. 1) Tukar ke kabel atau hampiri Wi-Fi 5 GHz; 2) turunkan had kadar bit/lebar jalur untuk beri lebihan; 3) periksa paket hilang, tutup aplikasi pemakan lebar jalur lain; 4) pulihkan pemacu GPU hos ke versi stabil. Utamakan kabel; kadar bit < muat naik dengan lebihan."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - bagaimana membaiki Kerap putus / putus dalam saat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Putus dalam beberapa saat atau seminit, menyambung semula berulang. Rangkaian tak stabil / kehilangan, keep-alive tak ditetapkan, masalah lapisan keselamatan atau sijil, atau ralat protokol TermDD X.224 (Event ID 50). 1) Periksa paket hilang dan kestabilan penghalaan; 2) tetapkan selang keep-alive di hos; 3) semak lapisan keselamatan dan penyulitan; 4) lihat Event ID 50 dalam Pemapar Peristiwa untuk lokalisasi gangguan protokol. Rangkaian stabil, lapisan keselamatan dan sijil betul."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - bagaimana membaiki Tiada bunyi?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gambar baik tapi tiada bunyi di hujung jauh. Hos tiada peranti audio boleh guna (PC awan / tanpa pembesar suara papar \"Tiada pembesar suara atau fon kepala dipasang\") atau peranti tangkap salah dipilih. 1) Pasang peranti audio maya (seperti VB-Cable) di hos; 2) pilih peranti tangkap betul dalam tetapan; 3) jika ada yang bersambung, sambung semula untuk berkesan. Pastikan hos ada peranti output audio boleh guna."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - bagaimana membaiki Kawalan / periferal tak dikesan?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kawalan, papan kekunci/tetikus atau periferal lain tak dikesan atau tak bergerak balas di hujung jauh. Passthrough kawalan tak didayakan di klien, pemacu kawalan hilang di hos, atau program lain memegang peranti secara eksklusif. 1) Dayakan passthrough kawalan/periferal dalam UU Remote; 2) pasang pemacu kawalan sesuai di hos; 3) sambung semula dan tutup program yang memegang peranti secara eksklusif. Pasang pemacu lebih awal dan dayakan passthrough."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - bagaimana membaiki Konflik port / masalah pendengar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pendengar luar biasa / sambungan ditolak, lazim dalam RDP layan sendiri / mesin sama. Port RDP lalai 3389 (atau port ditetapkan) diguna program lain. 1) Guna netstat -a -o untuk cari PID yang guna port; 2) padankan dengan tasklist /svc; 3) ubah port atau hentikan program berkonflik, kemudian mulakan semula perkhidmatan jauh. Elak beberapa alat jauh berebut port sama."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - bagaimana membaiki Tak dapat dicapai semasa tidur/hibernasi?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hos tak bergerak balas dan tak bersambung langsung. Hos masuk tidur atau hibernasi, jadi kad rangkaian terputus kuasa dan tak bergerak balas. 1) Tetapkan pelan kuasa hos supaya tak pernah tidur/hibernasi; 2) kejutkan dengan Wake-on-LAN atau penghidupan jauh UU; 3) mulakan sambungan selepas terjaga. Matikan tidur/hibernasi, tetapkan penghidupan jauh."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Bahasa: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <strong>Bahasa Melayu</strong> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote kawalan jauh / penstriman permainan - penyelesaian masalah sambungan & ralat</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_ms.webp"><img src="/img/cover_ms.png" alt="Ilustrasi penyelesaian masalah sambungan & ralat UU Remote" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Rajah: carian masalah UU Remote (kata kunci gejala -> punca paling mungkin + langkah + pencegahan)</figcaption></figure>
+<p><strong>UU Remote</strong> tak bersambung, <strong>skrin hitam</strong> selepas bersambung, <strong>lag</strong>, tiada bunyi, kawalan tak dikesan - jangan teka membuta. Kuncinya <strong>asingkan ikut kategori dan semak ikut urutan</strong>: dahulu <strong>rangkaian (paket hilang / muat naik / tembok api)</strong>, kemudian <strong>pemacu GPU / resolusi</strong>, akhir sekali <strong>kebenaran / sijil</strong>. Taip atau ketik <strong>gejala</strong> anda (cth. <code>tak bersambung</code>, <code>skrin hitam</code>, <code>lag</code>, <code>tiada bunyi</code>, <code>putus</code>, <code>kawalan</code>) untuk cari <strong>punca paling mungkin + langkah + pencegahan</strong>. Mahu pasang dahulu? Lihat <a href="https://uuyc163.com/download/">muat turun UU Remote</a> dan <a href="https://uuyc163.com/faq/">soal jawab</a>.</p>
+<input id="q" placeholder="Taip gejala, cth. tak bersambung / skrin hitam / lag / tiada bunyi / putus / kawalan" autocomplete="off">
+<button id="go">Cari penyelesaian</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>Langkah 1: asingkan masalah kepada empat kumpulan dahulu (jangan terus pasang semula)</h2>
+<p>Sembilan daripada sepuluh masalah kawalan jauh/penstriman tergolong dalam empat kumpulan - kelaskan dahulu, kemudian tangani: (1) <strong>Sambungan</strong> - tak bersambung, putus dalam saat, konflik port, tak dapat dicapai semasa tidur, IPv6 berkerenah: periksa <strong>rangkaian dan tembok api/antivirus, suis jauh, dan sama ada hos dalam talian serta dihidupkan</strong>; (2) <strong>Gambar</strong> - skrin hitam, artifak, kabur: biasanya <strong>ketakpadanan resolusi/skrin penuh atau pemacu GPU lama</strong>; (3) <strong>Kependaman/lag</strong> - lengah input, tersekat: punca sebenar biasanya <strong>paket hilang / Wi-Fi lemah / muat naik hos rendah</strong>, bukan prestasi; (4) <strong>Bunyi / periferal / kebenaran</strong> - tiada bunyi, kawalan tak dikesan, tiada kebenaran jauh: periksa <strong>peranti audio hos, passthrough kawalan, kumpulan Pengguna Desktop Jauh</strong>. Lagi: <a href="https://uuyc163.com/faq/">FAQ UU Remote</a>.</p>
+<div class="cat"><div class="catbox"><b>Sambungan / putus</b><span class="cs">tak bersambung . kerap putus . konflik port . tak dapat dicapai semasa tidur . IPv6</span><div>Periksa rangkaian dan tembok api/antivirus, suis jauh, dan sama ada hos dalam talian serta dihidupkan: bila gagal, benarkan tembok api dahulu, matikan/hidupkan suis jauh, segarkan IP; jika port 3389 diguna, cari konflik dengan netstat; jangan biar hos tidur.</div></div><div class="catbox"><b>Gambar (skrin hitam / artifak / kabur)</b><span class="cs">skrin hitam ketika bersambung . artifak . kabur</span><div>Biasanya ketakpadanan resolusi/skrin penuh atau pemacu GPU lama: tukar ke resolusi disokong, jadikan permainan mod tetingkap, kemas kini pemacu GPU, lumpuhkan cache bitmap kekal; untuk artifak/kabur periksa kadar bit dan paket hilang serta cuba lumpuhkan penyahkodan perkakasan.</div></div><div class="catbox"><b>Kependaman / lag</b><span class="cs">lengah input . tersekat . tergagap</span><div>Punca sebenar biasanya rangkaian, bukan prestasi: tukar ke kabel atau Wi-Fi 5 GHz, turunkan had kadar bit/lebar jalur, periksa paket hilang, di hos pulihkan pemacu GPU stabil, tutup aplikasi pemakan lebar jalur lain; muat naik hos tak cukup ialah halangan sebenar melalui internet.</div></div><div class="catbox"><b>Bunyi / periferal / kebenaran</b><span class="cs">tiada bunyi . kawalan tak dikesan . tiada kebenaran jauh</span><div>Tiada bunyi - periksa peranti audio hos (PC awan / tanpa pembesar suara perlu peranti audio maya); kawalan tak dikesan - dayakan passthrough dan pasang pemacu; tiada kebenaran - tambah akaun ke kumpulan "Pengguna Desktop Jauh" dan periksa dasar had sambungan.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pokok keputusan lokalisasi masalah UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Cara melokalisasi masalah (asingkan ikut gejala kepada empat kumpulan: sambungan / gambar / kependaman / bunyi & periferal)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">Ada masalah</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">Asingkan ikut gejala</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">tak bersambung/putus -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">rangkaian . tembok api . suis . port</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">skrin hitam/artifak -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">resolusi . skrin penuh . pemacu GPU</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">Empat masalah lazim (pilih arah semak kendiri ikut gejala)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. Sambungan/putus</text><text x="32" y="234" fill="#555" font-size="11">rangkaian . tembok api . port . tidur</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. Skrin hitam</text><text x="206" y="234" fill="#555" font-size="11">resolusi . skrin penuh . pemacu</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. Kependaman/lag</text><text x="380" y="234" fill="#555" font-size="11">kehilangan . muat naik . kabel dulu</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. Bunyi/periferal</text><text x="554" y="234" fill="#555" font-size="11">peranti audio . kawalan . kebenaran</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>Rajah 1: aliran lokalisasi masalah UU Remote - asingkan ikut gejala kepada empat kumpulan (sambungan / gambar / kependaman / bunyi & periferal), kemudian semak ikut urutan</figcaption></figure>
+<h2>Langkah 2: punca paling kerap salah didiagnosis -> L2 (rangkaian dahulu, kemudian pemacu/resolusi, akhir kebenaran/sijil)</h2>
+<p>Inti: <strong>kebanyakan kes "lag" dan "tak bersambung" sebenarnya masalah rangkaian, bukan prestasi PC atau pepijat perisian</strong>. Semak ikut urutan ini paling jimat masa: (1) <strong>Lag/lengah - periksa rangkaian dahulu</strong>: paket hilang, Wi-Fi lemah, dan <strong>muat naik</strong> hos tak cukup ialah halangan sebenar penstriman (mengawal rumah dari luar menghantar gambar <em>keluar</em> dari rumah, memakan muat naik) - tukar ke kabel atau Wi-Fi 5 GHz, turunkan had kadar bit/lebar jalur, di hos cuba pulihkan pemacu GPU stabil (pemacu NVIDIA baharu pernah punca kependaman pengekod luar biasa); (2) <strong>Skrin hitam - periksa resolusi dan pemacu dahulu</strong>: bersambung tapi hitam sedangkan dengar bunyi / nampak tetikus biasanya bermaksud <strong>resolusi tak disokong atau resolusi skrin penuh permainan != resolusi penstriman</strong> (jadikan permainan mod tetingkap), <strong>pemacu GPU lama</strong> (kemas kini), atau cache bitmap kekal rosak (lumpuhkan); (3) <strong>Gagal bersambung - periksa tembok api dan suis dahulu</strong>: tembok api/antivirus menyekat, matikan kemudian hidupkan suis jauh, mulakan semula penghala untuk segarkan IP, atau port <code>3389</code> diguna (<code>netstat -a -o</code> untuk konflik); (4) <strong>Ralat keselamatan - periksa pengesahan/sijil</strong>: "kerana ralat keselamatan klien tak dapat bersambung" biasanya lapisan pengesahan/penyulitan salah tetapan atau sijil lesen rosak; (5) <strong>Tiada bunyi - periksa peranti audio</strong>: jika hos tiada pembesar suara / PC awan tiada peranti audio, pasang peranti audio maya. Di bawah pokok keputusan untuk lokalisasi masalah; lebih bawah panel semakan kendiri, perbandingan, dan anggaran 2026.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Panel semakan kendiri sebelum bersambung UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Panel semak kendiri sebelum bersambung/penstriman (hijau = dipenuhi / merah = mudah terlepas)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">Item semakan</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Penilaian</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Keadaan</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Hos dihidupkan, dilog masuk, dalam talian (bukan tidur)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">status dalam talian</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">dipenuhi</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Tembok api/antivirus benarkan UU Remote</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">tembok api</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">semak</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Kedua-dua hujung kabel atau Wi-Fi 5 GHz, isyarat penuh</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">kualiti rangkaian</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">dipenuhi</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Pemacu GPU hos = versi stabil terkini</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">pemacu GPU</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">semak</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Muat naik hos >= kadar bit penstriman + lebihan</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">muat naik</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">dipenuhi</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Port 3389 tak diguna program lain</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">port</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">semak</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">Nota: merah = tiga yang paling kerap terlepas - benarkan tembok api, pemacu GPU, konflik port; untuk tak bersambung / skrin hitam / lag semak ini sebelum pasang semula.</text></svg><figcaption>Rajah 2: panel semakan kendiri sebelum bersambung (hijau = dipenuhi / merah = perangkap untuk disemak)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_ms.webp"><img src="/img/board_ms.png" alt="Ilustrasi titik hijau/merah panel semakan kendiri sebelum bersambung UU Remote" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Rajah: periksa "hos dalam talian & dihidupkan . tembok api dibenarkan . kabel/5GHz . pemacu baharu . port bebas" - lag & skrin hitam kerap gagal pada yang awal</figcaption></figure>
+<h2>Jadual penuh masalah lazim (gejala . kategori . arah penyelesaian)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs kawalan jauh / penstriman lazim - perbandingan penyelesaian masalah (dokumentasi awam)</h2>
+<table class="cmp"><tr><th>Penyelesaian</th><th>Sambungan/NAT</th><th>Pengendalian skrin hitam</th><th>Periferal/kawalan</th><th>Kependaman melalui rangkaian</th><th>Alat diagnostik</th></tr><tr><td>UU Remote</td><td>P2P terus + rangkaian persendirian, NAT auto</td><td>tukar resolusi / tetingkap / kemas kini pemacu</td><td>passthrough kawalan & periferal</td><td>milisaat (rangkaian persendirian dioptimum)</td><td>log klien + semak kendiri</td></tr><tr><td>ToDesk</td><td>geganti sendiri + P2P</td><td>resolusi mudah suai</td><td>pemetaan periferal</td><td>rendah (saluran khusus)</td><td>panel diagnostik</td></tr><tr><td>Parsec</td><td>P2P hole-punch, perlu IP awam/UPnP</td><td>ketakpadanan skrin penuh -> tetingkap</td><td>sokongan kawalan asli</td><td>sangat rendah dalam LAN, bergantung rangkaian melalui internet</td><td>log + dokumentasi komuniti</td></tr><tr><td>Microsoft RDP</td><td>port 3389, perlu izin/get laluan</td><td>cache bitmap kekal / resolusi / pemacu</td><td>perlu tetapan pengalihan</td><td>rendah dalam LAN, bergantung lebar jalur melalui internet</td><td>Pemapar Peristiwa + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>geganti Steam + terus</td><td>kemas kini pemacu / lumpuhkan nyahkod HW</td><td>sokongan kawalan diutamakan</td><td>~30-50Mb/s @1080p60</td><td>lumpuhkan IPv6 + tetapan strim</td></tr></table><section class="i4data">
+<h2>UU Remote kawalan jauh/penstriman taburan masalah lazim & nota (anggaran 2026)</h2>
+<p>Berikut <strong>anggaran 2026</strong> menggabungkan dokumentasi RDP rasmi Microsoft, sokongan rasmi Steam Remote Play dan Parsec (bukan komitmen vendor atau statistik tangan pertama; sebagai rujukan, berubah dengan versi dan rangkaian):</p>
+<table>
+<tr><th>Dimensi</th><th>Anggaran / nota</th></tr>
+<tr><td>Taburan ikut jenis masalah (angg.)</td><td>sambungan/putus ~ <strong>35%</strong> . gambar (skrin hitam/artifak) ~ <strong>25%</strong> . kependaman/lag ~ <strong>22%</strong> . bunyi/periferal ~ <strong>12%</strong> . kebenaran/keselamatan ~ <strong>6%</strong></td></tr>
+<tr><td>Punca sebenar lag (kunci)</td><td>kebanyakan "lag / tak bersambung" ialah <strong>masalah rangkaian</strong> (paket hilang, Wi-Fi lemah, <strong>muat naik</strong> hos rendah), <strong>bukan</strong> prestasi PC atau pepijat -> periksa rangkaian sebelum perisian/perkakasan</td></tr>
+<tr><td>Punca utama skrin hitam (angg.)</td><td>ketakpadanan resolusi/skrin penuh + pemacu GPU lama mendominasi; hitam dengan bunyi = masalah resolusi klasik, jadikan permainan mod tetingkap / resolusi lazim paling membantu</td></tr>
+<tr><td>Port & protokol RDP</td><td>port RDP lalai <strong>3389 (TCP)</strong>; jika diguna -> tak bersambung; Event ID <strong>50 (TermDD . X.224)</strong> = ralat aliran protokol yang memutus klien</td></tr>
+<tr><td>Urutan semak kendiri (jimat masa)</td><td><strong>rangkaian (kehilangan/muat naik/tembok api) dahulu -> pemacu/resolusi -> kebenaran/sijil akhir</strong>; penstriman sekitar <strong>30-50Mbps @1080p60</strong>, dan kadar bit mesti di bawah muat naik hos</td></tr>
+</table>
+<p><small>Asas anggaran: garis dasar sumber + ekstrapolasi (menggabungkan Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", sokongan rasmi Steam Remote Play, sokongan rasmi Parsec, 2026); berubah dengan versi dan dasar rangkaian. Bergantung pada maklumat rasmi terkini dan ujian anda.</small></p>
+</section>
+<h2>Kes sebenar - baca pantas</h2>
+<ul class="scenes"><li>Mengawal PC rumah dari telefon, skrin hitam sebaik bersambung tapi dengar bunyi: biasanya resolusi hos tak disokong telefon atau resolusi skrin penuh permainan tak padan -> jadikan permainan mod tetingkap, tukar hos ke resolusi lazim seperti 1080p, dan kemas kini pemacu GPU.</li><li>Tiba-tiba perlahan dengan lengah besar di tengah sesi: jangan salahkan prestasi PC dahulu - periksa paket hilang dan isyarat Wi-Fi, tukar ke kabel atau hampiri Wi-Fi 5 GHz, turunkan had kadar bit/lebar jalur, turunkan kualiti jika muat naik hos rendah; jika pemacu NVIDIA yang baru dipasang bermasalah, pulihkan yang stabil.</li><li>Klien berkata "tak dapat bersambung ke komputer jauh / sambungan gagal": pastikan hos dihidupkan, dilog masuk, dalam talian, benarkan UU Remote dalam tembok api dan antivirus, matikan kemudian hidupkan suis jauh; jika IP rumah berubah mulakan semula penghala, atau semak sama ada port 3389 diguna program lain.</li><li>Putus dalam beberapa saat atau seminit: biasanya rangkaian tak stabil atau masalah keselamatan/sijil - periksa paket hilang dan penghalaan, tetapkan selang keep-alive di hos, semak lapisan keselamatan dan penyulitan; Event ID 50 (TermDD . X.224) dalam Pemapar Peristiwa juga menunjuk aliran protokol terputus.</li><li>Gambar baik tapi tiada bunyi di hujung jauh: hos tiada peranti audio boleh guna (PC awan atau tanpa pembesar suara papar "Tiada pembesar suara atau fon kepala dipasang") -> pasang peranti audio maya (seperti VB-Cable) di hos dan pilih peranti tangkap betul dalam tetapan.</li><li>Boleh log masuk tapi tak boleh mula kawalan jauh, dengan amaran tiada kebenaran: tambah akaun ke kumpulan "Pengguna Desktop Jauh" hos, semak sama ada dasar "Hadkan bilangan sambungan" menyekat, dan pastikan akaun ada hak log masuk jauh.</li></ul><div class="related"><h2>Berkaitan</h2><ul><li><a href="https://uuyc163.com/">UU Remote rasmi / muat turun dan panduan</a></li><li><a href="https://uuyc163.com/faq/">FAQ UU Remote (rasmi)</a></li><li><a href="https://uuyc163.com/ms/tools/connection-troubleshooting/">Penyelesaian masalah UU Remote (jadual penuh rujukan)</a></li><li><a href="https://uuycc.com/">Pusat muat turun UU Remote (kembar)</a></li></ul></div></main>
+<footer>Nota masalah / punca / penyelesaian disusun dari Microsoft Learn "Troubleshoot Remote desktop disconnected errors" dan "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (gagal sambungan RDP, konflik port 3389, lapisan keselamatan & penyulitan, kerosakan sijil lesen, tak dapat dicapai semasa tidur, Event ID 50 TermDD X.224 ralat protokol), sokongan rasmi Steam Remote Play (gagal sambungan = tembok api/antivirus / set semula suis / segarkan IP, skrin hitam = kemas kini pemacu / lumpuhkan penyahkodan perkakasan, lumpuhkan IPv6) dan sokongan rasmi Parsec (skrin hitam = ketakpadanan resolusi skrin penuh -> tetingkap, tiada bunyi = hos tanpa peranti audio -> peranti audio maya, kependaman tinggi = pemacu baharu / kehilangan -> pulihkan pemacu . turunkan lebar jalur . kabel). Taburan masalah 2026 ialah anggaran, bukan komitmen vendor atau statistik tangan pertama; sebagai rujukan, bergantung pada maklumat rasmi terkini dan ujian anda. (Penyetempatan: tidak rasmi · terjemahan LLM)<br>Halaman alat . carian tidak menggantikan ujian sebenar dalam klien rasmi atau sokongan rasmi</footer>
+</div>
+<script src="/ms/codes.js"></script><script src="/app.js"></script>
+</body></html>
