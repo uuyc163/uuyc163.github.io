@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote استكشاف أخطاء الاتصال - لا يتصل، شاشة سوداء، تأخّر، لا صوت</title>
+<meta name="description" content="UU Remote لا يتصل، شاشة سوداء بعد الاتصال، تأخّر، لا صوت أو لا يُكتشف ذراع التحكم؟ اكتب أو انقر عرضًا (لا يتصل / شاشة سوداء / تأخّر / انقطاع / لا صوت / ذراع التحكم / تعارض المنفذ) للعثور على السبب الأرجح + خطوات الحل + الوقاية: التأخّر عادةً مشكلة شبكة (فقد حزم، Wi-Fi ضعيف، رفع منخفض للمضيف)، وليس أداء الحاسوب؛ الشاشة السوداء عادةً عدم تطابق الدقة/ملء الشاشة أو تعريف GPU قديم؛ عند فشل الاتصال تحقّق أولًا من الجدار الناري/مضاد الفيروسات ومفتاح البعيد؛ خطأ الأمان يشير إلى طبقة المصادقة/التشفير أو شهادة ترخيص تالفة؛ تعارض منفذ RDP 3389؛ غير قابل للوصول أثناء السكون؛ تكيّف IPv6 سيئ. مع مقارنة UU Remote مقابل ToDesk / Parsec / Microsoft RDP / Steam Remote Play وتقديرات 2026. مُجمَّع من وثائق RDP الرسمية لمايكروسوفت ودعم Steam Remote Play وParsec الرسمي.">
+<link rel="canonical" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote استكشاف أخطاء الاتصال والبحث عن الأخطاء",
+   "url": "https://uuyc163.github.io/ar/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "ar",
+   "description": "UU Remote لا يتصل، شاشة سوداء بعد الاتصال، تأخّر، لا صوت أو لا يُكتشف ذراع التحكم؟ اكتب أو انقر عرضًا (لا يتصل / شاشة سوداء / تأخّر / انقطاع / لا صوت / ذراع التحكم / تعارض المنفذ) للعثور على السبب الأرجح + خطوات الحل + الوقاية: التأخّر عادةً مشكلة شبكة (فقد حزم، Wi-Fi ضعيف، رفع منخفض للمضيف)، وليس أداء الحاسوب؛ الشاشة السوداء عادةً عدم تطابق الدقة/ملء الشاشة أو تعريف GPU قديم؛ عند فشل الاتصال تحقّق أولًا من الجدار الناري/مضاد الفيروسات ومفتاح البعيد؛ خطأ الأمان يشير إلى طبقة المصادقة/التشفير أو شهادة ترخيص تالفة؛ تعارض منفذ RDP 3389؛ غير قابل للوصول أثناء السكون؛ تكيّف IPv6 سيئ. مع مقارنة UU Remote مقابل ToDesk / Parsec / Microsoft RDP / Steam Remote Play وتقديرات 2026. مُجمَّع من وثائق RDP الرسمية لمايكروسوفت ودعم Steam Remote Play وParsec الرسمي.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "ar",
+   "url": "https://uuyc163.github.io/ar/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - كيف تُصلح لا يتصل / فشل الاتصال؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "يقول العميل \"تعذّر الاتصال بالحاسوب البعيد / فشل / مهلة\"؛ لا تستطيع الدخول إلى المضيف. المضيف مُطفأ / غير مسجَّل / غير متصل، الجدار الناري أو مضاد الفيروسات يحجب، مفتاح بعيد معطوب، IP منزل متغيّر، أو منفذ مشغول. 1) تأكّد أن المضيف مُشغَّل ومسجَّل الدخول ومتصل؛ 2) اسمح لـ UU Remote في الجدار الناري ومضاد الفيروسات؛ 3) أطفئ-شغّل مفتاح البعيد لإعادة التعيين؛ 4) أعد تشغيل الراوتر لتحديث IP؛ 5) إن كان المنفذ 3389 مشغولًا فغيّره أو أوقف البرنامج المتعارض. أعطِ المضيف IP ثابت في الشبكة المحلية، أضفه لقائمة الثقة، أبقِه مُشغَّلًا ومتصلًا."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - كيف تُصلح شاشة سوداء بعد الاتصال؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "متصل لكن الصورة سوداء تمامًا، غالبًا مع سماع صوت ورؤية الماوس. دقة غير مدعومة، دقة ملء شاشة اللعبة != دقة البث، تعريف GPU قديم، أو persistent bitmap caching تالف. 1) انقل المضيف إلى دقة شائعة مثل 1080p؛ 2) اجعل لعبة ملء الشاشة نافذة؛ 3) حدّث تعريف GPU؛ 4) عطّل \"persistent bitmap caching\" (علامة تبويب الأداء في RDP). استخدم دقة متوافقة، أبقِ تعريف GPU حديثًا."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - كيف تُصلح تأخّر / تأخير الإدخال؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "تأخير إدخال ملحوظ، تقطّع / فقد إطارات، استجابة سيئة. ازدحام شبكة / فقد حزم، Wi-Fi ضعيف، رفع منخفض للمضيف، معدل بت يفوق النطاق، أو تأخير ترميز غير طبيعي من تعريف GPU جديد. 1) انتقل إلى كابل أو اقترب من Wi-Fi 5GHz؛ 2) اخفض حد معدل البت/النطاق لترك هامش؛ 3) تحقّق من فقد الحزم، أغلق التطبيقات المستهلكة للنطاق؛ 4) على المضيف عُد إلى تعريف GPU مستقر. فضّل الكابل؛ معدل البت < الرفع مع هامش."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - كيف تُصلح انقطاع متكرر / ينقطع خلال ثوانٍ؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ينقطع خلال ثوانٍ أو دقيقة، يعيد الاتصال مرارًا. عدم استقرار شبكة / فقد، لا keep-alive مُهيّأ، مشكلة طبقة أمان أو شهادة، أو خطأ بروتوكول TermDD X.224 (Event ID 50). 1) تحقّق من فقد الحزم واستقرار التوجيه؛ 2) اضبط فاصل keep-alive على المضيف؛ 3) راجع طبقة الأمان والتشفير؛ 4) انظر Event ID 50 في عارض الأحداث لتحديد انقطاع البروتوكول. شبكة مستقرة، طبقة أمان وشهادة صحيحة."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - كيف تُصلح لا صوت؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "الصورة جيدة لكن لا صوت في الطرف البعيد. المضيف بلا جهاز صوت قابل للاستخدام (الحاسوب السحابي / بلا سماعة يُظهِر \"لا توجد سماعات أو سماعات رأس موصولة\") أو اختير جهاز التقاط خاطئ. 1) ثبّت جهاز صوت افتراضي (مثل VB-Cable) على المضيف؛ 2) اختر جهاز الالتقاط الصحيح في الإعدادات؛ 3) إن كان أحد متصلًا فأعد الاتصال للتطبيق. تأكّد أن للمضيف جهاز إخراج صوت قابل للاستخدام."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - كيف تُصلح لا يُكتشف ذراع التحكم / الطرفية؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ذراع التحكم أو لوحة المفاتيح/الماوس أو طرفية أخرى لا تُكتشف أو لا تستجيب في الطرف البعيد. تمرير ذراع التحكم غير مفعّل على العميل، تعريفات ذراع التحكم مفقودة على المضيف، أو برنامج آخر يحتجز الجهاز حصريًا. 1) فعّل تمرير ذراع التحكم/الطرفية في UU Remote؛ 2) ثبّت تعريف ذراع التحكم المناسب على المضيف؛ 3) أعد الاتصال وأغلق البرنامج الذي يحتجز الجهاز حصريًا. ثبّت التعريفات مسبقًا وفعّل التمرير."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - كيف تُصلح تعارض المنفذ / مشكلة المستمع؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "مستمع غير طبيعي / رُفض الاتصال، شائع في RDP المستضاف ذاتيًا / نفس الجهاز. منفذ RDP الافتراضي 3389 (أو المنفذ المُعيَّن) مستخدم من برنامج آخر. 1) استخدم netstat -a -o لإيجاد PID الذي يستخدم المنفذ؛ 2) طابقه بـ tasklist /svc؛ 3) غيّر المنفذ أو أوقف البرنامج المتعارض، ثم أعد تشغيل خدمة البعيد. تجنّب تنافس عدة أدوات بعيدة على نفس المنفذ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - كيف تُصلح غير قابل للوصول أثناء السكون/الإسبات؟",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "المضيف لا يستجيب ولا يتصل مطلقًا. دخل المضيف في السكون أو الإسبات، فبطاقة الشبكة بلا طاقة ولا تستجيب. 1) اضبط خطة طاقة المضيف على عدم السكون/الإسبات أبدًا؛ 2) أيقظه بـ Wake-on-LAN أو تشغيل UU عن بُعد؛ 3) ابدأ الاتصال بعد الاستيقاظ. عطّل السكون/الإسبات، اضبط التشغيل عن بُعد."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">اللغة: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <strong>العربية</strong> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote التحكم عن بُعد / بث الألعاب - استكشاف أخطاء الاتصال والبحث عن الأخطاء</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_ar.webp"><img src="/img/cover_ar.png" alt="رسم توضيحي لاستكشاف أخطاء اتصال UU Remote والبحث عن الأخطاء" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>شكل: بحث أعطال UU Remote (كلمة العرض المفتاحية -> السبب الأرجح + الخطوات + الوقاية)</figcaption></figure>
+<p><strong>UU Remote</strong> لا يتصل، <strong>شاشة سوداء</strong> عند الاتصال، <strong>تأخّر</strong>، لا صوت، لا يُكتشف ذراع التحكم - لا تخمّن عشوائيًا. المفتاح هو <strong>التقسيم حسب الفئة والفحص الذاتي بالترتيب</strong>: أولًا <strong>الشبكة (فقد حزم / رفع / جدار ناري)</strong>، ثم <strong>تعريف GPU / الدقة</strong>، وأخيرًا <strong>الأذونات / الشهادة</strong>. اكتب أو انقر <strong>عرضك</strong> (مثل <code>لا يتصل</code>، <code>شاشة سوداء</code>، <code>تأخّر</code>، <code>لا صوت</code>، <code>انقطاع</code>، <code>ذراع التحكم</code>) للعثور على <strong>السبب الأرجح + الخطوات + الوقاية</strong>. تثبيت أولًا؟ انظر <a href="https://uuyc163.com/download/">تنزيل UU Remote</a> و<a href="https://uuyc163.com/faq/">الأسئلة الشائعة</a>.</p>
+<input id="q" placeholder="اكتب العرض، مثل لا يتصل / شاشة سوداء / تأخّر / لا صوت / انقطاع / ذراع التحكم" autocomplete="off">
+<button id="go">ابحث عن حل</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>الخطوة 1: قسّم العطل أولًا إلى أربع مجموعات (لا تُعِد التثبيت فورًا)</h2>
+<p>تسعة من كل عشرة مشاكل تحكم عن بُعد/بث تقع في أربع مجموعات - صنّف أولًا ثم عالج: (1) <strong>الاتصال</strong> - لا يتصل، ينقطع خلال ثوانٍ، تعارض المنفذ، غير قابل للوصول أثناء السكون، IPv6 متقلّب: تحقّق من <strong>الشبكة والجدار الناري/مضاد الفيروسات، مفتاح البعيد، وما إذا كان المضيف متصلًا وقيد التشغيل</strong>؛ (2) <strong>الصورة</strong> - شاشة سوداء، تشوّهات، ضبابية: عادةً <strong>عدم تطابق الدقة/ملء الشاشة أو تعريف GPU قديم</strong>؛ (3) <strong>التأخير/التأخّر</strong> - تأخّر الإدخال، تقطّع: السبب الحقيقي عادةً <strong>فقد حزم / Wi-Fi ضعيف / رفع منخفض للمضيف</strong>، وليس الأداء؛ (4) <strong>الصوت / الطرفية / الإذن</strong> - لا صوت، لا يُكتشف ذراع التحكم، لا إذن بعيد: تحقّق من <strong>جهاز صوت المضيف، تمرير ذراع التحكم، مجموعة Remote Desktop Users</strong>. المزيد: <a href="https://uuyc163.com/faq/">UU Remote FAQ</a>.</p>
+<div class="cat"><div class="catbox"><b>الاتصال / الانقطاع</b><span class="cs">لا يتصل . انقطاع متكرر . تعارض المنفذ . غير قابل للوصول أثناء السكون . IPv6</span><div>تحقّق من الشبكة والجدار الناري/مضاد الفيروسات، مفتاح البعيد، وما إذا كان المضيف متصلًا وقيد التشغيل: عند الفشل اسمح بالجدار الناري أولًا، أطفئ/شغّل البعيد، حدّث IP؛ إن كان المنفذ 3389 مشغولًا فابحث عن التعارض بـ netstat؛ لا تدع المضيف ينام.</div></div><div class="catbox"><b>الصورة (شاشة سوداء / تشوّهات / ضبابية)</b><span class="cs">شاشة سوداء عند الاتصال . تشوّهات . ضبابية</span><div>عادةً عدم تطابق الدقة/ملء الشاشة أو تعريف GPU قديم: انتقل إلى دقة مدعومة، اجعل اللعبة نافذة، حدّث تعريف GPU، عطّل persistent bitmap caching؛ للتشوّهات/الضبابية تحقّق من معدل البت وفقد الحزم وجرّب تعطيل فك الترميز بالعتاد.</div></div><div class="catbox"><b>التأخير / التأخّر</b><span class="cs">تأخّر الإدخال . تقطّع . تلعثم</span><div>السبب الحقيقي عادةً الشبكة وليس الأداء: انتقل إلى كابل أو Wi-Fi 5GHz، اخفض حد معدل البت/النطاق، تحقّق من فقد الحزم، على المضيف عُد إلى تعريف GPU مستقر، أغلق التطبيقات الأخرى المستهلكة للنطاق؛ رفع المضيف غير الكافي هو عنق الزجاجة الحقيقي عبر الإنترنت.</div></div><div class="catbox"><b>الصوت / الطرفية / الإذن</b><span class="cs">لا صوت . لا يُكتشف ذراع التحكم . لا إذن بعيد</span><div>لا صوت - تحقّق من جهاز صوت المضيف (الحاسوب السحابي / بلا سماعة يحتاج جهاز صوت افتراضي)؛ لا يُكتشف ذراع التحكم - فعّل التمرير وثبّت التعريفات؛ لا إذن - أضف الحساب إلى مجموعة "Remote Desktop Users" وتحقّق من سياسة حد الاتصالات.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="شجرة قرار تحديد عطل UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">كيف تحدّد العطل (قسّم حسب العرض إلى أربع مجموعات: اتصال / صورة / تأخير / صوت وطرفية)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">شيء معطّل</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">قسّم حسب العرض</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">لا يتصل/انقطاع -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">شبكة . جدار ناري . مفتاح . منفذ</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">شاشة سوداء/تشوّهات -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">دقة . ملء الشاشة . تعريف GPU</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">أربعة أعطال نمطية (اختر اتجاه الفحص الذاتي حسب العرض)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. الاتصال/الانقطاع</text><text x="32" y="234" fill="#555" font-size="11">شبكة . جدار ناري . منفذ . سكون</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. شاشة سوداء</text><text x="206" y="234" fill="#555" font-size="11">دقة . ملء الشاشة . تعريف</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. التأخير/التأخّر</text><text x="380" y="234" fill="#555" font-size="11">فقد . رفع . كابل أولًا</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. صوت/طرفية</text><text x="554" y="234" fill="#555" font-size="11">جهاز صوت . ذراع تحكم . إذن</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>شكل 1: تدفق تحديد عطل UU Remote - قسّم حسب العرض إلى أربع مجموعات (اتصال / صورة / تأخير / صوت وطرفية)، ثم افحص بالترتيب</figcaption></figure>
+<h2>الخطوة 2: السبب الأكثر تشخيصًا خاطئًا -> L2 (الشبكة أولًا، ثم التعريف/الدقة، أخيرًا الأذونات/الشهادة)</h2>
+<p>الفكرة الأساسية: <strong>معظم حالات "التأخّر" و"لا يتصل" هي في الواقع مشاكل شبكة، وليست أداء الحاسوب أو خطأ برمجي</strong>. الفحص بهذا الترتيب يوفّر أكبر وقت: (1) <strong>التأخّر/التأخير - تحقّق من الشبكة أولًا</strong>: فقد الحزم، Wi-Fi الضعيف، و<strong>الرفع</strong> غير الكافي للمضيف هي عنق الزجاجة الحقيقي للبث (التحكم في المنزل من الخارج يرسل الصورة <em>للخارج</em>، يستهلك الرفع) - انتقل إلى كابل أو Wi-Fi 5GHz، اخفض حد معدل البت/النطاق، على المضيف عُد إلى تعريف GPU مستقر (تعريفات NVIDIA الجديدة سبّبت تأخير ترميز غير طبيعي)؛ (2) <strong>الشاشة السوداء - تحقّق من الدقة والتعريف أولًا</strong>: متصل لكن أسود مع سماع صوت/رؤية الماوس يعني عادةً <strong>دقة غير مدعومة أو دقة ملء شاشة اللعبة != دقة البث</strong> (اجعل اللعبة نافذة)، <strong>تعريف GPU قديم</strong> (حدّث)، أو persistent bitmap caching تالف (عطّل)؛ (3) <strong>فشل الاتصال - تحقّق من الجدار الناري والمفتاح أولًا</strong>: الجدار الناري/مضاد الفيروسات يحجب، أطفئ-شغّل مفتاح البعيد، أعد تشغيل الراوتر لتحديث IP، أو المنفذ <code>3389</code> مشغول (<code>netstat -a -o</code> للتعارض)؛ (4) <strong>خطأ الأمان - تحقّق من المصادقة/الشهادة</strong>: "بسبب خطأ أمني تعذّر على العميل الاتصال" عادةً طبقة مصادقة/تشفير مُهيّأة خطأ أو شهادة ترخيص تالفة؛ (5) <strong>لا صوت - تحقّق من جهاز الصوت</strong>: إن لم يكن للمضيف سماعة / لا جهاز صوت للحاسوب السحابي، ثبّت جهاز صوت افتراضي. أدناه شجرة قرار تحديد العطل؛ وأسفلها لوحة الفحص الذاتي، المقارنة، وتقديرات 2026.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="لوحة الفحص الذاتي قبل اتصال UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">لوحة الفحص الذاتي قبل الاتصال/البث (أخضر = مُحقَّق / أحمر = يسهل إغفاله)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">بند الفحص</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">الحكم</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">الحالة</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">المضيف مُشغَّل، مسجَّل الدخول، متصل (ليس سكونًا)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">حالة الاتصال</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">مُحقَّق</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">الجدار الناري/مضاد الفيروسات يسمح بـ UU Remote</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">الجدار الناري</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">تحقّق</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">الطرفان كابل أو Wi-Fi 5GHz، إشارة كاملة</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">جودة الشبكة</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">مُحقَّق</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">تعريف GPU للمضيف = إصدار مستقر حديث</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">تعريف GPU</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">تحقّق</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">رفع المضيف >= معدل بت البث + هامش</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">الرفع</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">مُحقَّق</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">المنفذ 3389 غير مستخدم من برنامج آخر</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">المنفذ</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">تحقّق</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">ملاحظة: أحمر = الثلاثة الأكثر إغفالًا - السماح بالجدار الناري، تعريف GPU، تعارض المنفذ؛ في لا يتصل / شاشة سوداء / تأخّر تحقّق منها قبل إعادة التثبيت.</text></svg><figcaption>شكل 2: لوحة الفحص الذاتي قبل الاتصال (أخضر = مُحقَّق / أحمر = فخ للفحص)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_ar.webp"><img src="/img/board_ar.png" alt="رسم توضيحي للنقاط الخضراء/الحمراء للوحة الفحص الذاتي قبل اتصال UU Remote" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>شكل: تحقّق "المضيف متصل وقيد التشغيل . الجدار الناري يسمح . كابل/5GHz . تعريف جديد . منفذ فارغ" - التأخّر والشاشة السوداء يفشلان غالبًا في الأولى</figcaption></figure>
+<h2>جدول البحث الكامل للأعطال الشائعة (العرض . الفئة . اتجاه الحل)</h2>
+<table id="tbl"></table>
+<h2>UU Remote مقابل التحكم عن بُعد / البث الشائع - مقارنة استكشاف الأخطاء (وثائق عامة)</h2>
+<table class="cmp"><tr><th>الحل</th><th>الاتصال/NAT</th><th>معالجة الشاشة السوداء</th><th>الطرفية/ذراع التحكم</th><th>التأخير عبر الشبكة</th><th>أدوات التشخيص</th></tr><tr><td>UU Remote</td><td>P2P مباشر + شبكة خاصة، NAT تلقائي</td><td>تغيير الدقة / نافذة / تحديث التعريف</td><td>تمرير ذراع التحكم والطرفية</td><td>ميلي ثانية (شبكة خاصة مُحسَّنة)</td><td>سجلات العميل + فحص ذاتي</td></tr><tr><td>ToDesk</td><td>ترحيل خاص + P2P</td><td>دقة تكيّفية</td><td>تعيين الطرفية</td><td>منخفض (قناة مخصّصة)</td><td>لوحة تشخيص</td></tr><tr><td>Parsec</td><td>P2P اختراق، يتطلّب IP عام/UPnP</td><td>عدم تطابق ملء الشاشة -> نافذة</td><td>دعم ذراع تحكم أصلي</td><td>منخفض جدًا في LAN، عبر الإنترنت حسب الشبكة</td><td>سجلات + وثائق مجتمع</td></tr><tr><td>Microsoft RDP</td><td>منفذ 3389، يتطلّب سماح/بوابة</td><td>persistent bitmap cache / الدقة / التعريف</td><td>يتطلّب إعداد إعادة توجيه</td><td>منخفض في LAN، عبر الإنترنت حسب النطاق</td><td>عارض الأحداث + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>ترحيل Steam + مباشر</td><td>تحديث التعريف / تعطيل فك الترميز بالعتاد</td><td>دعم ذراع التحكم أولًا</td><td>~30-50Mb/s @1080p60</td><td>تعطيل IPv6 + إعدادات البث</td></tr></table><section class="i4data">
+<h2>UU Remote التحكم عن بُعد/البث توزيع الأعطال الشائعة وملاحظات (تقدير 2026)</h2>
+<p>التالي <strong>تقديرات 2026</strong> تجمع وثائق RDP الرسمية لمايكروسوفت ودعم Steam Remote Play وParsec الرسمي (ليست التزامات مورّد ولا إحصاءات مباشرة؛ للمرجع، تتغيّر بالإصدار والشبكة):</p>
+<table>
+<tr><th>البُعد</th><th>التقدير / الملاحظة</th></tr>
+<tr><td>التوزيع حسب نوع العطل (تقدير)</td><td>اتصال/انقطاع ~ <strong>35%</strong> . صورة (شاشة سوداء/تشوّهات) ~ <strong>25%</strong> . تأخير/تأخّر ~ <strong>22%</strong> . صوت/طرفية ~ <strong>12%</strong> . إذن/أمان ~ <strong>6%</strong></td></tr>
+<tr><td>السبب الحقيقي للتأخّر (مفتاح)</td><td>معظم "التأخّر / لا يتصل" مشكلة <strong>شبكة</strong> (فقد حزم، Wi-Fi ضعيف، <strong>رفع</strong> منخفض للمضيف)، <strong>ليس</strong> أداء الحاسوب أو خطأ -> تحقّق من الشبكة قبل البرمجيات/العتاد</td></tr>
+<tr><td>السبب الرئيسي للشاشة السوداء (تقدير)</td><td>عدم تطابق الدقة/ملء الشاشة + تعريف GPU قديم يسودان؛ أسود مع صوت = مشكلة دقة كلاسيكية، جعل اللعبة نافذة / دقة شائعة الأكثر فائدة</td></tr>
+<tr><td>منفذ RDP والبروتوكول</td><td>منفذ RDP الافتراضي <strong>3389 (TCP)</strong>؛ إن كان مشغولًا -> لا يتصل؛ Event ID <strong>50 (TermDD . X.224)</strong> = خطأ تيار بروتوكول يقطع العميل</td></tr>
+<tr><td>ترتيب الفحص الذاتي (يوفّر الوقت)</td><td><strong>الشبكة (فقد/رفع/جدار ناري) أولًا -> التعريف/الدقة -> الأذونات/الشهادة أخيرًا</strong>؛ البث نحو <strong>30-50Mbps @1080p60</strong>، ومعدل البت يجب أن يبقى دون رفع المضيف</td></tr>
+</table>
+<p><small>أساس التقدير: خط أساس المصادر + استقراء (دمج Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons"، دعم Steam Remote Play الرسمي، دعم Parsec الرسمي، 2026)؛ يتغيّر بالإصدار وسياسة الشبكة. اعتمد على أحدث المعلومات الرسمية واختبارك.</small></p>
+</section>
+<h2>سيناريوهات حقيقية - قراءة سريعة</h2>
+<ul class="scenes"><li>التحكم في حاسوب المنزل من الهاتف، شاشة سوداء فور الاتصال لكن يُسمَع صوت: عادةً دقة المضيف غير مدعومة من الهاتف أو دقة ملء شاشة اللعبة غير متطابقة -> اجعل اللعبة نافذة، انقل المضيف إلى دقة شائعة مثل 1080p، وحدّث تعريف GPU.</li><li>يصبح بطيئًا فجأة بتأخير كبير في منتصف الجلسة: لا تلُم أداء الحاسوب أولًا - تحقّق من فقد الحزم وإشارة Wi-Fi، انتقل إلى كابل أو اقترب من Wi-Fi 5GHz، اخفض حد معدل البت/النطاق، اخفض الجودة إن كان رفع المضيف منخفضًا؛ إن أساء تعريف NVIDIA حديث التثبيت فعُد إلى مستقر.</li><li>يقول العميل "تعذّر الاتصال بالحاسوب البعيد / فشل الاتصال": تأكّد أن المضيف مُشغَّل ومسجَّل الدخول ومتصل، اسمح لـ UU Remote في الجدار الناري ومضاد الفيروسات، أطفئ-شغّل مفتاح البعيد؛ إن تغيّر IP المنزل أعد تشغيل الراوتر، أو تحقّق إن كان المنفذ 3389 مستخدمًا من برنامج آخر.</li><li>ينقطع خلال ثوانٍ أو دقيقة: عادةً عدم استقرار شبكة أو مشكلة أمان/شهادة - تحقّق من فقد الحزم والتوجيه، اضبط فاصل keep-alive على المضيف، راجع طبقة الأمان والتشفير؛ Event ID 50 (TermDD . X.224) في عارض الأحداث يشير أيضًا إلى تيار بروتوكول مقطوع.</li><li>الصورة جيدة لكن لا صوت في الطرف البعيد: المضيف بلا جهاز صوت قابل للاستخدام (الحاسوب السحابي أو بلا سماعة يُظهِر "لا توجد سماعات أو سماعات رأس موصولة") -> ثبّت جهاز صوت افتراضي (مثل VB-Cable) على المضيف واختر جهاز الالتقاط الصحيح في الإعدادات.</li><li>يمكنك تسجيل الدخول لكن لا يمكن بدء التحكم عن بُعد، مع تحذير بعدم الإذن: أضف الحساب إلى مجموعة "Remote Desktop Users" للمضيف، تحقّق إن كانت سياسة "Limit number of connections" تحجب، وتأكّد أن للحساب حقوق تسجيل دخول بعيد.</li></ul><div class="related"><h2>ذات صلة</h2><ul><li><a href="https://uuyc163.com/">UU Remote الرسمي / التنزيل والدليل</a></li><li><a href="https://uuyc163.com/faq/">UU Remote FAQ (رسمي)</a></li><li><a href="https://uuyc163.com/ar/tools/connection-troubleshooting/">استكشاف أخطاء UU Remote (جدول مرجعي كامل)</a></li><li><a href="https://uuycc.com/">مركز تنزيل UU Remote (الشقيق)</a></li></ul></div></main>
+<footer>ملاحظات العطل / السبب / الحل مُجمَّعة من Microsoft Learn "Troubleshoot Remote desktop disconnected errors" و"Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (فشل اتصال RDP، تعارض المنفذ 3389، طبقة الأمان والتشفير، تلف شهادة الترخيص، غير قابل للوصول أثناء السكون، Event ID 50 TermDD X.224 خطأ بروتوكول)، دعم Steam Remote Play الرسمي (فشل الاتصال = جدار ناري/مضاد فيروسات / إعادة تعيين المفتاح / تحديث IP، شاشة سوداء = تحديث التعريفات / تعطيل فك الترميز بالعتاد، تعطيل IPv6) ودعم Parsec الرسمي (شاشة سوداء = عدم تطابق دقة ملء الشاشة -> نافذة، لا صوت = المضيف بلا جهاز صوت -> جهاز صوت افتراضي، تأخير عالٍ = تعريف جديد / فقد -> أعد التعريف . اخفض النطاق . كابل). توزيع الأعطال 2026 تقدير، ليس التزامًا من المورّد ولا إحصاء مباشر؛ للمرجع، اعتمد على أحدث المعلومات الرسمية واختبارك. (التوطين: غير رسمي · ترجمة LLM)<br>صفحة أداة . البحث لا يحل محل الاختبار الحقيقي في العميل الرسمي أو الدعم الرسمي</footer>
+</div>
+<script src="/ar/codes.js"></script><script src="/app.js"></script>
+</body></html>
