@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote solução de problemas de conexão e erros - não conecta, tela preta, lag, sem som</title>
+<meta name="description" content="UU Remote não conecta, tela preta ao conectar, lag, sem som ou controle não detectado? Digite ou toque um sintoma (não conecta / tela preta / lag / desconexão / sem som / controle / conflito de porta) para achar a causa mais provável + passos de solução + prevenção: lag costuma ser problema de rede (perda de pacotes, Wi-Fi fraco, pouco upload do host), não desempenho do PC; tela preta costuma ser descompasso de resolução/tela cheia ou driver de GPU antigo; em falhas de conexão verifique antes firewall/antivírus e o interruptor remoto; um erro de segurança aponta para a camada de autenticação/criptografia ou um certificado de licença corrompido; conflito da porta RDP 3389; inacessível em suspensão; má adaptação IPv6. Mais comparativo UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play e estimativas 2026. Compilado da documentação oficial de RDP da Microsoft, do suporte oficial do Steam Remote Play e do Parsec.">
+<link rel="canonical" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote solução de problemas de conexão e erros",
+   "url": "https://uuyc163.github.io/pt-br/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "pt-BR",
+   "description": "UU Remote não conecta, tela preta ao conectar, lag, sem som ou controle não detectado? Digite ou toque um sintoma (não conecta / tela preta / lag / desconexão / sem som / controle / conflito de porta) para achar a causa mais provável + passos de solução + prevenção: lag costuma ser problema de rede (perda de pacotes, Wi-Fi fraco, pouco upload do host), não desempenho do PC; tela preta costuma ser descompasso de resolução/tela cheia ou driver de GPU antigo; em falhas de conexão verifique antes firewall/antivírus e o interruptor remoto; um erro de segurança aponta para a camada de autenticação/criptografia ou um certificado de licença corrompido; conflito da porta RDP 3389; inacessível em suspensão; má adaptação IPv6. Mais comparativo UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play e estimativas 2026. Compilado da documentação oficial de RDP da Microsoft, do suporte oficial do Steam Remote Play e do Parsec.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "pt-BR",
+   "url": "https://uuyc163.github.io/pt-br/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - como resolver Não conecta / falha de conexão?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O cliente diz \"não foi possível conectar ao computador remoto / falha / tempo esgotado\"; você não entra no host. Host desligado / não logado / offline, firewall ou antivírus bloqueando, interruptor remoto com defeito, IP de casa mudado ou porta ocupada. 1) Confirme que o host está ligado, logado e online; 2) libere o UU Remote no firewall e antivírus; 3) desligue e ligue o interruptor remoto para resetar; 4) reinicie o roteador para renovar o IP; 5) se a porta 3389 estiver ocupada, mude-a ou pare o programa em conflito. Dê ao host um IP de LAN fixo, adicione à lista confiável, mantenha ligado e online."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - como resolver Tela preta ao conectar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Conectado mas a imagem fica toda preta, muitas vezes enquanto você ouve som e vê o mouse. Resolução não suportada, resolução em tela cheia do jogo != resolução do streaming, driver de GPU antigo ou cache de bitmap persistente corrompido. 1) Mude o host para uma resolução comum como 1080p; 2) coloque o jogo em tela cheia para janela; 3) atualize o driver de GPU; 4) desative o \"cache de bitmap persistente\" (aba Desempenho do RDP). Use uma resolução compatível, mantenha o driver de GPU recente."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - como resolver Lag / atraso de entrada?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Atraso de entrada perceptível, engasgos / quedas de quadros, resposta ruim. Congestionamento de rede / perda de pacotes, Wi-Fi fraco, pouco upload do host, bitrate acima da banda, ou latência anormal do codificador por um driver de GPU novo. 1) Mude para cabo ou chegue perto do Wi-Fi 5 GHz; 2) baixe o limite de bitrate/banda para deixar folga; 3) verifique a perda de pacotes, feche outros apps que consomem banda; 4) reverta no host para um driver de GPU estável. Prefira cabo; bitrate < upload com folga."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - como resolver Quedas frequentes / cai em segundos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Cai em poucos segundos ou um minuto, reconectando o tempo todo. Instabilidade de rede / perda, sem keep-alive configurado, problema de camada de segurança ou certificado, ou erro de protocolo TermDD X.224 (Event ID 50). 1) Verifique a perda de pacotes e a estabilidade do roteamento; 2) configure um intervalo keep-alive no host; 3) examine a camada de segurança e a criptografia; 4) veja o Event ID 50 no Visualizador de Eventos para localizar a interrupção do protocolo. Rede estável, camada de segurança e certificado corretos."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - como resolver Sem som?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A imagem vai bem mas não há som no lado remoto. O host não tem um dispositivo de áudio utilizável (um PC na nuvem / sem alto-falante mostra \"Nenhum alto-falante ou fone conectado\") ou o dispositivo de captura errado foi escolhido. 1) Instale um dispositivo de áudio virtual (como VB-Cable) no host; 2) escolha o dispositivo de captura certo nas configurações; 3) se alguém estiver conectado, reconecte para aplicar. Garanta que o host tenha um dispositivo de saída de áudio utilizável."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - como resolver Controle / periférico não detectado?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Um controle, teclado/mouse ou outro periférico não é detectado ou não responde no lado remoto. Passthrough do controle não ativado no cliente, drivers do controle ausentes no host, ou outro programa segurando o dispositivo em exclusivo. 1) Ative o passthrough de controle/periférico no UU Remote; 2) instale o driver do controle adequado no host; 3) reconecte e feche o programa que segura o dispositivo em exclusivo. Instale os drivers com antecedência e ative o passthrough."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - como resolver Conflito de porta / problema de listener?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Listener anormal / conexão recusada, comum em RDP auto-hospedado / mesma máquina. A porta RDP padrão 3389 (ou sua porta configurada) está em uso por outro programa. 1) Use netstat -a -o para achar o PID que usa a porta; 2) combine com tasklist /svc; 3) mude a porta ou pare o programa em conflito, depois reinicie o serviço remoto. Evite que várias ferramentas remotas disputem a mesma porta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - como resolver Inacessível em suspensão/hibernação?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O host não responde e não conecta de jeito nenhum. O host entrou em suspensão ou hibernação, então a placa de rede está sem energia e não responde. 1) Defina o plano de energia do host para nunca suspender/hibernar; 2) acorde-o com Wake-on-LAN ou a ligação remota do UU; 3) inicie a conexão após acordar. Desative suspensão/hibernação, configure a ligação remota."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Idioma: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <strong>Português (BR)</strong> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote controle remoto / streaming de jogos - solução de problemas de conexão e erros</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_ptbr.webp"><img src="/img/cover_ptbr.png" alt="Ilustração da solução de problemas de conexão e erros do UU Remote" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Fig: busca de falhas do UU Remote (palavra-chave do sintoma -> causa mais provável + passos + prevenção)</figcaption></figure>
+<p><strong>UU Remote</strong> não conecta, <strong>tela preta</strong> ao conectar, <strong>lag</strong>, sem som, controle não detectado - não tente no escuro. O segredo é <strong>separar por categoria e autoverificar em ordem</strong>: primeiro a <strong>rede (perda de pacotes / upload / firewall)</strong>, depois o <strong>driver de GPU / a resolução</strong>, e por último as <strong>permissões / o certificado</strong>. Digite ou toque seu <strong>sintoma</strong> (ex.: <code>não conecta</code>, <code>tela preta</code>, <code>lag</code>, <code>sem som</code>, <code>desconexão</code>, <code>controle</code>) para achar a <strong>causa mais provável + passos + prevenção</strong>. Instalar primeiro? Veja <a href="https://uuyc163.com/download/">baixar UU Remote</a> e as <a href="https://uuyc163.com/faq/">perguntas frequentes</a>.</p>
+<input id="q" placeholder="Digite um sintoma, ex.: não conecta / tela preta / lag / sem som / desconexão / controle" autocomplete="off">
+<button id="go">Buscar solução</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>Passo 1: separe a falha em quatro grupos primeiro (não reinstale de cara)</h2>
+<p>Nove de cada dez problemas de controle remoto/streaming cabem em quatro grupos - classifique primeiro, depois trate: (1) <strong>Conexão</strong> - não conecta, cai em segundos, conflito de porta, inacessível em suspensão, IPv6 birrento: verifique <strong>rede e firewall/antivírus, o interruptor remoto e se o host está online e ligado</strong>; (2) <strong>Imagem</strong> - tela preta, artefatos, borrada: geralmente um <strong>descompasso de resolução/tela cheia ou driver de GPU antigo</strong>; (3) <strong>Latência/lag</strong> - atraso de entrada, engasgos: a causa real costuma ser <strong>perda de pacotes / Wi-Fi fraco / pouco upload do host</strong>, não desempenho; (4) <strong>Som / periférico / permissão</strong> - sem som, controle não detectado, sem permissão remota: verifique o <strong>dispositivo de áudio do host, o passthrough do controle, o grupo Usuários da Área de Trabalho Remota</strong>. Mais: <a href="https://uuyc163.com/faq/">FAQ do UU Remote</a>.</p>
+<div class="cat"><div class="catbox"><b>Conexão / quedas</b><span class="cs">não conecta . quedas frequentes . conflito de porta . inacessível em suspensão . IPv6</span><div>Verifique rede e firewall/antivírus, o interruptor remoto e se o host está online e ligado: em falha de conexão, libere o firewall primeiro, desligue/ligue o remoto, renove o IP; se a porta 3389 estiver em uso, ache o conflito com netstat; não deixe o host suspender.</div></div><div class="catbox"><b>Imagem (tela preta / artefatos / borrada)</b><span class="cs">tela preta ao conectar . artefatos . borrada</span><div>Geralmente descompasso de resolução/tela cheia ou driver de GPU antigo: mude para uma resolução suportada, coloque o jogo em janela, atualize o driver de GPU, desative o cache de bitmap persistente; para artefatos/borrada verifique bitrate e perda de pacotes e tente desativar a decodificação por hardware.</div></div><div class="catbox"><b>Latência / lag</b><span class="cs">atraso de entrada . engasgos . travadas</span><div>A causa real costuma ser a rede, não o desempenho: mude para cabo ou Wi-Fi 5 GHz, baixe o limite de bitrate/banda, verifique a perda de pacotes, no host reverta para um driver de GPU estável, feche outros apps que consomem banda; pouco upload do host é o verdadeiro gargalo pela internet.</div></div><div class="catbox"><b>Som / periférico / permissão</b><span class="cs">sem som . controle não detectado . sem permissão remota</span><div>Sem som - verifique o dispositivo de áudio do host (um PC na nuvem / sem alto-falante precisa de um dispositivo de áudio virtual); controle não detectado - ative o passthrough e instale drivers; sem permissão - adicione a conta ao grupo "Usuários da Área de Trabalho Remota" e verifique a política de limite de conexões.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo de decisão de localização de falhas do UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Como localizar uma falha (separe por sintoma em quatro grupos: conexão / imagem / latência / som e periférico)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">Algo quebrou</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">Separe por sintoma</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">não conecta/cai -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">rede . firewall . interruptor . porta</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">tela preta/artefatos -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">resolução . tela cheia . driver GPU</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">Quatro falhas típicas (escolha direção de autoverificação por sintoma)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. Conexão/quedas</text><text x="32" y="234" fill="#555" font-size="11">rede . firewall . porta . suspensão</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. Tela preta</text><text x="206" y="234" fill="#555" font-size="11">resolução . tela cheia . driver</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. Latência/lag</text><text x="380" y="234" fill="#555" font-size="11">perda . upload . cabo primeiro</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. Som/periférico</text><text x="554" y="234" fill="#555" font-size="11">disp. áudio . controle . permissão</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>Fig 1: fluxo de localização de falhas do UU Remote - separe por sintoma em quatro grupos (conexão / imagem / latência / som e periférico), depois autoverifique em ordem</figcaption></figure>
+<h2>Passo 2: a causa pior diagnosticada -> L2 (rede primeiro, depois driver/resolução, por último permissões/certificado)</h2>
+<p>Ideia central: <strong>a maioria dos casos de "lag" e "não conecta" são na verdade problemas de rede, não desempenho do PC nem bug de software</strong>. Autoverificar nesta ordem economiza mais tempo: (1) <strong>Lag/atraso - verifique a rede primeiro</strong>: perda de pacotes, Wi-Fi fraco e <strong>upload</strong> insuficiente do host são o verdadeiro gargalo do streaming (controlar sua casa de fora envia a imagem <em>para fora</em>, consumindo upload) - mude para cabo ou Wi-Fi 5 GHz, baixe o limite de bitrate/banda e no host tente reverter para um driver de GPU estável (drivers NVIDIA novos causaram latência anormal do codificador); (2) <strong>Tela preta - verifique resolução e driver primeiro</strong>: conectado mas preto enquanto você ouve som / vê o mouse geralmente significa <strong>resolução não suportada ou resolução em tela cheia do jogo != resolução do streaming</strong> (coloque o jogo em janela), um <strong>driver de GPU antigo</strong> (atualize) ou cache de bitmap persistente corrompido (desative); (3) <strong>Falha de conexão - verifique firewall e interruptor primeiro</strong>: firewall/antivírus bloqueando, desligue e ligue o interruptor remoto, reinicie o roteador para renovar o IP, ou porta <code>3389</code> em uso (<code>netstat -a -o</code> para o conflito); (4) <strong>Erro de segurança - verifique autenticação/certificado</strong>: "devido a um erro de segurança o cliente não pôde conectar" geralmente é camada de autenticação/criptografia mal configurada ou certificado de licença corrompido; (5) <strong>Sem som - verifique o dispositivo de áudio</strong>: se o host não tem alto-falante / um PC na nuvem não tem dispositivo de áudio, instale um dispositivo de áudio virtual. Abaixo a árvore de decisão para localizar a falha; mais abaixo o painel de autoverificação, o comparativo e as estimativas 2026.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Painel de autoverificação antes de conectar do UU Remote" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Painel de autoverificação antes de conectar/streaming (verde = atendido / vermelho = fácil de esquecer)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">Item de verificação</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Julgamento</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Estado</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host ligado, logado, online (não em suspensão)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">estado online</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">atendido</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Firewall/antivírus liberam o UU Remote</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">firewall</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">verificar</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Ambos os lados por cabo ou Wi-Fi 5 GHz, sinal cheio</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">qualidade da rede</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">atendido</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Driver de GPU do host = versão estável recente</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">driver GPU</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">verificar</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Upload do host >= bitrate do streaming + folga</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">upload</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">atendido</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Porta 3389 não usada por outro programa</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">porta</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">verificar</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">Nota: vermelho = os três mais esquecidos - liberar o firewall, o driver de GPU, o conflito de porta; em não conecta / tela preta / lag verifique-os antes de reinstalar.</text></svg><figcaption>Fig 2: painel de autoverificação antes de conectar (verde = atendido / vermelho = armadilha a verificar)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_ptbr.webp"><img src="/img/board_ptbr.png" alt="Ilustração dos pontos verde/vermelho do painel de autoverificação antes de conectar do UU Remote" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Fig: verifique "host online e ligado . firewall liberado . cabo/5GHz . driver recente . porta livre" - lag e tela preta costumam falhar nos primeiros</figcaption></figure>
+<h2>Tabela completa de falhas comuns (sintoma . categoria . direção de solução)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs controle remoto / streaming comuns - comparativo de solução de problemas (documentação pública)</h2>
+<table class="cmp"><tr><th>Solução</th><th>Conexão/NAT</th><th>Tratamento de tela preta</th><th>Periférico/controle</th><th>Latência pela rede</th><th>Ferramentas de diagnóstico</th></tr><tr><td>UU Remote</td><td>P2P direto + rede privada, NAT auto</td><td>trocar resolução / janela / atualizar driver</td><td>passthrough de controle e periféricos</td><td>milissegundos (rede privada otimizada)</td><td>logs do cliente + autoverificação</td></tr><tr><td>ToDesk</td><td>relay próprio + P2P</td><td>resolução adaptativa</td><td>mapeamento de periféricos</td><td>baixa (canal dedicado)</td><td>painel de diagnóstico</td></tr><tr><td>Parsec</td><td>P2P hole-punch, exige IP público/UPnP</td><td>descompasso de tela cheia -> janela</td><td>suporte nativo de controle</td><td>muito baixa em LAN, depende da rede pela internet</td><td>logs + documentação da comunidade</td></tr><tr><td>Microsoft RDP</td><td>porta 3389, exige liberação/gateway</td><td>cache de bitmap persistente / resolução / driver</td><td>exige config de redirecionamento</td><td>baixa em LAN, depende da banda pela internet</td><td>Visualizador de Eventos + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>relay da Steam + direto</td><td>atualizar driver / desativar decodificação HW</td><td>suporte de controle prioritário</td><td>~30-50Mb/s @1080p60</td><td>desativar IPv6 + configurações de stream</td></tr></table><section class="i4data">
+<h2>UU Remote controle remoto/streaming distribuição de falhas comuns e notas (estimativa 2026)</h2>
+<p>O seguinte são <strong>estimativas 2026</strong> combinando a documentação oficial de RDP da Microsoft, o suporte oficial do Steam Remote Play e do Parsec (não compromissos do fabricante nem estatística de primeira mão; orientativas, mudam com a versão e a rede):</p>
+<table>
+<tr><th>Dimensão</th><th>Estimativa / nota</th></tr>
+<tr><td>Distribuição por tipo de falha (est.)</td><td>conexão/quedas ~ <strong>35%</strong> . imagem (tela preta/artefatos) ~ <strong>25%</strong> . latência/lag ~ <strong>22%</strong> . som/periférico ~ <strong>12%</strong> . permissão/segurança ~ <strong>6%</strong></td></tr>
+<tr><td>Causa real do lag (chave)</td><td>a maioria de "lag / não conecta" é um <strong>problema de rede</strong> (perda de pacotes, Wi-Fi fraco, pouco <strong>upload</strong> do host), <strong>não</strong> desempenho do PC nem bug -> verifique a rede antes de soft/hardware</td></tr>
+<tr><td>Causa principal de tela preta (est.)</td><td>descompasso de resolução/tela cheia + driver de GPU antigo dominam; preto com som = um problema de resolução clássico, colocar o jogo em janela / uma resolução comum ajuda mais</td></tr>
+<tr><td>Porta e protocolo RDP</td><td>porta RDP padrão <strong>3389 (TCP)</strong>; se em uso -> não conecta; Event ID <strong>50 (TermDD . X.224)</strong> = um erro de fluxo de protocolo que desconecta o cliente</td></tr>
+<tr><td>Ordem de autoverificação (economiza tempo)</td><td><strong>rede (perda/upload/firewall) primeiro -> driver/resolução -> permissões/certificado por último</strong>; o streaming é cerca de <strong>30-50Mbps @1080p60</strong>, e o bitrate deve ficar abaixo do upload do host</td></tr>
+</table>
+<p><small>Base da estimativa: linha de base das fontes + extrapolação (combinando Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", suporte oficial do Steam Remote Play, suporte oficial do Parsec, 2026); muda com a versão e a política de rede. Confie nas informações oficiais mais recentes e nos seus testes.</small></p>
+</section>
+<h2>Casos reais - leitura rápida</h2>
+<ul class="scenes"><li>Controlar o PC de casa pelo celular, tela preta logo ao conectar mas se ouve som: geralmente a resolução do host não é suportada pelo celular ou a resolução em tela cheia do jogo não bate -> coloque o jogo em janela, mude o host para uma resolução comum como 1080p e atualize o driver de GPU.</li><li>Fica lento de repente com muito atraso no meio da sessão: não culpe primeiro o desempenho do PC - verifique a perda de pacotes e o sinal Wi-Fi, mude para cabo ou chegue perto do Wi-Fi 5 GHz, baixe o limite de bitrate/banda, baixe a qualidade se o upload do host for pouco; se um driver NVIDIA recém-instalado der problema, reverta para um estável.</li><li>O cliente diz "não foi possível conectar ao computador remoto / falha de conexão": confirme que o host está ligado, logado e online, libere o UU Remote no firewall e antivírus, desligue e ligue o interruptor remoto; se o IP de casa mudou reinicie o roteador, ou veja se a porta 3389 está sendo usada por outro programa.</li><li>Cai em poucos segundos ou um minuto: geralmente instabilidade de rede ou problema de segurança/certificado - verifique a perda de pacotes e o roteamento, configure um intervalo keep-alive no host, examine a camada de segurança e a criptografia; o Event ID 50 (TermDD . X.224) no Visualizador de Eventos também indica fluxo de protocolo interrompido.</li><li>A imagem vai bem mas não há som no lado remoto: o host não tem um dispositivo de áudio utilizável (um PC na nuvem ou sem alto-falante mostra "Nenhum alto-falante ou fone conectado") -> instale um dispositivo de áudio virtual (como VB-Cable) no host e escolha o dispositivo de captura certo nas configurações.</li><li>Você consegue logar mas não iniciar o controle remoto, com aviso de falta de permissão: adicione a conta ao grupo "Usuários da Área de Trabalho Remota" do host, verifique se a diretiva "Limitar número de conexões" bloqueia, e confirme que a conta tem direitos de logon remoto.</li></ul><div class="related"><h2>Relacionado</h2><ul><li><a href="https://uuyc163.com/">UU Remote oficial / download e guia</a></li><li><a href="https://uuyc163.com/faq/">FAQ do UU Remote (oficial)</a></li><li><a href="https://uuyc163.com/pt-br/tools/connection-troubleshooting/">Solução de problemas do UU Remote (tabela completa de referência)</a></li><li><a href="https://uuycc.com/">Central de download do UU Remote (irmão)</a></li></ul></div></main>
+<footer>As notas de falha / causa / solução são compiladas da Microsoft Learn "Troubleshoot Remote desktop disconnected errors" e "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (falha de conexão RDP, conflito da porta 3389, camada de segurança e criptografia, corrupção do certificado de licença, inacessível em suspensão, Event ID 50 TermDD X.224 erro de protocolo), do suporte oficial do Steam Remote Play (falha de conexão = firewall/antivírus / reset do interruptor / renovar IP, tela preta = atualizar drivers / desativar decodificação por hardware, desativar IPv6) e do suporte oficial do Parsec (tela preta = descompasso de resolução em tela cheia -> janela, sem som = host sem dispositivo de áudio -> dispositivo de áudio virtual, latência alta = driver novo / perda -> reverter driver . baixar banda . cabo). A distribuição de falhas 2026 é uma estimativa, não compromissos do fabricante nem estatística de primeira mão; orientativa, confie nas informações oficiais mais recentes e nos seus testes. (Localização: não oficial · tradução LLM)<br>Página de ferramenta . a busca não substitui testes reais no cliente oficial nem o suporte oficial</footer>
+</div>
+<script src="/pt-br/codes.js"></script><script src="/app.js"></script>
+</body></html>
