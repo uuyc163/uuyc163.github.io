@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="bn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote সংযোগ সমস্যা সমাধান ও ত্রুটি অনুসন্ধান - সংযোগ হয় না, কালো স্ক্রিন, ল্যাগ, শব্দ নেই</title>
+<meta name="description" content="UU Remote সংযোগ হয় না, সংযোগের পর কালো স্ক্রিন, ল্যাগ, শব্দ নেই বা কন্ট্রোলার শনাক্ত হয় না? উপসর্গ টাইপ বা ট্যাপ করুন (সংযোগ হয় না / কালো স্ক্রিন / ল্যাগ / সংযোগ বিচ্ছিন্ন / শব্দ নেই / কন্ট্রোলার / পোর্ট দ্বন্দ্ব) সবচেয়ে সম্ভাব্য কারণ + সমাধান ধাপ + প্রতিরোধ খুঁজতে: ল্যাগ সাধারণত নেটওয়ার্ক সমস্যা (প্যাকেট হারানো, দুর্বল Wi-Fi, হোস্টের কম আপলোড), PC কর্মক্ষমতা নয়; কালো স্ক্রিন সাধারণত রেজোলিউশন/ফুলস্ক্রিন অমিল বা পুরনো GPU ড্রাইভার; সংযোগ ব্যর্থ হলে আগে ফায়ারওয়াল/অ্যান্টিভাইরাস ও রিমোট সুইচ দেখুন; নিরাপত্তা ত্রুটি প্রমাণীকরণ/এনক্রিপশন স্তর বা ক্ষতিগ্রস্ত লাইসেন্স সার্টিফিকেট নির্দেশ করে; RDP পোর্ট 3389 দ্বন্দ্ব; স্লিপে অগম্য; দুর্বল IPv6 অভিযোজন. সাথে UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play তুলনা ও 2026 অনুমান. Microsoft অফিসিয়াল RDP নথি, Steam Remote Play ও Parsec অফিসিয়াল সহায়তা থেকে সংকলিত.">
+<link rel="canonical" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote সংযোগ সমস্যা সমাধান ও ত্রুটি অনুসন্ধান",
+   "url": "https://uuyc163.github.io/bn/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "bn",
+   "description": "UU Remote সংযোগ হয় না, সংযোগের পর কালো স্ক্রিন, ল্যাগ, শব্দ নেই বা কন্ট্রোলার শনাক্ত হয় না? উপসর্গ টাইপ বা ট্যাপ করুন (সংযোগ হয় না / কালো স্ক্রিন / ল্যাগ / সংযোগ বিচ্ছিন্ন / শব্দ নেই / কন্ট্রোলার / পোর্ট দ্বন্দ্ব) সবচেয়ে সম্ভাব্য কারণ + সমাধান ধাপ + প্রতিরোধ খুঁজতে: ল্যাগ সাধারণত নেটওয়ার্ক সমস্যা (প্যাকেট হারানো, দুর্বল Wi-Fi, হোস্টের কম আপলোড), PC কর্মক্ষমতা নয়; কালো স্ক্রিন সাধারণত রেজোলিউশন/ফুলস্ক্রিন অমিল বা পুরনো GPU ড্রাইভার; সংযোগ ব্যর্থ হলে আগে ফায়ারওয়াল/অ্যান্টিভাইরাস ও রিমোট সুইচ দেখুন; নিরাপত্তা ত্রুটি প্রমাণীকরণ/এনক্রিপশন স্তর বা ক্ষতিগ্রস্ত লাইসেন্স সার্টিফিকেট নির্দেশ করে; RDP পোর্ট 3389 দ্বন্দ্ব; স্লিপে অগম্য; দুর্বল IPv6 অভিযোজন. সাথে UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play তুলনা ও 2026 অনুমান. Microsoft অফিসিয়াল RDP নথি, Steam Remote Play ও Parsec অফিসিয়াল সহায়তা থেকে সংকলিত.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "bn",
+   "url": "https://uuyc163.github.io/bn/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - সংযোগ হয় না / সংযোগ ব্যর্থ কীভাবে ঠিক করবেন?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ক্লায়েন্ট বলে \"রিমোট কম্পিউটারে সংযোগ করা যায়নি / ব্যর্থ / টাইমআউট\"; আপনি হোস্টে ঢুকতে পারেন না. হোস্ট বন্ধ / লগ ইন নয় / অফলাইন, ফায়ারওয়াল বা অ্যান্টিভাইরাস ব্লক, ত্রুটিপূর্ণ রিমোট সুইচ, বদলানো বাড়ির IP, বা ব্যস্ত পোর্ট. ১) নিশ্চিত করুন হোস্ট চালু, লগ ইন ও অনলাইন; ২) ফায়ারওয়াল ও অ্যান্টিভাইরাসে UU Remote অনুমতি দিন; ৩) রিমোট সুইচ বন্ধ-চালু করে রিসেট করুন; ৪) IP রিফ্রেশে রাউটার রিস্টার্ট; ৫) পোর্ট 3389 ব্যস্ত হলে বদলান বা দ্বন্দ্ব প্রোগ্রাম থামান. হোস্টকে স্থির LAN IP দিন, বিশ্বস্ত তালিকায় যোগ করুন, চালু ও অনলাইন রাখুন."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - সংযোগের পর কালো স্ক্রিন কীভাবে ঠিক করবেন?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "সংযুক্ত কিন্তু ছবি পুরো কালো, প্রায়ই শব্দ শোনা ও মাউস দেখা যায়. রেজোলিউশন অসমর্থিত, গেমের ফুলস্ক্রিন রেজোলিউশন != স্ট্রিমিং রেজোলিউশন, পুরনো GPU ড্রাইভার, বা ক্ষতিগ্রস্ত persistent bitmap caching. ১) হোস্ট 1080p মতো সাধারণ রেজোলিউশনে নিন; ২) ফুলস্ক্রিন গেম উইন্ডোতে করুন; ৩) GPU ড্রাইভার আপডেট; ৪) \"persistent bitmap caching\" বন্ধ করুন (RDP Performance ট্যাব). সামঞ্জস্যপূর্ণ রেজোলিউশন ব্যবহার, GPU ড্রাইভার নতুন রাখুন."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - ল্যাগ / ইনপুট বিলম্ব কীভাবে ঠিক করবেন?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "স্পষ্ট ইনপুট বিলম্ব, আটকানো / ফ্রেম পড়ে, খারাপ সাড়া. নেটওয়ার্ক ভিড় / প্যাকেট হারানো, দুর্বল Wi-Fi, হোস্টের কম আপলোড, ব্যান্ডউইথের বেশি বিটরেট, বা নতুন GPU ড্রাইভার থেকে অস্বাভাবিক এনকোডার বিলম্ব. ১) কেবল বা 5GHz Wi-Fi কাছে যান; ২) অতিরিক্তের জন্য বিটরেট/ব্যান্ডউইথ সীমা কমান; ৩) প্যাকেট হারানো দেখুন, ব্যান্ডউইথ খাওয়া অ্যাপ বন্ধ করুন; ৪) হোস্টে স্থিতিশীল GPU ড্রাইভারে ফিরুন. কেবল অগ্রাধিকার; বিটরেট < আপলোড, অতিরিক্তসহ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - ঘন বিচ্ছিন্ন / সেকেন্ডে বিচ্ছিন্ন কীভাবে ঠিক করবেন?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "কয়েক সেকেন্ড বা এক মিনিটে বিচ্ছিন্ন, বারবার পুনঃসংযোগ. নেটওয়ার্ক অস্থিরতা / হারানো, keep-alive সেট নেই, নিরাপত্তা স্তর বা সার্টিফিকেট সমস্যা, বা TermDD X.224 প্রোটোকল ত্রুটি (Event ID 50). ১) প্যাকেট হারানো ও রাউটিং স্থিতিশীলতা দেখুন; ২) হোস্টে keep-alive ব্যবধান সেট করুন; ৩) নিরাপত্তা স্তর ও এনক্রিপশন দেখুন; ৪) প্রোটোকল ব্যাঘাতে Event Viewer Event ID 50 দেখুন. স্থিতিশীল নেটওয়ার্ক, সঠিক নিরাপত্তা স্তর ও সার্টিফিকেট."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - শব্দ নেই কীভাবে ঠিক করবেন?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ছবি ঠিক কিন্তু রিমোট প্রান্তে শব্দ নেই. হোস্টে ব্যবহারযোগ্য অডিও ডিভাইস নেই (ক্লাউড PC / স্পিকার ছাড়া \"কোন স্পিকার বা হেডফোন সংযুক্ত নেই\" দেখায়) বা ভুল ক্যাপচার ডিভাইস নির্বাচিত. ১) হোস্টে ভার্চুয়াল অডিও ডিভাইস (যেমন VB-Cable) ইনস্টল করুন; ২) সেটিংসে সঠিক ক্যাপচার ডিভাইস বাছুন; ৩) কেউ সংযুক্ত থাকলে প্রয়োগে পুনঃসংযোগ করুন. নিশ্চিত করুন হোস্টে ব্যবহারযোগ্য অডিও আউটপুট ডিভাইস আছে."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - কন্ট্রোলার / পেরিফেরাল শনাক্ত নয় কীভাবে ঠিক করবেন?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "কন্ট্রোলার, কীবোর্ড/মাউস বা অন্য পেরিফেরাল রিমোট প্রান্তে শনাক্ত হয় না বা সাড়া দেয় না. ক্লায়েন্টে কন্ট্রোলার পাসথ্রু সক্রিয় নয়, হোস্টে কন্ট্রোলার ড্রাইভার অনুপস্থিত, বা অন্য প্রোগ্রাম ডিভাইস একচেটিয়া ধরে. ১) UU Remote এ কন্ট্রোলার/পেরিফেরাল পাসথ্রু সক্রিয় করুন; ২) হোস্টে উপযুক্ত কন্ট্রোলার ড্রাইভার ইনস্টল; ৩) পুনঃসংযোগ ও ডিভাইস একচেটিয়া ধরা প্রোগ্রাম বন্ধ করুন. আগে ড্রাইভার ইনস্টল ও পাসথ্রু সক্রিয় করুন."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - পোর্ট দ্বন্দ্ব / listener সমস্যা কীভাবে ঠিক করবেন?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "অস্বাভাবিক listener / সংযোগ প্রত্যাখ্যাত, স্ব-হোস্টেড / একই মেশিন RDP তে সাধারণ. ডিফল্ট RDP পোর্ট 3389 (বা সেট পোর্ট) অন্য প্রোগ্রামে ব্যবহৃত. ১) পোর্ট ব্যবহারকারী PID খুঁজতে netstat -a -o; ২) tasklist /svc দিয়ে মেলান; ৩) পোর্ট বদলান বা দ্বন্দ্ব প্রোগ্রাম থামান, পরে রিমোট সেবা রিস্টার্ট. একাধিক রিমোট টুল একই পোর্টে না লড়ুক."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - স্লিপ/হাইবারনেটে অগম্য কীভাবে ঠিক করবেন?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "হোস্ট সাড়া দেয় না ও মোটেই সংযোগ হয় না. হোস্ট স্লিপ বা হাইবারনেটে গেছে, তাই নেটওয়ার্ক কার্ড বিদ্যুৎহীন ও সাড়াহীন. ১) হোস্ট পাওয়ার প্ল্যান কখনো স্লিপ/হাইবারনেট নয়; ২) Wake-on-LAN বা UU রিমোট পাওয়ার-অন দিয়ে জাগান; ৩) জাগার পর সংযোগ শুরু করুন. স্লিপ/হাইবারনেট বন্ধ, রিমোট পাওয়ার-অন সেট করুন."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">ভাষা: <a href="/">简体中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <strong>বাংলা</strong> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote রিমোট কন্ট্রোল / গেম স্ট্রিমিং - সংযোগ সমস্যা সমাধান ও ত্রুটি অনুসন্ধান</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_bn.webp"><img src="/img/cover_bn.png" alt="UU Remote সংযোগ সমস্যা সমাধান ও ত্রুটি অনুসন্ধান চিত্র" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>চিত্র: UU Remote ত্রুটি অনুসন্ধান (উপসর্গ কীওয়ার্ড -> সবচেয়ে সম্ভাব্য কারণ + ধাপ + প্রতিরোধ)</figcaption></figure>
+<p><strong>UU Remote</strong> সংযোগ হয় না, সংযোগে <strong>কালো স্ক্রিন</strong>, <strong>ল্যাগ</strong>, শব্দ নেই, কন্ট্রোলার শনাক্ত হয় না - অন্ধভাবে অনুমান করবেন না. মূল কথা <strong>শ্রেণি অনুযায়ী ভাগ করে ক্রমে নিজে পরীক্ষা করুন</strong>: প্রথমে <strong>নেটওয়ার্ক (প্যাকেট হারানো / আপলোড / ফায়ারওয়াল)</strong>, তারপর <strong>GPU ড্রাইভার / রেজোলিউশন</strong>, শেষে <strong>অনুমতি / সার্টিফিকেট</strong>. আপনার <strong>উপসর্গ</strong> টাইপ/ট্যাপ করুন (যেমন <code>সংযোগ হয় না</code>, <code>কালো স্ক্রিন</code>, <code>ল্যাগ</code>, <code>শব্দ নেই</code>, <code>বিচ্ছিন্ন</code>, <code>কন্ট্রোলার</code>) <strong>সবচেয়ে সম্ভাব্য কারণ + ধাপ + প্রতিরোধ</strong> পেতে. আগে ইনস্টল করবেন? দেখুন <a href="https://uuyc163.com/download/">UU Remote ডাউনলোড</a> ও <a href="https://uuyc163.com/faq/">সাধারণ প্রশ্ন</a>.</p>
+<input id="q" placeholder="উপসর্গ টাইপ করুন, যেমন সংযোগ হয় না / কালো স্ক্রিন / ল্যাগ / শব্দ নেই / বিচ্ছিন্ন / কন্ট্রোলার" autocomplete="off">
+<button id="go">সমাধান খুঁজুন</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>ধাপ ১: ত্রুটি প্রথমে চার দলে ভাগ করুন (সঙ্গে সঙ্গে পুনঃইনস্টল নয়)</h2>
+<p>রিমোট কন্ট্রোল/স্ট্রিমিং সমস্যার দশের নয়টি চার দলে পড়ে - আগে শ্রেণিবদ্ধ করুন, পরে সমাধান: (১) <strong>সংযোগ</strong> - সংযোগ হয় না, সেকেন্ডে বিচ্ছিন্ন, পোর্ট দ্বন্দ্ব, স্লিপে অগম্য, খিটখিটে IPv6: <strong>নেটওয়ার্ক ও ফায়ারওয়াল/অ্যান্টিভাইরাস, রিমোট সুইচ, এবং হোস্ট অনলাইন ও চালু কিনা</strong> দেখুন; (২) <strong>ছবি</strong> - কালো স্ক্রিন, আর্টিফ্যাক্ট, ঝাপসা: সাধারণত <strong>রেজোলিউশন/ফুলস্ক্রিন অমিল বা পুরনো GPU ড্রাইভার</strong>; (৩) <strong>বিলম্ব/ল্যাগ</strong> - ইনপুট বিলম্ব, আটকানো: আসল কারণ সাধারণত <strong>প্যাকেট হারানো / দুর্বল Wi-Fi / হোস্টের কম আপলোড</strong>, কর্মক্ষমতা নয়; (৪) <strong>শব্দ / পেরিফেরাল / অনুমতি</strong> - শব্দ নেই, কন্ট্রোলার শনাক্ত হয় না, রিমোট অনুমতি নেই: <strong>হোস্ট অডিও ডিভাইস, কন্ট্রোলার পাসথ্রু, Remote Desktop Users গ্রুপ</strong> দেখুন. আরও: <a href="https://uuyc163.com/faq/">UU Remote FAQ</a>.</p>
+<div class="cat"><div class="catbox"><b>সংযোগ / বিচ্ছিন্ন</b><span class="cs">সংযোগ হয় না . ঘন বিচ্ছিন্ন . পোর্ট দ্বন্দ্ব . স্লিপে অগম্য . IPv6</span><div>নেটওয়ার্ক ও ফায়ারওয়াল/অ্যান্টিভাইরাস, রিমোট সুইচ, এবং হোস্ট অনলাইন ও চালু কিনা দেখুন: ব্যর্থতায় আগে ফায়ারওয়াল অনুমতি দিন, রিমোট বন্ধ/চালু করুন, IP রিফ্রেশ করুন; পোর্ট 3389 ব্যস্ত হলে netstat দিয়ে দ্বন্দ্ব খুঁজুন; হোস্ট স্লিপ হতে দেবেন না.</div></div><div class="catbox"><b>ছবি (কালো স্ক্রিন / আর্টিফ্যাক্ট / ঝাপসা)</b><span class="cs">সংযোগে কালো স্ক্রিন . আর্টিফ্যাক্ট . ঝাপসা</span><div>সাধারণত রেজোলিউশন/ফুলস্ক্রিন অমিল বা পুরনো GPU ড্রাইভার: সমর্থিত রেজোলিউশনে যান, গেম উইন্ডোতে করুন, GPU ড্রাইভার আপডেট, persistent bitmap caching বন্ধ; আর্টিফ্যাক্ট/ঝাপসায় বিটরেট ও প্যাকেট হারানো দেখুন, হার্ডওয়্যার ডিকোডিং বন্ধ করে দেখুন.</div></div><div class="catbox"><b>বিলম্ব / ল্যাগ</b><span class="cs">ইনপুট বিলম্ব . আটকানো . থেমে থেমে</span><div>আসল কারণ সাধারণত নেটওয়ার্ক, কর্মক্ষমতা নয়: কেবল বা 5GHz Wi-Fi তে যান, বিটরেট/ব্যান্ডউইথ সীমা কমান, প্যাকেট হারানো দেখুন, হোস্টে স্থিতিশীল GPU ড্রাইভারে ফিরুন, ব্যান্ডউইথ খাওয়া অন্য অ্যাপ বন্ধ করুন; হোস্টের কম আপলোড ইন্টারনেটে আসল প্রতিবন্ধক.</div></div><div class="catbox"><b>শব্দ / পেরিফেরাল / অনুমতি</b><span class="cs">শব্দ নেই . কন্ট্রোলার শনাক্ত নয় . রিমোট অনুমতি নেই</span><div>শব্দ নেই - হোস্ট অডিও ডিভাইস দেখুন (ক্লাউড PC / স্পিকার ছাড়া ভার্চুয়াল অডিও ডিভাইস দরকার); কন্ট্রোলার শনাক্ত নয় - পাসথ্রু চালু ও ড্রাইভার ইনস্টল; অনুমতি নেই - অ্যাকাউন্ট "Remote Desktop Users" গ্রুপে যোগ ও সংযোগ সীমা নীতি দেখুন.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote ত্রুটি অবস্থান সিদ্ধান্ত গাছ" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">ত্রুটি কীভাবে অবস্থান করবেন (উপসর্গে চার দলে ভাগ: সংযোগ / ছবি / বিলম্ব / শব্দ ও পেরিফেরাল)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">কিছু ভেঙেছে</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">উপসর্গে ভাগ করুন</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">সংযোগ হয় না/বিচ্ছিন্ন -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">নেটওয়ার্ক . ফায়ারওয়াল . সুইচ . পোর্ট</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">কালো স্ক্রিন/আর্টিফ্যাক্ট -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">রেজোলিউশন . ফুলস্ক্রিন . GPU ড্রাইভার</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">চারটি সাধারণ ত্রুটি (উপসর্গে স্ব-পরীক্ষা দিক বাছুন)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">১. সংযোগ/বিচ্ছিন্ন</text><text x="32" y="234" fill="#555" font-size="11">নেটওয়ার্ক . ফায়ারওয়াল . পোর্ট . স্লিপ</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">২. কালো স্ক্রিন</text><text x="206" y="234" fill="#555" font-size="11">রেজোলিউশন . ফুলস্ক্রিন . ড্রাইভার</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">৩. বিলম্ব/ল্যাগ</text><text x="380" y="234" fill="#555" font-size="11">হারানো . আপলোড . কেবল আগে</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">৪. শব্দ/পেরিফেরাল</text><text x="554" y="234" fill="#555" font-size="11">অডিও ডিভাইস . কন্ট্রোলার . অনুমতি</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>চিত্র ১: UU Remote ত্রুটি অবস্থান প্রবাহ - উপসর্গে চার দলে ভাগ (সংযোগ / ছবি / বিলম্ব / শব্দ ও পেরিফেরাল), পরে ক্রমে পরীক্ষা</figcaption></figure>
+<h2>ধাপ ২: সবচেয়ে ভুল-নির্ণীত কারণ -> L2 (আগে নেটওয়ার্ক, পরে ড্রাইভার/রেজোলিউশন, শেষে অনুমতি/সার্টিফিকেট)</h2>
+<p>মূল ভাবনা: <strong>বেশিরভাগ "ল্যাগ" ও "সংযোগ হয় না" আসলে নেটওয়ার্ক সমস্যা, PC কর্মক্ষমতা বা সফটওয়্যার বাগ নয়</strong>. এই ক্রমে পরীক্ষা সবচেয়ে সময় বাঁচায়: (১) <strong>ল্যাগ/বিলম্ব - আগে নেটওয়ার্ক</strong>: প্যাকেট হারানো, দুর্বল Wi-Fi, এবং হোস্টের অপর্যাপ্ত <strong>আপলোড</strong> স্ট্রিমিংয়ের আসল প্রতিবন্ধক (বাইরে থেকে বাড়ি নিয়ন্ত্রণ ছবি <em>বাইরে</em> পাঠায়, আপলোড খায়) - কেবল বা 5GHz Wi-Fi তে যান, বিটরেট/ব্যান্ডউইথ সীমা কমান, হোস্টে স্থিতিশীল GPU ড্রাইভারে ফিরুন (নতুন NVIDIA ড্রাইভার অস্বাভাবিক এনকোডার বিলম্ব করেছে); (২) <strong>কালো স্ক্রিন - আগে রেজোলিউশন ও ড্রাইভার</strong>: সংযুক্ত কিন্তু কালো অথচ শব্দ/মাউস দেখা যায় মানে সাধারণত <strong>রেজোলিউশন অসমর্থিত বা গেমের ফুলস্ক্রিন রেজোলিউশন != স্ট্রিমিং রেজোলিউশন</strong> (গেম উইন্ডোতে), <strong>পুরনো GPU ড্রাইভার</strong> (আপডেট), বা ক্ষতিগ্রস্ত persistent bitmap caching (বন্ধ); (৩) <strong>সংযোগ ব্যর্থতা - আগে ফায়ারওয়াল ও সুইচ</strong>: ফায়ারওয়াল/অ্যান্টিভাইরাস ব্লক, রিমোট সুইচ বন্ধ-চালু, IP রিফ্রেশে রাউটার রিস্টার্ট, বা পোর্ট <code>3389</code> ব্যস্ত (<code>netstat -a -o</code> দ্বন্দ্বে); (৪) <strong>নিরাপত্তা ত্রুটি - প্রমাণীকরণ/সার্টিফিকেট</strong>: "নিরাপত্তা ত্রুটির কারণে ক্লায়েন্ট সংযোগ করতে পারেনি" সাধারণত ভুল কনফিগার প্রমাণীকরণ/এনক্রিপশন স্তর বা ক্ষতিগ্রস্ত লাইসেন্স সার্টিফিকেট; (৫) <strong>শব্দ নেই - অডিও ডিভাইস</strong>: হোস্টে স্পিকার না থাকলে / ক্লাউড PC তে অডিও ডিভাইস না থাকলে ভার্চুয়াল অডিও ডিভাইস ইনস্টল করুন. নিচে ত্রুটি অবস্থান সিদ্ধান্ত গাছ; আরও নিচে স্ব-পরীক্ষা প্যানেল, তুলনা, ও 2026 অনুমান.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote সংযোগের আগে স্ব-পরীক্ষা প্যানেল" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">সংযোগ/স্ট্রিমের আগে স্ব-পরীক্ষা প্যানেল (সবুজ = পূর্ণ / লাল = সহজে এড়ানো যায়)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">পরীক্ষা আইটেম</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">বিচার</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">অবস্থা</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">হোস্ট চালু, লগ ইন, অনলাইন (স্লিপ নয়)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">অনলাইন অবস্থা</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">পূর্ণ</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">ফায়ারওয়াল/অ্যান্টিভাইরাস UU Remote অনুমতি দেয়</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">ফায়ারওয়াল</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">দেখুন</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">দুই প্রান্ত কেবল বা 5GHz Wi-Fi, পূর্ণ সিগন্যাল</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">নেটওয়ার্ক মান</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">পূর্ণ</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">হোস্ট GPU ড্রাইভার = নতুন স্থিতিশীল সংস্করণ</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">GPU ড্রাইভার</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">দেখুন</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">হোস্ট আপলোড >= স্ট্রিমিং বিটরেট + অতিরিক্ত</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">আপলোড</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">পূর্ণ</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">পোর্ট 3389 অন্য প্রোগ্রামে ব্যবহৃত নয়</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">পোর্ট</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">দেখুন</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">নোট: লাল = তিনটি সবচেয়ে এড়ানো - ফায়ারওয়াল অনুমতি, GPU ড্রাইভার, পোর্ট দ্বন্দ্ব; সংযোগ হয় না / কালো স্ক্রিন / ল্যাগে পুনঃইনস্টলের আগে এগুলো দেখুন.</text></svg><figcaption>চিত্র ২: সংযোগের আগে স্ব-পরীক্ষা প্যানেল (সবুজ = পূর্ণ / লাল = পরীক্ষণীয় ফাঁদ)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_bn.webp"><img src="/img/board_bn.png" alt="UU Remote সংযোগের আগে স্ব-পরীক্ষা প্যানেলের সবুজ/লাল বিন্দু চিত্র" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>চিত্র: দেখুন "হোস্ট অনলাইন ও চালু . ফায়ারওয়াল অনুমতি . কেবল/5GHz . নতুন ড্রাইভার . পোর্ট খালি" - ল্যাগ ও কালো স্ক্রিন প্রায়ই প্রথমগুলোতে ব্যর্থ</figcaption></figure>
+<h2>সব সাধারণ ত্রুটির অনুসন্ধান সারণি (উপসর্গ . শ্রেণি . সমাধান দিক)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs সাধারণ রিমোট কন্ট্রোল / স্ট্রিমিং - সমস্যা সমাধান তুলনা (সর্বজনীন নথি)</h2>
+<table class="cmp"><tr><th>সমাধান</th><th>সংযোগ/NAT</th><th>কালো স্ক্রিন ব্যবস্থাপনা</th><th>পেরিফেরাল/কন্ট্রোলার</th><th>নেটওয়ার্কে বিলম্ব</th><th>ডায়াগনস্টিক টুল</th></tr><tr><td>UU Remote</td><td>P2P সরাসরি + ব্যক্তিগত নেটওয়ার্ক, অটো NAT</td><td>রেজোলিউশন বদল / উইন্ডো / ড্রাইভার আপডেট</td><td>কন্ট্রোলার ও পেরিফেরাল পাসথ্রু</td><td>মিলিসেকেন্ড (অপ্টিমাইজড ব্যক্তিগত নেটওয়ার্ক)</td><td>ক্লায়েন্ট লগ + স্ব-পরীক্ষা</td></tr><tr><td>ToDesk</td><td>নিজস্ব রিলে + P2P</td><td>অভিযোজিত রেজোলিউশন</td><td>পেরিফেরাল ম্যাপিং</td><td>নিম্ন (নিবেদিত চ্যানেল)</td><td>ডায়াগনস্টিক প্যানেল</td></tr><tr><td>Parsec</td><td>P2P হোল-পাঞ্চ, সর্বজনীন IP/UPnP দরকার</td><td>ফুলস্ক্রিন অমিল -> উইন্ডো</td><td>নেটিভ কন্ট্রোলার সমর্থন</td><td>LAN এ খুব নিম্ন, ইন্টারনেটে নেটওয়ার্ক নির্ভর</td><td>লগ + কমিউনিটি নথি</td></tr><tr><td>Microsoft RDP</td><td>পোর্ট 3389, অনুমতি/গেটওয়ে দরকার</td><td>persistent bitmap cache / রেজোলিউশন / ড্রাইভার</td><td>রিডিরেকশন সেটআপ দরকার</td><td>LAN এ নিম্ন, ইন্টারনেটে ব্যান্ডউইথ নির্ভর</td><td>Event Viewer + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>Steam রিলে + সরাসরি</td><td>ড্রাইভার আপডেট / হার্ডওয়্যার ডিকোড বন্ধ</td><td>কন্ট্রোলার-প্রথম সমর্থন</td><td>~30-50Mb/s @1080p60</td><td>IPv6 বন্ধ + স্ট্রিম সেটিংস</td></tr></table><section class="i4data">
+<h2>UU Remote রিমোট কন্ট্রোল/স্ট্রিমিং সাধারণ ত্রুটি বণ্টন ও নোট (অনুমান 2026)</h2>
+<p>নিম্নলিখিত <strong>2026 অনুমান</strong> যা Microsoft অফিসিয়াল RDP নথি, Steam Remote Play ও Parsec অফিসিয়াল সহায়তা মিলিয়ে (বিক্রেতার প্রতিশ্রুতি বা প্রথম-হাত পরিসংখ্যান নয়; রেফারেন্সের জন্য, সংস্করণ ও নেটওয়ার্কে বদলায়):</p>
+<table>
+<tr><th>মাত্রা</th><th>অনুমান / নোট</th></tr>
+<tr><td>ত্রুটি ধরন বণ্টন (অনু.)</td><td>সংযোগ/বিচ্ছিন্ন ~ <strong>35%</strong> . ছবি (কালো স্ক্রিন/আর্টিফ্যাক্ট) ~ <strong>25%</strong> . বিলম্ব/ল্যাগ ~ <strong>22%</strong> . শব্দ/পেরিফেরাল ~ <strong>12%</strong> . অনুমতি/নিরাপত্তা ~ <strong>6%</strong></td></tr>
+<tr><td>ল্যাগের আসল কারণ (চাবি)</td><td>বেশিরভাগ "ল্যাগ / সংযোগ হয় না" একটি <strong>নেটওয়ার্ক সমস্যা</strong> (প্যাকেট হারানো, দুর্বল Wi-Fi, হোস্টের কম <strong>আপলোড</strong>), <strong>নয়</strong> PC কর্মক্ষমতা বা বাগ -> সফট/হার্ডওয়্যারের আগে নেটওয়ার্ক দেখুন</td></tr>
+<tr><td>কালো স্ক্রিনের প্রধান কারণ (অনু.)</td><td>রেজোলিউশন/ফুলস্ক্রিন অমিল + পুরনো GPU ড্রাইভার প্রধান; শব্দসহ কালো = ক্লাসিক রেজোলিউশন সমস্যা, গেম উইন্ডোতে / সাধারণ রেজোলিউশন সবচেয়ে সাহায্যকারী</td></tr>
+<tr><td>RDP পোর্ট ও প্রোটোকল</td><td>ডিফল্ট RDP পোর্ট <strong>3389 (TCP)</strong>; ব্যবহৃত হলে -> সংযোগ হয় না; Event ID <strong>50 (TermDD . X.224)</strong> = প্রোটোকল স্ট্রিম ত্রুটি যা ক্লায়েন্ট বিচ্ছিন্ন করে</td></tr>
+<tr><td>স্ব-পরীক্ষা ক্রম (সময় বাঁচায়)</td><td><strong>আগে নেটওয়ার্ক (হারানো/আপলোড/ফায়ারওয়াল) -> ড্রাইভার/রেজোলিউশন -> শেষে অনুমতি/সার্টিফিকেট</strong>; স্ট্রিমিং প্রায় <strong>30-50Mbps @1080p60</strong>, ও বিটরেট হোস্ট আপলোডের নিচে থাকা উচিত</td></tr>
+</table>
+<p><small>অনুমান ভিত্তি: উৎস ভিত্তিরেখা + বহিঃপ্রক্ষেপ (Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", Steam Remote Play অফিসিয়াল সহায়তা, Parsec অফিসিয়াল সহায়তা, 2026 মিলিয়ে); সংস্করণ ও নেটওয়ার্ক নীতিতে বদলায়. সর্বশেষ অফিসিয়াল তথ্য ও আপনার পরীক্ষার উপর নির্ভর করুন.</small></p>
+</section>
+<h2>বাস্তব দৃশ্য - দ্রুত পড়ুন</h2>
+<ul class="scenes"><li>ফোন থেকে বাড়ির PC নিয়ন্ত্রণ, সংযোগেই কালো স্ক্রিন কিন্তু শব্দ আসে: সাধারণত হোস্ট রেজোলিউশন ফোনে অসমর্থিত বা গেমের ফুলস্ক্রিন রেজোলিউশন মেলে না -> গেম উইন্ডোতে করুন, হোস্ট 1080p মতো সাধারণ রেজোলিউশনে নিন, ও GPU ড্রাইভার আপডেট করুন.</li><li>সেশনের মাঝে হঠাৎ ধীর ও বড় বিলম্ব: আগে PC কর্মক্ষমতা দোষ দেবেন না - প্যাকেট হারানো ও Wi-Fi সিগন্যাল দেখুন, কেবলে যান বা 5GHz Wi-Fi কাছে আসুন, বিটরেট/ব্যান্ডউইথ সীমা কমান, হোস্ট আপলোড কম হলে মান কমান; নতুন NVIDIA ড্রাইভার গোলমাল করলে স্থিতিশীলে ফিরুন.</li><li>ক্লায়েন্ট বলে "রিমোট কম্পিউটারে সংযোগ করা যায়নি / সংযোগ ব্যর্থ": নিশ্চিত করুন হোস্ট চালু, লগ ইন ও অনলাইন, ফায়ারওয়াল ও অ্যান্টিভাইরাসে UU Remote অনুমতি দিন, রিমোট সুইচ বন্ধ-চালু করুন; বাড়ির IP বদলালে রাউটার রিস্টার্ট, বা দেখুন পোর্ট 3389 অন্য প্রোগ্রাম ব্যবহার করছে কিনা.</li><li>কয়েক সেকেন্ড বা এক মিনিটে বিচ্ছিন্ন: সাধারণত নেটওয়ার্ক অস্থিরতা বা নিরাপত্তা/সার্টিফিকেট সমস্যা - প্যাকেট হারানো ও রাউটিং দেখুন, হোস্টে keep-alive ব্যবধান সেট করুন, নিরাপত্তা স্তর ও এনক্রিপশন দেখুন; Event Viewer এ Event ID 50 (TermDD . X.224) ও ব্যাহত প্রোটোকল স্ট্রিম নির্দেশ করে.</li><li>ছবি ঠিক কিন্তু রিমোট প্রান্তে শব্দ নেই: হোস্টে ব্যবহারযোগ্য অডিও ডিভাইস নেই (ক্লাউড PC বা স্পিকার ছাড়া "কোন স্পিকার বা হেডফোন সংযুক্ত নেই" দেখায়) -> হোস্টে ভার্চুয়াল অডিও ডিভাইস (যেমন VB-Cable) ইনস্টল ও সেটিংসে সঠিক ক্যাপচার ডিভাইস নির্বাচন করুন.</li><li>লগ ইন হয় কিন্তু রিমোট কন্ট্রোল শুরু হয় না, অনুমতি না থাকার সতর্কতা: অ্যাকাউন্ট হোস্টের "Remote Desktop Users" গ্রুপে যোগ করুন, দেখুন "Limit number of connections" নীতি ব্লক করছে কিনা, ও নিশ্চিত করুন অ্যাকাউন্টের রিমোট লগঅন অধিকার আছে.</li></ul><div class="related"><h2>সম্পর্কিত</h2><ul><li><a href="https://uuyc163.com/">UU Remote অফিসিয়াল / ডাউনলোড ও গাইড</a></li><li><a href="https://uuyc163.com/faq/">UU Remote FAQ (অফিসিয়াল)</a></li><li><a href="https://uuyc163.com/bn/tools/connection-troubleshooting/">UU Remote সমস্যা সমাধান (পূর্ণ রেফারেন্স সারণি)</a></li><li><a href="https://uuycc.com/">UU Remote ডাউনলোড কেন্দ্র (সহযোগী)</a></li></ul></div></main>
+<footer>ত্রুটি / কারণ / সমাধান নোট Microsoft Learn "Troubleshoot Remote desktop disconnected errors" ও "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (RDP সংযোগ ব্যর্থতা, পোর্ট 3389 দ্বন্দ্ব, নিরাপত্তা স্তর ও এনক্রিপশন, লাইসেন্স সার্টিফিকেট দুর্নীতি, স্লিপে অগম্য, Event ID 50 TermDD X.224 প্রোটোকল ত্রুটি), Steam Remote Play অফিসিয়াল সহায়তা (সংযোগ ব্যর্থতা = ফায়ারওয়াল/অ্যান্টিভাইরাস / সুইচ রিসেট / IP রিফ্রেশ, কালো স্ক্রিন = ড্রাইভার আপডেট / হার্ডওয়্যার ডিকোডিং বন্ধ, IPv6 বন্ধ) ও Parsec অফিসিয়াল সহায়তা (কালো স্ক্রিন = ফুলস্ক্রিন রেজোলিউশন অমিল -> উইন্ডো, শব্দ নেই = হোস্টে অডিও ডিভাইস নেই -> ভার্চুয়াল অডিও ডিভাইস, উচ্চ বিলম্ব = নতুন ড্রাইভার / হারানো -> ড্রাইভার ফেরত . ব্যান্ডউইথ কমান . কেবল) থেকে সংকলিত. 2026 ত্রুটি বণ্টন একটি অনুমান, বিক্রেতার প্রতিশ্রুতি বা প্রথম-হাত পরিসংখ্যান নয়; রেফারেন্সের জন্য সর্বশেষ অফিসিয়াল তথ্য ও আপনার পরীক্ষার উপর নির্ভর করুন. (স্থানীয়করণ: অনানুষ্ঠানিক · LLM অনুবাদ)<br>টুল পৃষ্ঠা . অনুসন্ধান অফিসিয়াল ক্লায়েন্টে প্রকৃত পরীক্ষা বা অফিসিয়াল সহায়তার বিকল্প নয়</footer>
+</div>
+<script src="/bn/codes.js"></script><script src="/app.js"></script>
+</body></html>
