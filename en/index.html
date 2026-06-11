@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UU Remote connection troubleshooting & error lookup - can't connect, black screen, lag, no sound fixes</title>
+<meta name="description" content="UU Remote won't connect, black screen after connecting, lag, no sound, or controller not detected? Enter or tap a symptom (can't connect / black screen / lag / disconnect / no sound / controller / port conflict) to look up the most likely cause + fix steps + prevention: lag is usually a network problem (packet loss, weak Wi-Fi, low host upload), not your PC's performance; black screen is usually a resolution/fullscreen mismatch or an old GPU driver; connection failures - check firewall/antivirus and the remote toggle first; a security error points to auth/encryption layer or a corrupt license certificate; RDP port 3389 conflicts; sleep/hibernate can't be reached; IPv6 mis-adaptation. Plus a UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play troubleshooting comparison and 2026 fault-distribution estimates. Compiled from Microsoft's official RDP troubleshooting docs, Steam Remote Play and Parsec official support.">
+<link rel="canonical" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://uuyc163.github.io/">
+<link rel="alternate" hreflang="en" href="https://uuyc163.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://uuyc163.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hant" href="https://uuyc163.github.io/zh-tw/">
+<link rel="alternate" hreflang="ko" href="https://uuyc163.github.io/ko/">
+<link rel="alternate" hreflang="id" href="https://uuyc163.github.io/id/">
+<link rel="alternate" hreflang="vi" href="https://uuyc163.github.io/vi/">
+<link rel="alternate" hreflang="th" href="https://uuyc163.github.io/th/">
+<link rel="alternate" hreflang="ms" href="https://uuyc163.github.io/ms/">
+<link rel="alternate" hreflang="es" href="https://uuyc163.github.io/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://uuyc163.github.io/pt-br/">
+<link rel="alternate" hreflang="de" href="https://uuyc163.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://uuyc163.github.io/fr/">
+<link rel="alternate" hreflang="ru" href="https://uuyc163.github.io/ru/">
+<link rel="alternate" hreflang="it" href="https://uuyc163.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://uuyc163.github.io/pl/">
+<link rel="alternate" hreflang="nl" href="https://uuyc163.github.io/nl/">
+<link rel="alternate" hreflang="tr" href="https://uuyc163.github.io/tr/">
+<link rel="alternate" hreflang="ar" href="https://uuyc163.github.io/ar/">
+<link rel="alternate" hreflang="fa" href="https://uuyc163.github.io/fa/">
+<link rel="alternate" hreflang="hi" href="https://uuyc163.github.io/hi/">
+<link rel="alternate" hreflang="bn" href="https://uuyc163.github.io/bn/">
+<link rel="alternate" hreflang="ta" href="https://uuyc163.github.io/ta/">
+<link rel="alternate" hreflang="te" href="https://uuyc163.github.io/te/">
+<link rel="alternate" hreflang="fil" href="https://uuyc163.github.io/fil/">
+<link rel="alternate" hreflang="ur" href="https://uuyc163.github.io/ur/">
+<link rel="alternate" hreflang="lo" href="https://uuyc163.github.io/lo/">
+<link rel="alternate" hreflang="km" href="https://uuyc163.github.io/km/">
+<link rel="alternate" hreflang="my" href="https://uuyc163.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://uuyc163.github.io/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "UU Remote connection troubleshooting & error lookup",
+   "url": "https://uuyc163.github.io/en/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "inLanguage": "en",
+   "description": "UU Remote won't connect, black screen after connecting, lag, no sound, or controller not detected? Enter or tap a symptom (can't connect / black screen / lag / disconnect / no sound / controller / port conflict) to look up the most likely cause + fix steps + prevention: lag is usually a network problem (packet loss, weak Wi-Fi, low host upload), not your PC's performance; black screen is usually a resolution/fullscreen mismatch or an old GPU driver; connection failures - check firewall/antivirus and the remote toggle first; a security error points to auth/encryption layer or a corrupt license certificate; RDP port 3389 conflicts; sleep/hibernate can't be reached; IPv6 mis-adaptation. Plus a UU Remote vs ToDesk / Parsec / Microsoft RDP / Steam Remote Play troubleshooting comparison and 2026 fault-distribution estimates. Compiled from Microsoft's official RDP troubleshooting docs, Steam Remote Play and Parsec official support.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "en",
+   "url": "https://uuyc163.github.io/en/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "UU Remote - how to fix Can't connect / connection failed?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The client says \"couldn't connect to the remote computer / connection failed / timeout\"; you can't get into the host. Host not powered on / not logged in / offline, firewall or antivirus blocking, faulty remote toggle, changed home IP, or the port is taken. 1) Confirm the host is powered on, logged in and online; 2) allow UU Remote through firewall and antivirus; 3) toggle the remote switch off then on to reset; 4) restart the router to refresh the IP; 5) if port 3389 is taken, change it or stop the conflicting program. Give the host a fixed LAN IP, add it to the trust list, keep it powered and online."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - how to fix Black screen after connecting?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Connected but the picture is all black, often while you can still hear sound and see the mouse. Resolution not supported, the game's fullscreen resolution != the streaming resolution, an old GPU driver, or corrupt persistent bitmap caching. 1) Switch the host to a common resolution like 1080p; 2) set the fullscreen game to windowed; 3) update the GPU driver; 4) disable \"persistent bitmap caching\" (RDP Experience tab). Use a compatible resolution, keep the GPU driver recent."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - how to fix Lag / input delay?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Noticeable input delay, stutter / dropped frames, poor responsiveness. Network congestion / packet loss, weak Wi-Fi, low host upload, bitrate above bandwidth, or abnormal encoder latency from a new GPU driver. 1) Switch to wired or move close to 5GHz Wi-Fi; 2) lower the bitrate/bandwidth limit to leave headroom; 3) check packet loss, close other bandwidth-hungry apps; 4) roll back the host GPU driver to a stable version. Prefer wired; keep bitrate < upload with headroom."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - how to fix Frequent drops / disconnects after seconds?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Drops after a few seconds or a minute, reconnecting repeatedly. Network instability / packet loss, no keep-alive configured, a security-layer or certificate issue, or a TermDD X.224 protocol error (Event ID 50). 1) Check packet loss and routing stability; 2) configure a keep-alive interval on the host; 3) review the security layer and encryption settings; 4) check Event Viewer Event ID 50 to locate the protocol interruption. Stable network, correct security layer and certificate."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - how to fix No sound?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Picture is fine but there's no sound on the remote end. The host has no usable audio device (a cloud PC / no speaker shows \"No speakers or headphones are plugged in\"), or the wrong capture device is selected. 1) Install a virtual audio device (like VB-Cable) on the host; 2) pick the right capture device in settings; 3) if someone is connected, reconnect for the change to apply. Make sure the host has a usable audio output device."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - how to fix Controller / peripheral not detected?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A controller, keyboard/mouse or other peripheral isn't detected or doesn't respond on the remote end. Controller passthrough not enabled on the client, missing controller drivers on the host, or another program holding the device exclusively. 1) Enable controller/peripheral passthrough in UU Remote; 2) install the matching controller driver on the host; 3) reconnect and close the program holding the device exclusively. Install drivers ahead of time and enable passthrough."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - how to fix Port conflict / listener issue?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Abnormal listener / connection refused, common on self-hosted / same-machine RDP. The default RDP port 3389 (or your configured port) is taken by another program. 1) Use netstat -a -o to find the PID using the port; 2) match it with tasklist /svc; 3) change the port or stop the conflicting program, then restart the remote service. Avoid multiple remote tools fighting over the same port."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "UU Remote - how to fix Can't connect when asleep/hibernating?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The host is unresponsive and won't connect no matter what. The host went to sleep or hibernate, so the NIC is powered down and can't respond. 1) Set the host power plan to never sleep/hibernate; 2) wake it with Wake-on-LAN or UU remote power-on; 3) start the connection after it wakes. Disable sleep/hibernate, set up remote power-on."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Language: <a href="/">简体中文</a> · <strong>English</strong> · <a href="/ja/">日本語</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/ko/">한국어</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/th/">ไทย</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/es/">Español</a> · <a href="/pt-br/">Português (BR)</a> · <a href="/de/">Deutsch</a> · <a href="/fr/">Français</a> · <a href="/ru/">Русский</a> · <a href="/it/">Italiano</a> · <a href="/pl/">Polski</a> · <a href="/nl/">Nederlands</a> · <a href="/tr/">Türkçe</a> · <a href="/ar/">العربية</a> · <a href="/fa/">فارسی</a> · <a href="/hi/">हिन्दी</a> · <a href="/bn/">বাংলা</a> · <a href="/ta/">தமிழ்</a> · <a href="/te/">తెలుగు</a> · <a href="/fil/">Filipino</a> · <a href="/ur/">اردو</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>UU Remote remote-control / game-streaming connection troubleshooting & error lookup</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_en.webp"><img src="/img/cover_en.png" alt="UU Remote remote-control / streaming connection troubleshooting & error lookup illustration" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Fig: UU Remote connection troubleshooting lookup (symptom keyword -> most likely cause + fix steps + prevention)</figcaption></figure>
+<p><strong>UU Remote</strong> won't connect, <strong>black screen</strong> after connecting, <strong>lag</strong>, no sound, controller not detected - don't guess blindly. The key to troubleshooting is to <strong>split by category and self-check in order</strong>: first <strong>network (packet loss / upload / firewall)</strong>, then <strong>GPU driver / resolution</strong>, and only last <strong>permissions / certificate</strong>. Enter or tap your <strong>symptom</strong> (e.g. <code>can't connect</code>, <code>black screen</code>, <code>lag</code>, <code>no sound</code>, <code>disconnect</code>, <code>controller</code>) to look up the <strong>most likely cause + fix steps + prevention</strong>. Want to install the client first? See <a href="https://uuyc163.com/download/">UU Remote download</a> and the <a href="https://uuyc163.com/faq/">FAQ</a>.</p>
+<input id="q" placeholder="Enter a symptom, e.g. can't connect / black screen / lag / no sound / disconnect / controller" autocomplete="off">
+<button id="go">Find fix</button>
+<div class="chips" id="chips"></div>
+<div id="out"></div>
+<h2>Step 1: split the fault into four buckets first (don't reinstall right away)</h2>
+<p>Nine out of ten remote-control / streaming problems fit four buckets - categorise first, then treat: (1) <strong>Connection</strong> - can't connect, drops after seconds, port conflict, can't reach when asleep, IPv6 acting up: check <strong>network and firewall/antivirus, the remote toggle, and whether the host is online and powered on</strong>; (2) <strong>Display</strong> - black screen, artifacts, blur: usually a <strong>resolution/fullscreen mismatch or an old GPU driver</strong>; (3) <strong>Latency/lag</strong> - input delay, dropped frames: the real cause is usually <strong>packet loss / weak Wi-Fi / low host upload</strong>, not performance; (4) <strong>Sound / peripheral / permission</strong> - no sound, controller not detected, no remote permission: check the <strong>host audio device, controller passthrough, Remote Desktop Users group</strong>. More: <a href="https://uuyc163.com/faq/">UU Remote FAQ</a>.</p>
+<div class="cat"><div class="catbox"><b>Connection / drops</b><span class="cs">can't connect . frequent drops . port conflict . can't reach when asleep . IPv6</span><div>Check network and firewall/antivirus, the remote toggle, and whether the host is online & powered on: for connection failure allow the firewall first, toggle remote off then on, refresh the IP; if port 3389 is in use find the conflict with netstat; keep the host out of sleep/hibernate.</div></div><div class="catbox"><b>Display (black screen / artifacts / blur)</b><span class="cs">black screen on connect . artifacts . blurry</span><div>Usually a resolution/fullscreen mismatch or old GPU driver: switch to a supported resolution, set the game to windowed, update the GPU driver, disable persistent bitmap caching; for artifacts/blur check bitrate and packet loss, and try disabling hardware decoding to fall back to software.</div></div><div class="catbox"><b>Latency / lag</b><span class="cs">input delay . dropped frames . stutter</span><div>The real cause is usually network, not performance: switch to wired or 5GHz Wi-Fi, lower the bitrate/bandwidth limit, check packet loss, on the host roll back to a stable GPU driver, close other bandwidth-hungry apps; insufficient host upload is the real over-internet bottleneck.</div></div><div class="catbox"><b>Sound / peripheral / permission</b><span class="cs">no sound . controller not detected . no remote permission</span><div>No sound - check the host audio device (a cloud PC / no speaker needs a virtual audio device); controller not detected - enable controller passthrough and install drivers; no permission - add the account to the "Remote Desktop Users" group and check the connection-limit policy.</div></div></div><figure><svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote fault-location decision flow" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">How to locate a fault (split by symptom into four buckets: connection / display / latency / sound & peripheral)</text><rect x="20" y="46" width="150" height="46" rx="10" fill="#0b1220"/><text x="95" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#fff">Something broke</text><path d="M170 69 H206" stroke="#999" stroke-width="2" fill="none" marker-end="url(#a)"/><rect x="206" y="46" width="172" height="46" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="292" y="74" text-anchor="middle" font-family="system-ui,Arial" font-size="13" fill="#0d8276">Split by symptom</text><rect x="440" y="20" width="262" height="56" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="455" y="42" font-family="system-ui,Arial" font-size="12.5" fill="#1d4ed8">can't connect/drops -></text><text x="455" y="62" font-family="system-ui,Arial" font-size="11.5" fill="#1e3a8a">check network . firewall . toggle . port</text><rect x="440" y="86" width="262" height="56" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="455" y="108" font-family="system-ui,Arial" font-size="12.5" fill="#b45309">black screen/artifacts -></text><text x="455" y="128" font-family="system-ui,Arial" font-size="11.5" fill="#92400e">check resolution . fullscreen . GPU driver</text><path d="M378 60 H410 V48 H440" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#a)"/><path d="M378 78 H410 V114 H440" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#a)"/><text x="20" y="178" font-family="system-ui,Arial" font-size="13" font-weight="700" fill="#1d1d1f">Four typical faults (pick a self-check direction by symptom)</text><g font-family="system-ui,Arial" font-size="12"><rect x="20" y="190" width="162" height="92" rx="10" fill="#eef4ff" stroke="#cfe0ff"/><text x="32" y="212" font-weight="700" fill="#1d4ed8">1. Connection/drops</text><text x="32" y="234" fill="#555" font-size="11">network . firewall . port . sleep</text><rect x="194" y="190" width="162" height="92" rx="10" fill="#ecfdf6" stroke="#c7f0e3"/><text x="206" y="212" font-weight="700" fill="#0d8276">2. Black screen</text><text x="206" y="234" fill="#555" font-size="11">resolution . fullscreen . driver</text><rect x="368" y="190" width="162" height="92" rx="10" fill="#fffbeb" stroke="#fde68a"/><text x="380" y="212" font-weight="700" fill="#b45309">3. Latency/lag</text><text x="380" y="234" fill="#555" font-size="11">packet loss . upload . wired first</text><rect x="542" y="190" width="160" height="92" rx="10" fill="#fef2f2" stroke="#fecaca"/><text x="554" y="212" font-weight="700" fill="#b91c1c">4. Sound/peripheral</text><text x="554" y="234" fill="#555" font-size="11">audio device . controller . permission</text></g><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 z" fill="#999"/></marker></defs></svg><figcaption>Fig 1: UU Remote fault-location flow - split by symptom into four buckets (connection / display / latency / sound & peripheral), then self-check in order</figcaption></figure>
+<h2>Step 2: the most misdiagnosed root cause -> L2 (network first, then driver/resolution, last permissions/certificate)</h2>
+<p>Key idea: <strong>most "lag" and "can't connect" cases are actually network problems, not PC performance or a software bug</strong>. Self-checking in this order saves the most time: (1) <strong>Lag/delay - check the network first</strong>: packet loss, weak Wi-Fi, and insufficient host <strong>upload</strong> are the real streaming bottleneck (controlling home from outside sends the picture <em>out</em> from home, which eats upload) - switch to wired or 5GHz Wi-Fi, lower the bitrate/bandwidth limit, and on the host try rolling back to a stable GPU driver (newer NVIDIA drivers once caused abnormal encoder latency); (2) <strong>Black screen - check resolution and driver first</strong>: connected but black while you can hear sound / see the mouse usually means the <strong>resolution isn't supported or the game's fullscreen resolution != the streaming resolution</strong> (set the game to windowed), an <strong>old GPU driver</strong> (update it), or corrupt persistent bitmap caching (disable it); (3) <strong>Connection failure - check firewall and the toggle first</strong>: firewall/antivirus blocking, toggle the remote switch off then on, restart the router to refresh the IP, or port <code>3389</code> in use (<code>netstat -a -o</code> to find the conflicting process); (4) <strong>Security error - check auth/certificate</strong>: "because of a security error the client could not connect" usually means a misconfigured auth/encryption layer or a corrupt license certificate; (5) <strong>No sound - check the audio device</strong>: when the host has no speaker / a cloud PC has no audio device, install a virtual audio device. Below is the "fault location" decision tree; further down are the pre-connection self-check panel, the comparison and 2026 estimates.</p>
+<figure><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UU Remote pre-connection self-check panel" style="width:100%;height:auto;border:1px solid #eee;border-radius:12px;background:#fff"><text x="20" y="28" font-family="system-ui,Arial" font-size="15.5" font-weight="700" fill="#1d1d1f">Pre-connection / streaming self-check panel (green = met / red = easy to overlook)</text><rect x="20" y="42" width="680" height="226" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="38" y="66" font-family="system-ui,Arial" font-size="12.5" font-weight="700" fill="#475569">Check item</text><text x="300" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">Judgement</text><text x="610" y="66" font-family="system-ui,Arial" font-size="12" fill="#94a3b8">State</text><line x1="38" y1="74" x2="682" y2="74" stroke="#e2e8f0" stroke-width="1"/><text x="38" y="98" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host powered on, logged in, online (not asleep/hibernating)</text><text x="300" y="98" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">online state</text><circle cx="612" cy="94" r="6" fill="#16a34a"/><text x="628" y="98" font-family="system-ui,Arial" font-size="12" fill="#16a34a">met</text><text x="38" y="128" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Firewall/antivirus allow UU Remote</text><text x="300" y="128" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">firewall</text><circle cx="612" cy="124" r="6" fill="#ef4444"/><text x="628" y="128" font-family="system-ui,Arial" font-size="12" fill="#ef4444">verify</text><text x="38" y="158" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Both ends wired or 5GHz Wi-Fi, full signal</text><text x="300" y="158" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">network quality</text><circle cx="612" cy="154" r="6" fill="#16a34a"/><text x="628" y="158" font-family="system-ui,Arial" font-size="12" fill="#16a34a">met</text><text x="38" y="188" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host GPU driver is a recent stable version</text><text x="300" y="188" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">GPU driver</text><circle cx="612" cy="184" r="6" fill="#ef4444"/><text x="628" y="188" font-family="system-ui,Arial" font-size="12" fill="#ef4444">verify</text><text x="38" y="218" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Host upload >= streaming bitrate + headroom</text><text x="300" y="218" font-family="system-ui,Arial" font-size="12.5" fill="#16a34a">upload</text><circle cx="612" cy="214" r="6" fill="#16a34a"/><text x="628" y="218" font-family="system-ui,Arial" font-size="12" fill="#16a34a">met</text><text x="38" y="248" font-family="system-ui,Arial" font-size="13" fill="#1d1d1f">Port 3389 not taken by another program</text><text x="300" y="248" font-family="system-ui,Arial" font-size="12.5" fill="#ef4444">port</text><circle cx="612" cy="244" r="6" fill="#ef4444"/><text x="628" y="248" font-family="system-ui,Arial" font-size="12" fill="#ef4444">verify</text><text x="20" y="296" font-family="system-ui,Arial" font-size="11.5" fill="#94a3b8">Note: red = the three most overlooked - firewall allow, GPU driver, port conflict; check these before reinstalling for can't-connect / black screen / lag.</text></svg><figcaption>Fig 2: pre-connection self-check panel (green = met / red = easy pitfall to verify)</figcaption></figure>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_en.webp"><img src="/img/board_en.png" alt="UU Remote pre-connection self-check panel green/red items illustration" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Fig: check "host online & powered on . firewall allowed . wired/5GHz . fresh driver . port free" - lag & black screen usually fail the first few</figcaption></figure>
+<h2>Full common-fault lookup table (symptom . category . fix direction)</h2>
+<table id="tbl"></table>
+<h2>UU Remote vs mainstream remote-control / streaming options - troubleshooting comparison (public docs)</h2>
+<table class="cmp"><tr><th>Solution</th><th>Connection/NAT</th><th>Black-screen handling</th><th>Peripheral/controller</th><th>Over-network latency</th><th>Troubleshooting tools</th></tr><tr><td>UU Remote</td><td>P2P direct + private net, auto NAT</td><td>switch resolution / windowed / update driver</td><td>controller & peripheral passthrough</td><td>millisecond (tuned private net)</td><td>client logs + self-check</td></tr><tr><td>ToDesk</td><td>in-house relay + P2P</td><td>adaptive resolution</td><td>peripheral mapping</td><td>low (dedicated channel)</td><td>diagnostics panel</td></tr><tr><td>Parsec</td><td>P2P hole-punch, needs public IP/UPnP</td><td>fullscreen mismatch -> windowed</td><td>native controller support</td><td>very low on LAN, network-dependent over net</td><td>logs + community docs</td></tr><tr><td>Microsoft RDP</td><td>port 3389, needs allow/gateway</td><td>persistent bitmap cache / resolution / driver</td><td>needs redirection setup</td><td>low on LAN, bandwidth-dependent over net</td><td>Event Viewer + netstat/qwinsta</td></tr><tr><td>Steam Remote Play</td><td>Steam relay + direct</td><td>update driver / disable hardware decode</td><td>controller-first support</td><td>~30-50Mb/s @1080p60</td><td>disable IPv6 + stream settings</td></tr></table><section class="i4data">
+<h2>UU Remote remote-control / streaming common-fault distribution & notes (2026 estimate)</h2>
+<p>The following are <strong>2026 estimates</strong> combining Microsoft's official RDP troubleshooting docs, Steam Remote Play and Parsec official support (not vendor commitments, not first-hand statistics; for reference, changes with version and network):</p>
+<table>
+<tr><th>Dimension</th><th>Estimate / note</th></tr>
+<tr><td>Fault-type distribution (est.)</td><td>connection/drops ~ <strong>35%</strong> . display (black screen/artifacts) ~ <strong>25%</strong> . latency/lag ~ <strong>22%</strong> . sound/peripheral ~ <strong>12%</strong> . permission/security ~ <strong>6%</strong></td></tr>
+<tr><td>Real cause of lag (key)</td><td>most "lag / can't connect" is a <strong>network problem</strong> (packet loss, weak Wi-Fi, low host <strong>upload</strong>), <strong>not</strong> PC performance or a software bug -> check the network before the soft/hardware</td></tr>
+<tr><td>Top cause of black screen (est.)</td><td>resolution/fullscreen mismatch + old GPU driver dominate; black with sound = a classic resolution issue, windowing the game / a common resolution helps most</td></tr>
+<tr><td>RDP port & protocol</td><td>RDP default port <strong>3389 (TCP)</strong>; if taken you can't connect; Event ID <strong>50 (TermDD . X.224)</strong> = a protocol-stream error that disconnects the client</td></tr>
+<tr><td>Self-check order (time-saving)</td><td><strong>network (loss/upload/firewall) first -> driver/resolution -> permissions/certificate last</strong>; streaming is roughly <strong>30-50Mbps @1080p60</strong>, and bitrate must stay below host upload</td></tr>
+</table>
+<p><small>Estimate basis: source baseline + extrapolation (combining Microsoft Learn "Troubleshoot Remote desktop disconnected errors" / "Disconnect Codes and Reasons", Steam Remote Play official support, Parsec official support, 2026); changes with version and network policy. Rely on each vendor's latest official info and your own testing.</small></p>
+</section>
+<h2>Real-world cases - quick read</h2>
+<ul class="scenes"><li>Controlling your home PC from a phone outside, black screen right after connecting but you can hear sound: usually the host resolution isn't supported by the phone or the game's fullscreen resolution doesn't match -> set the game to windowed, switch the host to a common resolution like 1080p, and update the GPU driver.</li><li>It suddenly gets laggy with big input delay mid-session: don't blame PC performance first - check packet loss and Wi-Fi signal, switch to wired or move closer to 5GHz Wi-Fi, lower the bitrate/bandwidth limit, drop quality when host upload is low; if a freshly installed NVIDIA driver misbehaves, roll back to a stable one.</li><li>The client says "couldn't connect to the remote computer / connection failed": confirm the host is powered on, logged in and online, allow UU Remote through firewall and antivirus, toggle the remote switch off then on; if the home IP changed restart the router to refresh it, or check whether port 3389 is taken by another program.</li><li>It drops after a few seconds or a minute: usually network instability or a security/certificate issue - check packet loss and routing, configure a keep-alive interval on the host, review the security layer and encryption; Event ID 50 (TermDD . X.224) in Event Viewer also points to an interrupted protocol stream.</li><li>Picture is fine but there's no sound on the remote end: the host has no usable audio device (a cloud PC or one with no speaker shows "No speakers or headphones are plugged in") -> install a virtual audio device (like VB-Cable) on the host and pick the right capture device in settings.</li><li>You can log in but can't start remote control, with a no-permission prompt: add the account to the host's "Remote Desktop Users" group, check whether the "Limit number of connections" group policy is blocking it, and confirm the account has remote logon rights.</li></ul><div class="related"><h2>Related</h2><ul><li><a href="https://uuyc163.com/">UU Remote official site / download & guide</a></li><li><a href="https://uuyc163.com/faq/">UU Remote FAQ (official)</a></li><li><a href="https://uuyc163.com/en/tools/connection-troubleshooting/">UU Remote connection troubleshooting (authoritative full table)</a></li><li><a href="https://uuycc.com/">UU Remote download center (sister)</a></li></ul></div></main>
+<footer>Fault / cause / fix notes are compiled from Microsoft Learn's "Troubleshoot Remote desktop disconnected errors" and "Remote Desktop Client Troubleshooting: Disconnect Codes and Reasons" (RDP connection failure, port 3389 conflict, security layer & encryption, license certificate corruption, can't reach when asleep, Event ID 50 TermDD X.224 protocol error), Steam Remote Play official support (connection failure = firewall/antivirus / toggle reset / refresh IP, black screen = update drivers / disable hardware decoding, disable IPv6) and Parsec official support (black screen = fullscreen resolution mismatch -> windowed, no sound = host has no audio device -> install a virtual audio device, high latency = newer driver / packet loss -> roll back driver . lower bandwidth . switch to wired). 2026 fault distribution is an estimate - not vendor commitments, not first-hand statistics; for reference, rely on each vendor's latest official info and your own testing.<br>Tool page . the lookup doesn't replace real testing in the official client or official tech support</footer>
+</div>
+<script src="/en/codes.js"></script><script src="/app.js"></script>
+</body></html>
